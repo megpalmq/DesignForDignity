@@ -1,0 +1,57 @@
+.contact-section {
+  background: linear-gradient(135deg, #e2ceb9, #455642);
+  padding: 60px 20px;
+  color: white;
+  text-align: center;
+  height: 100vh;
+
+  .container {
+    max-width: 800px;
+    margin-top: 200px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    margin-top: 200px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: "Arial", sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    font-family: "Verdana", sans-serif;
+    opacity: 0.9;
+  }
+
+  .email-button {
+    display: inline-block;
+    text-decoration: none;
+
+    button {
+      padding: 15px 25px;
+      background-color: #fd79a8; // Cool pink for the button
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #d63031; // Darker pink on hover
+        transform: scale(1.05);
+      }
+
+      &:active {
+        background-color: #e17055; // Slightly darker shade when clicked
+      }
+    }
+  }
+}

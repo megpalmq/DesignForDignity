@@ -1,0 +1,380 @@
+$heading-font: "rl-aqva";
+.group {
+  overflow: hidden;
+}
+
+.pull {
+  float: left;
+}
+
+.push {
+  float: right;
+}
+
+.hero {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100vh;
+
+  &__image {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    clip: rect(0, auto, auto, 0);
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/dc/Indianapolis-indiana-from-above.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &--overlay {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+
+      background: linear-gradient(
+        to bottom,
+        rgba(121, 85, 72, 0) 0%,
+        rgba(121, 85, 72, 0.17) 21%,
+        rgba(121, 85, 72, 0.5) 80%
+      );
+    }
+  }
+
+  &__child {
+    position: fixed;
+    background-repeat: no-repeat;
+    backface-visibility: hidden;
+    opacity: 0.8;
+
+    &--primary {
+      top: -120px;
+      left: 50px;
+      width: 819px;
+      height: 1621px;
+      background-image: url(https://res.cloudinary.com/mihael/image/upload/v1548409393/codepen/cloud-2.png);
+    }
+
+    &--secondary {
+      top: 0;
+      right: 50px;
+      width: 300px;
+      height: 500px;
+      background-size: 300px auto;
+      background-image: url(https://res.cloudinary.com/mihael/image/upload/v1548409392/codepen/cloud-1.png);
+    }
+  }
+
+  &__title {
+    position: absolute;
+    top: 40vh;
+    left: 15vw;
+    right: 24vw;
+    z-index: 1;
+    opacity: 0;
+    font-size: 200px;
+    line-height: calc(6px * 12);
+    color: white;
+    font-family: $heading-font;
+    font-weight: bolder;
+    text-align: center;
+  }
+
+  &__subtitle {
+    position: absolute;
+    top: 60vh;
+    left: 31vw;
+    right: 24vw;
+    width: 500px;
+    color: white;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    background-color: #806b6b;
+    border-radius: 30px;
+    padding: 10px;
+  }
+}
+
+.animation {
+  &--floating {
+    animation-name: floating;
+    animation-duration: 200000ms;
+    animation-iteration-count: infinite;
+  }
+
+  &--title-in {
+    animation: title-in 800ms forwards ease-in-out 750ms;
+  }
+
+  &--from-top {
+    animation: from-top 350ms forwards cubic-bezier(0.65, 0.05, 0.36, 1);
+  }
+
+  &--from-bottom {
+    animation: from-bottom 350ms forwards cubic-bezier(0.65, 0.05, 0.36, 1);
+  }
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes title-in {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-25%);
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+@keyframes from-top {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-30%);
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+@keyframes from-bottom {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(15%);
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+.projects {
+  background: linear-gradient(
+    5deg,
+    rgba(135, 172, 126, 1) 4%,
+    rgba(115, 84, 57, 1) 84%
+  );
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  cursor: pointer;
+  top: 0;
+}
+
+.project-card {
+  background-color: #f2d5c4;
+  text-decoration: none;
+  border-radius: 50px;
+  padding: 30px;
+  color: black;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 30%;
+  height: 400px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+  margin-bottom: 100px;
+
+  &:hover {
+    background-color: #91a687;
+    transform: scale(1.25);
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .project-image {
+    margin: 0 auto;
+    border-radius: 30px;
+    width: 60%;
+    height: 250px;
+    background-image: url(../images/team1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .project-image2 {
+    margin: 0 auto;
+    border-radius: 30px;
+    width: 60%;
+    height: 250px;
+    background-image: url(../images/team2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .project-image3 {
+    margin: 0 auto;
+    border-radius: 30px;
+    width: 60%;
+    height: 250px;
+    background-image: url(../images/team3.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .project-image4 {
+    margin: 0 auto;
+    border-radius: 30px;
+    width: 60%;
+    height: 250px;
+    background-image: url(../images/team4.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .project-image5 {
+    margin: 0 auto;
+    border-radius: 30px;
+    width: 60%;
+    height: 250px;
+    background-image: url(../images/team5.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .project-image6 {
+    margin: 0 auto;
+    border-radius: 30px;
+    width: 60%;
+    height: 250px;
+    background-image: url(../images/team6.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .project-image7 {
+    margin: 0 auto;
+    border-radius: 30px;
+    width: 60%;
+    height: 250px;
+    background-image: url(../images/team7.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .project-image8 {
+    margin: 0 auto;
+    border-radius: 30px;
+    width: 60%;
+    height: 250px;
+    background-image: url(../images/team8.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .project-details {
+    h3 {
+      margin: 0 auto;
+      font-size: 1.5rem;
+      margin-top: 10px;
+    }
+
+    p {
+      margin: 0 auto;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+/* Media Queries for responsiveness */
+@media screen and (max-width: 1200px) {
+  .hero__title {
+    font-size: 150px;
+    line-height: calc(6px * 10);
+  }
+
+  .hero__subtitle {
+    width: 400px;
+    font-size: 20px;
+    top: 65vh;
+    left: 25vw;
+  }
+
+  .project-card {
+    width: 40%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero__title {
+    font-size: 100px;
+    line-height: calc(6px * 8);
+  }
+
+  .hero__subtitle {
+    width: 300px;
+    font-size: 18px;
+    top: 70vh;
+    left: 15vw;
+  }
+
+  .project-card {
+    width: 80%;
+    margin-bottom: 50px;
+  }
+
+  .project-card .project-image {
+    width: 70%;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero__title {
+    font-size: 60px;
+    line-height: calc(6px * 6);
+  }
+
+  .hero__subtitle {
+    width: 200px;
+    font-size: 16px;
+    top: 75vh;
+    left: 10vw;
+  }
+
+  .project-card {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .project-card .project-image {
+    width: 90%;
+    height: 150px;
+  }
+}

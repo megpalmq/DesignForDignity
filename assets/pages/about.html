@@ -1,0 +1,250 @@
+<section id="about" class="about-section">
+  <div class="container">
+    <div class="wrap">
+      <div class="line">
+        <div class="left">
+          <div class="content">
+            <span class="spanSlow">Food</span>
+          </div>
+        </div>
+        <!--
+        -->
+        <div class="right">
+          <div class="content">
+            <span class="spanSlow">Food</span>
+          </div>
+        </div>
+      </div>
+      <div class="line">
+        <div class="left">
+          <div class="content">
+            <span class="spanSlow">Insecurity</span>
+          </div>
+        </div>
+        <!--
+        -->
+        <div class="right">
+          <div class="content">
+            <span class="spanSlow">Insecurity</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="about-content">
+      
+        <h2>Indiana</h2>
+        <div class="text-content"></div>
+        <p>
+          Food insecurity is a pressing issue affecting many residents of
+          Indiana, particularly in rural and urban areas. Despite the state's
+          agricultural wealth, a significant number of Hoosiers face challenges
+          in accessing nutritious, affordable food.
+          <br />
+          This issue is often exacerbated by high poverty rates, unemployment,
+          and a lack of access to food retailers in certain regions, resulting
+          in food deserts. The elderly population is especially vulnerable, with
+          many facing difficulties in obtaining fresh produce, largely due to
+          limited mobility and fixed incomes. In cities like Indianapolis, Fort
+          Wayne, and Evansville, low-income households struggle to meet basic
+          nutritional needs, leading to poor health outcomes and increased
+          reliance on food pantries and community food banks.<br />
+
+          Furthermore, food insecurity in Indiana has a significant ripple
+          effect, impacting children's education, physical and mental
+          development, and contributing to the cycle of poverty.
+        </p>
+       
+
+        <h2>South Korea</h2>
+        <p>
+          In South Korea, food insecurity, while less talked about, is becoming
+          an increasing concern, especially for vulnerable groups like the
+          elderly and low-income families. Despite the country’s high-tech,
+          modern economy, many individuals, particularly seniors, face
+          difficulties in accessing nutritious meals due to rising food costs
+          and limited availability of affordable food in certain areas. Food
+          insecurity in Korea is also linked to the country’s aging population,
+          as older adults, often living alone or in poverty, have limited access
+          to fresh food and adequate nutrition. Seoul and other major cities,
+          such as Busan, have seen increased reports of elderly individuals
+          experiencing malnutrition due to economic hardship. Furthermore, food
+          banks and social welfare programs in Korea are often underfunded,
+          leaving many citizens without the support they need. The issue is
+          compounded by societal pressures that often stigmatize those who rely
+          on these services, further isolating and disenfranchising vulnerable
+          groups.
+        </p>
+        
+      </div>
+      
+      <div class="indy"></div>
+    </div>
+  </div>
+</section>
+
+<section class="bonerCenter">
+<h2>Bonner Center for Civic Engagement</h2>
+<p>
+          The Bonner Center for Civic Engagement in Indianapolis plays a vital
+          role in combating food insecurity in the local community. Through its
+          initiatives, the center helps provide access to healthy and nutritious
+          food for residents facing challenges, especially in underserved areas
+          and food deserts. The center collaborates with local food banks,
+          nonprofits, and community organizations to address the root causes of
+          food insecurity, focusing on long-term solutions that empower
+          individuals and families.
+        </p>
+        <p>
+          The center also provides educational programs and volunteer
+          opportunities that engage students and community members in efforts to
+          support food access and nutrition. By fostering collaboration and
+          community-driven solutions, the Bonner Center is helping to reduce food
+          insecurity and improve the quality of life for many Indianapolis
+          residents.
+        </p>
+     <div class="bonLogo"></div>
+</section>
+
+<section id="food-insecurity" class="food-insecurity-section">
+  <div class="container">
+    <h2 class="section-title">Map of Food Insecurity</h2>
+    <p>
+      Food insecurity affects vulnerable populations across Indiana and Korea,
+      particularly the elderly and underserved communities. By focusing on these
+      regions, our collaboration highlights the importance of addressing food
+      access disparities and fostering community-driven solutions.
+    </p>
+    <div id="food-insecurity-map" class="map-container">
+      <div id="map"></div>
+      <p class="map-instructions">
+        Tap the dots on the map to learn more about food insecurity hotspots.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<div class="container2">
+    <div class="about-content">
+      <h2 class="section-title">About the Collaboration</h2>
+      <div class="text-content">
+        <p>
+          Yonsei University and Herron School of Art + Design students united to
+          create impactful designs addressing food scarcity and health
+          challenges for elderly communities in Korea and Indianapolis. Each
+          team was assigned a distinct topic and presentation style, using
+          visuals, typography, and layout to communicate the message
+          effectively.
+        </p>
+        <p>
+          This collaboration was a valuable opportunity for students to learn
+          from one another, explore diverse design techniques, and gain hands-on
+          experience in addressing critical social issues through creative
+          storytelling.
+        </p>
+      </div>
+      <a href="#projects" class="seeMore">
+        See their Projects <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+    <div class="aboutCollabImg"></div>
+
+    
+</div>
+
+
+<script>
+  function initMap() {
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 6,
+      center: { lat: 39.8283, lng: -98.5795 },
+    });
+
+    const locations = [
+      {
+        lat: 39.7684,
+        lng: -86.1581,
+        title: "Indianapolis, IN",
+        description:
+          "Indianapolis, the state's capital, faces high levels of food insecurity in both urban and suburban areas, especially among lower-income households.",
+      },
+      {
+        lat: 41.0793,
+        lng: -85.1394,
+        title: "Fort Wayne, IN",
+        description:
+          "Fort Wayne has experienced rising food insecurity due to high poverty rates and lack of access to fresh food in many neighborhoods.",
+      },
+      {
+        lat: 37.9716,
+        lng: -87.5711,
+        title: "Evansville, IN",
+        description:
+          "In Evansville, food insecurity is concentrated in low-income neighborhoods, where families struggle to access affordable, nutritious food.",
+      },
+      {
+        lat: 41.5934,
+        lng: -87.3462,
+        title: "Gary, IN",
+        description:
+          "Gary, a city with high poverty and unemployment rates, faces severe food insecurity, particularly in its most impoverished neighborhoods.",
+      },
+      {
+        lat: 41.7036,
+        lng: -86.25,
+        title: "South Bend, IN",
+        description:
+          "South Bend struggles with food insecurity, especially in inner-city areas where many families have limited access to fresh produce and affordable grocery stores.",
+      },
+      {
+        lat: 40.1921,
+        lng: -85.3963,
+        title: "Muncie, IN",
+        description:
+          "Muncie has notable food deserts, impacting lower-income residents who lack reliable access to affordable, nutritious food.",
+      },
+      {
+        lat: 39.1658,
+        lng: -86.5264,
+        title: "Bloomington, IN",
+        description:
+          "While Bloomington is home to Indiana University, the city faces food insecurity challenges for its low-income residents, especially elderly and disabled individuals.",
+      },
+      {
+        lat: 37.5665,
+        lng: 126.978,
+        title: "Seoul, Korea",
+        description:
+          "In Seoul, despite its modernity, certain underprivileged areas face food insecurity due to rising costs and lack of proper access to food for vulnerable populations.",
+      },
+      {
+        lat: 35.1796,
+        lng: 129.0756,
+        title: "Busan, Korea",
+        description:
+          "Busan, a major port city, struggles with food insecurity among elderly populations living in poverty, affecting their ability to access fresh, affordable food.",
+      },
+    ];
+
+    locations.forEach((location) => {
+      const marker = new google.maps.Marker({
+        position: { lat: location.lat, lng: location.lng },
+        map: map,
+        title: location.title,
+      });
+
+      const infoWindow = new google.maps.InfoWindow({
+        content: `<h3>${location.title}</h3><p>${location.description}</p>`,
+      });
+
+      marker.addListener("click", function () {
+        infoWindow.open(map, marker);
+      });
+    });
+  }
+
+  const script = document.createElement("script");
+  script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyDTh3mjm1-Lhlo5Pmhi6d_wMlYcRuzipQQ&callback=initMap`;
+  script.async = true;
+  document.head.appendChild(script);
+</script>
