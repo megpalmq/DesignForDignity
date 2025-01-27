@@ -1,3 +1,13 @@
+$tan: #d2c29c;
+$brown: #352d27;
+$green: #669c8b;
+$yellow: #e0a138;
+$orange: #c05126;
+$light-gray: #eeee;
+$dark-gray: #635c5c;
+$highlight-color: #c05126;
+$heading-font: "rl-aqva", sans-serif;
+
 .project-hero5 {
   position: relative;
   background-image: url(../images/team1.png);
@@ -33,6 +43,7 @@
   animation: fadeInUp 1s ease-out;
   width: 50%;
   text-align: center;
+  font-family: $heading-font;
 }
 
 .project-description5 {
@@ -81,6 +92,7 @@
   font-size: 2.5rem;
   margin-bottom: 30px;
   color: #fc8500;
+  font-family: $heading-font;
 }
 
 .project-info5 {
@@ -107,6 +119,7 @@
   color: white;
   background-color: #1b659e;
   width: 100%;
+  font-family: $heading-font;
 
   border-radius: 50px;
   padding: 10px;
@@ -140,6 +153,7 @@
   font-size: 2rem;
   color: #ffffff;
   margin-bottom: 20px;
+  font-family: $heading-font;
 }
 
 .member-list5 {
@@ -207,6 +221,7 @@
 
 .group-photo5 h3 {
   font-size: 2rem;
+  font-family: $heading-font;
   margin-bottom: 10px;
   color: #ffffff;
 }
@@ -234,6 +249,7 @@
   font-size: 2.5rem;
   margin-bottom: 30px;
   color: #fc8500;
+  font-family: $heading-font;
 }
 
 .final-draft5 p {
@@ -403,4 +419,251 @@
 
 .see-more5:focus {
   outline: none;
+}
+@media screen and (max-width: 950px) {
+  .project-hero5 {
+    height: 90vh;
+  }
+
+  .project-title5 {
+    font-size: 3rem; /* Smaller font size for mobile */
+    width: 90%;
+    margin-top: 100px;
+  }
+
+  .project-description5 {
+    font-size: 1rem; /* Adjust font size */
+    max-width: 90%;
+    margin-top: 20px;
+  }
+
+  .project-type5 {
+    font-size: 1.3rem;
+    width: 15%;
+    text-align: center;
+  }
+
+  .about5 {
+    padding: 30px 10px; /* Reduced padding */
+  }
+
+  .section-title5 {
+    font-size: 3rem; /* Adjust font size */
+  }
+
+  .project-info5 {
+    width: 90%; /* Full width for smaller screens */
+    font-size: 1rem;
+  }
+
+  .project-process5 {
+    padding: 0 20px; /* Adjust padding */
+  }
+
+  .members5 {
+    padding: 10px;
+    margin: 20px 0;
+    max-width: 100%;
+  }
+
+  .member-list5 {
+    gap: 20px;
+  }
+
+  .poster-thumbnails5 {
+    display: flex;
+    align-items: center;
+  }
+
+  .poster-item5 {
+    width: 100%;
+    align-items: center;
+  }
+
+  .poster-item5 img {
+    width: 100%;
+  }
+
+  .modal-content5 {
+    max-width: 100%;
+  }
+
+  .final-draft5 h2 {
+    font-size: 3rem; /* Smaller heading */
+  }
+
+  .final-draft5 p {
+    font-size: 1rem; /* Adjust paragraph font size */
+  }
+
+  /* Adjust the back and see more buttons */
+  .button-container5 {
+    flex-direction: column; /* Stack buttons vertically */
+  }
+
+  .back-button5 {
+    padding: 15px;
+  }
+
+  .see-more5 {
+    padding: 12px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .project-hero5 {
+    height: 90vh;
+  }
+
+  .project-title5 {
+    font-size: 3rem; /* Smaller font size for mobile */
+    width: 90%;
+    margin-top: 100px;
+  }
+
+  .project-description5 {
+    font-size: 1rem; /* Adjust font size */
+    max-width: 90%;
+    margin-top: 20px;
+  }
+
+  .project-type5 {
+    font-size: 1.3rem;
+    width: 15%;
+    text-align: center;
+  }
+
+  .about5 {
+    padding: 30px 10px; /* Reduced padding */
+  }
+
+  .section-title5 {
+    font-size: 3rem; /* Adjust font size */
+  }
+
+  .project-info5 {
+    width: 90%; /* Full width for smaller screens */
+    font-size: 1rem;
+  }
+
+  .project-process5 {
+    padding: 0 20px; /* Adjust padding */
+  }
+
+  .members5 {
+    padding: 10px;
+    margin: 20px 0;
+    max-width: 100%;
+  }
+
+  .member-list5 {
+    gap: 20px;
+  }
+
+  .poster-thumbnails5 {
+    display: flex;
+    align-items: center;
+  }
+
+  .poster-item5 {
+    width: 100%;
+    align-items: center;
+  }
+
+  .poster-item5 img {
+    width: 100%;
+  }
+
+  .modal-content5 {
+    max-width: 100%;
+  }
+
+  .final-draft5 h2 {
+    font-size: 3rem; /* Smaller heading */
+  }
+
+  .final-draft5 p {
+    font-size: 1rem; /* Adjust paragraph font size */
+  }
+
+  /* Adjust the back and see more buttons */
+  .button-container5 {
+    flex-direction: column; /* Stack buttons vertically */
+  }
+
+  .back-button5 {
+    padding: 15px;
+  }
+
+  .see-more5 {
+    padding: 12px;
+  }
+}
+
+/* Media Queries for Smaller Mobile Screens */
+@media screen and (max-width: 480px) {
+  .project-hero5 {
+    height: 80vh;
+  }
+
+  .project-title5 {
+    font-size: 2rem;
+  }
+
+  .project-description5 {
+    font-size: 0.9rem; /* Adjust font size */
+  }
+
+  .project-type5 {
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  .about5 {
+    padding: 20px 10px;
+  }
+
+  .section-title5 {
+    font-size: 3rem;
+  }
+
+  .project-info5 {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .members5 {
+    margin: 10px 0;
+  }
+
+  .member-list5 {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+
+  .poster-item5 {
+    width: 100%;
+  }
+
+  .modal-content5 {
+    max-width: 100%; /* Full width for mobile screens */
+  }
+  .group-photo5 {
+    width: 100%;
+  }
+
+  .final-draft5 h2 {
+    font-size: 3rem; /* Adjust for mobile */
+  }
+
+  .final-draft5 p {
+    font-size: 0.9rem; /* Adjust font size */
+  }
+
+  .back-button5,
+  .see-more5 {
+    width: 60%;
+    margin: 20px;
+  }
 }
