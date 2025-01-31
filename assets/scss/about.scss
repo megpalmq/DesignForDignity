@@ -98,7 +98,7 @@ $map-height: 400px;
   justify-content: space-between;
   align-items: center;
   padding: 3rem;
-  background: linear-gradient(to bottom right, #201600, #443c23);
+  background: linear-gradient(to bottom right, $tan, $green);
   border-radius: 15px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   gap: 2rem;
@@ -109,7 +109,7 @@ $map-height: 400px;
     .section-title {
       font-size: 2.5rem;
       font-weight: bold;
-      color: #f7d2b2;
+      color: $brown;
       margin-bottom: 1.5rem;
       position: relative;
       text-transform: uppercase;
@@ -131,8 +131,8 @@ $map-height: 400px;
     .text-content {
       p {
         font-size: 1.2rem;
-        line-height: 1.8;
-        color: #f7d2b2;
+        line-height: 1.5;
+        color: $brown;
         margin-bottom: 1rem;
         animation: slideIn 1s ease forwards;
 
@@ -146,7 +146,7 @@ $map-height: 400px;
     }
     .seeMore {
       display: inline-block;
-      background: linear-gradient(45deg, #ff6f61, #ff9472);
+      background: linear-gradient(45deg, $orange, #ff9472);
       color: #fff;
       font-size: 1.2rem;
       font-weight: bold;
@@ -261,7 +261,7 @@ $map-height: 400px;
 // About Section
 .about-section {
   padding: 60px 0;
-  background-image: linear-gradient(to top, $brown 0%, $tan 100%);
+  background-image: linear-gradient(to top, $tan 0%, $green 100%);
   animation: fadeIn 1.5s ease-out;
 
   .section-title {
@@ -273,10 +273,6 @@ $map-height: 400px;
     margin-bottom: 30px;
     transition: color 0.3s ease;
     animation: slideUp 1.2s ease-out;
-
-    &:hover {
-      color: $accent-color;
-    }
   }
 
   .about-content {
@@ -287,14 +283,16 @@ $map-height: 400px;
     align-items: center;
     color: black;
     border-radius: 20px;
-    background-color: rgb(255, 245, 217);
+    background-color: $tan;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     opacity: 0;
     animation: fadeIn 1.5s ease-out 0.5s forwards;
 
+    width: 50%;
+
     .text-content {
       flex: 1;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       line-height: 1.6;
       color: #000000;
     }
@@ -320,32 +318,50 @@ $map-height: 400px;
   background-color: $brown;
   padding: 40px;
   width: 100%;
-  position: absolute;
+  height: 100vh; /* Ensure it takes the full height of the viewport */
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Align items vertically */
+  justify-content: center; /* Vertically center content */
+  align-items: center; /* Horizontally center content */
+  color: $tan;
+
   h2 {
     border-radius: 5px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-    width: 100%;
-    font-size: 30px;
-    font-weight: bolder;
+    width: 60%;
+    margin: 0 auto;
+    justify-self: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: 900;
     font-family: rl-aqva, sans-serif;
     font-style: normal;
-    font-weight: 900;
     color: $orange;
-    p {
-      width: 200px;
-      line-height: 1.6;
-    }
+    margin-bottom: 40px;
 
     .BonerCenterTitle {
       font-size: 2rem;
-
       font-family: rl-aqva, sans-serif;
       font-style: normal;
       font-weight: 900;
     }
   }
+
+  .TT {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    //text-align: center; /* Center the text */
+    margin: 0 auto; /* Center the content horizontally */
+    p {
+      line-height: 1.6;
+      color: $tan;
+      width: 60%; /* Set width to 60% for the paragraphs */
+      //text-align: center; /* Center paragraph text */
+      margin: 0 auto; /* Center the paragraph */
+    }
+  }
+
   .bonLogo {
     background-image: url(../images/bonLogo.png);
     background-position: center;
@@ -353,9 +369,10 @@ $map-height: 400px;
     background-size: cover;
     width: 500px;
     height: 150px;
-    margin: 0 auto;
+    margin-top: 20px; /* Space between text and logo */
   }
 }
+
 @media (max-width: 768px) {
   .bonerCenter {
     padding: 20px;
@@ -377,9 +394,6 @@ $map-height: 400px;
   background: linear-gradient(180deg, $tan, #e7d4b5);
   padding: 60px 0;
   animation: fadeIn 2s ease-out;
-
-  // Default padding
-  padding-top: 550px; // You can keep this value for larger screens
 
   .section-title {
     font-size: 2.5rem;
