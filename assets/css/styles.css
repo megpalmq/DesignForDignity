@@ -431,20 +431,23 @@ body {
 }
 .section5 {
   width: 100%;
-  background-color: #d2c29c;
+  padding-top: 100px;
+  background: linear-gradient(#669c8b, #d2c29c);
   display: flex;
-  height: 600px;
+  height: 700px;
   flex-direction: column;
   align-items: center;
   padding: 40px 0;
   /* Image Backgrounds */
 }
 .section5 h2 {
+  padding-top: 100px;
   font-size: 48px;
   font-weight: bold;
   color: #352d27;
   text-align: center;
   margin-bottom: 50px;
+  font-family: rl-aqva, sans-serif;
 }
 .section5 .image-row {
   display: flex;
@@ -820,8 +823,7 @@ body {
   transform: translateX(-50%); /* Centers the title horizontally */
   z-index: 1;
   opacity: 0;
-  font-size: 200px;
-  line-height: 72px;
+  font-size: 170px;
   color: white;
   font-family: "rl-aqva";
   font-weight: bolder;
@@ -835,7 +837,6 @@ body {
   width: 500px;
   color: white;
   font-size: 24px;
-  line-height: 32px;
   text-align: center;
   background-color: #806b6b;
   border-radius: 30px;
@@ -942,7 +943,7 @@ body {
   }
 }
 .projects {
-  background: linear-gradient(5deg, #669c8b 4%, #352d27 84%);
+  background: linear-gradient(5deg, #669c8b 4%, #806b6b 84%);
   padding-top: 100px;
   display: flex;
   flex-wrap: wrap;
@@ -984,7 +985,7 @@ body {
   border-radius: 30px;
   width: 80%;
   height: 250px;
-  background-image: url(../images/team1.png);
+  background-image: url(../images/FD/team1EN.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1542,7 +1543,7 @@ body {
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
-  background: linear-gradient(32deg, rgb(146, 144, 237) 13%, rgb(255, 182, 182) 74%);
+  background: linear-gradient(32deg, #479195 21%, #d2c29c 77%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1578,7 +1579,7 @@ body {
   margin-top: 30px;
   line-height: 27px;
   animation: fadeInUp 2s ease-out;
-  color: #ff7b7b;
+  color: #479195;
   padding: 10px;
   border-radius: 20px;
   background-color: white;
@@ -1604,7 +1605,7 @@ body {
 .section-title1 {
   font-size: 2.5rem;
   margin-bottom: 30px;
-  color: #ff7b7b;
+  color: #d2c29c;
   font-family: "rl-aqva", sans-serif;
 }
 
@@ -1630,7 +1631,7 @@ body {
   font-size: 2rem;
   margin-bottom: 15px;
   color: white;
-  background-color: #837fee;
+  background-color: #479195;
   width: 100%;
   border-radius: 50px;
   padding: 10px;
@@ -1649,14 +1650,14 @@ body {
 }
 
 .project-process1 li strong {
-  color: #ff7b7b;
+  color: #d2c29c;
 }
 
 .members1 {
   text-align: center;
   margin: 50px auto;
   padding: 20px;
-  background-color: #ffb6b6;
+  background-color: #d2c29c;
   border-radius: 10px;
   max-width: 80%;
 }
@@ -1677,7 +1678,7 @@ body {
   text-align: center;
   width: 200px;
   height: auto;
-  background-color: #837fee;
+  background-color: #479195;
   border-radius: 10px;
   padding: 15px;
   transition: transform 0.3s ease;
@@ -1704,7 +1705,7 @@ body {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: #ff7b7b;
+  background-color: #479195;
   transform: scaleX(0);
   transform-origin: bottom right;
   transition: transform 0.3s ease;
@@ -1738,6 +1739,45 @@ body {
   color: #555;
 }
 
+.koreanFeature {
+  background-color: #479195;
+  padding: 40px;
+  margin-top: 50px;
+  border-radius: 10px;
+}
+.koreanFeature .section-title1 {
+  font-size: 3.2rem;
+  color: #d2c29c;
+  margin-bottom: 20px;
+}
+.koreanFeature .korean-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.koreanFeature .korean-content .text-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  line-height: 1.5;
+}
+.koreanFeature .korean-content .text-content .scroll-animate {
+  font-size: 1.5rem;
+  color: #d2c29c;
+  width: 70%;
+}
+.koreanFeature .korean-content .korean-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.koreanFeature .korean-content .korean-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
 /* Gallery Section */
 .final-draft1 {
   padding: 50px 20px;
@@ -1748,7 +1788,7 @@ body {
 .final-draft1 h2 {
   font-size: 2.5rem;
   margin-bottom: 30px;
-  color: #ff7b7b;
+  color: #479195;
   font-family: "rl-aqva", sans-serif;
 }
 
@@ -1832,7 +1872,7 @@ body {
   position: absolute;
   top: 50%;
   padding: 16px;
-  color: white;
+  color: #d2c29c;
   font-size: 18px;
   font-weight: bold;
   background-color: rgba(0, 0, 0, 0.6);
@@ -1875,13 +1915,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; /* Stack buttons vertically */
-  margin-top: 20px;
+  flex-direction: column;
+  background-color: #479195;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 /* Back Button */
 .back-button1 {
-  background-color: #ff7b7b;
+  background-color: #479195;
   border: none;
   padding: 15px 30px;
   border-radius: 50px;

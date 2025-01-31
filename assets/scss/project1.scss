@@ -27,11 +27,7 @@ $heading-font: "rl-aqva", sans-serif;
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
-  background: linear-gradient(
-    32deg,
-    rgba(146, 144, 237, 1) 13%,
-    rgba(255, 182, 182, 1) 74%
-  );
+  background: linear-gradient(32deg, #479195 21%, $tan 77%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -66,7 +62,7 @@ $heading-font: "rl-aqva", sans-serif;
   margin-top: 30px;
   line-height: 27px;
   animation: fadeInUp 2s ease-out;
-  color: #ff7b7b;
+  color: #479195;
   padding: 10px;
   border-radius: 20px;
   background-color: white;
@@ -93,7 +89,7 @@ $heading-font: "rl-aqva", sans-serif;
 .section-title1 {
   font-size: 2.5rem;
   margin-bottom: 30px;
-  color: #ff7b7b;
+  color: $tan;
   font-family: $heading-font;
 }
 
@@ -119,7 +115,7 @@ $heading-font: "rl-aqva", sans-serif;
   font-size: 2rem;
   margin-bottom: 15px;
   color: white;
-  background-color: #837fee;
+  background-color: #479195;
   width: 100%;
   border-radius: 50px;
   padding: 10px;
@@ -138,14 +134,14 @@ $heading-font: "rl-aqva", sans-serif;
 }
 
 .project-process1 li strong {
-  color: #ff7b7b;
+  color: $tan;
 }
 
 .members1 {
   text-align: center;
   margin: 50px auto;
   padding: 20px;
-  background-color: #ffb6b6;
+  background-color: $tan;
   border-radius: 10px;
   max-width: 80%;
 
@@ -167,7 +163,7 @@ $heading-font: "rl-aqva", sans-serif;
       text-align: center;
       width: 200px;
       height: auto;
-      background-color: #837fee;
+      background-color: #479195;
       border-radius: 10px;
       padding: 15px;
       transition: transform 0.3s ease;
@@ -195,7 +191,7 @@ $heading-font: "rl-aqva", sans-serif;
           left: 0;
           width: 100%;
           height: 2px;
-          background-color: #ff7b7b;
+          background-color: #479195;
           transform: scaleX(0);
           transform-origin: bottom right;
           transition: transform 0.3s ease;
@@ -238,6 +234,51 @@ $heading-font: "rl-aqva", sans-serif;
     }
   }
 }
+.koreanFeature {
+  background-color: #479195;
+  padding: 40px;
+  margin-top: 50px;
+  border-radius: 10px;
+
+  .section-title1 {
+    font-size: 3.2rem;
+    color: $tan;
+    margin-bottom: 20px;
+  }
+
+  .korean-content {
+    display: flex;
+    flex-direction: row; // Arrange items horizontally
+    align-items: flex-start; // Align items to the top of the container
+    // justify-content: space-between; // Or flex-start, center, flex-end, etc. as needed
+
+    .text-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      line-height: 1.5;
+
+      .scroll-animate {
+        font-size: 1.5rem;
+        color: $tan;
+        width: 70%;
+      }
+    }
+
+    .korean-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+    }
+  }
+}
 
 /* Gallery Section */
 
@@ -250,7 +291,7 @@ $heading-font: "rl-aqva", sans-serif;
 .final-draft1 h2 {
   font-size: 2.5rem;
   margin-bottom: 30px;
-  color: #ff7b7b;
+  color: #479195;
   font-family: $heading-font;
 }
 
@@ -332,7 +373,7 @@ $heading-font: "rl-aqva", sans-serif;
   position: absolute;
   top: 50%;
   padding: 16px;
-  color: white;
+  color: $tan;
   font-size: 18px;
   font-weight: bold;
   background-color: rgba(0, 0, 0, 0.6);
@@ -374,13 +415,15 @@ $heading-font: "rl-aqva", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; /* Stack buttons vertically */
-  margin-top: 20px;
+  flex-direction: column;
+  background-color: #479195;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 /* Back Button */
 .back-button1 {
-  background-color: #ff7b7b;
+  background-color: #479195;
   border: none;
   padding: 15px 30px;
   border-radius: 50px;

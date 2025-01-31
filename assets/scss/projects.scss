@@ -86,8 +86,8 @@ $heading-font: "rl-aqva";
     transform: translateX(-50%); /* Centers the title horizontally */
     z-index: 1;
     opacity: 0;
-    font-size: 200px;
-    line-height: calc(6px * 12);
+    font-size: 170px;
+    //line-height: calc(6px * 12);
     color: white;
     font-family: $heading-font;
     font-weight: bolder;
@@ -102,7 +102,7 @@ $heading-font: "rl-aqva";
     width: 500px;
     color: white;
     font-size: 24px;
-    line-height: 32px;
+
     text-align: center;
     background-color: #806b6b;
     border-radius: 30px;
@@ -234,7 +234,7 @@ $heading-font: "rl-aqva";
 }
 
 .projects {
-  background: linear-gradient(5deg, $green 4%, $brown 84%);
+  background: linear-gradient(5deg, $green 4%, #806b6b 84%);
   padding-top: 100px;
   display: flex;
   flex-wrap: wrap;
@@ -277,7 +277,7 @@ $heading-font: "rl-aqva";
       border-radius: 30px;
       width: 80%;
       height: 250px;
-      background-image: url(../images/team1.png);
+      background-image: url(../images/FD/team1EN.png);
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
