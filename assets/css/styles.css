@@ -39,12 +39,12 @@ body {
 /* Navbar */
 .navbar {
   display: flex;
+  position: fixed;
   justify-content: space-between;
   align-items: center;
   padding: 1.2rem 0;
   background-color: #d2c29c;
   color: #352d27;
-  position: absolute;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
@@ -223,6 +223,10 @@ body {
   }
 }
 @media (max-width: 800px) {
+  .navbar .menu-toggle {
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+  }
   .hero1 {
     height: 50vh;
   }
@@ -235,6 +239,10 @@ body {
 @media (max-width: 480px) {
   .navbar {
     height: 6%;
+  }
+  .navbar .menu-toggle {
+    height: 80%;
+    padding-bottom: 4px;
   }
   .hero1 {
     height: 30vh;
