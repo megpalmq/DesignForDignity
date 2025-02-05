@@ -138,7 +138,13 @@ function openModal() {
 function closeModal() {
   document.getElementById("modal").style.display = "none";
 }
+function openModal(modalId) {
+  document.getElementById(modalId).style.display = "block";
+}
 
+function closeModal(modalId) {
+  document.getElementById(modalId).style.display = "none";
+}
 // Function to display the current slide
 function currentSlide(n) {
   showSlides((slideIndex = n));

@@ -316,9 +316,10 @@ body {
 /* Food Section */
 .section3 {
   display: flex;
+  background-color: $tan;
 
   .descBox1 {
-    width: 60%;
+    width: 800px;
     height: 500px;
     background-color: $tan;
     display: flex;
@@ -330,7 +331,7 @@ body {
       margin: 0 auto;
       color: $brown;
       font-size: 18px;
-      width: 70%;
+      width: 85%;
       line-height: 30px;
       align-items: center;
       font-family: transat-text, sans-serif;
@@ -424,10 +425,10 @@ body {
   }
 
   .descBox1 {
-    width: 85%; /* Adjust width to give some padding on the sides */
+    width: 100%; /* Adjust width to give some padding on the sides */
     height: 100%;
     padding: 20px;
-    margin: 20px 0;
+
     display: flex;
     justify-content: center;
     align-items: center;

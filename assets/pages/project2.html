@@ -36,8 +36,58 @@
         </ol>
       </div>
     </div>
+    <div class="process"></div>
   </section>
+ 
+  <div class="koreanFeature">
+    <h2 class="section-title2">Collaboration with Yonsei University</h2>
+    <div class="korean-content">
+      <div class="text-content">
+        <p class="scroll-animate">
+          This project was a collaborative effort between Herron School of Art + Design and Yonsei University in Seoul, South Korea. Together, we researched food insecurity in both cities and developed solutions to address the challenges faced by vulnerable populations. By leveraging our shared expertise, we created a design that was culturally relevant and adaptable to the needs of both communities.
+        </p>
+        <p class="scroll-animate">
+          Throughout this collaboration, our teams engaged in constant communication, exchanging ideas and feedback to ensure the project was culturally sensitive and impactful. Yonsei University provided valuable insights into the local needs of their community, allowing us to tailor the design to the unique challenges faced by residents in both Songdo and Seoul. This exchange of knowledge helped us develop a more comprehensive solution that bridges the gap between two very different but equally important communities.
+        </p>
+      </div>
+      <div class="korean-image scroll-animate" onclick="openModal('modalKorean')">
+        <img src="/assets/images/FD/team2Kr.png" alt="Yonsei University Collaboration" />
+    </div>
+    
+    <div id="modalKorean" class="modal2">
+        <span class="close2" onclick="closeModal('modalKorean')">&times;</span>
+        <div class="modal-content2">
+            <div class="slides">
+                <div class="slide">
+                    <img src="/assets/images/FD/team2Kr.png" alt="Yonsei University Collaboration" />
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    </div>
+    
+  </div>
 
+  <div class="final-draft2 scroll-animate">
+    <h2>Final Draft</h2>
+    <p>Click on the poster to see them up close.</p>
+  
+    <div class="poster-item2" onclick="openModal('modalEnglish')">
+      <div class="english2"></div>
+  </div>
+  
+  <div id="modalEnglish" class="modal2">
+      <span class="close2" onclick="closeModal('modalEnglish')">&times;</span>
+      <div class="modal-content2">
+          <div class="slides">
+              <div class="slide">
+                  <img src="/assets/images/FD/team2EN.png" alt="English Poster" />
+              </div>
+          </div>
+      </div>
+  </div>
+  </div>
   <section id="members" class="members2 scroll-animate">
     <h2 class="section-title2">Team Members</h2>
     <div class="member-list2">
@@ -83,40 +133,6 @@
       <p class="photo-description2">The team behind the Food Access project</p>
     </div>
   </section>
-  <div class="final-draft2">
-    <h2>Final Draft</h2>
-    <p>Click on the brochures to see them up close.</p>
-  
-    <div class="poster-thumbnails2 scroll-animate">
-      <div class="poster-item2" onclick="openModal(); currentSlide(1)">
-        <div class="english2"></div>
-      </div>
-      <div class="poster-item2" onclick="openModal(); currentSlide(2)">
-        <div class="korean2"></div> 
-      </div>
-    </div>
-  
-    <!-- Modal for full-screen view -->
-    <div id="modal" class="modal2">
-      <span class="close2" onclick="closeModal()">&times;</span>
-      <div class="modal-content2">
-        <div class="slides">
-          <!-- Slide 1 (English Poster) -->
-          <div class="slide">
-            <img src="/assets/images/FD/team2EN.png" alt="English Poster" />
-          </div>
-  
-          <div class="slide">
-            <img src="/assets/images/FD/team2Kr.png" alt="Korean Poster" />
-          </div>
-  
-          <!-- Navigation arrows -->
-          <a class="prev2" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next2" onclick="plusSlides(1)">&#10095;</a>
-        </div>
-      </div>
-    </div>
-  </div>
   <div class="button-container2">
     <a
       class="see-more2"
@@ -130,9 +146,9 @@
       <a href="#projects">Back to Projects</a>
     </button>
   
- 
+  
     
-  </div
+  </div>
     </div>
   </div>
 </div>
