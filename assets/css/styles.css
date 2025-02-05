@@ -764,76 +764,11 @@ body {
   display: block;
   width: 100%;
   height: 100vh;
-  overflow: hidden; /* Ensures overflow is hidden */
-}
-.hero__image {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  clip: rect(0, auto, auto, 0);
-  background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/dc/Indianapolis-indiana-from-above.jpg);
-  background-attachment: fixed;
+  overflow: hidden;
+  background-image: url(../images/VectorMap.jpg);
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
-}
-.hero__image--overlay {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  background: linear-gradient(to bottom, rgba(121, 85, 72, 0) 0%, rgba(121, 85, 72, 0.17) 21%, rgba(121, 85, 72, 0.5) 80%);
-  height: 100%; /* Keeps overlay covering entire area */
-}
-.hero__child {
-  position: fixed;
-  background-repeat: no-repeat;
-  backface-visibility: hidden;
-  opacity: 0.8;
-}
-.hero__child--primary {
-  top: -120px;
-  left: 50px;
-  width: 819px;
-  height: 1621px;
-  background-image: url(https://res.cloudinary.com/mihael/image/upload/v1548409393/codepen/cloud-2.png);
-}
-.hero__child--secondary {
-  top: 0;
-  right: 50px;
-  width: 300px;
-  height: 500px;
-  background-size: 300px auto;
-  background-image: url(https://res.cloudinary.com/mihael/image/upload/v1548409392/codepen/cloud-1.png);
-}
-.hero__title {
-  position: absolute;
-  top: 40vh;
-  left: 20%;
-  margin: 0 auto;
-  transform: translateX(-50%); /* Centers the title horizontally */
-  z-index: 1;
-  opacity: 0;
-  font-size: 170px;
-  color: white;
-  font-family: "rl-aqva";
-  font-weight: bolder;
-  text-align: center;
-}
-.hero__subtitle {
-  position: absolute;
-  top: 60vh;
-  left: 50%;
-  transform: translateX(-50%); /* Centers the subtitle horizontally */
-  width: 500px;
-  color: white;
-  font-size: 24px;
-  text-align: center;
-  background-color: #806b6b;
-  border-radius: 30px;
-  padding: 10px;
-  font-family: transat-text, sans-serif;
 }
 
 .animation--floating {
@@ -851,91 +786,8 @@ body {
   animation: from-bottom 350ms forwards cubic-bezier(0.65, 0.05, 0.36, 1);
 }
 
-@keyframes floating {
-  0% {
-    transform: translateY(0%);
-  }
-  50% {
-    transform: translateY(50%);
-  }
-  100% {
-    transform: translateY(0%);
-  }
-}
-@keyframes title-in {
-  0% {
-    visibility: hidden;
-    opacity: 0;
-    transform: translateY(-25%);
-  }
-  100% {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-}
-@keyframes from-top {
-  0% {
-    visibility: hidden;
-    opacity: 0;
-    transform: translateY(-30%);
-  }
-  100% {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-}
-@keyframes from-bottom {
-  0% {
-    visibility: hidden;
-    opacity: 0;
-    transform: translateY(15%);
-  }
-  100% {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-}
-@media (max-width: 1200px) {
-  .hero__title {
-    font-size: 150px; /* Adjusted font size */
-  }
-  .hero__subtitle {
-    font-size: 20px; /* Adjusted font size */
-  }
-}
-@media (max-width: 900px) {
-  .hero__title {
-    font-size: 120px; /* Adjusted font size */
-  }
-  .hero__subtitle {
-    font-size: 18px; /* Adjusted font size */
-  }
-}
-@media (max-width: 600px) {
-  .hero__title {
-    font-size: 75px;
-    left: 10%;
-  }
-  .hero__subtitle {
-    font-size: 14px;
-    width: 50%;
-  }
-}
-@media (max-width: 400px) {
-  .hero__title {
-    font-size: 75px;
-    left: 10%;
-  }
-  .hero__subtitle {
-    font-size: 14px;
-    width: 50%;
-  }
-}
 .projects {
-  background: linear-gradient(5deg, #669c8b 4%, #806b6b 84%);
+  background: linear-gradient(5deg, #669c8b 4%, #d2c29c 84%);
   padding-top: 100px;
   display: flex;
   flex-wrap: wrap;
@@ -1759,6 +1611,15 @@ body {
 
 .project-process1 li strong {
   color: #d2c29c;
+}
+
+.process {
+  background-image: url(../images/);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .members1 {
