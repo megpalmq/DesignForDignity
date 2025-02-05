@@ -318,8 +318,8 @@ body {
   display: flex;
 
   .descBox1 {
-    width: 65%;
-    height: 600px;
+    width: 60%;
+    height: 500px;
     background-color: $tan;
     display: flex;
     margin: 0 auto;
@@ -327,13 +327,12 @@ body {
     p {
       display: flex;
       justify-content: center;
-      padding-top: 90px;
       margin: 0 auto;
       color: $brown;
       font-size: 18px;
-      width: 60%;
+      width: 70%;
       line-height: 30px;
-
+      align-items: center;
       font-family: transat-text, sans-serif;
       font-style: normal;
       font-weight: 300;
@@ -341,32 +340,33 @@ body {
   }
 
   .farm {
-    background-image: url(../images/farm.jpeg);
+    background-image: url(../images/farmmm.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 900px;
-    height: 600px;
+    width: 700px;
+    height: 500px;
   }
 }
 
 .section4 {
   display: flex;
   .descBox1 {
-    width: 65%;
-    height: 600px;
+    width: 64.95%;
+    height: 500px;
     background-color: $green;
     display: flex;
     margin: 0 auto;
 
     p {
+      align-items: center;
       display: flex;
       justify-content: center;
       padding-top: 50px;
       margin: 0 auto;
       color: $brown;
       font-size: 18px;
-      width: 60%;
+      width: 70%;
       line-height: 30px;
       margin-top: 20px;
       font-family: transat-text, sans-serif;
@@ -381,7 +381,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     width: 900px;
-    height: 600px;
+    height: 500px;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -414,7 +414,6 @@ body {
     height: 250px;
 
     background-position: center; /* Keep the background centered */
-    margin-top: 20px;
   }
 }
 @media screen and (max-width: 900px) {
@@ -640,26 +639,9 @@ body {
     }
   }
 
-  .footer-social {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    gap: 15px;
-
-    a {
-      color: $brown;
-      font-size: 1.5rem;
-      transition: color 0.3s;
-
-      &:hover {
-        color: $orange;
-      }
-    }
-  }
-
   .footer-bottom {
     text-align: center;
-    font-size: 1rem;
+    font-size: 0.7rem;
     margin-top: 20px;
     color: $brown;
   }
@@ -715,7 +697,7 @@ body {
     .descBox1 {
       width: 100%;
       height: auto;
-      padding: 20px;
+
       text-align: center;
     }
     .farm {
@@ -731,7 +713,6 @@ body {
     .img-container {
       width: 80%;
       height: 100%;
-      margin: 25px;
     }
   }
 
