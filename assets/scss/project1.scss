@@ -145,6 +145,24 @@ $heading-font: "rl-aqva", sans-serif;
   margin: 0 auto;
   width: 800px;
   height: 600px;
+
+  // Media Queries for responsiveness
+  @media (max-width: 1200px) {
+    width: 700px !important; // Forcing the width change
+    height: 500px !important;
+  }
+
+  @media (max-width: 768px) {
+    width: 90% !important; // Forcing the width change
+    height: 400px !important;
+    background-position: top center !important;
+  }
+
+  @media (max-width: 480px) {
+    width: 100% !important; // Forcing the width change
+    height: 300px !important;
+    background-position: top center !important;
+  }
 }
 
 .koreanFeature {
@@ -163,7 +181,7 @@ $heading-font: "rl-aqva", sans-serif;
     display: flex;
     flex-direction: row; // Arrange items horizontally
     align-items: flex-start; // Align items to the top of the container
-    // justify-content: space-between; // Or flex-start, center, flex-end, etc. as needed
+    gap: 20px;
 
     .text-content {
       flex: 1;
@@ -190,6 +208,55 @@ $heading-font: "rl-aqva", sans-serif;
         border-radius: 10px;
       }
     }
+  }
+}
+@media (max-width: 1200px) {
+  .section-title1 {
+    font-size: 2.8rem !important; // Adjust font size for tablets and large screens
+  }
+
+  .korean-content {
+    flex-direction: row !important;
+    gap: 15px !important;
+  }
+
+  .text-content .scroll-animate {
+    width: 80% !important; // Make the text content wider on medium screens
+  }
+}
+
+@media (max-width: 768px) {
+  // Less padding on smaller screens
+  .section-title1 {
+    font-size: 2.4rem !important; // Further decrease font size on mobile
+    margin-bottom: 10px;
+  }
+
+  .korean-content {
+    flex-direction: column !important; // Stack content vertically on smaller screens
+    gap: 25px !important;
+  }
+
+  .text-content .scroll-animate {
+    font-size: 1.3rem !important; // Adjust font size for better readability
+    width: 90% !important; // Increase the width of text content for smaller screens
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title1 {
+    font-size: 2rem !important; // Smaller font size on very small screens
+    margin-bottom: 5px;
+  }
+
+  .korean-content {
+    flex-direction: column !important; // Continue stacking vertically
+    gap: 15px !important;
+  }
+
+  .text-content .scroll-animate {
+    font-size: 1.2rem !important; // Adjust font size for small devices
+    width: 100% !important; // Ensure text fills the screen width on mobile
   }
 }
 
@@ -649,3 +716,161 @@ $heading-font: "rl-aqva", sans-serif;
     margin: 20px;
   }
 }
+
+/* Tablet Screens */
+@media screen and (max-width: 768px) {
+  .project-hero1 {
+    height: 70vh;
+  }
+
+  .project-title1 {
+    font-size: 2.5rem;
+    width: 90%;
+    margin-top: 70px;
+  }
+
+  .project-description1 {
+    font-size: 1rem;
+    max-width: 90%;
+    margin-top: 20px;
+  }
+
+  .project-type1 {
+    font-size: 1.2rem;
+    width: 15%;
+    text-align: center;
+  }
+
+  .about1 {
+    padding: 30px 10px;
+  }
+
+  .section-title1 {
+    font-size: 2rem;
+  }
+
+  .project-info1 {
+    width: 90%;
+    font-size: 1rem;
+  }
+
+  .project-process1 {
+    padding: 0 20px;
+  }
+
+  .members1 {
+    padding: 10px;
+    margin: 20px 0;
+    max-width: 100%;
+  }
+
+  .member-list1 {
+    gap: 20px;
+  }
+
+  .poster-thumbnails1 {
+    display: flex;
+    align-items: center;
+  }
+
+  .poster-item1 {
+    width: 100%;
+    align-items: center;
+  }
+
+  .poster-item1 img {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .modal-content1 {
+    max-width: 100%;
+  }
+
+  .final-draft1 h2 {
+    font-size: 2rem;
+  }
+
+  .final-draft1 p {
+    font-size: 1rem;
+  }
+
+  .button-container1 {
+    flex-direction: column;
+  }
+
+  .back-button1 {
+    padding: 15px;
+  }
+
+  .see-more1 {
+    padding: 12px;
+  }
+}
+
+/* Smaller Mobile Screens */
+@media screen and (max-width: 480px) {
+  .project-hero1 {
+    height: 80vh;
+  }
+
+  .project-title1 {
+    font-size: 1.8rem;
+  }
+
+  .project-description1 {
+    font-size: 0.9rem;
+  }
+
+  .project-type1 {
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  .about1 {
+    padding: 20px 10px;
+  }
+
+  .section-title1 {
+    font-size: 1.8rem;
+  }
+
+  .project-info1 {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .members1 {
+    margin: 10px 0;
+  }
+
+  .member-list1 {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+
+  .poster-item1 {
+    width: 100%;
+  }
+
+  .modal-content1 {
+    max-width: 100%;
+  }
+
+  .final-draft1 h2 {
+    font-size: 1.8rem;
+  }
+
+  .final-draft1 p {
+    font-size: 0.9rem;
+  }
+
+  .back-button1,
+  .see-more1 {
+    width: 60%;
+    margin: 20px;
+  }
+}
+//korean
