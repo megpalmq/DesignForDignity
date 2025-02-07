@@ -110,6 +110,8 @@ $map-height: 400px;
     padding: 20px;
     justify-content: space-between;
     gap: 20px;
+    width: 400px;
+    padding-bottom: 20px;
     margin-top: 20px;
     align-items: center;
     color: black;
@@ -119,13 +121,14 @@ $map-height: 400px;
     opacity: 0;
     animation: fadeIn 1.5s ease-out 0.5s forwards;
 
-    width: 50%;
-
     .text-content {
       flex: 1;
       font-size: 1.2rem;
       line-height: 1.6;
       color: #000000;
+      p {
+        width: 500px;
+      }
     }
 
     .collab {
@@ -143,133 +146,199 @@ $map-height: 400px;
       }
     }
   }
-}
-.about-section {
-  background-image: linear-gradient(to top, $tan 0%, $green 100%);
-  animation: fadeIn 1.5s ease-out;
-  padding-bottom: 50px;
 
-  .indymap {
-    background-image: url(../images/infographic.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 950px;
-    width: 100%;
+  .container {
     animation: fadeIn 1.5s ease-out;
-  }
-
-  .section-title {
-    margin-top: 100px;
-    font-size: 2.5rem;
-    font-family: $heading-font;
-    text-align: center;
-    color: $primary-color;
-    margin-bottom: 30px;
-    transition: color 0.3s ease;
-    animation: slideUp 1.2s ease-out;
-  }
-
-  .about-content {
-    padding: 20px;
-    justify-content: space-between;
-    gap: 20px;
-    margin-top: 20px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    display: flex; // Ensure flex is applied
+    flex-direction: row;
+    justify-content: space-between; // Add spacing
     align-items: center;
-    color: black;
-    border-radius: 20px;
-    background-color: $tan;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    opacity: 0;
-    animation: fadeIn 1.5s ease-out 0.5s forwards;
-    width: 50%;
+    gap: 20px;
+    .containerMap {
+      padding: 20px;
+      height: 100%;
+      border-radius: 50px;
 
-    .text-content {
-      flex: 1;
-      font-size: 1.2rem;
-      line-height: 1.6;
-      color: #000000;
-    }
+      .indymap {
+        background-image: url(../images/infographic.jpg);
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        background-repeat: no-repeat;
+        background-size: cover;
+        //height: 950px;
+        width: 100%;
+        animation: fadeIn 1.5s ease-out;
+      }
 
-    .collab {
-      background-image: url(../images/about-collaboration.jpg);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: 100%;
-      height: 80%;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-      &:hover {
-        transform: scale(1.05);
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+      .section-title {
+        font-size: 2.5rem;
+        font-family: $heading-font;
+        text-align: center;
+        color: $primary-color;
+        margin-bottom: 30px;
+        transition: color 0.3s ease;
+        animation: slideUp 1.2s ease-out;
+        h2 {
+          height: 100%;
+        }
       }
     }
-  }
-
-  // Responsive Adjustments
-  @media (max-width: 1024px) {
-    .indymap {
-      height: 700px;
-      width: 100%;
-    }
-
     .about-content {
-      width: 70%;
+      padding: 20px;
+      justify-content: space-between;
+      gap: 20px;
+      margin-top: 20px;
+      align-items: center;
+      color: black;
+      border-radius: 20px;
+      background-color: $tan;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      opacity: 0;
+      animation: fadeIn 1.5s ease-out 0.5s forwards;
+      width: 50%;
+
+      .text-content {
+        flex: 1;
+        font-size: 1.2rem;
+        line-height: 1.6;
+        color: #000000;
+      }
+
+      .collab {
+        background-image: url(../images/about-collaboration.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 80%;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+          transform: scale(1.05);
+          box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
+      }
     }
 
-    .section-title {
-      font-size: 2rem;
-      margin-top: 80px;
+    // Responsive Adjustments
+    @media (max-width: 1024px) {
+      .indymap {
+        height: 700px;
+        width: 100%;
+      }
+
+      .about-content {
+        width: 70%;
+      }
+
+      .section-title {
+        font-size: 2rem;
+        margin-top: 80px;
+      }
+
+      .text-content {
+        font-size: 1.1rem;
+      }
     }
 
-    .text-content {
-      font-size: 1.1rem;
+    @media (max-width: 768px) {
+      padding-bottom: 100px;
+
+      .indymap {
+        height: 400px;
+        width: 100%;
+      }
+
+      .about-content {
+        width: 90%; // Make the box wider on mobile
+        padding: 15px;
+      }
+
+      .section-title {
+        font-size: 1.8rem;
+        margin-top: 60px;
+      }
+
+      .text-content {
+        font-size: 1rem;
+        line-height: 1.5;
+      }
     }
-  }
 
-  @media (max-width: 768px) {
-    padding-bottom: 100px;
+    @media (max-width: 480px) {
+      .indymap {
+        height: 300px;
+        width: 100%;
+      }
 
-    .indymap {
-      height: 400px;
-      width: 100%;
+      .about-content {
+        width: 95%; // Make the Indiana tan box wider
+        padding: 10px;
+      }
+
+      .section-title {
+        font-size: 1.5rem;
+        margin-top: 40px;
+      }
+
+      .text-content {
+        font-size: 0.9rem;
+      }
     }
-
-    .about-content {
-      width: 90%; // Make the box wider on mobile
-      padding: 15px;
-    }
-
-    .section-title {
-      font-size: 1.8rem;
+    .food-insecurity-section {
       margin-top: 60px;
-    }
+      background-color: $tan;
 
-    .text-content {
-      font-size: 1rem;
-      line-height: 1.5;
-    }
-  }
+      animation: fadeIn 2s ease-out;
+      border-radius: 20px;
 
-  @media (max-width: 480px) {
-    .indymap {
-      height: 300px;
-      width: 100%;
-    }
+      .section-title {
+        font-size: 2.5rem;
+        text-align: center;
+        color: $primary-color;
 
-    .about-content {
-      width: 95%; // Make the Indiana tan box wider
-      padding: 10px;
-    }
+        animation: slideUp 1.5s ease-out;
+        font-family: rl-aqva, sans-serif;
+        font-style: normal;
+        font-weight: 900;
+      }
 
-    .section-title {
-      font-size: 1.5rem;
-      margin-top: 40px;
-    }
+      p {
+        color: black;
+      }
 
-    .text-content {
-      font-size: 0.9rem;
+      .map-container {
+        text-align: center;
+        opacity: 0;
+        animation: fadeIn 1.5s ease-out 1s forwards;
+
+        #map {
+          height: $map-height;
+          width: 100%;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease;
+
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+
+        .map-instructions {
+          font-size: 1rem;
+          margin-top: 20px;
+          color: $brown;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: $primary-color;
+          }
+        }
+      }
     }
   }
 }
@@ -350,63 +419,12 @@ $map-height: 400px;
   }
 }
 
-.food-insecurity-section {
-  background: linear-gradient(180deg, $tan, #e7d4b5);
-  padding: 60px 0;
-  animation: fadeIn 2s ease-out;
-
-  .section-title {
-    font-size: 2.5rem;
-    text-align: center;
-    color: $primary-color;
-    margin-bottom: 30px;
-    animation: slideUp 1.5s ease-out;
-    font-family: rl-aqva, sans-serif;
-    font-style: normal;
-    font-weight: 900;
-  }
-
-  p {
-    color: black;
-  }
-
-  .map-container {
-    position: relative;
-    text-align: center;
-    opacity: 0;
-    animation: fadeIn 1.5s ease-out 1s forwards;
-
-    #map {
-      height: $map-height;
-      width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-
-      &:hover {
-        transform: scale(1.05);
-      }
-    }
-
-    .map-instructions {
-      font-size: 1rem;
-      margin-top: 20px;
-      color: #807092;
-      transition: color 0.3s ease;
-
-      &:hover {
-        color: $primary-color;
-      }
-    }
-  }
-}
 .container2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 3rem;
   background: linear-gradient(to bottom right, $tan, $green);
-  border-radius: 15px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   gap: 2rem;
   .infographic {

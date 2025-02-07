@@ -584,7 +584,8 @@ body {
   color: #352d27;
 }
 .footer .footer-bottom {
-  text-align: center;
+  display: flex;
+  justify-content: flex-end;
   font-size: 0.7rem;
   margin-top: 20px;
   color: #352d27;
@@ -651,13 +652,14 @@ body {
   }
   .section5 .img-container {
     width: 80%;
-    height: 100%;
+    height: 150px;
   }
   /* Footer */
   .footer .footer-grid {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-top: 150px;
   }
   .footer .footer-links {
     flex-direction: column;
@@ -1052,6 +1054,8 @@ body {
   padding: 20px;
   justify-content: space-between;
   gap: 20px;
+  width: 400px;
+  padding-bottom: 20px;
   margin-top: 20px;
   align-items: center;
   color: black;
@@ -1060,13 +1064,15 @@ body {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   opacity: 0;
   animation: fadeIn 1.5s ease-out 0.5s forwards;
-  width: 50%;
 }
 .about-section .about-content .text-content {
   flex: 1;
   font-size: 1.2rem;
   line-height: 1.6;
   color: #000000;
+}
+.about-section .about-content .text-content p {
+  width: 500px;
 }
 .about-section .about-content .collab {
   background-image: url(../images/about-collaboration.jpg);
@@ -1081,23 +1087,33 @@ body {
   transform: scale(1.05);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
-
-.about-section {
-  background-image: linear-gradient(to top, #d2c29c 0%, #669c8b 100%);
+.about-section .container {
   animation: fadeIn 1.5s ease-out;
   padding-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
 }
-.about-section .indymap {
+.about-section .container .containerMap {
+  padding: 20px;
+  height: 100%;
+  border-radius: 50px;
+}
+.about-section .container .containerMap .indymap {
   background-image: url(../images/infographic.jpg);
   background-position: center;
+  display: flex;
+  flex-direction: column;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 950px;
   width: 100%;
   animation: fadeIn 1.5s ease-out;
 }
-.about-section .section-title {
-  margin-top: 100px;
+.about-section .container .containerMap .section-title {
   font-size: 2.5rem;
   font-family: "rl-aqva", sans-serif;
   text-align: center;
@@ -1106,7 +1122,10 @@ body {
   transition: color 0.3s ease;
   animation: slideUp 1.2s ease-out;
 }
-.about-section .about-content {
+.about-section .container .containerMap .section-title h2 {
+  height: 100%;
+}
+.about-section .container .about-content {
   padding: 20px;
   justify-content: space-between;
   gap: 20px;
@@ -1120,13 +1139,13 @@ body {
   animation: fadeIn 1.5s ease-out 0.5s forwards;
   width: 50%;
 }
-.about-section .about-content .text-content {
+.about-section .container .about-content .text-content {
   flex: 1;
   font-size: 1.2rem;
   line-height: 1.6;
   color: #000000;
 }
-.about-section .about-content .collab {
+.about-section .container .about-content .collab {
   background-image: url(../images/about-collaboration.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -1135,63 +1154,105 @@ body {
   height: 80%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.about-section .about-content .collab:hover {
+.about-section .container .about-content .collab:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 @media (max-width: 1024px) {
-  .about-section .indymap {
+  .about-section .container .indymap {
     height: 700px;
     width: 100%;
   }
-  .about-section .about-content {
+  .about-section .container .about-content {
     width: 70%;
   }
-  .about-section .section-title {
+  .about-section .container .section-title {
     font-size: 2rem;
     margin-top: 80px;
   }
-  .about-section .text-content {
+  .about-section .container .text-content {
     font-size: 1.1rem;
   }
 }
 @media (max-width: 768px) {
-  .about-section {
+  .about-section .container {
     padding-bottom: 100px;
   }
-  .about-section .indymap {
+  .about-section .container .indymap {
     height: 400px;
     width: 100%;
   }
-  .about-section .about-content {
+  .about-section .container .about-content {
     width: 90%;
     padding: 15px;
   }
-  .about-section .section-title {
+  .about-section .container .section-title {
     font-size: 1.8rem;
     margin-top: 60px;
   }
-  .about-section .text-content {
+  .about-section .container .text-content {
     font-size: 1rem;
     line-height: 1.5;
   }
 }
 @media (max-width: 480px) {
-  .about-section .indymap {
+  .about-section .container .indymap {
     height: 300px;
     width: 100%;
   }
-  .about-section .about-content {
+  .about-section .container .about-content {
     width: 95%;
     padding: 10px;
   }
-  .about-section .section-title {
+  .about-section .container .section-title {
     font-size: 1.5rem;
     margin-top: 40px;
   }
-  .about-section .text-content {
+  .about-section .container .text-content {
     font-size: 0.9rem;
   }
+}
+.about-section .container .food-insecurity-section {
+  margin-top: 60px;
+  background-color: #d2c29c;
+  animation: fadeIn 2s ease-out;
+  border-radius: 20px;
+}
+.about-section .container .food-insecurity-section .section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #352d27;
+  animation: slideUp 1.5s ease-out;
+  font-family: rl-aqva, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+}
+.about-section .container .food-insecurity-section p {
+  color: black;
+}
+.about-section .container .food-insecurity-section .map-container {
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out 1s forwards;
+}
+.about-section .container .food-insecurity-section .map-container #map {
+  height: 400px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.about-section .container .food-insecurity-section .map-container #map:hover {
+  transform: scale(1.05);
+}
+.about-section .container .food-insecurity-section .map-container .map-instructions {
+  font-size: 1rem;
+  margin-top: 20px;
+  color: #352d27;
+  transition: color 0.3s ease;
+}
+.about-section .container .food-insecurity-section .map-container .map-instructions:hover {
+  color: #352d27;
 }
 
 .bonerCenter {
@@ -1260,57 +1321,12 @@ body {
     height: 100px;
   }
 }
-.food-insecurity-section {
-  background: linear-gradient(180deg, #d2c29c, #e7d4b5);
-  padding: 60px 0;
-  animation: fadeIn 2s ease-out;
-}
-.food-insecurity-section .section-title {
-  font-size: 2.5rem;
-  text-align: center;
-  color: #352d27;
-  margin-bottom: 30px;
-  animation: slideUp 1.5s ease-out;
-  font-family: rl-aqva, sans-serif;
-  font-style: normal;
-  font-weight: 900;
-}
-.food-insecurity-section p {
-  color: black;
-}
-.food-insecurity-section .map-container {
-  position: relative;
-  text-align: center;
-  opacity: 0;
-  animation: fadeIn 1.5s ease-out 1s forwards;
-}
-.food-insecurity-section .map-container #map {
-  height: 400px;
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-.food-insecurity-section .map-container #map:hover {
-  transform: scale(1.05);
-}
-.food-insecurity-section .map-container .map-instructions {
-  font-size: 1rem;
-  margin-top: 20px;
-  color: #807092;
-  transition: color 0.3s ease;
-}
-.food-insecurity-section .map-container .map-instructions:hover {
-  color: #352d27;
-}
-
 .container2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 3rem;
   background: linear-gradient(to bottom right, #d2c29c, #669c8b);
-  border-radius: 15px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   gap: 2rem;
 }

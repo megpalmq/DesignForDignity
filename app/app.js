@@ -103,6 +103,10 @@ function initURLListener() {
 $(document).ready(function () {
   initURLListener();
   changeRoute();
+  $("video").on("ended", function () {
+    $(this).get(0).currentTime = 0; // Reset to start
+    $(this).get(0).play(); // Play again
+  });
 });
 $(window).on("hashchange", changeRoute);
 if ($("#map").length > 0) {
