@@ -43,8 +43,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1.2rem 0;
-  background-color: #d2c29c;
-  color: #352d27;
+  background-color: #352d27;
+  color: tan;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
@@ -59,11 +59,10 @@ body {
   font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
-  color: #352d27;
+  color: #d2c29c;
   letter-spacing: 1px;
   text-decoration: none;
-  padding: 10px;
-  font-family: rl-aqva, sans-serif;
+  padding: 20px;
   font-style: normal;
   font-weight: 900;
 }
@@ -83,8 +82,6 @@ body {
   color: white;
   font-size: 1rem;
   padding: 0.5rem 0;
-  font-family: transat-text, sans-serif;
-  font-style: oblique;
   font-weight: 300;
 }
 .navbar .nav-links li a:hover {
@@ -96,7 +93,8 @@ body {
   bottom: 0;
   left: 0;
   width: 0;
-  height: 2px;
+  height: 4px;
+  border-radius: 10px;
   background: #c05126;
   transition: width 0.3s ease;
 }
@@ -273,6 +271,7 @@ body {
   align-items: center;
   color: #d2c29c;
   text-align: center;
+  flex-direction: column;
 }
 .saying h3 {
   width: 60%;
@@ -293,50 +292,27 @@ body {
   }
 }
 /* Food Section */
-.section3 {
-  display: flex;
-  background-color: #d2c29c;
-}
-.section3 .descBox1 {
-  width: 800px;
-  height: 500px;
-  background-color: #d2c29c;
-  display: flex;
-  margin: 0 auto;
-}
-.section3 .descBox1 p {
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-  color: #352d27;
-  font-size: 18px;
-  width: 85%;
-  line-height: 30px;
-  align-items: center;
-  font-family: transat-text, sans-serif;
-  font-style: normal;
-  font-weight: 300;
-}
-.section3 .farm {
-  background-image: url(../images/farmmm.jpg);
+.groupimage {
+  background-image: url(../images/collab.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 700px;
-  height: 500px;
+  width: 100%;
+  height: 800px;
 }
 
 .section4 {
   display: flex;
+  background-color: #669c8b;
 }
-.section4 .descBox1 {
-  width: 64.95%;
+.section4 .descBox2 {
   height: 500px;
   background-color: #669c8b;
   display: flex;
   margin: 0 auto;
+  gap: 40px;
 }
-.section4 .descBox1 p {
+.section4 .descBox2 p {
   align-items: center;
   display: flex;
   justify-content: center;
@@ -344,20 +320,36 @@ body {
   margin: 0 auto;
   color: #352d27;
   font-size: 18px;
-  width: 70%;
+  width: 600px;
   line-height: 30px;
   margin-top: 20px;
   font-family: transat-text, sans-serif;
   font-style: normal;
   font-weight: 300;
+  padding-bottom: 80px;
 }
-.section4 .farm {
-  background-image: url(../images/collab.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 900px;
-  height: 500px;
+.section4 .descBox2 .descBox3 {
+  padding-top: 50px;
+  background-color: #669c8b;
+  height: 300px;
+}
+.section4 .descBox2 .descBox3 h3 {
+  font-size: 24px;
+  padding-top: 80px;
+  color: #352d27;
+}
+.section4 .descBox2 .descBox3 .p2 {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  color: #352d27;
+  font-size: 18px;
+  width: 400px;
+  line-height: 30px;
+  font-family: transat-text, sans-serif;
+  font-weight: 300;
+  padding-bottom: 50px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -437,86 +429,6 @@ body {
     flex-grow: 0; /* Prevent the farm box from growing */
   }
 }
-.section5 {
-  width: 100%;
-  padding-top: 100px;
-  background: linear-gradient(#669c8b, #d2c29c);
-  display: flex;
-  height: 700px;
-  flex-direction: column;
-  align-items: center;
-  padding: 40px 0;
-  /* Image Backgrounds */
-}
-.section5 h2 {
-  padding-top: 100px;
-  font-size: 48px;
-  font-weight: bold;
-  color: #352d27;
-  text-align: center;
-  margin-bottom: 50px;
-  font-family: rl-aqva, sans-serif;
-}
-.section5 .image-row {
-  display: flex;
-  justify-content: center; /* Centers the images */
-  align-items: center; /* Keeps images aligned */
-  gap: 40px; /* Adds space between images */
-  width: 100%; /* Ensures the row spans full width */
-  flex-wrap: wrap; /* Prevents overflow on smaller screens */
-}
-.section5 .img-container {
-  position: relative;
-  width: 400px;
-  height: 300px;
-  border-radius: 30px;
-  overflow: hidden;
-  box-shadow: 10px 5px 5px rgba(84, 64, 53, 0.4);
-  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
-}
-.section5 .img-container:hover {
-  transform: translateY(-3px) scale(1.02); /* Soft lift */
-  box-shadow: 12px 6px 10px rgba(200, 108, 55, 0.5);
-}
-.section5 .img-container .hover-text {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 20px;
-  font-weight: bold;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 30px;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-.section5 .img-container:hover .hover-text {
-  opacity: 1;
-}
-.section5 .img1,
-.section5 .img2,
-.section5 .img3 {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-}
-.section5 .img1 {
-  background-image: url(../images/img1.png);
-}
-.section5 .img2 {
-  background-image: url(../images/img2.png);
-}
-.section5 .img3 {
-  background-image: url(../images/img3.png);
-}
-
 .scroll-animate {
   opacity: 0;
   transform: translateY(50px);
@@ -761,34 +673,205 @@ body {
   float: right;
 }
 
-.hero {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  background-image: url(../images/VectorMap.jpg);
-  background-repeat: no-repeat;
+.topImage {
+  background: linear-gradient(5deg, #d2c29c 4%, #669c8b 94%);
+  height: 110vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 20vh;
+  transition: all 0.5s ease;
+}
+@media (max-width: 1024px) {
+  .topImage {
+    padding-top: 15vh;
+    height: auto;
+  }
+}
+@media (max-width: 768px) {
+  .topImage {
+    padding-top: 15vh;
+  }
+}
+@media (max-width: 450px) {
+  .topImage {
+    padding-top: 25vh;
+    padding: 5vw;
+  }
+}
+.topImage .TM {
+  background-image: url(../images/process.png);
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  min-height: 40vh;
+  display: flex;
+  margin: 0 auto;
+  transition: transform 0.3s ease-in-out;
+}
+.topImage .TM:hover {
+  transform: scale(1.05);
+}
+@media (max-width: 1024px) {
+  .topImage .TM {
+    min-height: 30vh;
+  }
+}
+@media (max-width: 768px) {
+  .topImage .TM {
+    min-height: 25vh;
+  }
+}
+.topImage .triangle {
+  background-image: url(../images/triangle.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  min-height: 40vh;
+  display: flex;
+  margin: 0 auto;
+  transition: transform 0.3s ease-in-out;
+}
+.topImage .triangle:hover {
+  transform: scale(1.05);
+}
+@media (max-width: 1024px) {
+  .topImage .triangle {
+    min-height: 30vh;
+  }
+}
+@media (max-width: 768px) {
+  .topImage .triangle {
+    min-height: 25vh;
+  }
+}
+
+.section3 {
+  display: flex;
+  background: linear-gradient(#d2c29c, #669c8b);
+}
+.section3 .descBox1 {
+  width: 600px;
+  height: 500px;
+  display: flex;
+  margin: 0 auto;
+}
+.section3 .descBox1 p {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  color: #352d27;
+  font-size: 18px;
+  line-height: 30px;
+  align-items: center;
+  font-family: transat-text, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+.section3 .farm {
+  background-image: url(../images/farmmm.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
+  width: 700px;
+  height: 500px;
+  border-radius: 20px 0px 0px 20px;
 }
 
-.animation--floating {
-  animation-name: floating;
-  animation-duration: 200000ms;
-  animation-iteration-count: infinite;
+.section5 {
+  width: 100%;
+  padding-top: 100px;
+  background-color: #669c8b;
+  display: flex;
+  height: 700px;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0;
+  /* Image Backgrounds */
 }
-.animation--title-in {
-  animation: title-in 800ms forwards ease-in-out 750ms;
+.section5 h2 {
+  padding-top: 100px;
+  font-size: 48px;
+  font-weight: bold;
+  color: #352d27;
+  text-align: center;
+  margin-bottom: 50px;
+  font-family: rl-aqva, sans-serif;
 }
-.animation--from-top {
-  animation: from-top 350ms forwards cubic-bezier(0.65, 0.05, 0.36, 1);
+.section5 .image-row {
+  display: flex;
+  justify-content: center; /* Centers the images */
+  align-items: center; /* Keeps images aligned */
+  gap: 40px; /* Adds space between images */
+  width: 100%; /* Ensures the row spans full width */
+  flex-wrap: wrap; /* Prevents overflow on smaller screens */
 }
-.animation--from-bottom {
-  animation: from-bottom 350ms forwards cubic-bezier(0.65, 0.05, 0.36, 1);
+.section5 .img-container {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 10px 5px 5px rgba(84, 64, 53, 0.4);
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+.section5 .img-container:hover {
+  transform: translateY(-3px) scale(1.02); /* Soft lift */
+  box-shadow: 12px 6px 10px rgba(200, 108, 55, 0.5);
+}
+.section5 .img-container .hover-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 20px;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 30px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.section5 .img-container:hover .hover-text {
+  opacity: 1;
+}
+.section5 .img1,
+.section5 .img2,
+.section5 .img3 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+.section5 .img1 {
+  background-image: url(../images/img1.png);
+}
+.section5 .img2 {
+  background-image: url(../images/img2.png);
+}
+.section5 .img3 {
+  background-image: url(../images/img3.png);
 }
 
-.projects {
+.proj .prodTitle {
+  font-size: 55px;
+  font-family: rl-aqva, sans-serif;
+  flex-direction: column;
+  height: auto;
+  display: flex;
+  color: #352d27;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #669c8b;
+}
+.proj .projects {
   background: linear-gradient(5deg, #352d27 4%, #669c8b 94%);
   padding-top: 100px;
   display: flex;
@@ -797,7 +880,7 @@ body {
   justify-content: center;
   margin: 0 auto;
 }
-.projects .project-card {
+.proj .projects .project-card {
   background-color: #d2c29c;
   text-decoration: none;
   border-radius: 50px;
@@ -809,108 +892,107 @@ body {
   box-sizing: border-box;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
   font-family: transat-text, sans-serif;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 100px;
 }
-.projects .project-card:hover {
+.proj .projects .project-card:hover {
   background-color: #669c8b;
   transform: scale(1);
 }
-.projects .project-card h2 {
+.proj .projects .project-card h2 {
   margin: 0 auto;
   margin-top: 10px;
   margin-bottom: 10px;
   color: #352d27;
+  align-items: center;
   font-family: "rl-aqva";
+  text-align: center;
+  font-size: 32px;
 }
-.projects .project-card a {
+.proj .projects .project-card a {
   text-decoration: none;
   color: black;
 }
-.projects .project-card .project-image {
+.proj .projects .project-card .project-image {
   margin: 0 auto;
   border-radius: 30px;
-  width: 60%;
-  height: 270px;
+  width: 80%;
+  height: 300px;
   background-image: url(../mockups/team1.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.projects .project-card .project-image2 {
+.proj .projects .project-card .project-image2 {
   margin: 0 auto;
   border-radius: 30px;
-  width: 60%;
-  height: 250px;
+  width: 80%;
+  height: 300px;
   background-image: url(../mockups/team2.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.projects .project-card .project-image3 {
+.proj .projects .project-card .project-image3 {
   margin: 0 auto;
   border-radius: 30px;
-  width: 60%;
-  height: 250px;
+  width: 80%;
+  height: 300px;
   background-image: url(../mockups/team3.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.projects .project-card .project-image4 {
+.proj .projects .project-card .project-image4 {
   margin: 0 auto;
   border-radius: 30px;
-  width: 60%;
-  height: 250px;
+  width: 80%;
+  height: 300px;
   background-image: url(../mockups/team4.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.projects .project-card .project-image5 {
+.proj .projects .project-card .project-image5 {
   margin: 0 auto;
   border-radius: 30px;
-  width: 60%;
-  height: 250px;
+  width: 80%;
+  height: 300px;
   background-image: url(../mockups/team5.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.projects .project-card .project-image6 {
+.proj .projects .project-card .project-image6 {
   margin: 0 auto;
   border-radius: 30px;
-  width: 60%;
-  height: 250px;
+  width: 80%;
+  height: 300px;
   background-image: url(../mockups/team6.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.projects .project-card .project-image7 {
+.proj .projects .project-card .project-image7 {
   margin: 0 auto;
   border-radius: 30px;
-  width: 60%;
-  height: 250px;
+  width: 80%;
+  height: 300px;
   background-image: url(../mockups/team7.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.projects .project-card .project-image8 {
+.proj .projects .project-card .project-image8 {
   margin: 0 auto;
   border-radius: 30px;
-  width: 60%;
-  height: 250px;
+  width: 80%;
+  height: 300px;
   background-image: url(../mockups/team8.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-.projects .project-card .project-details p {
-  margin: 0 auto;
-  width: 100%;
-  text-align: center;
-  margin-top: 10px;
 }
 
 @media (max-width: 1200px) {
