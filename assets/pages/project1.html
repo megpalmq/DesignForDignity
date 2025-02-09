@@ -1,79 +1,62 @@
+<!-- Hero Section -->
 <div id="project1" class="project-page">
-  <!-- Hero Section -->
   <div id="top"></div>
   <div class="project-hero1">
     <div class="hero-overlay1">
       <h1 class="project-title1">
-        Food Access in Indianapolis and Songdo/ Seoul
+        Food Access in Indianapolis and Songdo/Seoul
       </h1>
-      
       <p class="project-description1">
         This collaborative project was aimed at addressing food insecurity and
-        sustainability. We worked with local communities in
-        Indianapolis to develop a design that would encourage sustainable food
-        practices while ensuring that vulnerable populations had access to
-        healthy meals.
+        sustainability. We worked with local communities in Indianapolis to
+        develop a design that would encourage sustainable food practices while
+        ensuring that vulnerable populations had access to healthy meals.
       </p>
       <p class="project-type1">Infographic Posters</p>
     </div>
   </div>
 
+  <section class="finalDrafts">
+    <div class="upText">
+      <h2>Final Drafts</h2>
+      <p>Click on the poster to see them up close.</p>
+    </div>
+
+    <div class="drafts">
+      <!-- English Poster -->
+      <div class="poster-thumbnails1">
+        <div class="poster-item1" onclick="openModal(); currentSlide(1)">
+          <div class="english1"></div>
+          <p>Indiana poster</p>
+        </div>
+        <div class="poster-item1" onclick="openModal(); currentSlide(2)">
+          <div class="korean1"></div>
+        </div>
+      </div>
+
+      <!-- Modal for full-screen view -->
+      <div id="modal" class="modal2">
+        <span class="close2" onclick="closeModal()">&times;</span>
+        <div class="modal-content2">
+          <div class="slides">
+            <!-- Slide 1 (English Poster) -->
+            <div class="slide">
+              <img src="/assets/images/FD/team1EN.png" alt="English Poster" />
+            </div>
+            <div class="slide2">
+              <img src="/assets/images/FD/team1Kr.png" alt="Korean Poster" />
+            </div>
+            <!-- Navigation arrows -->
+            <a class="prev2" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next2" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  
-
-  
-
-  <div class="koreanFeature">
-    <h2 class="section-title1">Collaboration with Yonsei University</h2>
-    <div class="korean-content">
-      <div class="text-content">
-        <p class="scroll-animate">
-          This project was a collaborative effort between Herron School of Art + Design and Yonsei University in Seoul, South Korea. Together, we researched food insecurity in both cities and developed solutions to address the challenges faced by vulnerable populations. By leveraging our shared expertise, we created a design that was culturally relevant and adaptable to the needs of both communities.
-        </p>
-        <p class="scroll-animate">
-          Throughout this collaboration, our teams engaged in constant communication, exchanging ideas and feedback to ensure the project was culturally sensitive and impactful. Yonsei University provided valuable insights into the local needs of their community, allowing us to tailor the design to the unique challenges faced by residents in both Songdo and Seoul. This exchange of knowledge helped us develop a more comprehensive solution that bridges the gap between two very different but equally important communities.
-        </p>
-      </div>
-      <div class="korean-image scroll-animate" onclick="openModal('modalKorean')">
-        <img src="/assets/images/FD/team1Kr.png" alt="Yonsei University Collaboration" />
-    </div>
-    
-    <div id="modalKorean" class="modal1">
-        <span class="close1" onclick="closeModal('modalKorean')">&times;</span>
-        <div class="modal-content1">
-            <div class="slides">
-                <div class="slide">
-                    <img src="/assets/images/FD/team1Kr.png" alt="Yonsei University Collaboration" />
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    </div>
-    
-  </div>
-
-  <div class="final-draft1 scroll-animate">
-    <h2>Final Draft</h2>
-    <p>Click on the poster to see them up close.</p>
-  
-    <div class="poster-item1" onclick="openModal('modalEnglish')">
-      <div class="english1"></div>
-  </div>
-  
-  <div id="modalEnglish" class="modal1">
-      <span class="close1" onclick="closeModal('modalEnglish')">&times;</span>
-      <div class="modal-content1">
-          <div class="slides">
-              <div class="slide">
-                  <img src="/assets/images/FD/team1EN.png" alt="English Poster" />
-              </div>
-          </div>
-      </div>
-  </div>
-  </div>
-  <section id="members" class="members1 scroll-animate">
+  <!-- Members Section -->
+  <section class="members1">
     <h2 class="section-title1">Team Members</h2>
     <div class="member-list1">
       <div class="member-item1">
@@ -93,20 +76,19 @@
         <p>Project Coordinator</p>
       </div>
       <div class="member-item1">
-        <h3 class="fancy-name1"> Na Yeon Kim</h3>
+        <h3 class="fancy-name1">Na Yeon Kim</h3>
         <p>Researcher</p>
       </div>
       <div class="member-item1">
-        <h3 class="fancy-name1"> Teresa Ralston</h3>
+        <h3 class="fancy-name1">Teresa Ralston</h3>
         <p>Researcher</p>
       </div>
       <div class="member-item1">
-        <h3 class="fancy-name1"> Brian Padgett</h3>
+        <h3 class="fancy-name1">Brian Padgett</h3>
         <p>Researcher</p>
       </div>
-      <!-- Add more team members as needed -->
     </div>
-  
+
     <!-- Group Photo Section -->
     <div class="group-photo1 scroll-animate">
       <h3>Our Team</h3>
@@ -118,22 +100,18 @@
       <p class="photo-description1">The team behind the Food Access project</p>
     </div>
   </section>
+
+  <!-- Buttons Section -->
   <div class="button-container1">
     <a
       class="see-more1"
       href="https://kebrunette.myportfolio.com/yonsei-x-herron-collab"
       target="_blank"
     >
-    See more about the design! <i class="fa fa-external-link"></i>
+      See more about the design! <i class="fa fa-external-link"></i>
     </a>
-   
     <button class="back-button1">
       <a href="#projects">Back to Projects</a>
     </button>
-  
- 
-    
-  </div
-    </div>
   </div>
 </div>

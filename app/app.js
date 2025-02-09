@@ -142,13 +142,7 @@ function openModal() {
 function closeModal() {
   document.getElementById("modal").style.display = "none";
 }
-function openModal(modalId) {
-  document.getElementById(modalId).style.display = "block";
-}
 
-function closeModal(modalId) {
-  document.getElementById(modalId).style.display = "none";
-}
 // Function to display the current slide
 function currentSlide(n) {
   showSlides((slideIndex = n));
@@ -188,15 +182,26 @@ window.onclick = function (event) {
     closeModal();
   }
 };
-$(window).on("scroll", function () {
-  $(".scroll-animate").each(function () {
-    let elementTop = $(this).offset().top;
-    let windowBottom = $(window).scrollTop() + $(window).height() * 0.8;
+function isElementInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
 
-    if (elementTop < windowBottom) {
-      $(this).addClass("animate");
-    } else {
-      $(this).removeClass("animate"); // Optional for re-triggering
+// Add 'visible' class to all elements with 'scroll-animate' class
+function animateOnScroll() {
+  const elements = document.querySelectorAll(".scroll-animate");
+  elements.forEach((element) => {
+    if (isElementInViewport(element)) {
+      element.classList.add("visible");
     }
   });
-});
+}
+
+// Trigger the animation function on scroll
+window.addEventListener("scroll", animateOnScroll);
