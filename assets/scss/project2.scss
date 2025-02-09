@@ -80,6 +80,8 @@ $heading-font: "rl-aqva", sans-serif;
   }
 }
 
+/* About Section */
+
 /* Gallery Section */
 
 .final-draft2 {
@@ -88,19 +90,13 @@ $heading-font: "rl-aqva", sans-serif;
   text-align: center;
 }
 
-.final-draft2 h2 {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-  color: #479195;
-  font-family: $heading-font;
+.finalDrafts {
+  .upText {
+    h2 {
+      color: $green;
+    }
+  }
 }
-
-.final-draft2 p {
-  font-size: 1.2rem;
-  color: #333;
-  margin-bottom: 30px;
-}
-
 .poster-thumbnails2 {
   display: flex;
   justify-content: center; // Centers the posters

@@ -12,7 +12,7 @@ $heading-font: "rl-aqva", sans-serif;
   background-image: url(../images/team3.png);
   background-size: cover;
   background-position: center;
-  height: 80vh;
+  height: 90vh;
   color: white;
   display: flex;
   justify-content: center;
@@ -86,7 +86,7 @@ $heading-font: "rl-aqva", sans-serif;
 .finalDrafts {
   background: linear-gradient($green, $tan);
   width: 100%;
-  height: 850px;
+  height: 900px;
   .upText {
     display: flex;
     flex-direction: column;
@@ -95,7 +95,7 @@ $heading-font: "rl-aqva", sans-serif;
     h2 {
       display: flex;
       margin: 0 auto;
-      color: $tan;
+      color: $green;
       font-size: 44px;
       font-family: $heading-font;
       justify-content: center;
@@ -318,6 +318,7 @@ $heading-font: "rl-aqva", sans-serif;
   border-radius: 10px;
   max-width: 90%;
   z-index: 10;
+  height: fit-content;
 
   h2 {
     font-size: 1.8rem;
@@ -361,6 +362,14 @@ $heading-font: "rl-aqva", sans-serif;
   .group-photo3 {
     margin-top: 20px;
     text-align: center;
+    opacity: 0; // Start hidden
+    transform: translateX(-100px); // Start off-screen
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+
+    &.visible {
+      opacity: 1;
+      transform: translateX(0); // Fly in effect
+    }
 
     h3 {
       font-size: 1.6rem;

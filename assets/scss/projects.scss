@@ -20,7 +20,7 @@ $heading-font: "rl-aqva";
   float: right;
 }
 .topImage {
-  background: linear-gradient(5deg, $tan 4%, $green 94%);
+  background: linear-gradient($tan, $green);
   height: 110vh; // Adjusts for full viewport height
   display: flex;
   align-items: center;
@@ -50,7 +50,7 @@ $heading-font: "rl-aqva";
     background-repeat: no-repeat;
     background-size: contain; // Ensure the whole image is visible and scales
     width: 100%; // Fluid width for scaling
-    min-height: 40vh; // Use min-height to ensure the image scales properly
+    min-height: 60vh; // Use min-height to ensure the image scales properly
     display: flex;
     margin: 0 auto;
     transition: transform 0.3s ease-in-out; // Smooth scale transition
@@ -67,30 +67,6 @@ $heading-font: "rl-aqva";
       min-height: 25vh; // Adjust for mobile
     }
   }
-
-  .triangle {
-    background-image: url(../images/triangle.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain; // Ensure image scales properly without cutting off
-    width: 100%;
-    min-height: 40vh; // Fluid scaling for the triangle image
-    display: flex;
-    margin: 0 auto;
-    transition: transform 0.3s ease-in-out;
-
-    &:hover {
-      transform: scale(1.05); // Zoom on hover
-    }
-
-    @media (max-width: 1024px) {
-      min-height: 30vh;
-    }
-
-    @media (max-width: 768px) {
-      min-height: 25vh;
-    }
-  }
 }
 .section3 {
   display: flex;
@@ -98,7 +74,7 @@ $heading-font: "rl-aqva";
 
   .descBox1 {
     width: 600px;
-    height: 500px;
+    height: 900px;
 
     display: flex;
     margin: 0 auto;
@@ -123,15 +99,41 @@ $heading-font: "rl-aqva";
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 700px;
+    width: 800px;
     height: 500px;
+    margin-top: 200px;
     border-radius: 20px 0px 0px 20px;
+  }
+}
+.triangle {
+  background-image: url(../images/triangle.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: $green;
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  margin: 0 auto;
+
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05); // Zoom on hover
+  }
+
+  @media (max-width: 1024px) {
+    min-height: 30vh;
+  }
+
+  @media (max-width: 768px) {
+    min-height: 25vh;
   }
 }
 .section5 {
   width: 100%;
   padding-top: 100px;
-  background-color: $green;
+  background: linear-gradient($green, $tan);
   display: flex;
   height: 700px;
   flex-direction: column;
@@ -384,53 +386,74 @@ $heading-font: "rl-aqva";
     }
   }
 }
+@media (max-width: 768px) {
+  .proj {
+    padding-top: 700px;
+    .projects {
+      flex-direction: column;
+      align-items: center;
+      padding-top: 50px; // Reduce padding for better spacing on mobile
 
-@media (max-width: 600px) {
-  .projects {
-    .project-card {
-      width: calc(100% - 20px); /* Single column layout */
-      height: auto;
-      padding: 20px;
-    }
+      .project-card {
+        width: 90%; // Make the cards take up most of the screen width
+        height: auto; // Allow the height to adjust dynamically
+        padding: 20px; // Adjust padding for better spacing
+        margin-bottom: 50px; // Reduce margin for better spacing between cards
+        text-align: center;
 
-    .project-image {
-      width: 80%;
-      height: 200px;
-    }
+        h2 {
+          font-size: 28px; // Slightly reduce heading size for better readability
+        }
 
-    .project-image2,
-    .project-image3,
-    .project-image4,
-    .project-image5,
-    .project-image6,
-    .project-image7,
-    .project-image8 {
-      width: 80%;
-      height: 200px;
+        .project-image,
+        .project-image2,
+        .project-image3,
+        .project-image4,
+        .project-image5,
+        .project-image6,
+        .project-image7,
+        .project-image8 {
+          width: 100%; // Make images responsive
+          height: 250px; // Adjust height for better fit
+          border-radius: 20px; // Keep rounded corners
+        }
+      }
     }
   }
 }
-
-@media (max-width: 400px) {
-  .projects {
-    .project-card {
-      padding: 15px;
+@media (max-width: 480px) {
+  .proj {
+    .prodTitle {
+      font-size: 40px; // Reduce title size for better readability
+      padding: 10px; // Add padding for spacing
     }
 
-    .project-image {
-      width: 100%;
-      height: 180px;
-    }
+    .projects {
+      padding-top: 30px; // Reduce top padding to save space
 
-    .project-image2,
-    .project-image3,
-    .project-image4,
-    .project-image5,
-    .project-image6,
-    .project-image7,
-    .project-image8 {
-      width: 100%;
-      height: 180px;
+      .project-card {
+        width: 95%; // Use more screen width while keeping margins
+        padding: 15px; // Adjust padding for better spacing
+        margin-bottom: 30px; // Reduce margin for better spacing
+        border-radius: 30px; // Slightly reduce border radius for a softer look
+
+        h2 {
+          font-size: 24px; // Reduce font size for better readability on small screens
+        }
+
+        .project-image,
+        .project-image2,
+        .project-image3,
+        .project-image4,
+        .project-image5,
+        .project-image6,
+        .project-image7,
+        .project-image8 {
+          width: 100%; // Ensure images are responsive
+          height: 200px; // Slightly reduce height for better fit
+          border-radius: 15px; // Keep smooth corners
+        }
+      }
     }
   }
 }

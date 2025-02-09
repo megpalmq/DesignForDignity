@@ -205,3 +205,18 @@ function animateOnScroll() {
 
 // Trigger the animation function on scroll
 window.addEventListener("scroll", animateOnScroll);
+$(document).ready(function () {
+  function checkVisibility() {
+    $(".group-photo3").each(function () {
+      let elementTop = $(this).offset().top;
+      let windowBottom = $(window).scrollTop() + $(window).height();
+
+      if (elementTop < windowBottom - 100) {
+        $(this).addClass("visible");
+      }
+    });
+  }
+
+  $(window).on("scroll", checkVisibility);
+  checkVisibility(); // Check on page load
+});
