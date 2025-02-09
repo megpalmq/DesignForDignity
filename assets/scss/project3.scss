@@ -165,11 +165,8 @@ $heading-font: "rl-aqva", sans-serif;
     }
 
     .slides img {
-      width: 100%;
+      width: 80%; /* or whatever value you want */
       height: auto;
-      object-fit: contain;
-      background-repeat: no-repeat;
-      border-radius: 10px;
     }
     p {
       color: $green;
@@ -288,6 +285,7 @@ $heading-font: "rl-aqva", sans-serif;
       }
 
       .slides img {
+        margin-top: 200px;
         width: 300px;
         height: 400px;
       }

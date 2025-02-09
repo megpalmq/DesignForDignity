@@ -80,297 +80,361 @@ $heading-font: "rl-aqva", sans-serif;
   }
 }
 
-/* About Section */
-.about4 {
+.finalDrafts {
   padding: 50px 20px;
+  background: linear-gradient(to bottom right, $tan, $green);
   text-align: center;
-  background-color: #fff;
-}
 
-.section-title4 {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-  color: $tan;
-  font-family: $heading-font;
-}
-
-.project-info4 {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-  line-height: 1.8;
-  color: #333;
-  width: 50%;
-  margin: 0 auto;
-  margin-bottom: 100px;
-}
-
-.project-process4 {
-  text-align: left;
-  max-width: 800px;
-  margin: 0 auto;
-  font-size: 1rem;
-  color: #444;
-}
-
-.project-process4 h3 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-  color: white;
-  background-color: #479195;
-  width: 100%;
-  border-radius: 50px;
-  padding: 10px;
-  font-family: $heading-font;
-}
-
-.project-process4 ol {
-  list-style: none;
-  padding-left: 0;
-}
-
-.project-process4 li {
-  margin-bottom: 20px;
-  font-size: 1.5rem;
-  color: #333;
-}
-
-.project-process4 li strong {
-  color: $tan;
-}
-
-.process {
-  background-image: url(../images/proc-01.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  margin: 0 auto;
-  width: 800px;
-  height: 600px;
-
-  // Media Queries for responsiveness
-  @media (max-width: 1200px) {
-    width: 700px !important; // Forcing the width change
-    height: 500px !important;
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #479195;
+    font-family: $heading-font;
   }
 
-  @media (max-width: 768px) {
-    width: 90% !important; // Forcing the width change
-    height: 400px !important;
-    background-position: top center !important;
+  p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 30px;
   }
 
-  @media (max-width: 480px) {
-    width: 100% !important; // Forcing the width change
-    height: 300px !important;
-    background-position: top center !important;
-  }
-}
-
-.koreanFeature {
-  background-color: #479195;
-  padding: 40px;
-  margin-top: 50px;
-  border-radius: 10px;
-
-  .section-title4 {
-    font-size: 3.2rem;
-    color: $tan;
-    margin-bottom: 20px;
-  }
-
-  .korean-content {
+  .poster-thumbnails4 {
     display: flex;
-    flex-direction: row; // Arrange items horizontally
-    align-items: flex-start; // Align items to the top of the container
+    justify-content: center; // Centers the posters
+    align-items: center;
     gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+  }
 
-    .text-content {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      line-height: 1.5;
+  .poster-item4 {
+    width: 400px; // Adjust as needed
+    height: 550px; // Adjust as needed
+    overflow: hidden;
+    cursor: pointer;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-      .scroll-animate {
-        font-size: 1.5rem;
-        color: $tan;
-        width: 70%;
-      }
+    img {
+      width: 700px; // Make the image fill the container
+      height: 800px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
     }
 
-    .korean-image {
+    &:hover img {
+      transform: scale(1.05);
+    }
+  }
+
+  .english4 {
+    width: 800px;
+    height: 550px;
+    background-image: url(../images/FD/team4EN.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    display: flex;
+    margin: 0 auto;
+  }
+  .korean4 {
+    width: 800px;
+    height: 550px;
+    background-image: url(../images/FD/team4Kr.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    display: flex;
+    margin: 0 auto;
+  }
+
+  /* Modal Styles */
+  .modal4 {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    .modal-content4 {
+      width: 1200px;
+      margin: 0 auto;
+      padding-top: 200px;
+      height: auto;
       display: flex;
       justify-content: center;
       align-items: center;
 
-      img {
-        max-width: 100%;
-        height: 600px;
-        border-radius: 10px;
+      .slides {
+        width: 1000px;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 1000px;
+          border-radius: 10px;
+        }
+      }
+      .slide2 {
+        width: 1000px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 100px;
+
+        img {
+          width: 1000px;
+          border-radius: 10px;
+        }
+      }
+    }
+
+    .prev2,
+    .next2 {
+      position: absolute;
+      top: 50%;
+      padding: 16px;
+      color: $tan;
+      font-size: 18px;
+      font-weight: bold;
+      background-color: rgba(0, 0, 0, 0.6);
+      border: none;
+      cursor: pointer;
+      user-select: none;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+    }
+
+    .prev2 {
+      left: 0;
+    }
+
+    .next2 {
+      right: 0;
+    }
+
+    .close4 {
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 36px;
+      color: #f1f1f1;
+      font-weight: bold;
+      cursor: pointer;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #bbb;
       }
     }
   }
 }
-
-@media (max-width: 1200px) {
-  .section-title4 {
-    font-size: 2.8rem !important; // Adjust font size for tablets and large screens
-  }
-
-  .korean-content {
-    flex-direction: row !important;
-    gap: 15px !important;
-  }
-
-  .text-content .scroll-animate {
-    width: 80% !important; // Make the text content wider on medium screens
-  }
-}
-
-@media (max-width: 768px) {
-  // Less padding on smaller screens
-  .section-title4 {
-    font-size: 2.4rem !important; // Further decrease font size on mobile
-    margin-bottom: 10px;
-  }
-
-  .korean-content {
-    flex-direction: column !important; // Stack content vertically on smaller screens
-    gap: 25px !important;
-  }
-
-  .text-content .scroll-animate {
-    font-size: 1.3rem !important; // Adjust font size for better readability
-    width: 90% !important; // Increase the width of text content for smaller screens
-  }
-}
-
-@media (max-width: 480px) {
-  .section-title4 {
-    font-size: 2rem !important; // Smaller font size on very small screens
-    margin-bottom: 5px;
-  }
-
-  .korean-content {
-    flex-direction: column !important; // Continue stacking vertically
-    gap: 15px !important;
-  }
-
-  .text-content .scroll-animate {
-    font-size: 1.2rem !important; // Adjust font size for small devices
-    width: 100% !important; // Ensure text fills the screen width on mobile
-  }
-}
-
-/* Gallery Section */
-
-.final-draft4 {
+.finalDrafts {
   padding: 50px 20px;
   background: linear-gradient(to bottom right, $tan, $green);
   text-align: center;
-}
 
-.final-draft4 h2 {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-  color: #479195;
-  font-family: $heading-font;
-}
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #479195;
+    font-family: $heading-font;
+  }
 
-.final-draft4 p {
-  font-size: 1.2rem;
-  color: #333;
-  margin-bottom: 30px;
-}
+  p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 30px;
+  }
 
-.poster-thumbnails4 {
-  display: flex;
-  justify-content: center; // Centers the posters
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  width: 100%;
-  margin: 0 auto;
-}
+  .poster-thumbnails4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+  }
 
-.poster-item4 {
-  width: 400px; // Adjust as needed
-  height: 550px; // Adjust as needed
-  overflow: hidden;
-  cursor: pointer;
-  margin: 0 auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  .poster-item4 {
+    width: 400px;
+    height: 550px;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-.poster-item4 img {
-  width: 100%; // Make the image fill the container
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-}
+    img {
+      width: 700px;
+      height: 800px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
 
-.poster-item4:hover img {
-  transform: scale(1.05);
-}
+    &:hover img {
+      transform: scale(1.05);
+    }
+  }
 
-.english4 {
-  width: 400px;
-  height: 550px;
-  background-image: url(../images/FD/team4EN.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 10px;
-  display: flex;
-  margin: 0 auto;
-}
+  .english4,
+  .korean4 {
+    width: 800px;
+    height: 550px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    display: flex;
+    margin: 0 auto;
+  }
 
-/* Modal Styles */
-.modal4 {
-  display: none; /* Hidden by default */
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8); /* Black background with transparency */
-}
+  /* Modal Styles */
+  .modal4 {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
 
-.modal-content4 {
-  position: relative;
-  margin: 10% auto;
-  max-width: 800px;
-  background-color: white;
-  padding: 20px;
-}
+    .modal-content4 {
+      width: 1200px;
+      margin: 0 auto;
+      padding-top: 200px;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-.close4 {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  font-size: 36px;
-  color: #fff;
-  cursor: pointer;
-}
+      .slides {
+        width: 1000px;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-.close4:hover {
-  color: #bbb;
-}
+        img {
+          width: 1000px;
+          border-radius: 10px;
+        }
+      }
+      .slide2 {
+        width: 1000px;
 
-/* Additional styling for the modal */
-.slides img {
-  width: 100%;
-  display: block;
-  margin: 0 auto;
-}
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 100px;
 
+        img {
+          width: 1000px;
+          border-radius: 10px;
+        }
+      }
+    }
+
+    .prev2,
+    .next2 {
+      position: absolute;
+      top: 50%;
+      padding: 16px;
+      color: $tan;
+      font-size: 18px;
+      font-weight: bold;
+      background-color: rgba(0, 0, 0, 0.6);
+      border: none;
+      cursor: pointer;
+      user-select: none;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+    }
+
+    .prev2 {
+      left: 0;
+    }
+
+    .next2 {
+      right: 0;
+    }
+
+    .close4 {
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 36px;
+      color: #f1f1f1;
+      font-weight: bold;
+      cursor: pointer;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #bbb;
+      }
+    }
+  }
+}
+@media (max-width: 480px) {
+  .modal4 .modal-content4 {
+    width: 90%; // Reduced to ensure padding inside the modal
+    max-width: 500px; // Max width for smaller screens
+    padding: 20px 10px; // Add padding to prevent the image from touching the edges
+  }
+
+  .modal4 .slide img {
+    width: 100%;
+    height: auto; // Ensure the image scales proportionally
+    object-fit: contain;
+    padding: 150px;
+    left: 0;
+  }
+  .modal4 .slide2 img {
+    width: 100%;
+    height: auto; // Ensure the image scales proportionally
+    object-fit: contain;
+    padding: 130px;
+    margin-right: 70px;
+  }
+
+  .modal4 .prev2,
+  .modal4 .next2 {
+    font-size: 16px; // Slightly larger arrows for better visibility
+    padding: 12px;
+  }
+
+  .modal4 .close4 {
+    font-size: 28px;
+  }
+}
 .members4 {
   text-align: center;
   margin: 40px auto;
@@ -458,7 +522,7 @@ $heading-font: "rl-aqva", sans-serif;
       font-size: 1.6rem;
     }
 
-    .group-photo4 .photo-description4 {
+    .group-photo1 .photo-description1 {
       font-size: 0.85rem;
     }
   }
@@ -466,7 +530,7 @@ $heading-font: "rl-aqva", sans-serif;
   @media (max-width: 480px) {
     padding: 15px;
 
-    .member-item4 {
+    .member-item2 {
       max-width: 100%;
       padding: 10px;
     }
@@ -477,7 +541,6 @@ $heading-font: "rl-aqva", sans-serif;
     }
   }
 }
-
 .button-container4 {
   display: flex;
   justify-content: center;
@@ -530,7 +593,7 @@ $heading-font: "rl-aqva", sans-serif;
 /* Media Queries for Tablets and Smaller Screens */
 @media screen and (max-width: 768px) {
   .project-hero4 {
-    height: 70vh; /* Adjust height on smaller screens */
+    height: 100vh; /* Adjust height on smaller screens */
   }
 
   .project-title4 {
@@ -540,137 +603,137 @@ $heading-font: "rl-aqva", sans-serif;
     font-family: $heading-font;
   }
 
-  .project-description4 {
+  .project-description2 {
     font-size: 1rem; /* Adjust font size */
     max-width: 90%;
     margin-top: 20px;
   }
 
-  .project-type4 {
+  .project-type2 {
     font-size: 1.2rem;
     width: 15%;
     text-align: center;
   }
 
-  .about4 {
+  .about2 {
     padding: 30px 10px; /* Reduced padding */
   }
 
-  .section-title4 {
+  .section-title2 {
     font-size: 2rem; /* Adjust font size */
     font-family: $heading-font;
   }
 
-  .project-info4 {
+  .project-info2 {
     width: 90%; /* Full width for smaller screens */
     font-size: 1rem;
   }
 
-  .project-process4 {
+  .project-process2 {
     padding: 0 20px; /* Adjust padding */
   }
 
-  .members4 {
+  .members2 {
     padding: 10px;
     margin: 20px 0;
     max-width: 100%;
   }
 
-  .member-list4 {
+  .member-list2 {
     gap: 20px;
   }
 
-  .poster-thumbnails4 {
+  .poster-thumbnails2 {
     display: flex;
     align-items: center;
   }
 
-  .poster-item4 {
+  .poster-item2 {
     width: 100%;
     align-items: center;
   }
 
-  .poster-item4 img {
+  .poster-item2 img {
     width: 100%;
     display: flex;
     margin: 0 auto;
     margin-right: 100px;
   }
 
-  .modal-content4 {
+  .modal-content2 {
     max-width: 100%;
   }
 
-  .final-draft4 h2 {
+  .final-draft2 h2 {
     font-size: 2rem; /* Smaller heading */
     font-family: $heading-font;
   }
 
-  .final-draft4 p {
+  .final-draft2 p {
     font-size: 1rem; /* Adjust paragraph font size */
   }
 
   /* Adjust the back and see more buttons */
-  .button-container4 {
+  .button-container2 {
     flex-direction: column; /* Stack buttons vertically */
   }
 
-  .back-button4 {
+  .back-button2 {
     padding: 15px;
   }
 
-  .see-more4 {
+  .see-more2 {
     padding: 12px;
   }
 }
 
 /* Media Queries for Smaller Mobile Screens */
 @media screen and (max-width: 480px) {
-  .project-hero4 {
+  .project-hero2 {
     height: 80vh;
   }
 
-  .project-title4 {
+  .project-title2 {
     font-size: 1.8rem;
   }
 
-  .project-description4 {
+  .project-description2 {
     font-size: 0.9rem; /* Adjust font size */
   }
 
-  .project-type4 {
+  .project-type2 {
     font-size: 1rem;
     width: 100%;
   }
 
-  .about4 {
+  .about2 {
     padding: 20px 10px;
   }
 
-  .section-title4 {
+  .section-title2 {
     font-size: 1.8rem; /* Adjust for mobile */
   }
 
-  .project-info4 {
+  .project-info2 {
     width: 100%;
     font-size: 0.9rem;
   }
 
-  .members4 {
+  .members2 {
     margin: 10px 0;
   }
 
-  .member-list4 {
+  .member-list2 {
     flex-direction: column;
     display: flex;
     align-items: center;
   }
 
-  .poster-item4 {
+  .poster-item2 {
     width: 100%;
   }
 
-  .modal-content4 {
+  .modal-content2 {
     max-width: 100%; /* Full width for mobile screens */
   }
 

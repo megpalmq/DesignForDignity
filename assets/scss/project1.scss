@@ -225,6 +225,86 @@ $heading-font: "rl-aqva", sans-serif;
     }
   }
 }
+@media screen and (max-width: 480px) {
+  .finalDrafts {
+    padding: 20px;
+    height: 100vh;
+
+    .upText {
+      padding: 20px;
+      h2 {
+        font-size: 28px; // Make text smaller for phones
+        text-align: center;
+      }
+      p {
+        font-size: 14px; // Reduce paragraph text size
+        text-align: center;
+      }
+    }
+
+    .drafts {
+      flex-direction: column;
+      gap: 20px;
+
+      .final-draft1 {
+        flex-direction: column;
+      }
+
+      .poster-thumbnails1 {
+        flex-direction: column; // Stack thumbnails vertically
+        gap: 10px;
+      }
+
+      .poster-item1 {
+        width: 300px; // Take full width on mobile
+        height: 400px; // Adjust height automatically
+        margin-bottom: 20px;
+      }
+
+      .poster-item1 img {
+        width: 300px; // Scale image to fit the container
+        height: 400px;
+      }
+      .modal2 {
+        padding-top: 200px;
+        height: 100vh;
+
+        .modal-content2 {
+          max-width: 100%;
+          overflow-x: hidden;
+        }
+
+        .slides img {
+          margin-top: 200px;
+          width: 300px;
+          height: 400px;
+        }
+        .slide2 img {
+          top: 0;
+          width: 300px;
+          height: 400px;
+        }
+      }
+      .english1,
+      .korean1 {
+        width: 100%; // Make images responsive for smaller screens
+        height: 400px;
+      }
+
+      .prev,
+      .next {
+        font-size: 14px; // Smaller buttons for mobile
+        padding: 12px;
+      }
+
+      .close1 {
+        font-size: 30px;
+        top: -10px;
+        bottom: 10px;
+      }
+    }
+  }
+}
 
 .members1 {
   text-align: center;
@@ -536,10 +616,6 @@ $heading-font: "rl-aqva", sans-serif;
   .project-type1 {
     font-size: 1rem;
     width: 100%;
-  }
-
-  .finalDrafts {
-    height: 1300px;
   }
 
   .members1 {
