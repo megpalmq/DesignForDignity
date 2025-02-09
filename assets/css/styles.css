@@ -3105,6 +3105,65 @@ body {
   color: #bbb;
 }
 
+@media screen and (max-width: 480px) {
+  .finalDrafts {
+    padding: 20px;
+    height: 100vh;
+  }
+  .finalDrafts .upText {
+    padding: 20px;
+  }
+  .finalDrafts .upText h2 {
+    font-size: 28px;
+    text-align: center;
+  }
+  .finalDrafts .upText p {
+    font-size: 14px;
+    text-align: center;
+  }
+  .finalDrafts .drafts {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .finalDrafts .drafts .final-draft3 {
+    flex-direction: column;
+  }
+  .finalDrafts .drafts .poster-thumbnails3 {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .finalDrafts .drafts .poster-item3 {
+    width: 300px;
+    height: 400px;
+    margin-bottom: 20px;
+  }
+  .finalDrafts .drafts .poster-item3 img {
+    width: 300px;
+    height: 400px;
+  }
+  .finalDrafts .drafts .modal-content3 {
+    max-width: 90%;
+    padding-top: 200px;
+  }
+  .finalDrafts .drafts .slides img {
+    width: 300px;
+    height: 400px;
+  }
+  .finalDrafts .drafts .english3,
+  .finalDrafts .drafts .korean3 {
+    width: 100%;
+    height: 400px;
+  }
+  .finalDrafts .drafts .prev3,
+  .finalDrafts .drafts .next3 {
+    font-size: 14px;
+    padding: 12px;
+  }
+  .finalDrafts .drafts .close3 {
+    font-size: 24px;
+    margin-top: 100px;
+  }
+}
 .members3 {
   text-align: center;
   margin: 40px auto;
@@ -3359,7 +3418,8 @@ body {
 /* Smaller Mobile Screens */
 @media screen and (max-width: 480px) {
   .project-hero3 {
-    height: 80vh;
+    height: 130vh;
+    padding-bottom: 200px;
   }
   .project-title3 {
     font-size: 2.5rem;
@@ -3371,17 +3431,6 @@ body {
     font-size: 1rem;
     width: 100%;
   }
-  .finalDrafts {
-    height: 1500px;
-  }
-  .finalDrafts .drafts .poster-item3 {
-    width: 50%;
-    height: 450px;
-    overflow: hidden;
-    cursor: pointer;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
   .members3 {
     margin: 10px 0;
   }
@@ -3389,18 +3438,6 @@ body {
     flex-direction: column;
     display: flex;
     align-items: center;
-  }
-  .poster-item3 {
-    width: 100%;
-  }
-  .modal-content3 {
-    max-width: 100%;
-  }
-  .final-draft3 h2 {
-    font-size: 1.8rem;
-  }
-  .final-draft3 p {
-    font-size: 0.9rem;
   }
   .back-button3,
   .see-more3 {
