@@ -1112,6 +1112,7 @@ body {
   background-image: linear-gradient(to top, #d2c29c 0%, #669c8b 100%);
   animation: fadeIn 1.5s ease-out;
   padding-bottom: 50px;
+  padding-top: 100px;
 }
 .about-section .indymap {
   background-image: url(../images/infographic.jpg);
@@ -1174,8 +1175,6 @@ body {
   padding-bottom: 50px;
   display: flex;
   flex-direction: row;
-  display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
@@ -1184,6 +1183,14 @@ body {
   padding: 20px;
   height: 100%;
   border-radius: 50px;
+}
+.about-section .container .containerMap .sec-title {
+  font-size: 2.5rem;
+  text-align: center;
+  justify-self: center;
+  color: #352d27;
+  font-family: rl-aqva, sans-serif;
+  padding: 10px;
 }
 .about-section .container .containerMap .indymap {
   background-image: url(../images/infographic.jpg);
@@ -1194,18 +1201,6 @@ body {
   background-size: cover;
   width: 100%;
   animation: fadeIn 1.5s ease-out;
-}
-.about-section .container .containerMap .section-title {
-  font-size: 2.5rem;
-  font-family: "rl-aqva", sans-serif;
-  text-align: center;
-  color: #352d27;
-  margin-bottom: 30px;
-  transition: color 0.3s ease;
-  animation: slideUp 1.2s ease-out;
-}
-.about-section .container .containerMap .section-title h2 {
-  height: 100%;
 }
 .about-section .container .about-content {
   padding: 20px;
@@ -1239,60 +1234,6 @@ body {
 .about-section .container .about-content .collab:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-}
-@media (max-width: 1024px) {
-  .about-section .container .indymap {
-    height: 700px;
-    width: 100%;
-  }
-  .about-section .container .about-content {
-    width: 70%;
-  }
-  .about-section .container .section-title {
-    font-size: 2rem;
-    margin-top: 80px;
-  }
-  .about-section .container .text-content {
-    font-size: 1.1rem;
-  }
-}
-@media (max-width: 768px) {
-  .about-section .container {
-    padding-bottom: 100px;
-  }
-  .about-section .container .indymap {
-    height: 400px;
-    width: 100%;
-  }
-  .about-section .container .about-content {
-    width: 90%;
-    padding: 15px;
-  }
-  .about-section .container .section-title {
-    font-size: 1.8rem;
-    margin-top: 60px;
-  }
-  .about-section .container .text-content {
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-}
-@media (max-width: 480px) {
-  .about-section .container .indymap {
-    height: 300px;
-    width: 100%;
-  }
-  .about-section .container .about-content {
-    width: 95%;
-    padding: 10px;
-  }
-  .about-section .container .section-title {
-    font-size: 1.5rem;
-    margin-top: 40px;
-  }
-  .about-section .container .text-content {
-    font-size: 0.9rem;
-  }
 }
 .about-section .container .food-insecurity-section {
   margin-top: 60px;
@@ -1337,70 +1278,197 @@ body {
   color: #352d27;
 }
 
+@media (max-width: 1200px) {
+  .about-content {
+    padding-top: 90px;
+    padding-bottom: 50px;
+  }
+  .about-content .indymap {
+    height: 800px;
+  }
+  .about-content .section-title {
+    font-size: 2.2rem;
+    margin-top: 90px;
+  }
+  .about-content .text-content {
+    font-size: 1.2rem;
+    width: 50vw;
+  }
+}
+@media (max-width: 1024px) {
+  .about-section {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+  .about-section .indymap {
+    height: 700px;
+  }
+  .about-section .section-title {
+    font-size: 2rem;
+    margin-top: 80px;
+  }
+  .about-section .about-content {
+    width: 50%;
+  }
+  .about-section .text-content {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 768px) {
+  .about-section .container {
+    padding-bottom: 80px;
+    flex-direction: column;
+  }
+  .about-section .container .indymap {
+    height: 400px;
+  }
+  .about-section .container .about-content {
+    width: 100%;
+    padding: 15px;
+  }
+  .about-section .container .text-content {
+    font-size: 1rem;
+    line-height: 1.5;
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .about-section {
+    padding-bottom: 60px;
+  }
+  .about-section .indymap {
+    height: 300px;
+  }
+  .about-section .section-title {
+    font-size: 1.5rem;
+    margin-top: 40px;
+  }
+  .about-section .about-content {
+    width: 95%;
+    padding: 10px;
+  }
+  .about-section .text-content {
+    font-size: 0.9rem;
+  }
+}
 .bonerCenter {
   background-color: #352d27;
-  padding: 40px;
   width: 100%;
-  height: 100vh; /* Ensure it takes the full height of the viewport */
+  min-height: 50vh;
   display: flex;
-  flex-direction: column; /* Align items vertically */
-  justify-content: center; /* Vertically center content */
-  align-items: center; /* Horizontally center content */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color: #d2c29c;
 }
 .bonerCenter h2 {
   border-radius: 5px;
   width: 60%;
   margin: 0 auto;
-  justify-self: center;
-  align-items: center;
   font-size: 40px;
   font-weight: 900;
   font-family: rl-aqva, sans-serif;
-  font-style: normal;
   color: #c05126;
   margin-bottom: 40px;
 }
-.bonerCenter h2 .BonerCenterTitle {
+.bonerCenter .BonnerCenterTitle {
   font-size: 2rem;
   font-family: rl-aqva, sans-serif;
-  font-style: normal;
   font-weight: 900;
 }
-.bonerCenter .TT {
+.bonerCenter .logos {
   display: flex;
-  flex-direction: column;
-  font-size: 1.2rem;
-  margin: 0 auto; /* Center the content horizontally */
+  align-items: center;
+  gap: 30px;
 }
-.bonerCenter .TT p {
-  line-height: 1.6;
-  color: #d2c29c;
-  width: 60%; /* Set width to 60% for the paragraphs */
-  margin: 0 auto; /* Center the paragraph */
-}
-.bonerCenter .bonLogo {
-  background-image: url(../images/bonLogo.png);
+.bonerCenter .logos .logo1,
+.bonerCenter .logos .logo2 {
   background-position: center;
+  background-size: contain; /* Ensures full logo visibility */
   background-repeat: no-repeat;
-  background-size: cover;
-  width: 500px;
+}
+.bonerCenter .logos .logo1 {
+  background-image: url(../images/bonLogo.png);
+  width: 500px; /* Increased size */
+  height: 200px;
+}
+.bonerCenter .logos .logo2 {
+  background-image: url(../images/yonLogo.png);
+  width: 350px; /* Increased size */
   height: 150px;
-  margin-top: 20px; /* Space between text and logo */
 }
 
-@media (max-width: 768px) {
-  .bonerCenter {
-    padding: 20px;
-    position: relative;
-  }
+@media (max-width: 1200px) {
   .bonerCenter h2 {
-    font-size: 24px;
-    text-align: center;
+    font-size: 35px;
+    width: 70%;
   }
-  .bonerCenter .bonLogo {
+  .bonerCenter .logos {
+    gap: 20px;
+  }
+  .bonerCenter .logos .logo1 {
+    width: 400px;
+    height: 150px;
+  }
+  .bonerCenter .logos .logo2 {
+    width: 300px;
+    height: 130px;
+  }
+}
+@media (max-width: 1024px) {
+  .bonerCenter h2 {
+    font-size: 30px;
+    width: 80%;
+  }
+  .bonerCenter .logos {
+    gap: 15px;
+  }
+  .bonerCenter .logos .logo1 {
     width: 350px;
+    height: 130px;
+  }
+  .bonerCenter .logos .logo2 {
+    width: 250px;
     height: 100px;
+  }
+}
+@media (max-width: 768px) {
+  .bonerCenter h2 {
+    font-size: 25px;
+    width: 90%;
+    margin-bottom: 20px;
+  }
+  .bonerCenter .logos {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .bonerCenter .logos .logo1 {
+    width: 300px;
+    height: 120px;
+  }
+  .bonerCenter .logos .logo2 {
+    width: 200px;
+    height: 80px;
+  }
+}
+@media (max-width: 644px) {
+  .bonerCenter h2 {
+    font-size: 35px;
+    width: 100%;
+    padding-left: 20px;
+    margin-bottom: 10px;
+  }
+  .bonerCenter .logos {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .bonerCenter .logos .logo1 {
+    width: 350px;
+    height: 130px;
+  }
+  .bonerCenter .logos .logo2 {
+    width: 220px;
+    height: 140px;
   }
 }
 .container2 {
@@ -1527,58 +1595,126 @@ body {
   flex: none;
 }
 
-@media (max-width: 1024px) {
-  .about-section .container2,
-  .bonerCenter .TT,
-  .food-insecurity-section .container {
+@media (max-width: 1200px) {
+  .container2 {
     flex-direction: column;
+    padding: 20px;
+  }
+  .about-content {
+    width: 100%;
     text-align: center;
   }
-  h2 {
-    font-size: 2rem;
+  .about-content .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
   }
-  p {
-    font-size: 0.95rem;
+  .about-content .text-content {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  .about-content .seeMore {
+    font-size: 1.2rem;
+  }
+  .aboutCollabImg {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 1024px) {
+  .container2 {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .about-content {
+    width: 100%;
+    text-align: center;
+  }
+  .about-content .section-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  .about-content .text-content {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  .about-content .seeMore {
+    font-size: 1.1rem;
+  }
+  .aboutCollabImg {
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    margin-top: 20px;
   }
 }
 @media (max-width: 768px) {
-  .about-section,
-  .bonerCenter,
-  .food-insecurity-section {
-    padding: 30px 15px;
-  }
-  h2 {
-    font-size: 1.8rem;
-  }
-  p {
-    font-size: 0.9rem;
-  }
   .container2 {
-    flex-direction: column;
-    align-items: center;
+    padding: 15px;
   }
-}
-@media (max-width: 480px) {
-  .about-section,
-  .bonerCenter,
-  .food-insecurity-section {
-    padding: 20px 10px;
+  .about-content {
+    width: 100%;
   }
-  .bonLogo {
-    width: 20%;
-    height: 20%;
+  .about-content .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
   }
-  h2 {
-    font-size: 1.5rem;
+  .about-content .text-content {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    width: 100%;
   }
-  p {
-    font-size: 0.9rem;
-  }
-  .map-instructions {
-    font-size: 0.8rem;
+  .about-content .seeMore {
+    font-size: 1rem;
   }
   .aboutCollabImg {
-    width: 50%;
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    margin-top: 15px;
+  }
+}
+@media (max-width: 644px) {
+  .container2 {
+    padding: 10px;
+  }
+  .container2 .about-content {
+    width: 100%;
+    text-align: center;
+  }
+  .container2 .about-content .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  .container2 .about-content .text-content {
+    font-size: 1.3rem;
+    line-height: 1.3;
+    margin-bottom: 10px;
+  }
+  .container2 .about-content .seeMore {
+    font-size: 0.9rem;
+  }
+  .container2 .aboutCollabImg {
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    margin-top: 10px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(0.9);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .container2 .aboutCollabImg:hover {
+    transform: scale(1);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
   }
 }
 .project-hero1 {
