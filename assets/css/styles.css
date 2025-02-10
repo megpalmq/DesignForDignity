@@ -8,6 +8,7 @@ html,
 body {
   height: 100%;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 h1,
@@ -599,18 +600,6 @@ body {
     height: 100%;
   }
 }
-.group {
-  overflow: hidden;
-}
-
-.pull {
-  float: left;
-}
-
-.push {
-  float: right;
-}
-
 .topImage {
   background: linear-gradient(#d2c29c, #669c8b);
   height: 110vh;
@@ -693,8 +682,56 @@ body {
   height: 500px;
   margin-top: 200px;
   border-radius: 20px 0px 0px 20px;
+  margin-bottom: 100px;
 }
 
+@media (max-width: 768px) {
+  .section3 {
+    flex-direction: column; /* Stack the content vertically on smaller screens */
+    padding: 20px; /* Add some padding for spacing */
+  }
+  .descBox1 {
+    width: 100%; /* Make the description box take up the full width */
+    height: auto; /* Let the height adjust based on content */
+    margin: 0; /* Remove the auto margin */
+  }
+  .farm {
+    width: 100%; /* Make the farm image take up the full width */
+    height: 400px; /* Adjust the height for better visibility */
+    margin-top: 20px; /* Add margin for spacing */
+    border-radius: 20px; /* Apply consistent border-radius */
+  }
+  .descBox1 p {
+    font-size: 16px; /* Make the text smaller for readability */
+    line-height: 24px; /* Adjust line height for smaller screens */
+  }
+}
+@media (max-width: 660px) {
+  .descBox1 p {
+    font-size: 16px; /* Smaller font size for medium-sized screens */
+    line-height: 24px;
+    padding-top: 100px;
+  }
+}
+@media (max-width: 660px) {
+  .section3 {
+    padding: 10px;
+  }
+  .section3 .descBox1 {
+    width: 70%; /* Keep description box full width */
+    height: auto; /* Let the height adjust based on content */
+  }
+  .section3 .farm {
+    width: 100%; /* Ensure farm image is full width */
+    height: 300px; /* Adjust height for smaller screens */
+    margin-top: 20px; /* Maintain margin for spacing */
+    border-radius: 15px; /* Slightly smaller border-radius */
+  }
+  .section3 .descBox1 p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
 .triangle {
   background-image: url(../images/triangle.png);
   background-position: center;
@@ -801,6 +838,43 @@ body {
   background-image: url(../images/img3.png);
 }
 
+@media (max-width: 768px) {
+  .section5 {
+    padding-top: 50px;
+    height: auto;
+  }
+  .image-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .img-container {
+    width: 100%;
+    height: 200px;
+  }
+  h2 {
+    font-size: 32px;
+    padding-top: 50px;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 480px) {
+  .section5 {
+    padding-top: 30px; /* Further reduce padding */
+    height: auto; /* Let the height adjust based on content */
+  }
+  .image-row {
+    gap: 15px; /* Reduce space between images further */
+  }
+  .img-container {
+    width: 100%; /* Images take full width */
+    height: 180px; /* Smaller image height */
+  }
+  h2 {
+    font-size: 24px; /* Even smaller font size */
+    padding-top: 30px;
+    margin-bottom: 20px;
+  }
+}
 .proj .prodTitle {
   font-size: 55px;
   font-family: rl-aqva, sans-serif;
@@ -950,9 +1024,6 @@ body {
   }
 }
 @media (max-width: 768px) {
-  .proj {
-    padding-top: 700px;
-  }
   .proj .projects {
     flex-direction: column;
     align-items: center;
@@ -985,6 +1056,7 @@ body {
   .proj .prodTitle {
     font-size: 40px;
     padding: 10px;
+    padding-top: 100px;
   }
   .proj .projects {
     padding-top: 30px;
@@ -4399,7 +4471,8 @@ body {
     width: 100%;
   }
   .modal-content5 {
-    max-width: 100%; /* Full width for mobile screens */
+    max-width: 100%;
+    margin-top: 200px;
   }
   .group-photo5 {
     width: 100%;

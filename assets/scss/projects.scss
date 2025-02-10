@@ -8,17 +8,7 @@ $dark-gray: #635c5c;
 $highlight-color: #c05126;
 
 $heading-font: "rl-aqva";
-.group {
-  overflow: hidden;
-}
 
-.pull {
-  float: left;
-}
-
-.push {
-  float: right;
-}
 .topImage {
   background: linear-gradient($tan, $green);
   height: 110vh; // Adjusts for full viewport height
@@ -48,8 +38,8 @@ $heading-font: "rl-aqva";
     background-image: url(../images/process.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain; // Ensure the whole image is visible and scales
-    width: 100%; // Fluid width for scaling
+    background-size: contain;
+    width: 100%;
     min-height: 60vh; // Use min-height to ensure the image scales properly
     display: flex;
     margin: 0 auto;
@@ -103,8 +93,63 @@ $heading-font: "rl-aqva";
     height: 500px;
     margin-top: 200px;
     border-radius: 20px 0px 0px 20px;
+    margin-bottom: 100px;
   }
 }
+@media (max-width: 768px) {
+  .section3 {
+    flex-direction: column; /* Stack the content vertically on smaller screens */
+    padding: 20px; /* Add some padding for spacing */
+  }
+
+  .descBox1 {
+    width: 100%; /* Make the description box take up the full width */
+    height: auto; /* Let the height adjust based on content */
+    margin: 0; /* Remove the auto margin */
+  }
+
+  .farm {
+    width: 100%; /* Make the farm image take up the full width */
+    height: 400px; /* Adjust the height for better visibility */
+    margin-top: 20px; /* Add margin for spacing */
+    border-radius: 20px; /* Apply consistent border-radius */
+  }
+
+  .descBox1 p {
+    font-size: 16px; /* Make the text smaller for readability */
+    line-height: 24px; /* Adjust line height for smaller screens */
+  }
+}
+@media (max-width: 660px) {
+  .descBox1 p {
+    font-size: 16px; /* Smaller font size for medium-sized screens */
+    line-height: 24px;
+    padding-top: 100px;
+  }
+}
+@media (max-width: 660px) {
+  .section3 {
+    padding: 10px;
+
+    .descBox1 {
+      width: 70%; /* Keep description box full width */
+      height: auto; /* Let the height adjust based on content */
+    }
+
+    .farm {
+      width: 100%; /* Ensure farm image is full width */
+      height: 300px; /* Adjust height for smaller screens */
+      margin-top: 20px; /* Maintain margin for spacing */
+      border-radius: 15px; /* Slightly smaller border-radius */
+    }
+
+    .descBox1 p {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
+
 .triangle {
   background-image: url(../images/triangle.png);
   background-position: center;
@@ -217,6 +262,50 @@ $heading-font: "rl-aqva";
 
   .img3 {
     background-image: url(../images/img3.png);
+  }
+}
+@media (max-width: 768px) {
+  .section5 {
+    padding-top: 50px;
+    height: auto;
+  }
+
+  .image-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .img-container {
+    width: 100%;
+    height: 200px;
+  }
+
+  h2 {
+    font-size: 32px;
+    padding-top: 50px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section5 {
+    padding-top: 30px; /* Further reduce padding */
+    height: auto; /* Let the height adjust based on content */
+  }
+
+  .image-row {
+    gap: 15px; /* Reduce space between images further */
+  }
+
+  .img-container {
+    width: 100%; /* Images take full width */
+    height: 180px; /* Smaller image height */
+  }
+
+  h2 {
+    font-size: 24px; /* Even smaller font size */
+    padding-top: 30px;
+    margin-bottom: 20px;
   }
 }
 
@@ -388,17 +477,16 @@ $heading-font: "rl-aqva";
 }
 @media (max-width: 768px) {
   .proj {
-    padding-top: 700px;
     .projects {
       flex-direction: column;
       align-items: center;
       padding-top: 50px; // Reduce padding for better spacing on mobile
 
       .project-card {
-        width: 90%; // Make the cards take up most of the screen width
-        height: auto; // Allow the height to adjust dynamically
-        padding: 20px; // Adjust padding for better spacing
-        margin-bottom: 50px; // Reduce margin for better spacing between cards
+        width: 90%;
+        height: auto;
+        padding: 20px;
+        margin-bottom: 50px;
         text-align: center;
 
         h2 {
@@ -424,8 +512,9 @@ $heading-font: "rl-aqva";
 @media (max-width: 480px) {
   .proj {
     .prodTitle {
-      font-size: 40px; // Reduce title size for better readability
-      padding: 10px; // Add padding for spacing
+      font-size: 40px;
+      padding: 10px;
+      padding-top: 100px;
     }
 
     .projects {
