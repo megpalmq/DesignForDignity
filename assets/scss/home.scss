@@ -322,6 +322,90 @@ body {
   width: 100%;
   height: 800px;
 }
+@media (max-width: 768px) {
+  .groupimage {
+    height: 600px; /* Reduce height on smaller screens */
+  }
+
+  .section4 {
+    flex-direction: column; /* Stack the content vertically */
+    padding: 20px; /* Add padding for spacing */
+  }
+
+  .descBox2 {
+    width: 100%; /* Make descBox2 take up full width */
+    height: auto; /* Let the height adjust based on content */
+    gap: 20px; /* Reduce space between elements */
+    margin: 0; /* Remove the auto margin */
+  }
+
+  .descBox2 p {
+    font-size: 16px; /* Smaller font size for text */
+    line-height: 24px; /* Adjust line height for readability */
+    width: 100%; /* Ensure the text box takes full width */
+    padding-top: 20px; /* Reduce padding */
+    padding-bottom: 40px; /* Reduce bottom padding */
+  }
+
+  .descBox3 {
+    width: 100%; /* Full width for the description box */
+    height: auto; /* Adjust height based on content */
+    padding-top: 30px; /* Reduce padding-top */
+  }
+
+  .descBox3 h3 {
+    font-size: 20px; /* Smaller font size */
+    padding-top: 40px; /* Adjust padding for heading */
+  }
+
+  .descBox3 .p2 {
+    font-size: 16px; /* Smaller font size for text */
+    width: 100%; /* Make text box take full width */
+    padding-bottom: 30px; /* Reduce padding-bottom */
+  }
+}
+
+@media (max-width: 480px) {
+  .groupimage {
+    height: 400px; /* Further reduce height for mobile */
+  }
+
+  .section4 {
+    flex-direction: column; /* Stack content vertically */
+    padding: 10px; /* Less padding for small screens */
+  }
+
+  .descBox2 {
+    width: 100%; /* Full width for descBox2 */
+    height: auto;
+    margin: 0;
+    gap: 10px; /* Tighter gap between elements */
+  }
+
+  .descBox2 p {
+    font-size: 14px; /* Smaller font size */
+    line-height: 20px; /* Adjust line height */
+    padding-top: 10px; /* Reduce top padding */
+    padding-bottom: 20px; /* Reduce bottom padding */
+  }
+
+  .descBox3 {
+    width: 100%; /* Full width for descBox3 */
+    height: auto;
+    padding-top: 20px; /* Adjust padding for small screens */
+  }
+
+  .descBox3 h3 {
+    font-size: 18px; /* Smaller font size for heading */
+    padding-top: 20px; /* Adjust padding for heading */
+  }
+
+  .descBox3 .p2 {
+    font-size: 14px; /* Smaller font size for text */
+    width: 100%; /* Full width for text */
+    padding-bottom: 10px; /* Reduce padding-bottom */
+  }
+}
 
 .section4 {
   display: flex;
@@ -359,20 +443,136 @@ body {
         padding-top: 80px;
         color: $brown;
       }
-      .p2 {
-        align-items: center;
-        display: flex;
-        justify-content: center;
-        margin: 0 auto;
-        color: $brown;
-        font-size: 18px;
-        width: 400px;
-        line-height: 30px;
-        font-family: transat-text, sans-serif;
-        font-weight: 300;
-        padding-bottom: 50px;
-      }
     }
+  }
+}
+@media (max-width: 1024px) {
+  .section4 {
+    flex-direction: column;
+
+    .descBox2 {
+      width: 100%;
+      height: auto;
+      gap: 20px;
+    }
+
+    .descBox2 p {
+      font-size: 16px;
+      line-height: 26px;
+      width: 90%;
+      padding-top: 30px;
+      padding-bottom: 60px;
+      margin: 0 auto;
+    }
+
+    .descBox3 {
+      width: 100%;
+      height: 200px;
+      padding-top: 40px;
+      box-sizing: border-box;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .section4 {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .descBox2 {
+    width: 100%;
+    height: auto;
+    gap: 15px;
+  }
+
+  .descBox2 p {
+    font-size: 14px;
+    line-height: 22px;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    margin: 0 auto;
+  }
+
+  .descBox3 {
+    width: 100%;
+    height: auto;
+    padding-top: 30px;
+    box-sizing: border-box;
+  }
+
+  .descBox3 h3 {
+    font-size: 20px;
+    padding-top: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .section4 {
+    flex-direction: column;
+    padding: 5px;
+
+    .descBox2 {
+      width: 100%;
+      height: auto;
+      gap: 10px;
+    }
+
+    .descBox2 p {
+      font-size: 12px;
+      line-height: 20px;
+      width: 100%;
+      padding-top: 10px;
+      padding-bottom: 20px;
+      margin: 0 auto;
+    }
+
+    .descBox3 {
+      width: 100%;
+      height: auto;
+      padding-top: 20px;
+      box-sizing: border-box;
+    }
+
+    .descBox3 h3 {
+      font-size: 18px;
+      padding-top: 20px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .section4 {
+    flex-direction: column;
+    padding: 5px;
+  }
+
+  .descBox2 {
+    width: 100%;
+    height: auto;
+    gap: 5px;
+  }
+
+  .descBox2 p {
+    font-size: 10px;
+    line-height: 18px;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    margin: 0 auto;
+  }
+
+  .descBox3 {
+    width: 100%;
+    height: auto;
+    padding-top: 10px;
+    box-sizing: border-box;
+  }
+
+  .descBox3 h3 {
+    font-size: 16px;
+    padding-top: 10px;
   }
 }
 
