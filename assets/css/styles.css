@@ -1797,6 +1797,7 @@ body {
   margin-top: 30px;
   line-height: 27px;
   animation: fadeInUp 2s ease-out;
+  color: white;
   text-align: center;
 }
 
@@ -1824,65 +1825,86 @@ body {
     transform: translateY(0);
   }
 }
-.finalDrafts {
-  background: linear-gradient(#669c8b, #d2c29c);
-  width: 100%;
-  height: 800px;
+.final-draft1 {
+  padding: 50px 20px;
+  background: linear-gradient(to bottom right, #d2c29c, #669c8b);
+  text-align: center;
 }
-.finalDrafts .upText {
-  display: flex;
-  flex-direction: column;
-  padding: 40px;
-  margin: 0 auto;
-}
-.finalDrafts .upText h2 {
-  display: flex;
-  margin: 0 auto;
-  color: #669c8b;
-  font-size: 44px;
+
+.final-draft1 h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #479195;
   font-family: "rl-aqva", sans-serif;
-  justify-content: center;
 }
-.finalDrafts .upText p {
-  margin: 0 auto;
-  justify-content: center;
+
+.final-draft1 p {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 30px;
 }
-.finalDrafts .drafts {
+
+.poster-thumbnails1 {
   display: flex;
   justify-content: center;
-  gap: 40px;
-  margin: 0 auto;
-  /* Modal Styles */
-}
-.finalDrafts .drafts .final-draft1 {
-  display: flex;
-  justify-content: center;
-}
-.finalDrafts .drafts .poster-thumbnails1 {
-  display: flex;
-  justify-content: center;
+  align-items: center;
   gap: 20px;
   flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
 }
-.finalDrafts .drafts .poster-item1 {
+
+.poster-item1 {
   width: 400px;
   height: 550px;
   overflow: hidden;
   cursor: pointer;
+  margin: 0 auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.finalDrafts .drafts .poster-item1 img {
-  width: 100px;
-  height: 100px;
+
+.poster-item1 img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   border-radius: 10px;
   transition: transform 0.3s ease;
 }
-.finalDrafts .drafts .poster-item1:hover img {
+
+.poster-item1:hover img {
   transform: scale(1.05);
 }
-.finalDrafts .drafts .modal1 {
+
+.english1 {
+  width: 400px;
+  height: 550px;
+  background-image: url(../images/FD/team5EN.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.korean1 {
+  width: 400px;
+  height: 550px;
+  background-image: url(../images/FD/team1Kr.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  display: flex;
+  margin: 0 auto;
+}
+
+/* Modal Styles */
+.modal1 {
   display: none;
   position: fixed;
   z-index: 1;
@@ -1893,7 +1915,8 @@ body {
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.8);
 }
-.finalDrafts .drafts .modal-content1 {
+
+.modal-content1 {
   position: relative;
   margin: 15% auto;
   max-width: 900px;
@@ -1901,28 +1924,33 @@ body {
   justify-content: center;
   align-items: center;
 }
-.finalDrafts .drafts .slides1 img {
+
+.slides1 img {
   width: 100%;
   height: auto;
   object-fit: cover;
   border-radius: 10px;
 }
-.finalDrafts .drafts p {
+
+p {
   color: #669c8b;
   font-size: 20px;
 }
-.finalDrafts .drafts .english1 {
+
+.english1 {
   background-image: url(../images/FD/team1EN.png);
   width: 500px;
   height: 700px;
 }
-.finalDrafts .drafts .korean1 {
+
+.korean1 {
   background-image: url(../images/FD/team1Kr.png);
   width: 500px;
   height: 700px;
 }
-.finalDrafts .drafts .prev1,
-.finalDrafts .drafts .next1 {
+
+.prev1,
+.next1 {
   position: absolute;
   top: 50%;
   padding: 16px;
@@ -1935,17 +1963,21 @@ body {
   user-select: none;
   transition: background-color 0.3s ease;
 }
-.finalDrafts .drafts .prev1:hover,
-.finalDrafts .drafts .next1:hover {
+
+.prev1:hover,
+.next1:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
-.finalDrafts .drafts .prev1 {
+
+.prev1 {
   left: 0;
 }
-.finalDrafts .drafts .next1 {
+
+.next1 {
   right: 0;
 }
-.finalDrafts .drafts .close1 {
+
+.close1 {
   position: absolute;
   top: 10px;
   right: 25px;
@@ -1955,7 +1987,8 @@ body {
   cursor: pointer;
   transition: color 0.3s ease;
 }
-.finalDrafts .drafts .close1:hover {
+
+.close1:hover {
   color: #bbb;
 }
 
@@ -2362,6 +2395,7 @@ body {
   font-size: 1.1rem;
   max-width: 700px;
   margin: 0 auto;
+  color: white;
   font-weight: bolder;
   margin-top: 30px;
   line-height: 27px;
@@ -2453,7 +2487,7 @@ body {
 }
 
 /* Modal Styles */
-.modal2 {
+.modal1 {
   display: none;
   position: fixed;
   z-index: 1;
@@ -2465,13 +2499,31 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.modal-content2 {
+.modal-content1 {
   position: relative;
-  margin: 10% auto;
+  margin: 15% auto;
   max-width: 900px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.slides1 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+p {
+  color: #669c8b;
+  font-size: 20px;
+}
+
+.english2 {
+  background-image: url(../images/FD/team2EN.png);
+  width: 500px;
+  height: 700px;
 }
 
 .korean2 {
@@ -2841,6 +2893,7 @@ body {
   line-height: 27px;
   animation: fadeInUp 2s ease-out;
   text-align: center;
+  color: white;
 }
 
 .project-type3 {
@@ -2868,65 +2921,53 @@ body {
   }
 }
 /* About Section */
-.finalDrafts {
-  background: linear-gradient(#669c8b, #d3c49c);
-  width: 100%;
-  height: 900px;
+.final-draft2 {
+  padding: 50px 20px;
+  background: linear-gradient(to bottom right, #d3c49c, #669c8b);
+  text-align: center;
 }
-.finalDrafts .upText {
-  display: flex;
-  flex-direction: column;
-  padding: 40px;
-  margin: 0 auto;
-}
+
 .finalDrafts .upText h2 {
-  display: flex;
-  margin: 0 auto;
   color: #669c8b;
-  font-size: 44px;
-  font-family: "rl-aqva", sans-serif;
-  justify-content: center;
 }
-.finalDrafts .upText p {
-  margin: 0 auto;
-  justify-content: center;
-}
-.finalDrafts .drafts {
+
+.poster-thumbnails3 {
   display: flex;
   justify-content: center;
-  gap: 40px;
-  margin: 0 auto;
-  /* Modal Styles */
-}
-.finalDrafts .drafts .final-draft3 {
-  display: flex;
-  justify-content: center;
-}
-.finalDrafts .drafts .poster-thumbnails3 {
-  display: flex;
-  justify-content: center;
+  align-items: center;
   gap: 20px;
   flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
 }
-.finalDrafts .drafts .poster-item3 {
-  width: 500px;
-  height: 650px;
+
+.poster-item2 {
+  width: 400px;
+  height: 550px;
   overflow: hidden;
   cursor: pointer;
+  margin: 0 auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.finalDrafts .drafts .poster-item3 img {
-  width: 100px;
-  height: 100px;
-  object-fit: contain;
+
+.poster-item2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 10px;
   transition: transform 0.3s ease;
 }
-.finalDrafts .drafts .poster-item3:hover img {
+
+.poster-item2:hover img {
   transform: scale(1.05);
 }
-.finalDrafts .drafts .modal3 {
+
+/* Modal Styles */
+.modal3 {
   display: none;
   position: fixed;
   z-index: 1;
@@ -2937,7 +2978,8 @@ body {
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.8);
 }
-.finalDrafts .drafts .modal-content3 {
+
+.modal-content3 {
   position: relative;
   margin: 15% auto;
   max-width: 900px;
@@ -2945,41 +2987,49 @@ body {
   justify-content: center;
   align-items: center;
 }
-.finalDrafts .drafts .slides img {
-  width: 80%; /* or whatever value you want */
+
+.slides1 img {
+  width: 100%;
   height: auto;
+  object-fit: cover;
+  border-radius: 10px;
 }
-.finalDrafts .drafts p {
+
+p {
   color: #669c8b;
   font-size: 20px;
 }
-.finalDrafts .drafts .english3 {
+
+.english3 {
+  width: 400px;
+  height: 550px;
   background-image: url(../images/FD/team3final.jpg);
-  width: 500px;
-  height: 700px;
-  background-position: center;
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
+  border-radius: 10px;
+  display: flex;
+  margin: 0 auto;
 }
-.finalDrafts .drafts .korean3 {
+
+.korean3 {
+  width: 400px;
+  height: 550px;
   background-image: url(../images/FD/team3krr.png);
-  width: 500px;
-  height: 700px;
-  background-position: center;
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
+  border-radius: 10px;
+  display: flex;
+  margin: 0 auto;
 }
-.finalDrafts .drafts .slide2,
-.finalDrafts .drafts .slide {
-  width: 500px;
-  height: 700px;
-}
-.finalDrafts .drafts .prev3,
-.finalDrafts .drafts .next3 {
+
+.prev1,
+.next1 {
   position: absolute;
   top: 50%;
   padding: 16px;
-  color: white;
+  color: #d3c49c;
   font-size: 18px;
   font-weight: bold;
   background-color: rgba(0, 0, 0, 0.6);
@@ -2988,17 +3038,21 @@ body {
   user-select: none;
   transition: background-color 0.3s ease;
 }
-.finalDrafts .drafts .prev3:hover,
-.finalDrafts .drafts .next3:hover {
+
+.prev1:hover,
+.next1:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
-.finalDrafts .drafts .prev3 {
+
+.prev1 {
   left: 0;
 }
-.finalDrafts .drafts .next3 {
+
+.next1 {
   right: 0;
 }
-.finalDrafts .drafts .close3 {
+
+.close2 {
   position: absolute;
   top: 10px;
   right: 25px;
@@ -3008,7 +3062,8 @@ body {
   cursor: pointer;
   transition: color 0.3s ease;
 }
-.finalDrafts .drafts .close3:hover {
+
+.close1:hover {
   color: #bbb;
 }
 
@@ -3119,13 +3174,6 @@ body {
 .members3 .group-photo3 {
   margin-top: 20px;
   text-align: center;
-  opacity: 0;
-  transform: translateX(-100px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-.members3 .group-photo3.visible {
-  opacity: 1;
-  transform: translateX(0);
 }
 .members3 .group-photo3 h3 {
   font-size: 1.6rem;
@@ -3406,6 +3454,7 @@ body {
   margin-top: 30px;
   line-height: 27px;
   animation: fadeInUp 2s ease-out;
+  color: white;
   text-align: center;
 }
 
@@ -3514,7 +3563,7 @@ body {
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.8);
 }
-.finalDrafts .modal4 .modal-content4 {
+.finalDrafts .modal-content4 {
   width: 1200px;
   margin: 0 auto;
   padding-top: 200px;
@@ -3523,30 +3572,30 @@ body {
   justify-content: center;
   align-items: center;
 }
-.finalDrafts .modal4 .modal-content4 .slides {
-  width: 1000px;
+.finalDrafts .modal-content4 .slides {
+  width: 700px;
   height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.finalDrafts .modal4 .modal-content4 .slides img {
-  width: 1000px;
+.finalDrafts .modal-content4 .slides img {
+  width: 700px;
   border-radius: 10px;
 }
-.finalDrafts .modal4 .modal-content4 .slide2 {
+.finalDrafts .modal-content4 .slide2 {
   width: 1000px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding-right: 100px;
 }
-.finalDrafts .modal4 .modal-content4 .slide2 img {
+.finalDrafts .modal-content4 .slide2 img {
   width: 1000px;
   border-radius: 10px;
 }
-.finalDrafts .modal4 .prev2,
-.finalDrafts .modal4 .next2 {
+.finalDrafts .prev2,
+.finalDrafts .next2 {
   position: absolute;
   top: 50%;
   padding: 16px;
@@ -3559,17 +3608,17 @@ body {
   user-select: none;
   transition: background-color 0.3s ease;
 }
-.finalDrafts .modal4 .prev2:hover,
-.finalDrafts .modal4 .next2:hover {
+.finalDrafts .prev2:hover,
+.finalDrafts .next2:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
-.finalDrafts .modal4 .prev2 {
+.finalDrafts .prev2 {
   left: 0;
 }
-.finalDrafts .modal4 .next2 {
+.finalDrafts .next2 {
   right: 0;
 }
-.finalDrafts .modal4 .close4 {
+.finalDrafts .close4 {
   position: absolute;
   top: 10px;
   right: 25px;
@@ -3579,7 +3628,7 @@ body {
   cursor: pointer;
   transition: color 0.3s ease;
 }
-.finalDrafts .modal4 .close4:hover {
+.finalDrafts .close4:hover {
   color: #bbb;
 }
 

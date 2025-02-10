@@ -20,40 +20,38 @@
       <p class="project-type4">Brochure</p>
     </div>
   </div>
-
   <section class="finalDrafts">
     <div class="upText">
       <h2>Final Drafts</h2>
       <p>Click on the poster to see them up close.</p>
     </div>
 
-    <div class="drafts">
-      <!-- English Poster -->
-      <div class="poster-thumbnails4">
-        <div class="poster-item4" onclick="openModal(); currentSlide(1)">
-          <div class="english4"></div>
-        </div>
-        <div class="poster-item4" onclick="openModal(); currentSlide(2)">
-          <div class="korean4"></div>
-        </div>
+    <div class="poster-thumbnails1">
+      <div class="poster-item1" onclick="openModal(); currentSlide(1)">
+        <div class="english4"></div>
       </div>
+      <div class="poster-item1" onclick="openModal(); currentSlide(2)">
+        <div class="korean4"></div>
+      </div>
+    </div>
 
-      <!-- Modal for full-screen view -->
-      <div id="modal" class="modal4">
-        <span class="close4" onclick="closeModal()">&times;</span>
-        <div class="modal-content4">
-          <div class="slides">
-            <!-- Slide 1 (English Poster) -->
-            <div class="slide">
-              <img src="/assets/images/FD/team4EN.png" alt="English Poster" />
-            </div>
-            <div class="slide2">
-              <img src="/assets/images/FD/team4Kr.png" alt="Korean Poster" />
-            </div>
-            <!-- Navigation arrows -->
-            <a class="prev2" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next2" onclick="plusSlides(1)">&#10095;</a>
+    <!-- Modal for full-screen view -->
+    <div id="modal" class="modal4">
+      <span class="close2" onclick="closeModal()">&times;</span>
+      <div class="modal-content4">
+        <div class="slides">
+          <!-- Slide 1 (English Poster) -->
+          <div class="slide">
+            <img src="/assets/images/FD/team4En.png" alt="English Poster" />
           </div>
+
+          <div class="slide">
+            <img src="/assets/images/FD/team4Kr.png" alt="Korean Poster" />
+          </div>
+
+          <!-- Navigation arrows -->
+          <a class="prev8" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next8" onclick="plusSlides(1)">&#10095;</a>
         </div>
       </div>
     </div>

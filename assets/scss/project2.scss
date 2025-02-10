@@ -48,6 +48,7 @@ $heading-font: "rl-aqva", sans-serif;
   font-size: 1.1rem;
   max-width: 700px;
   margin: 0 auto;
+  color: white;
   font-weight: bolder;
   margin-top: 30px;
   line-height: 27px;
@@ -145,7 +146,7 @@ $heading-font: "rl-aqva", sans-serif;
 }
 
 /* Modal Styles */
-.modal2 {
+.modal1 {
   display: none;
   position: fixed;
   z-index: 1;
@@ -157,15 +158,30 @@ $heading-font: "rl-aqva", sans-serif;
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.modal-content2 {
+.modal-content1 {
   position: relative;
-  margin: 10% auto;
+  margin: 15% auto;
   max-width: 900px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.slides1 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+p {
+  color: $green;
+  font-size: 20px;
+}
+.english2 {
+  background-image: url(../images/FD/team2EN.png);
+  width: 500px;
+  height: 700px;
+}
 .korean2 {
   background-image: url(../images/FD/team2Kr.png);
   width: 500px;
