@@ -1339,6 +1339,7 @@ body {
   padding: 20px;
   justify-content: space-between;
   gap: 20px;
+  color: white;
   margin-top: 20px;
   align-items: center;
   color: black;
@@ -1354,6 +1355,9 @@ body {
   font-size: 1.2rem;
   line-height: 1.6;
   color: #000000;
+}
+.about-section .container .about-content .text-content p {
+  color: #352d27;
 }
 .about-section .container .about-content .collab {
   background-image: url(../images/about-collaboration.jpg);
@@ -4075,6 +4079,7 @@ p {
   margin-top: 30px;
   line-height: 27px;
   animation: fadeInUp 2s ease-out;
+  color: white;
   text-align: center;
 }
 
@@ -4682,6 +4687,7 @@ p {
   margin-top: 30px;
   line-height: 27px;
   animation: fadeInUp 2s ease-out;
+  color: white;
   text-align: center;
 }
 
@@ -5238,6 +5244,7 @@ p {
   line-height: 27px;
   animation: fadeInUp 2s ease-out;
   text-align: center;
+  color: white;
 }
 
 .project-type7 {
@@ -5786,6 +5793,7 @@ p {
   margin-top: 30px;
   line-height: 27px;
   animation: fadeInUp 2s ease-out;
+  color: white;
   text-align: center;
 }
 

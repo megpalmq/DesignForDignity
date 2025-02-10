@@ -185,6 +185,7 @@ $map-height: 400px;
       padding: 20px;
       justify-content: space-between;
       gap: 20px;
+      color: white;
       margin-top: 20px;
       align-items: center;
       color: black;
@@ -200,6 +201,9 @@ $map-height: 400px;
         font-size: 1.2rem;
         line-height: 1.6;
         color: #000000;
+        p {
+          color: $brown;
+        }
       }
 
       .collab {
