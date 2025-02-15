@@ -58,121 +58,14 @@ $heading-font: "rl-aqva";
     }
   }
 }
-.section3 {
-  display: flex;
-  background: linear-gradient($tan, $green);
-
-  .descBox1 {
-    width: 600px;
-    height: 900px;
-
-    display: flex;
-    margin: 0 auto;
-
-    p {
-      display: flex;
-      justify-content: center;
-      margin: 0 auto;
-      color: $brown;
-      font-size: 18px;
-
-      line-height: 30px;
-      align-items: center;
-      font-family: transat-text, sans-serif;
-      font-style: normal;
-      font-weight: 300;
-    }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-
-  .farm {
-    background-image: url(../images/farmmm.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 800px;
-    height: 500px;
-    margin-top: 200px;
-    border-radius: 20px 0px 0px 20px;
-    margin-bottom: 100px;
-  }
-}
-@media (max-width: 768px) {
-  .section3 {
-    flex-direction: column; /* Stack the content vertically on smaller screens */
-    padding: 20px; /* Add some padding for spacing */
-  }
-
-  .descBox1 {
-    width: 100%; /* Make the description box take up the full width */
-    height: auto; /* Let the height adjust based on content */
-    margin: 0; /* Remove the auto margin */
-  }
-
-  .farm {
-    width: 100%; /* Make the farm image take up the full width */
-    height: 400px; /* Adjust the height for better visibility */
-    margin-top: 20px; /* Add margin for spacing */
-    border-radius: 20px; /* Apply consistent border-radius */
-  }
-
-  .descBox1 p {
-    font-size: 16px; /* Make the text smaller for readability */
-    line-height: 24px; /* Adjust line height for smaller screens */
-  }
-}
-@media (max-width: 660px) {
-  .descBox1 p {
-    font-size: 16px; /* Smaller font size for medium-sized screens */
-    line-height: 24px;
-    padding-top: 100px;
-  }
-}
-@media (max-width: 660px) {
-  .section3 {
-    padding: 10px;
-
-    .descBox1 {
-      width: 70%; /* Keep description box full width */
-      height: auto; /* Let the height adjust based on content */
-    }
-
-    .farm {
-      width: 100%; /* Ensure farm image is full width */
-      height: 300px; /* Adjust height for smaller screens */
-      margin-top: 20px; /* Maintain margin for spacing */
-      border-radius: 15px; /* Slightly smaller border-radius */
-    }
-
-    .descBox1 p {
-      font-size: 14px;
-      line-height: 20px;
-    }
-  }
-}
-
-.triangle {
-  background-image: url(../images/triangle.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-color: $green;
-  width: 100%;
-  min-height: 70vh;
-  display: flex;
-  margin: 0 auto;
-
-  transition: transform 0.3s ease-in-out;
-
-  &:hover {
-    transform: scale(1.05); // Zoom on hover
-  }
-
-  @media (max-width: 1024px) {
-    min-height: 30vh;
-  }
-
-  @media (max-width: 768px) {
-    min-height: 25vh;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 .section5 {
@@ -193,15 +86,17 @@ $heading-font: "rl-aqva";
     text-align: center;
     margin-bottom: 50px;
     font-family: rl-aqva, sans-serif;
+    animation: fadeIn 1.5s ease-out;
   }
 
   .image-row {
     display: flex;
-    justify-content: center; /* Centers the images */
-    align-items: center; /* Keeps images aligned */
-    gap: 40px; /* Adds space between images */
-    width: 100%; /* Ensures the row spans full width */
-    flex-wrap: wrap; /* Prevents overflow on smaller screens */
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    flex-wrap: wrap;
+    animation: fadeIn 1.5s ease-out;
   }
 
   .img-container {
@@ -480,17 +375,14 @@ $heading-font: "rl-aqva";
     .projects {
       flex-direction: column;
       align-items: center;
-      padding-top: 50px; // Reduce padding for better spacing on mobile
 
       .project-card {
         width: 90%;
         height: auto;
-        padding: 20px;
-        margin-bottom: 50px;
         text-align: center;
 
         h2 {
-          font-size: 28px; // Slightly reduce heading size for better readability
+          font-size: 32px;
         }
 
         .project-image,
@@ -502,8 +394,8 @@ $heading-font: "rl-aqva";
         .project-image7,
         .project-image8 {
           width: 100%; // Make images responsive
-          height: 250px; // Adjust height for better fit
-          border-radius: 20px; // Keep rounded corners
+          height: 250px;
+          border-radius: 20px;
         }
       }
     }
@@ -514,20 +406,15 @@ $heading-font: "rl-aqva";
     .prodTitle {
       font-size: 40px;
       padding: 10px;
-      padding-top: 100px;
     }
 
     .projects {
-      padding-top: 30px; // Reduce top padding to save space
-
       .project-card {
-        width: 95%; // Use more screen width while keeping margins
-        padding: 15px; // Adjust padding for better spacing
-        margin-bottom: 30px; // Reduce margin for better spacing
-        border-radius: 30px; // Slightly reduce border radius for a softer look
+        width: 95%;
+        border-radius: 30px;
 
         h2 {
-          font-size: 24px; // Reduce font size for better readability on small screens
+          font-size: 24px;
         }
 
         .project-image,

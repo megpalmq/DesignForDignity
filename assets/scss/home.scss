@@ -6,7 +6,7 @@ $orange: #c05126;
 $light-gray: #eeee;
 $dark-gray: #635c5c;
 $highlight-color: #c05126;
-/* Base styles */
+
 body {
   margin: 0;
 
@@ -191,6 +191,9 @@ body {
       font-weight: 900;
       font-style: normal;
     }
+    .ani {
+      animation: fadeInUp 1.5s ease-out forwards;
+    }
 
     p {
       font-size: 23px;
@@ -269,18 +272,6 @@ body {
   }
 }
 
-// Fade-in animation for smooth effect
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 .saying {
   width: 100%;
   min-height: 300px;
@@ -300,6 +291,10 @@ body {
       color: $yellow;
     }
   }
+  .ani2 {
+    color: $yellow;
+    margin-top: 20px;
+  }
 }
 @media (max-width: 768px) {
   .saying {
@@ -310,100 +305,63 @@ body {
     width: 90%;
     font-size: 15px;
   }
+  .ani {
+    width: 100%;
+  }
 }
 
-/* Food Section */
-
-.groupimage {
-  background-image: url(../images/collab.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 800px;
-}
-@media (max-width: 768px) {
+.images {
+  display: flex;
   .groupimage {
-    height: 600px; /* Reduce height on smaller screens */
+    background-image: url(../images/collab.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    height: 400px;
   }
-
-  .section4 {
-    flex-direction: column; /* Stack the content vertically */
-    padding: 20px; /* Add padding for spacing */
-  }
-
-  .descBox2 {
-    width: 100%; /* Make descBox2 take up full width */
-    height: auto; /* Let the height adjust based on content */
-    gap: 20px; /* Reduce space between elements */
-    margin: 0; /* Remove the auto margin */
-  }
-
-  .descBox2 p {
-    font-size: 16px; /* Smaller font size for text */
-    line-height: 24px; /* Adjust line height for readability */
-    width: 100%; /* Ensure the text box takes full width */
-    padding-top: 20px; /* Reduce padding */
-    padding-bottom: 40px; /* Reduce bottom padding */
-  }
-
-  .descBox3 {
-    width: 100%; /* Full width for the description box */
-    height: auto; /* Adjust height based on content */
-    padding-top: 30px; /* Reduce padding-top */
-  }
-
-  .descBox3 h3 {
-    font-size: 20px; /* Smaller font size */
-    padding-top: 40px; /* Adjust padding for heading */
-  }
-
-  .descBox3 .p2 {
-    font-size: 16px; /* Smaller font size for text */
-    width: 100%; /* Make text box take full width */
-    padding-bottom: 30px; /* Reduce padding-bottom */
+  .tylerpic {
+    background-image: url(../images/shoulder.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    height: 400px;
   }
 }
-
+@media (max-width: 1200px) {
+  .images {
+    .groupimage,
+    .tylerpic {
+      width: 50%;
+      height: 350px;
+    }
+  }
+}
+@media (max-width: 992px) {
+  .images {
+    flex-direction: column;
+    .groupimage,
+    .tylerpic {
+      width: 100%;
+      height: 300px;
+    }
+  }
+}
+@media (max-width: 800px) {
+  .images {
+    .groupimage,
+    .tylerpic {
+      height: 250px;
+    }
+  }
+}
 @media (max-width: 480px) {
-  .groupimage {
-    height: 400px; /* Further reduce height for mobile */
-  }
-
-  .section4 {
-    flex-direction: column; /* Stack content vertically */
-    padding: 10px; /* Less padding for small screens */
-  }
-
-  .descBox2 {
-    width: 100%; /* Full width for descBox2 */
-    height: auto;
-    margin: 0;
-    gap: 10px; /* Tighter gap between elements */
-  }
-
-  .descBox2 p {
-    font-size: 14px; /* Smaller font size */
-    line-height: 20px; /* Adjust line height */
-    padding-top: 10px; /* Reduce top padding */
-    padding-bottom: 20px; /* Reduce bottom padding */
-  }
-
-  .descBox3 {
-    width: 100%; /* Full width for descBox3 */
-    height: auto;
-    padding-top: 20px; /* Adjust padding for small screens */
-  }
-
-  .descBox3 h3 {
-    font-size: 18px; /* Smaller font size for heading */
-    padding-top: 20px; /* Adjust padding for heading */
-  }
-
-  .descBox3 .p2 {
-    font-size: 14px; /* Smaller font size for text */
-    width: 100%; /* Full width for text */
-    padding-bottom: 10px; /* Reduce padding-bottom */
+  .images {
+    .groupimage,
+    .tylerpic {
+      height: 200px;
+    }
   }
 }
 
@@ -434,157 +392,118 @@ body {
       padding-bottom: 80px;
     }
     .descBox3 {
-      padding-top: 50px;
-      background-color: $green;
-      height: 300px;
-
-      h3 {
-        font-size: 24px;
-        padding-top: 80px;
-        color: $brown;
+      .triangle {
+        background-image: url(../images/triangle.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 700px;
+        min-height: 50vh;
+        margin-top: 30px;
       }
     }
   }
 }
-@media (max-width: 1024px) {
+
+@media (max-width: 1200px) {
   .section4 {
     flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
 
     .descBox2 {
-      width: 100%;
+      height: 450px;
+      gap: 30px;
+      p {
+        font-size: 16px;
+        width: 500px;
+        line-height: 28px;
+      }
+      .descBox3 {
+        .triangle {
+          width: 800px;
+          min-height: 75vh;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 992px) {
+  .section4 {
+    padding: 30px 15px;
+
+    .descBox2 {
       height: auto;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
       gap: 20px;
-    }
 
-    .descBox2 p {
-      font-size: 16px;
-      line-height: 26px;
-      width: 90%;
-      padding-top: 30px;
-      padding-bottom: 60px;
-      margin: 0 auto;
-    }
+      p {
+        font-size: 15px;
+        width: 80%;
+        line-height: 26px;
+        padding-top: 30px;
+      }
 
-    .descBox3 {
-      width: 100%;
-      height: 200px;
-      padding-top: 40px;
-      box-sizing: border-box;
+      .descBox3 {
+        .triangle {
+          width: 700px;
+          min-height: 70vh;
+        }
+      }
     }
   }
 }
-
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .section4 {
-    flex-direction: column;
-    padding: 10px;
-  }
-
-  .descBox2 {
-    width: 100%;
-    height: auto;
-    gap: 15px;
-  }
-
-  .descBox2 p {
-    font-size: 14px;
-    line-height: 22px;
-    width: 100%;
-    padding-top: 20px;
-    padding-bottom: 40px;
-    margin: 0 auto;
-  }
-
-  .descBox3 {
-    width: 100%;
-    height: auto;
-    padding-top: 30px;
-    box-sizing: border-box;
-  }
-
-  .descBox3 h3 {
-    font-size: 20px;
-    padding-top: 40px;
-  }
-}
-
-@media (max-width: 576px) {
-  .section4 {
-    flex-direction: column;
-    padding: 5px;
+    padding: 20px 10px;
 
     .descBox2 {
-      width: 100%;
       height: auto;
-      gap: 10px;
-    }
+      gap: 15px;
 
-    .descBox2 p {
-      font-size: 12px;
-      line-height: 20px;
-      width: 100%;
-      padding-top: 10px;
-      padding-bottom: 20px;
-      margin: 0 auto;
-    }
+      p {
+        font-size: 14px;
+        width: 90%;
+        padding-top: 20px;
+        line-height: 24px;
+      }
 
-    .descBox3 {
-      width: 100%;
-      height: auto;
-      padding-top: 20px;
-      box-sizing: border-box;
-    }
-
-    .descBox3 h3 {
-      font-size: 18px;
-      padding-top: 20px;
+      .descBox3 {
+        .triangle {
+          width: 600px;
+          min-height: 55vh;
+          margin-bottom: 100px;
+        }
+      }
     }
   }
 }
-
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .section4 {
-    flex-direction: column;
-    padding: 5px;
-  }
+    padding: 10px;
 
-  .descBox2 {
-    width: 100%;
-    height: auto;
-    gap: 5px;
-  }
+    .descBox2 {
+      gap: 10px;
+      p {
+        font-size: 13px;
+        width: 95%;
+        padding: 15px;
+        line-height: 22px;
+      }
 
-  .descBox2 p {
-    font-size: 10px;
-    line-height: 18px;
-    width: 100%;
-    padding-top: 5px;
-    padding-bottom: 10px;
-    margin: 0 auto;
-  }
-
-  .descBox3 {
-    width: 100%;
-    height: auto;
-    padding-top: 10px;
-    box-sizing: border-box;
-  }
-
-  .descBox3 h3 {
-    font-size: 16px;
-    padding-top: 10px;
+      .descBox3 {
+        .triangle {
+          width: 400px;
+          min-height: 40vh;
+        }
+      }
+    }
   }
 }
-
 .scroll-animate {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.scroll-animate.animate {
-  opacity: 1;
-  transform: translateY(0);
+  transform: translate3d(0, 50px, 0);
 }
 /* Footer */
 .footer {
@@ -619,7 +538,7 @@ body {
 
     p {
       margin: 5px 0;
-      //font-size: 1rem;
+      font-size: 15px;
       color: $brown;
     }
     a {
@@ -660,8 +579,8 @@ body {
     display: flex;
     justify-content: flex-end;
     font-size: 0.7rem;
-    margin-top: 20px;
     color: $brown;
+    margin-top: -20px;
   }
 
   @media (max-width: 768px) {
@@ -674,6 +593,9 @@ body {
     .footer-links,
     .footer-social {
       flex: none;
+    }
+    .footer-bottom {
+      margin-top: 20px;
     }
   }
 }
@@ -741,7 +663,6 @@ body {
     font-size: 0.8rem;
     margin-top: 20px;
     text-align: center;
-    width: 100%;
   }
 }
 

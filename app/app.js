@@ -1,33 +1,17 @@
 // Mobile Menu Toggle
 const mobileMenu = document.getElementById("mobile-menu");
 const navLinks = document.querySelector(".nav-links");
-let width = $(window).width();
-
-// Handle mousemove event
-$(window).on("mousemove", function (e) {
-  let normalizedPosition = e.pageX / (width / 2) - 1;
-  let speedSlow = 100 * normalizedPosition;
-  let speedFast = 200 * normalizedPosition;
-
-  $(".spanSlow").each(function () {
-    $(this).css("transform", `translate(${speedSlow}px)`);
-  });
-
-  $(".spanFast").each(function () {
-    $(this).css("transform", `translate(${speedFast}px)`);
-  });
-});
-
-// Recalculate width on window resize
-$(window).on("resize", function () {
-  width = $(window).width();
-});
 
 mobileMenu.addEventListener("click", () => {
-  console.log("Mobile menu clicked");
   navLinks.classList.toggle("open");
 });
 
+// Window Resize Event
+$(window).on("resize", function () {
+  const width = $(window).width();
+});
+
+// Scroll Event
 window.addEventListener("scroll", () => {
   const navbar = document.querySelector(".navbar");
   if (window.scrollY > 10) {
@@ -37,83 +21,57 @@ window.addEventListener("scroll", () => {
   }
 });
 
+// Navigation Functions
 function navigateToProject(projectId) {
-  // Redirect to the corresponding project page
   window.location.href = `./${projectId}.html`;
 }
 
-function initListeners() {
-  // Event listeners for project cards
-  $("#project1").click(function () {
-    showProjectDetails("project1");
-  });
-
-  $("#project2").click(function () {
-    showProjectDetails("project2");
-  });
-  $("#project3").click(function () {
-    showProjectDetails("project3");
-  });
-  $("#project4").click(function () {
-    showProjectDetails("project4");
-  });
-  $("#project5").click(function () {
-    showProjectDetails("project5");
-  });
-  $("#project6").click(function () {
-    showProjectDetails("project6");
-  });
-  $("#project7").click(function () {
-    showProjectDetails("project7");
-  });
-  $("#project8").click(function () {
-    showProjectDetails("project8");
-  });
-}
-
-$(document).ready(function () {
-  initListeners();
-});
-
+// Change Route Function
 function changeRoute() {
-  let hashTag = window.location.hash;
-  let pageID = hashTag.replace("#", "");
+  const hashTag = window.location.hash;
+  const pageID = hashTag.replace("#", "");
 
-  // Default to 'home' if no hash is set
   if (pageID === "") {
     pageID = "home";
   }
 
-  // Dynamically load the page using the pageID
   $.get(`assets/pages/${pageID}.html`, function (data) {
-    console.log("Data loaded: ");
     $("#app").html(data);
-
     window.scrollTo({ top: 0, behavior: "smooth" });
   }).fail(function () {
     console.log("Error loading page: " + pageID);
   });
 }
 
+// Initialize URL Listener
 function initURLListener() {
   $(window).on("hashchange", changeRoute);
   changeRoute();
 }
 
-$(document).ready(function () {
+// Initialize Listeners
+function initListeners() {
+  // Initialize URL listener
   initURLListener();
-  changeRoute();
-  $("video").on("ended", function () {
-    $(this).get(0).currentTime = 0; // Reset to start
-    $(this).get(0).play(); // Play again
-  });
-});
-$(window).on("hashchange", changeRoute);
-if ($("#map").length > 0) {
-  // Initialize the map
-  const map = L.map("map").setView([39.8283, -98.5795], 4); // Default center in USA
 
-  // Add tile layer (OpenStreetMap in this case)
+  // Initialize map
+  if ($("#map").length > 0) {
+    initMap();
+  }
+
+  // Initialize modal
+  initModal();
+
+  // Initialize slide show
+  initSlideShow();
+
+  // Initialize scroll animation
+  initScrollAnimation();
+}
+
+// Map Initialization
+function initMap() {
+  const map = L.map("map").setView([39.8283, -98.5795], 4);
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     attribution:
       '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
@@ -124,88 +82,86 @@ if ($("#map").length > 0) {
     { lat: 37.5665, lng: 126.978, popup: "Food Insecurity in Seoul, Korea" },
   ];
 
-  // Loop through the locations and add markers to the map
   locations.forEach((location) => {
     L.marker([location.lat, location.lng]).addTo(map).bindPopup(location.popup);
   });
-} else {
-  console.log("Map container not found.");
-}
-let slideIndex = 1;
-
-// Function to open the modal
-function openModal() {
-  document.getElementById("modal").style.display = "block";
 }
 
-// Function to close the modal
-function closeModal() {
-  document.getElementById("modal").style.display = "none";
-}
-
-// Function to display the current slide
-function currentSlide(n) {
-  showSlides((slideIndex = n));
-}
-
-// Function to navigate through the slides
-function plusSlides(n) {
-  showSlides((slideIndex += n));
-}
-
-// Function to show the slide corresponding to the current index
-function showSlides(n) {
-  let slides = document
-    .getElementsByClassName("slides")[0]
-    .getElementsByTagName("img");
-
-  if (n > slides.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
-
-  // Hide all slides
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-
-  // Show the current slide
-  slides[slideIndex - 1].style.display = "block";
-}
-
-// Optional: Close the modal when the user clicks outside of the modal content
-window.onclick = function (event) {
+// Modal Initialization
+function initModal() {
   const modal = document.getElementById("modal");
-  if (event.target == modal) {
-    closeModal();
+
+  // Open modal
+  function openModal() {
+    modal.style.display = "block";
   }
-};
-function isElementInViewport(el) {
-  const rect = el.getBoundingClientRect();
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <=
-      (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
-}
 
-// Add 'visible' class to all elements with 'scroll-animate' class
-function animateOnScroll() {
-  const elements = document.querySelectorAll(".scroll-animate");
-  elements.forEach((element) => {
-    if (isElementInViewport(element)) {
-      element.classList.add("visible");
+  // Close modal
+  function closeModal() {
+    modal.style.display = "none";
+  }
+
+  // Optional: Close the modal when the user clicks outside of the modal content
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      closeModal();
     }
-  });
+  };
 }
 
-// Trigger the animation function on scroll
-window.addEventListener("scroll", animateOnScroll);
-$(document).ready(function () {
+// Slide Show Initialization
+function initSlideShow() {
+  let slideIndex = 1;
+
+  // Function to display the current slide
+  function currentSlide(n) {
+    showSlides((slideIndex = n));
+  }
+
+  // Function to navigate through the slides
+  function plusSlides(n) {
+    showSlides((slideIndex += n));
+  }
+
+  // Function to show the slide corresponding to the current index
+  function showSlides(n) {
+    let slides = document
+      .getElementsByClassName("slides")[0]
+      .getElementsByTagName("img");
+
+    if (n > slides.length) {
+      slideIndex = 1;
+    }
+    if (n < 1) {
+      slideIndex = slides.length;
+    }
+
+    // Hide all slides
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+
+    // Show the current slide
+    slides[slideIndex - 1].style.display = "block";
+  }
+}
+
+// Scroll Animation Initialization
+function initScrollAnimation() {
+  // Add 'visible' class to all elements with 'scroll-animate' class
+  function animateOnScroll() {
+    const elements = document.querySelectorAll(".scroll-animate");
+    elements.forEach((element) => {
+      if (isElementInViewport(element)) {
+        element.classList.add("visible");
+      }
+    });
+  }
+
+  // Trigger the animation function on scroll
+  window.addEventListener("scroll", animateOnScroll);
+
+  // Check visibility of elements on page load
   function checkVisibility() {
     $(".group-photo3").each(function () {
       let elementTop = $(this).offset().top;
@@ -218,5 +174,23 @@ $(document).ready(function () {
   }
 
   $(window).on("scroll", checkVisibility);
-  checkVisibility(); // Check on page load
+  checkVisibility();
+}
+
+// Helper Function: Check if an element is in viewport
+function isElementInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+// Initialize Listeners on Document Ready
+$(document).ready(function () {
+  initListeners();
+  $(window).on("hashchange", changeRoute);
 });
