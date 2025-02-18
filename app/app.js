@@ -24,7 +24,7 @@ function navigateToProject(projectId) {
 
 function changeRoute() {
   const hashTag = window.location.hash;
-  let pageID = hashTag.replace("#", ""); // Change const to let
+  let pageID = hashTag.replace("#", "");
 
   if (pageID === "") {
     pageID = "home";
@@ -32,7 +32,54 @@ function changeRoute() {
 
   $.get(`assets/pages/${pageID}.html`, function (data) {
     $("#app").html(data);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+
+    // Wait for DOM update, then scroll to #projects if it exists
+    setTimeout(() => {
+      const projectsSection = document.getElementById("projects");
+      const aboutSection = document.getElementById("about");
+      const homePage = document.getElementById("home");
+      const proj1 = document.getElementById("project1");
+      const proj2 = document.getElementById("project2");
+      const proj3 = document.getElementById("project3");
+      const proj4 = document.getElementById("project4");
+      const proj5 = document.getElementById("project5");
+      const proj6 = document.getElementById("project6");
+      const proj7 = document.getElementById("project7");
+      const proj8 = document.getElementById("project8");
+      if (projectsSection) {
+        projectsSection.scrollIntoView({ behavior: "smooth" });
+      }
+      if (aboutSection) {
+        aboutSection.scrollIntoView({ behavior: "smooth" });
+      }
+      if (homePage) {
+        homePage.scrollIntoView({ behavior: "smooth" });
+      }
+      if (proj1) {
+        proj1.scrollIntoView({ behavior: "smooth" });
+      }
+      if (proj2) {
+        proj2.scrollIntoView({ behavior: "smooth" });
+      }
+      if (proj3) {
+        proj3.scrollIntoView({ behavior: "smooth" });
+      }
+      if (proj4) {
+        proj4.scrollIntoView({ behavior: "smooth" });
+      }
+      if (proj5) {
+        proj5.scrollIntoView({ behavior: "smooth" });
+      }
+      if (proj6) {
+        proj6.scrollIntoView({ behavior: "smooth" });
+      }
+      if (proj7) {
+        proj7.scrollIntoView({ behavior: "smooth" });
+      }
+      if (proj8) {
+        proj8.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100); // Short delay to ensure content is loaded
   }).fail(function () {
     console.log("Error loading page: " + pageID);
   });
