@@ -1,7 +1,7 @@
 $tan: #d2c29c;
 $brown: #352d27;
 $green: #669c8b;
-$yellow: #e0a138;
+$yellow: #d09022;
 $orange: #c05126;
 $light-gray: #eeee;
 $dark-gray: #635c5c;
@@ -276,23 +276,27 @@ body {
   width: 100%;
   min-height: 300px;
   padding: 20px;
-  background-color: $brown;
+  background-color: $tan;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: $tan;
+  color: $brown;
   text-align: center;
   flex-direction: column;
 
   h3 {
     width: 60%;
     font-size: 24px;
-    span {
-      color: $yellow;
-    }
+    color: $orange;
+  }
+  span {
+    color: $orange;
+  }
+  .ani {
+    color: $brown;
   }
   .ani2 {
-    color: $yellow;
+    color: $orange;
     margin-top: 20px;
   }
 }

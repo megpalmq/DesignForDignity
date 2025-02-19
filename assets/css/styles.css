@@ -258,23 +258,27 @@ body {
   width: 100%;
   min-height: 300px;
   padding: 20px;
-  background-color: #352d27;
+  background-color: #d2c29c;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #d2c29c;
+  color: #352d27;
   text-align: center;
   flex-direction: column;
 }
 .saying h3 {
   width: 60%;
   font-size: 24px;
+  color: #c05126;
 }
-.saying h3 span {
-  color: #e0a138;
+.saying span {
+  color: #c05126;
+}
+.saying .ani {
+  color: #352d27;
 }
 .saying .ani2 {
-  color: #e0a138;
+  color: #c05126;
   margin-top: 20px;
 }
 
