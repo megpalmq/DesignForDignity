@@ -129,63 +129,75 @@ function initMap() {
   });
 }
 
-// Modal Initialization
-function initModal() {
-  const modal = document.getElementById("modal");
+let slideIndex = 1;
 
-  // Open modal
-  function openModal() {
-    modal.style.display = "block";
-  }
-
-  // Close modal
-  function closeModal() {
-    modal.style.display = "none";
-  }
-
-  // Optional: Close the modal when the user clicks outside of the modal content
-  window.onclick = function (event) {
-    if (event.target == modal) {
-      closeModal();
-    }
-  };
+// Function to open the modal
+function openModal() {
+  document.getElementById("modal").style.display = "block";
 }
 
-// Slide Show Initialization
-function initSlideShow() {
-  let slideIndex = 1;
+// Function to close the modal
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}
 
-  // Function to display the current slide
-  function currentSlide(n) {
-    showSlides((slideIndex = n));
+// Function to navigate through the slides
+function plusSlides(n) {
+  showSlides((slideIndex += n));
+}
+
+// Function to display the current slide
+function currentSlide(n) {
+  showSlides((slideIndex = n));
+}
+
+// Function to show the slide corresponding to the current index
+function showSlides(n) {
+  let slides = document
+    .getElementsByClassName("slides")[0]
+    .getElementsByTagName("img");
+
+  // Wrap around the slide index if it's out of bounds
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
   }
 
-  // Function to navigate through the slides
-  function plusSlides(n) {
-    showSlides((slideIndex += n));
+  // Hide all slides
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
   }
 
-  // Function to show the slide corresponding to the current index
-  function showSlides(n) {
-    let slides = document
-      .getElementsByClassName("slides")[0]
-      .getElementsByTagName("img");
+  // Show the current slide
+  slides[slideIndex - 1].style.display = "block";
+}
 
-    if (n > slides.length) {
-      slideIndex = 1;
-    }
-    if (n < 1) {
-      slideIndex = slides.length;
-    }
-
-    // Hide all slides
-    for (let i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-
-    // Show the current slide
-    slides[slideIndex - 1].style.display = "block";
+// Close the modal if the user clicks outside the modal content
+window.onclick = function (event) {
+  const modal = document.getElementById("modal");
+  if (event.target === modal) {
+    closeModal();
   }
+};
+
+// Optional: Check if an element is in the viewport
+function isElementInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+// Initialize the modal and slideshow
+function initModal() {
+  const modal = document.getElementById("modal");
+  openModal(); // You can also call this when needed to open the modal
 }
 
 // Scroll Animation Initialization

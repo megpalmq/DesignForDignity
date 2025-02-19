@@ -375,6 +375,7 @@ body {
     display: flex;
     margin: 0 auto;
     gap: 40px;
+    padding-left: 40px;
     p {
       align-items: center;
       display: flex;
@@ -400,6 +401,11 @@ body {
         width: 700px;
         min-height: 50vh;
         margin-top: 30px;
+        transition: transform 0.3s ease-in-out; /* Smooth transition */
+      }
+
+      .triangle:hover {
+        transform: scale(1.1);
       }
     }
   }
