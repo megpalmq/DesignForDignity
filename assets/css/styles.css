@@ -531,7 +531,7 @@ body {
   justify-content: flex-end;
   font-size: 0.7rem;
   color: #352d27;
-  margin-top: -20px;
+  margin-top: 140px;
 }
 @media (max-width: 768px) {
   .footer .footer-grid {
@@ -1533,7 +1533,7 @@ body {
 .container2 .aboutCollabImg {
   width: 700px;
   height: 500px;
-  background-image: url(../images/shoulder.png);
+  background-image: url(../images/group3.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
