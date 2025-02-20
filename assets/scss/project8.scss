@@ -82,12 +82,11 @@ $heading-font: "rl-aqva", sans-serif;
     transform: translateY(0);
   }
 }
-
 .members8 {
   text-align: center;
   margin: 40px auto;
   padding: 20px;
-  background-color: $tan;
+  background-color: $tan; // Assuming you have a $tan variable in your project
   border-radius: 10px;
   max-width: 90%;
   z-index: 10;
@@ -101,27 +100,24 @@ $heading-font: "rl-aqva", sans-serif;
   }
 
   .member-list8 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); // This creates two equal columns
     gap: 20px;
     margin-top: 30px;
 
     .member-item8 {
-      width: 100%;
-      max-width: 400px;
       background-color: #479195;
       border-radius: 8px;
       padding: 15px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 2px 7px rgba(0, 0, 0, 0.15);
 
       .fancy-name8 {
         font-size: 1.4rem;
         font-weight: bold;
         color: #ffffff;
         text-transform: uppercase;
-        letter-spacing: 0.8px;
-        margin-bottom: 8px;
+        letter-spacing: 0.7px;
+        margin-bottom: 7px;
       }
 
       p {
@@ -157,13 +153,14 @@ $heading-font: "rl-aqva", sans-serif;
     }
   }
 
+  // Responsive Styling for Medium Screens (e.g., tablets)
   @media (max-width: 768px) {
     .member-list8 {
+      grid-template-columns: repeat(2, 1fr); // Keep 2 columns on medium screens
       gap: 15px;
     }
 
     .member-item8 {
-      max-width: 90%;
       padding: 12px;
     }
 
@@ -177,6 +174,7 @@ $heading-font: "rl-aqva", sans-serif;
     }
   }
 
+  // Responsive Styling for Small Screens (e.g., mobile)
   @media (max-width: 480px) {
     padding: 15px;
 
@@ -188,6 +186,10 @@ $heading-font: "rl-aqva", sans-serif;
     h2,
     h3 {
       font-size: 1.4rem;
+    }
+
+    .member-list8 {
+      grid-template-columns: 1fr; // Stack items in 1 column on small screens
     }
   }
 }
@@ -241,6 +243,7 @@ $heading-font: "rl-aqva", sans-serif;
   margin-bottom: 30px;
   color: #479195;
   font-family: $heading-font;
+  padding-bottom: 30px;
 }
 
 .final-draft8 p {
@@ -365,114 +368,6 @@ $heading-font: "rl-aqva", sans-serif;
 .close8:hover {
   color: #bbb;
 }
-.members8 {
-  text-align: center;
-  margin: 40px auto;
-  padding: 20px;
-  background-color: $tan;
-  border-radius: 10px;
-  max-width: 90%;
-  z-index: 10;
-  height: fit-content;
-
-  h2 {
-    font-size: 1.8rem;
-    color: #333;
-    margin-bottom: 15px;
-    font-family: $heading-font;
-  }
-
-  .member-list8 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    margin-top: 30px;
-
-    .member-item8 {
-      width: 100%;
-      max-width: 400px;
-      background-color: #479195;
-      border-radius: 8px;
-      padding: 15px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-
-      .fancy-name8 {
-        font-size: 1.4rem;
-        font-weight: bold;
-        color: #ffffff;
-        text-transform: uppercase;
-        letter-spacing: 0.8px;
-        margin-bottom: 8px;
-      }
-
-      p {
-        font-size: 1rem;
-        color: #ffffff;
-        margin: 0;
-      }
-    }
-  }
-
-  .group-photo8 {
-    margin-top: 20px;
-    text-align: center;
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-
-    h3 {
-      font-size: 1.6rem;
-      margin-bottom: 10px;
-      color: #333;
-      font-family: $heading-font;
-    }
-
-    .group-image8 {
-      width: 90%;
-      max-width: 500px;
-      border-radius: 8px;
-      margin-bottom: 10px;
-    }
-
-    .photo-description8 {
-      font-size: 0.9rem;
-      color: #555;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .member-list8 {
-      gap: 15px;
-    }
-
-    .member-item8 {
-      max-width: 90%;
-      padding: 12px;
-    }
-
-    h2,
-    h3 {
-      font-size: 1.6rem;
-    }
-
-    .group-photo8 .photo-description8 {
-      font-size: 0.85rem;
-    }
-  }
-
-  @media (max-width: 480px) {
-    padding: 15px;
-
-    .member-item8 {
-      max-width: 100%;
-      padding: 10px;
-    }
-
-    h2,
-    h3 {
-      font-size: 1.4rem;
-    }
-  }
-}
 
 .button-container8 {
   display: flex;
@@ -528,13 +423,13 @@ $heading-font: "rl-aqva", sans-serif;
   }
 
   .project-title8 {
-    font-size: 3rem; /* Smaller font size for mobile */
+    font-size: 3rem;
     width: 90%;
     margin-top: 100px;
   }
 
   .project-description8 {
-    font-size: 1rem; /* Adjust font size */
+    font-size: 1rem;
     max-width: 90%;
     margin-top: 20px;
   }
@@ -705,7 +600,7 @@ $heading-font: "rl-aqva", sans-serif;
 /* Media Queries for Smaller Mobile Screens */
 @media screen and (max-width: 480px) {
   .project-hero8 {
-    height: 80vh;
+    height: 100vh;
   }
 
   .project-title8 {

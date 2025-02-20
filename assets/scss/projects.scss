@@ -10,19 +10,18 @@ $highlight-color: #c05126;
 $heading-font: "rl-aqva";
 
 .topImage {
-  background: linear-gradient($tan, $green);
-  height: 110vh; // Adjusts for full viewport height
+  background: linear-gradient($green, $tan);
+  height: 90vh;
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding-top: 20vh; // Responsive padding
-
+  padding-top: 20vh;
   transition: all 0.5s ease; // Smooth transition
 
   // For tablet view
   @media (max-width: 1024px) {
     padding-top: 15vh;
-    height: auto; // Let content adjust
+    height: auto;
   }
 
   // For mobile view
@@ -40,7 +39,7 @@ $heading-font: "rl-aqva";
     background-repeat: no-repeat;
     background-size: contain;
     width: 100%;
-    min-height: 60vh; // Use min-height to ensure the image scales properly
+    min-height: 60vh;
     display: flex;
     margin: 0 auto;
     transition: transform 0.3s ease-in-out; // Smooth scale transition
@@ -50,11 +49,12 @@ $heading-font: "rl-aqva";
     }
 
     @media (max-width: 1024px) {
-      min-height: 30vh; // Adjust for smaller tablets
+      min-height: 30vh;
     }
 
     @media (max-width: 768px) {
-      min-height: 25vh; // Adjust for mobile
+      min-height: 25vh;
+      margin-top: 50px;
     }
   }
 }
@@ -71,9 +71,9 @@ $heading-font: "rl-aqva";
 .section5 {
   width: 100%;
   padding-top: 100px;
-  background: linear-gradient($green, $tan);
+  background: linear-gradient($tan, $green);
   display: flex;
-  height: 700px;
+  height: 100vh;
   flex-direction: column;
   align-items: center;
   padding: 40px 0;
@@ -159,6 +159,35 @@ $heading-font: "rl-aqva";
     background-image: url(../images/img3.png);
   }
 }
+@media screen and (max-width: 1200px) {
+  .section5 {
+    padding-top: 80px; /* Reduce padding for smaller screens */
+    height: auto; /* Let the height adjust to content */
+    padding: 30px 0; /* Adjust padding */
+  }
+
+  .section5 h2 {
+    font-size: 36px; /* Adjust font size */
+    padding-top: 60px; /* Reduce top padding */
+    margin-bottom: 40px; /* Reduce bottom margin */
+  }
+
+  .image-row {
+    gap: 20px; /* Reduce gap between images */
+    flex-direction: column; /* Stack images vertically on smaller screens */
+    align-items: center;
+  }
+
+  .img-container {
+    width: 90%; /* Make images responsive */
+    height: 250px; /* Adjust height */
+    margin-bottom: 20px; /* Add space between images */
+  }
+
+  .img-container .hover-text {
+    font-size: 18px; /* Adjust text size */
+  }
+}
 @media (max-width: 768px) {
   .section5 {
     padding-top: 50px;
@@ -184,8 +213,8 @@ $heading-font: "rl-aqva";
 
 @media (max-width: 480px) {
   .section5 {
-    padding-top: 30px; /* Further reduce padding */
-    height: auto; /* Let the height adjust based on content */
+    padding-top: 30px;
+    height: auto;
   }
 
   .image-row {
@@ -205,6 +234,7 @@ $heading-font: "rl-aqva";
 }
 
 .proj {
+  background-color: $green;
   .prodTitle {
     font-size: 55px;
     font-family: rl-aqva, sans-serif;
@@ -215,6 +245,17 @@ $heading-font: "rl-aqva";
     margin: 0 auto;
     text-align: center;
     background-color: $green;
+  }
+  .YBlurb {
+    width: 50%;
+    color: black;
+    height: 100%;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 30px;
+    background-color: $tan;
+    padding: 20px;
+    border-radius: 20px;
   }
 
   .projects {
@@ -353,6 +394,9 @@ $heading-font: "rl-aqva";
   }
 }
 @media (max-width: 1200px) {
+  .YBlurb {
+    font-size: 14px;
+  }
   .projects {
     .project-card {
       width: calc(50% - 20px); /* Two columns */
@@ -402,6 +446,10 @@ $heading-font: "rl-aqva";
   }
 }
 @media (max-width: 480px) {
+  .YBlurb {
+    font-size: 14px;
+    min-width: 400px;
+  }
   .proj {
     .prodTitle {
       font-size: 40px;

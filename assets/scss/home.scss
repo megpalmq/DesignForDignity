@@ -84,6 +84,8 @@ body {
           bottom: 0;
           left: 0;
           width: 0;
+          margin-left: 13px;
+          margin-bottom: 1px;
           height: 4px;
           border-radius: 10px;
           background: $highlight-color;
@@ -91,7 +93,7 @@ body {
         }
 
         &:hover::after {
-          width: 100%;
+          width: 98%;
         }
       }
     }
@@ -121,7 +123,7 @@ body {
       display: none;
       flex-direction: column;
       width: 200px;
-      height: 170px;
+      height: 190px;
       text-align: center;
       margin-top: 225px;
       background-color: $brown;
@@ -404,7 +406,7 @@ body {
         background-size: contain;
         width: 700px;
         min-height: 50vh;
-        margin-top: 30px;
+        margin-top: 70px;
         transition: transform 0.3s ease-in-out; /* Smooth transition */
       }
 

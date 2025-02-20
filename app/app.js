@@ -6,7 +6,10 @@ const navLinks = document.querySelector(".nav-links");
 $(window).on("resize", function () {
   const width = $(window).width();
 });
-
+mobileMenu.addEventListener("click", () => {
+  console.log("Mobile menu clicked");
+  navLinks.classList.toggle("open");
+});
 // Scroll Event
 window.addEventListener("scroll", () => {
   const navbar = document.querySelector(".navbar");
