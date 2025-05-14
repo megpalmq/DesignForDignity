@@ -94,27 +94,20 @@ function initURLListener() {
   changeRoute();
 }
 
-// Initialize Listeners
 function initListeners() {
-  // Initialize URL listener
   initURLListener();
 
-  // Initialize map
   if ($("#map").length > 0) {
     initMap();
   }
 
-  // Initialize modal
   initModal();
 
-  // Initialize slide show
   initSlideShow();
 
-  // Initialize scroll animation
   initScrollAnimation();
 }
 
-// Map Initialization
 function initMap() {
   const map = L.map("map").setView([39.8283, -98.5795], 4);
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -133,28 +126,20 @@ function initMap() {
 }
 
 let slideIndex = 1;
-
-// Function to open the modal
 function openModal() {
   document.getElementById("modal").style.display = "block";
 }
 
-// Function to close the modal
 function closeModal() {
   document.getElementById("modal").style.display = "none";
 }
 
-// Function to navigate through the slides
 function plusSlides(n) {
   showSlides((slideIndex += n));
 }
-
-// Function to display the current slide
 function currentSlide(n) {
   showSlides((slideIndex = n));
 }
-
-// Function to show the slide corresponding to the current index
 function showSlides(n) {
   let slides = document
     .getElementsByClassName("slides")[0]

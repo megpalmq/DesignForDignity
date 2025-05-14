@@ -268,7 +268,7 @@ body {
   }
 
   .hero1 .myVideo {
-    width: 100vw; // Ensure full screen width
+    width: 100vw;
     height: 40vh;
     object-fit: cover;
   }
@@ -319,18 +319,10 @@ body {
 .images {
   display: flex;
   .groupimage {
-    background-image: url(../images/collab.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     width: 50%;
     height: 400px;
   }
   .tylerpic {
-    background-image: url(../images/shoulder.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     width: 50%;
     height: 400px;
   }
@@ -370,154 +362,106 @@ body {
     }
   }
 }
+@media (max-width: 360px) {
+  .images {
+    .groupimage,
+    .tylerpic {
+      height: 200px;
+    }
+  }
+}
 
-.section4 {
+.descBox2 {
+  height: 100vh;
+  width: 100%;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row; // Default to row (side by side)
+  text-align: center;
   background-color: $green;
+  gap: 40px;
 
-  .descBox2 {
-    height: 500px;
-    background-color: $green;
-    display: flex;
-    margin: 0 auto;
-    gap: 40px;
-    padding-left: 40px;
+  p {
+    color: $brown;
+    font-size: 18px;
+    width: 600px;
+    line-height: 30px;
+    font-family: transat-text, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    margin: 0;
+    padding-left: 40px; // Add more left padding on large screens
+  }
+
+  .descBox3 {
+    .triangle {
+      background-image: url(../images/triangle.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 700px;
+      height: 50vh;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .triangle:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  // ✅ Tablet (Switch to column)
+  @media screen and (max-width: 1024px) {
+    flex-direction: column; // Stack the content on tablet-sized screens
+
     p {
-      align-items: center;
-      display: flex;
-      justify-content: center;
-      padding-top: 50px;
-      margin: 0 auto;
-      color: $brown;
-      font-size: 18px;
-      width: 600px;
-      line-height: 30px;
-      margin-top: 20px;
-      font-family: transat-text, sans-serif;
-      font-style: normal;
-      font-weight: 300;
-      padding-bottom: 80px;
+      width: 80%;
+      font-size: 16px;
+      line-height: 28px;
+      padding-left: 20px; // Less padding on tablet
     }
-    .descBox3 {
-      .triangle {
-        background-image: url(../images/triangle.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        width: 700px;
-        min-height: 50vh;
-        margin-top: 70px;
-        transition: transform 0.3s ease-in-out; /* Smooth transition */
-      }
 
-      .triangle:hover {
-        transform: scale(1.1);
-      }
+    .descBox3 .triangle {
+      width: 500px;
+      height: 40vh;
+    }
+  }
+
+  // ✅ Mobile (Further adjustments for mobile view)
+  @media screen and (max-width: 768px) {
+    p {
+      width: 90%;
+      font-size: 15px;
+      line-height: 26px;
+      padding-left: 10px; // Less padding on mobile
+    }
+
+    .descBox3 .triangle {
+      width: 350px;
+      height: 35vh;
+    }
+  }
+
+  // ✅ Small Mobile (Final adjustments for the smallest screens)
+  @media screen and (max-width: 480px) {
+    p {
+      width: 95%;
+      font-size: 14px;
+      line-height: 24px;
+      padding-left: 5px; // Very minimal padding on small mobile screens
+    }
+
+    .descBox3 .triangle {
+      width: 250px;
+      height: 30vh;
     }
   }
 }
 
-@media (max-width: 1200px) {
-  .section4 {
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 20px;
-
-    .descBox2 {
-      height: 450px;
-      gap: 30px;
-      p {
-        font-size: 16px;
-        width: 500px;
-        line-height: 28px;
-      }
-      .descBox3 {
-        .triangle {
-          width: 800px;
-          min-height: 75vh;
-        }
-      }
-    }
-  }
-}
-@media (max-width: 992px) {
-  .section4 {
-    padding: 30px 15px;
-
-    .descBox2 {
-      height: auto;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 20px;
-
-      p {
-        font-size: 15px;
-        width: 80%;
-        line-height: 26px;
-        padding-top: 30px;
-      }
-
-      .descBox3 {
-        .triangle {
-          width: 700px;
-          min-height: 70vh;
-        }
-      }
-    }
-  }
-}
-@media (max-width: 800px) {
-  .section4 {
-    padding: 20px 10px;
-
-    .descBox2 {
-      height: auto;
-      gap: 15px;
-
-      p {
-        font-size: 14px;
-        width: 90%;
-        padding-top: 20px;
-        line-height: 24px;
-      }
-
-      .descBox3 {
-        .triangle {
-          width: 600px;
-          min-height: 55vh;
-          margin-bottom: 100px;
-        }
-      }
-    }
-  }
-}
-@media (max-width: 600px) {
-  .section4 {
-    padding: 10px;
-
-    .descBox2 {
-      gap: 10px;
-      p {
-        font-size: 13px;
-        width: 95%;
-        padding: 15px;
-        line-height: 22px;
-      }
-
-      .descBox3 {
-        .triangle {
-          width: 400px;
-          min-height: 40vh;
-        }
-      }
-    }
-  }
-}
 .scroll-animate {
   transform: translate3d(0, 50px, 0);
 }
-/* Footer */
+
 .footer {
   background-color: $tan;
   color: #ecf0f1;
@@ -553,6 +497,7 @@ body {
       font-size: 15px;
       color: $brown;
     }
+
     a {
       text-decoration: none;
       color: $brown;
@@ -595,6 +540,25 @@ body {
     margin-top: 140px;
   }
 
+  @media (max-width: 1024px) {
+    .footer-grid {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .footer-logo,
+    .footer-links {
+      flex: none;
+      margin-bottom: 20px;
+    }
+
+    .footer-bottom {
+      margin-top: 30px;
+      justify-content: center;
+      font-size: 0.8rem;
+    }
+  }
+
   @media (max-width: 768px) {
     .footer-grid {
       flex-direction: column;
@@ -602,83 +566,42 @@ body {
     }
 
     .footer-logo,
-    .footer-links,
-    .footer-social {
+    .footer-links {
       flex: none;
+      margin-bottom: 15px;
     }
+
     .footer-bottom {
       margin-top: 20px;
+      font-size: 0.75rem;
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .footer {
+      padding: 20px 0;
+    }
+
+    .footer-grid {
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .footer-logo,
+    .footer-links {
+      flex: none;
+      margin-bottom: 10px;
+    }
+
+    .footer-bottom {
+      margin-top: 20px;
+      font-size: 0.7rem;
+      justify-content: center;
     }
   }
 }
-@media (max-width: 480px) {
-  .footer {
-    padding: 20px 0;
-    height: 30vh;
-  }
 
-  .container {
-    width: 90%;
-    height: 10vh;
-    margin: 0 auto;
-  }
-
-  .footer-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-  }
-
-  .footer-logo {
-    text-align: center;
-    flex: 1;
-
-    h3 {
-      font-size: 1.5rem;
-    }
-
-    p {
-      font-size: 0.9rem;
-    }
-
-    a {
-      font-size: 0.9rem;
-    }
-  }
-
-  .footer-links {
-    flex: 1;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-
-    li {
-      a {
-        color: $brown;
-        font-size: 1rem;
-        padding: 5px 10px;
-        border-radius: 5px;
-        transition: background 0.3s;
-
-        &:hover {
-          background-color: $orange;
-          color: $brown;
-        }
-      }
-    }
-  }
-
-  .footer-bottom {
-    font-size: 0.8rem;
-    margin-top: 20px;
-    text-align: center;
-  }
-}
-
-/* Global Animations */
 @keyframes fadeIn {
   0% {
     opacity: 0;

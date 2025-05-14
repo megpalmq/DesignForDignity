@@ -11,28 +11,6 @@ $font-family: "rl-aqva", sans-serif;
 $heading-font: "rl-aqva", sans-serif;
 $map-height: 400px;
 
-// Keyframes for animations
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes slideUp {
-  0% {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-// Base Styles
 *,
 *::before,
 *::after {
@@ -47,8 +25,8 @@ $map-height: 400px;
 }
 @media screen and (max-width: 768px) {
   .container {
-    width: 100%; /* Ensures full width on smaller screens */
-    padding: 0 20px; /* Add padding for better spacing */
+    width: 100%;
+    padding: 0 20px;
   }
 }
 
@@ -100,28 +78,22 @@ $map-height: 400px;
   padding-top: 100px;
 
   .about-content1 {
-    padding: 20px;
-    justify-content: space-between;
-
-    width: 600px;
-    padding-bottom: 20px;
-    margin-top: 20px;
-    align-items: center;
     color: black;
     border-radius: 20px;
-    background-color: $tan;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    //box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     opacity: 0;
+    padding: 15px;
     animation: fadeIn 1.5s ease-out 0.5s forwards;
     color: #352d27;
-
+    position: relative;
+    left: 0;
     .text-content {
       flex: 1;
       font-size: 1.2rem;
       line-height: 1.6;
 
       p {
-        width: 530px;
+        width: 600px;
         color: #352d27;
       }
       .tiny {
@@ -154,16 +126,14 @@ $map-height: 400px;
     gap: 2rem;
 
     .aboutCollabImg {
-      width: 700px;
+      width: 650px;
       height: 500px;
-      background-image: url(../images/group3.png);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
       border-radius: 15px;
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
       transform: scale(0.9);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      margin-left: 90px;
 
       &:hover {
         transform: scale(1);
@@ -172,7 +142,7 @@ $map-height: 400px;
     }
     .bonerCenter {
       background-color: $brown;
-      width: 600px;
+      width: 500px;
       min-height: 50vh;
       padding: 30px;
       justify-content: center;
@@ -200,7 +170,7 @@ $map-height: 400px;
 
       .logos {
         align-items: center;
-        gap: 30px;
+        gap: 25px;
         justify-content: center;
         display: flex;
         flex-direction: column;
@@ -213,13 +183,13 @@ $map-height: 400px;
 
         .logo1 {
           background-image: url(../images/bonLogo.png);
-          width: 500px; /* Increased size */
+          width: 400px;
           height: 200px;
         }
 
         .logo2 {
           background-image: url(../images/yonLogo.png);
-          width: 350px; /* Increased size */
+          width: 350px;
           height: 150px;
         }
       }
@@ -350,7 +320,7 @@ $map-height: 400px;
   }
 
   .bonerCenter h2 {
-    font-size: 20px; /* Reduce for smaller screens */
+    font-size: 20px;
   }
 
   .BonnerCenterTitle {
@@ -382,7 +352,7 @@ $map-height: 400px;
   padding-bottom: 50px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between; // Add spacing
+  justify-content: space-between;
   align-items: center;
 
   .containerMap {
@@ -401,8 +371,8 @@ $map-height: 400px;
   .indyGraphic {
     background-image: url(../images/indyGraphic.png);
     height: 670px;
-    width: 600px;
-    margin-right: 100px;
+    width: 620px;
+    margin-right: 20px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

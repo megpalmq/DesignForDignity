@@ -1,6 +1,6 @@
 <section id="about" class="about-section">
   <div class="container2">
-    <div class="aboutCollabImg"></div>
+    <img src="/assets/images/group3.png" class="aboutCollabImg" alt="">
     <section class="bonerCenter">
       <h2>Guest Collaborators </h2>
       <div class="logos">
@@ -11,9 +11,7 @@
     </section>
   </div>
   <div class="container">
-    
-    
-    <div class="about-content1">
+  <div class="about-content1">
       
         <h2>Indiana</h2>
       <div class="text-content">
@@ -79,7 +77,7 @@
   function initMap() {
     const map = new google.maps.Map(document.getElementById("map"), {
       zoom: 6,
-      center: { lat: 39.8283, lng: -98.5795 },
+      center: { lat: 40.0, lng: -86.0 }
     });
 
     const locations = [
@@ -166,7 +164,7 @@
   }
 
   const script = document.createElement("script");
-  script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyDTh3mjm1-Lhlo5Pmhi6d_wMlYcRuzipQQ&callback=initMap`;
+  script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyBvHy615YwSL59eTlG8mfbF83t6uEWzPMk&callback=initMap`;
   script.async = true;
   document.head.appendChild(script);
 </script>
