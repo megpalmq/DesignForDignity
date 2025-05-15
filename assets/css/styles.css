@@ -388,6 +388,7 @@ body {
   .descBox2 .triangle {
     width: 70vw;
     height: 60vh;
+    margin-left: 30px;
   }
   .descBox2 p {
     width: 90%;
