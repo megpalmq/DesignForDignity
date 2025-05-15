@@ -318,55 +318,31 @@ body {
 
 .images {
   display: flex;
-  .groupimage {
-    width: 50%;
-    height: 400px;
-  }
+  flex-wrap: wrap;
+
+  .groupimage,
   .tylerpic {
     width: 50%;
-    height: 400px;
+    height: auto;
+    object-fit: cover;
+    max-width: 100%;
   }
 }
+
 @media (max-width: 1200px) {
-  .images {
-    .groupimage,
-    .tylerpic {
-      width: 50%;
-      height: 350px;
-    }
+  .groupimage,
+  .tylerpic {
+    width: 50%;
   }
 }
+
 @media (max-width: 992px) {
   .images {
     flex-direction: column;
+
     .groupimage,
     .tylerpic {
       width: 100%;
-      height: 300px;
-    }
-  }
-}
-@media (max-width: 800px) {
-  .images {
-    .groupimage,
-    .tylerpic {
-      height: 250px;
-    }
-  }
-}
-@media (max-width: 480px) {
-  .images {
-    .groupimage,
-    .tylerpic {
-      height: 200px;
-    }
-  }
-}
-@media (max-width: 360px) {
-  .images {
-    .groupimage,
-    .tylerpic {
-      height: 200px;
     }
   }
 }
@@ -377,7 +353,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row; // Default to row (side by side)
+  flex-direction: row;
   text-align: center;
   background-color: $green;
   gap: 40px;
@@ -410,9 +386,8 @@ body {
     }
   }
 
-  // ✅ Tablet (Switch to column)
   @media screen and (max-width: 1024px) {
-    flex-direction: column; // Stack the content on tablet-sized screens
+    flex-direction: column;
 
     p {
       width: 80%;
@@ -427,33 +402,59 @@ body {
     }
   }
 
-  // ✅ Mobile (Further adjustments for mobile view)
   @media screen and (max-width: 768px) {
+    .descBox2 {
+      height: auto; // allow it to grow with content
+      padding: 40px 0; // optional: gives extra space top/bottom
+      flex-direction: column;
+    }
+
+    .descBox3 {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .triangle {
+      width: 70vw;
+      height: 60vh;
+    }
+
     p {
       width: 90%;
       font-size: 15px;
       line-height: 26px;
-      padding-left: 10px; // Less padding on mobile
-    }
-
-    .descBox3 .triangle {
-      width: 350px;
-      height: 35vh;
+      padding-left: 10px;
+      padding-right: 10px;
     }
   }
-
-  // ✅ Small Mobile (Final adjustments for the smallest screens)
-  @media screen and (max-width: 480px) {
-    p {
-      width: 95%;
-      font-size: 14px;
-      line-height: 24px;
-      padding-left: 5px; // Very minimal padding on small mobile screens
+  @media screen and (max-width: 365px) {
+    .descBox2 {
+      height: auto;
+      padding: 30px 0;
+      flex-direction: column;
     }
 
-    .descBox3 .triangle {
-      width: 250px;
-      height: 30vh;
+    .descBox3 {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .triangle {
+      width: 80vw;
+      height: 50vh;
+      margin-left: 30px;
+      background-size: contain;
+    }
+
+    p {
+      width: 95%;
+      font-size: 13px;
+      line-height: 22px;
+      margin-top: 30px;
     }
   }
 }
