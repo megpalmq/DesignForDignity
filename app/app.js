@@ -8,10 +8,11 @@ $(window).on("resize", function () {
 });
 mobileMenu.addEventListener("click", (e) => {
   e.stopPropagation(); 
-  console.log("Mobile menu clicked");
   navLinks.classList.toggle("open");
   mobileMenu.classList.toggle("open");
 });
+
+// Close when clicking outside
 document.addEventListener("click", (e) => {
   if (
     navLinks.classList.contains("open") &&
@@ -21,6 +22,14 @@ document.addEventListener("click", (e) => {
     navLinks.classList.remove("open");
     mobileMenu.classList.remove("open");
   }
+});
+
+// ✅ Close when clicking a nav link
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("open");
+    mobileMenu.classList.remove("open");
+  });
 });
 // Scroll Event
 window.addEventListener("scroll", () => {
