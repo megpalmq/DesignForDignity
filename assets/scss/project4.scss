@@ -251,9 +251,9 @@ $heading-font: "rl-aqva", sans-serif;
 
 @media (max-width: 480px) {
   .modal4 .modal-content4 {
-    width: 90%; // Reduced to ensure padding inside the modal
-    max-width: 500px; // Max width for smaller screens
-    padding: 20px 10px; // Add padding to prevent the image from touching the edges
+    width: 90%;
+    max-width: 500px;
+    padding: 20px 10px;
   }
 
   .modal4 .slide img {
@@ -262,6 +262,7 @@ $heading-font: "rl-aqva", sans-serif;
     object-fit: contain;
     padding: 150px;
     left: 0;
+    margin-top: 90px;
   }
   .modal4 .slide2 img {
     width: 100%;
