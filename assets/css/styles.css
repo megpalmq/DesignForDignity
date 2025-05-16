@@ -203,9 +203,6 @@ body {
   }
 }
 @media (max-width: 480px) {
-  .navbar .logo {
-    position: absolute;
-  }
   .navbar .nav-links {
     font-family: komet;
     font-weight: bold;
@@ -230,7 +227,6 @@ body {
     display: flex;
     position: relative;
     top: 18px;
-    left: 110px;
   }
   .navbar .menu-toggle {
     display: flex;
