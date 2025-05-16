@@ -6,9 +6,21 @@ const navLinks = document.querySelector(".nav-links");
 $(window).on("resize", function () {
   const width = $(window).width();
 });
-mobileMenu.addEventListener("click", () => {
+mobileMenu.addEventListener("click", (e) => {
+  e.stopPropagation(); 
   console.log("Mobile menu clicked");
   navLinks.classList.toggle("open");
+  mobileMenu.classList.toggle("open");
+});
+document.addEventListener("click", (e) => {
+  if (
+    navLinks.classList.contains("open") &&
+    !navLinks.contains(e.target) &&
+    !mobileMenu.contains(e.target)
+  ) {
+    navLinks.classList.remove("open");
+    mobileMenu.classList.remove("open");
+  }
 });
 // Scroll Event
 window.addEventListener("scroll", () => {
@@ -36,7 +48,6 @@ function changeRoute() {
   $.get(`assets/pages/${pageID}.html`, function (data) {
     $("#app").html(data);
 
-    // Wait for DOM update, then scroll to #projects if it exists
     setTimeout(() => {
       const projectsSection = document.getElementById("projects");
       const aboutSection = document.getElementById("about");
@@ -188,46 +199,31 @@ function initModal() {
   openModal(); // You can also call this when needed to open the modal
 }
 
-// Scroll Animation Initialization
 function initScrollAnimation() {
-  // Add 'visible' class to all elements with 'scroll-animate' class
+  const elements = document.querySelectorAll(".scroll-animate");
+
   function animateOnScroll() {
-    const elements = document.querySelectorAll(".scroll-animate");
-    elements.forEach((element) => {
-      if (isElementInViewport(element)) {
-        element.classList.add("visible");
+    elements.forEach((el) => {
+      if (isElementInViewport(el)) {
+        el.classList.add("visible");
       }
     });
   }
 
-  // Trigger the animation function on scroll
+  // Trigger animation on load and scroll
   window.addEventListener("scroll", animateOnScroll);
-
-  // Check visibility of elements on page load
-  function checkVisibility() {
-    $(".group-photo3").each(function () {
-      let elementTop = $(this).offset().top;
-      let windowBottom = $(window).scrollTop() + $(window).height();
-
-      if (elementTop < windowBottom - 100) {
-        $(this).addClass("visible");
-      }
-    });
-  }
-
-  $(window).on("scroll", checkVisibility);
-  checkVisibility();
+  window.addEventListener("resize", animateOnScroll);
+  animateOnScroll(); // Trigger once on load
 }
 
-// Helper Function: Check if an element is in viewport
+
 function isElementInViewport(el) {
   const rect = el.getBoundingClientRect();
   return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <=
-      (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    rect.top < window.innerHeight &&
+    rect.bottom > 0 &&
+    rect.left < window.innerWidth &&
+    rect.right > 0
   );
 }
 

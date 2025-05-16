@@ -13,25 +13,10 @@ $heading-font: "rl-aqva";
   background: linear-gradient($green, $tan);
   height: 90vh;
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
   padding-top: 20vh;
-  transition: all 0.5s ease; // Smooth transition
-
-  // For tablet view
-  @media (max-width: 1024px) {
-    padding-top: 15vh;
-    height: auto;
-  }
-
-  // For mobile view
-  @media (max-width: 768px) {
-    padding-top: 15vh;
-  }
-  @media (max-width: 450px) {
-    padding-top: 25vh;
-    padding: 5vw;
-  }
+  transition: all 0.5s ease;
 
   .TM {
     background-image: url(../images/process.png);
@@ -42,22 +27,37 @@ $heading-font: "rl-aqva";
     min-height: 60vh;
     display: flex;
     margin: 0 auto;
-    transition: transform 0.3s ease-in-out; // Smooth scale transition
+    transition: transform 0.3s ease-in-out;
 
     &:hover {
-      transform: scale(1.05); // Zoom on hover
+      transform: scale(1.05);
     }
+  }
 
-    @media (max-width: 1024px) {
+  // Tablet
+  @media (max-width: 1024px) {
+    padding-top: 15vh;
+    height: auto;
+
+    .TM {
       min-height: 30vh;
     }
+  }
 
-    @media (max-width: 768px) {
+  @media (max-width: 768px) {
+    .TM {
       min-height: 25vh;
       margin-top: 50px;
     }
   }
+
+  @media (max-width: 450px) {
+    padding-top: 5vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
 }
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -70,22 +70,20 @@ $heading-font: "rl-aqva";
 }
 .section5 {
   width: 100%;
-  padding-top: 100px;
+  padding: 100px 0 40px;
   background: linear-gradient($tan, $green);
   display: flex;
-  height: 100vh;
   flex-direction: column;
   align-items: center;
-  padding: 40px 0;
+  height: 100vh;
 
   h2 {
-    padding-top: 100px;
     font-size: 48px;
     font-weight: bold;
     color: $brown;
     text-align: center;
-    margin-bottom: 50px;
     font-family: rl-aqva, sans-serif;
+    margin-bottom: 50px;
     animation: fadeIn 1.5s ease-out;
   }
 
@@ -109,16 +107,13 @@ $heading-font: "rl-aqva";
     transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
 
     &:hover {
-      transform: translateY(-3px) scale(1.02); /* Soft lift */
+      transform: translateY(-3px) scale(1.02);
       box-shadow: 12px 6px 10px rgba(200, 108, 55, 0.5);
     }
 
     .hover-text {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      inset: 0;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -136,7 +131,6 @@ $heading-font: "rl-aqva";
     }
   }
 
-  /* Image Backgrounds */
   .img1,
   .img2,
   .img3 {
@@ -148,88 +142,75 @@ $heading-font: "rl-aqva";
   }
 
   .img1 {
-    background-image: url(../images/img1.png);
+    background-image: url(../images/img1.jpg);
   }
-
   .img2 {
-    background-image: url(../images/img2.png);
+    background-image: url(../images/img2.jpg);
   }
-
   .img3 {
-    background-image: url(../images/img3.png);
+    background-image: url(../images/img3.jpg);
   }
 }
+
 @media screen and (max-width: 1200px) {
   .section5 {
-    padding-top: 80px; /* Reduce padding for smaller screens */
-    height: auto; /* Let the height adjust to content */
-    padding: 30px 0; /* Adjust padding */
-  }
+    padding: 80px 0 30px;
+    height: auto;
 
-  .section5 h2 {
-    font-size: 36px; /* Adjust font size */
-    padding-top: 60px; /* Reduce top padding */
-    margin-bottom: 40px; /* Reduce bottom margin */
-  }
+    h2 {
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
 
-  .image-row {
-    gap: 20px; /* Reduce gap between images */
-    flex-direction: column; /* Stack images vertically on smaller screens */
-    align-items: center;
-  }
+    .image-row {
+      gap: 20px;
+      flex-direction: column;
+    }
 
-  .img-container {
-    width: 90%; /* Make images responsive */
-    height: 250px; /* Adjust height */
-    margin-bottom: 20px; /* Add space between images */
-  }
+    .img-container {
+      width: 90%;
+      height: 250px;
 
-  .img-container .hover-text {
-    font-size: 18px; /* Adjust text size */
+      .hover-text {
+        font-size: 18px;
+      }
+    }
   }
 }
+
 @media (max-width: 768px) {
   .section5 {
     padding-top: 50px;
-    height: auto;
-  }
 
-  .image-row {
-    flex-direction: column;
-    gap: 20px;
-  }
+    h2 {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
 
-  .img-container {
-    width: 100%;
-    height: 200px;
-  }
-
-  h2 {
-    font-size: 32px;
-    padding-top: 50px;
-    margin-bottom: 30px;
+    .img-container {
+      width: 100%;
+      height: 200px;
+    }
   }
 }
 
 @media (max-width: 480px) {
   .section5 {
     padding-top: 30px;
-    height: auto;
-  }
 
-  .image-row {
-    gap: 15px; /* Reduce space between images further */
-  }
+    h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
 
-  .img-container {
-    width: 100%; /* Images take full width */
-    height: 180px; /* Smaller image height */
-  }
+    .image-row {
+      padding: 5px;
+      gap: 15px;
+    }
 
-  h2 {
-    font-size: 24px; /* Even smaller font size */
-    padding-top: 30px;
-    margin-bottom: 20px;
+    .img-container {
+      height: 180px;
+    }
   }
 }
 
@@ -415,6 +396,9 @@ $heading-font: "rl-aqva";
   }
 }
 @media (max-width: 768px) {
+  .YBlurb {
+    min-width: 600px;
+  }
   .proj {
     .projects {
       flex-direction: column;
@@ -479,5 +463,61 @@ $heading-font: "rl-aqva";
         }
       }
     }
+  }
+}
+@media (max-width: 360px) {
+  .YBlurb {
+    font-size: 14px;
+    min-width: 300px;
+  }
+  .proj {
+    .prodTitle {
+      font-size: 40px;
+      padding: 10px;
+    }
+
+    .projects {
+      .project-card {
+        width: 85%;
+        border-radius: 30px;
+
+        h2 {
+          font-size: 24px;
+        }
+
+        .project-image,
+        .project-image2,
+        .project-image3,
+        .project-image4,
+        .project-image5,
+        .project-image6,
+        .project-image7,
+        .project-image8 {
+          width: 100%; // Ensure images are responsive
+          height: 200px; // Slightly reduce height for better fit
+          border-radius: 15px; // Keep smooth corners
+        }
+      }
+    }
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+
+  &.visible {
+    animation: fadeInUp 0.6s ease-out forwards;
   }
 }
