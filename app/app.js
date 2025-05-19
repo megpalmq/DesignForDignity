@@ -7,7 +7,7 @@ $(window).on("resize", function () {
   const width = $(window).width();
 });
 mobileMenu.addEventListener("click", (e) => {
-  e.stopPropagation(); 
+  e.stopPropagation();
   navLinks.classList.toggle("open");
   mobileMenu.classList.toggle("open");
 });
@@ -25,7 +25,7 @@ document.addEventListener("click", (e) => {
 });
 
 // ✅ Close when clicking a nav link
-document.querySelectorAll(".nav-links a").forEach(link => {
+document.querySelectorAll(".nav-links a").forEach((link) => {
   link.addEventListener("click", () => {
     navLinks.classList.remove("open");
     mobileMenu.classList.remove("open");
@@ -39,6 +39,35 @@ window.addEventListener("scroll", () => {
   } else {
     navbar.classList.remove("scrolled");
   }
+});
+
+function setupFadeInObserver() {
+  const faders = document.querySelectorAll(".fade-in");
+
+  if (faders.length === 0) return;
+
+  const appearOnScroll = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        } else {
+          entry.target.classList.remove("visible");
+        }
+      });
+    },
+    {
+      threshold: 0.1,
+    }
+  );
+
+  faders.forEach((fader) => {
+    appearOnScroll.observe(fader);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  setupFadeInObserver();
 });
 
 // Navigation Functions
@@ -69,6 +98,7 @@ function changeRoute() {
       const proj6 = document.getElementById("project6");
       const proj7 = document.getElementById("project7");
       const proj8 = document.getElementById("project8");
+      setupFadeInObserver();
       if (projectsSection) {
         projectsSection.scrollIntoView({ behavior: "smooth" });
       }
@@ -207,24 +237,6 @@ function initModal() {
   const modal = document.getElementById("modal");
   openModal(); // You can also call this when needed to open the modal
 }
-
-function initScrollAnimation() {
-  const elements = document.querySelectorAll(".scroll-animate");
-
-  function animateOnScroll() {
-    elements.forEach((el) => {
-      if (isElementInViewport(el)) {
-        el.classList.add("visible");
-      }
-    });
-  }
-
-  // Trigger animation on load and scroll
-  window.addEventListener("scroll", animateOnScroll);
-  window.addEventListener("resize", animateOnScroll);
-  animateOnScroll(); // Trigger once on load
-}
-
 
 function isElementInViewport(el) {
   const rect = el.getBoundingClientRect();
