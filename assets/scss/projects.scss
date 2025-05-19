@@ -1,16 +1,17 @@
 $tan: #d2c29c;
 $brown: #352d27;
-$green: #669c8b;
-$yellow: #e0a138;
-$orange: #c05126;
-$light-gray: #eeee;
-$dark-gray: #635c5c;
-$highlight-color: #c05126;
-
-$heading-font: "rl-aqva";
+$green: #266433;
+$lightgreen: #349452;
+$soft-green: #bddfc6;
+$yellow: #e1db54;
+$orange: #ef6838;
+$darkorange: #c05125;
+$highlight-color: #ef6838;
+$font-family: "alfarn", sans-serif;
+$heading-font: "alfarn", sans-serif;
 
 .topImage {
-  background: linear-gradient($green, $tan);
+  background: linear-gradient($lightgreen, $tan);
   height: 90vh;
   display: flex;
   flex-direction: column;
@@ -71,7 +72,7 @@ $heading-font: "rl-aqva";
 .section5 {
   width: 100%;
   padding: 100px 0 40px;
-  background: linear-gradient($tan, $green);
+  background: linear-gradient($tan, $lightgreen);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -82,7 +83,7 @@ $heading-font: "rl-aqva";
     font-weight: bold;
     color: $brown;
     text-align: center;
-    font-family: rl-aqva, sans-serif;
+    font-family: $heading-font;
     margin-bottom: 50px;
     animation: fadeIn 1.5s ease-out;
   }
@@ -215,17 +216,17 @@ $heading-font: "rl-aqva";
 }
 
 .proj {
-  background-color: $green;
+  background-color: $lightgreen;
   .prodTitle {
     font-size: 55px;
-    font-family: rl-aqva, sans-serif;
+    font-family: $heading-font;
     flex-direction: column;
     height: auto;
     display: flex;
     color: $brown;
     margin: 0 auto;
     text-align: center;
-    background-color: $green;
+    background-color: $lightgreen;
   }
   .YBlurb {
     width: 50%;
@@ -240,7 +241,7 @@ $heading-font: "rl-aqva";
   }
 
   .projects {
-    background: linear-gradient(5deg, $brown 4%, $green 94%);
+    background: linear-gradient(5deg, $tan 4%, $lightgreen 94%);
     padding-top: 100px;
     display: flex;
     flex-wrap: wrap;
@@ -265,7 +266,7 @@ $heading-font: "rl-aqva";
       margin-bottom: 100px;
 
       &:hover {
-        background-color: $green;
+        background-color: $soft-green;
         transform: scale(1);
       }
       h2 {

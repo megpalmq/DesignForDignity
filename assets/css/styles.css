@@ -21,9 +21,13 @@ p {
   margin-bottom: 16px;
 }
 
+@font-face {
+  font-family: ofelia;
+  src: url(../fonts/ofeliaLight.otf);
+}
 body {
   margin: 0;
-  font-family: transat-text, sans-serif;
+  font-family: ofelia;
   font-style: normal;
   font-weight: 300;
 }
@@ -64,16 +68,14 @@ body {
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 .navbar .logo {
-  font-size: 1rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #e1db54;
-  letter-spacing: 1px;
-  text-decoration: none;
-  padding: 20px;
-  font-style: normal;
-  font-weight: 900;
-  flex: 1;
+  background-image: url(../images/DesignforDignityLogo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100px;
+  height: 40px;
+  margin-left: 10px;
+  margin-bottom: 6px;
 }
 .navbar .logo:hover {
   color: #ef6838;
@@ -82,6 +84,7 @@ body {
   list-style: none;
   display: flex;
   gap: 1.5rem;
+  font-family: ofelia;
   flex-wrap: nowrap;
 }
 .navbar .nav-links li {
@@ -359,7 +362,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #352d27;
   text-align: center;
   flex-direction: column;
 }
@@ -367,12 +369,16 @@ body {
   width: 60%;
   font-size: 24px;
   color: #ef6838;
+  font-family: "alfarn", sans-serif;
 }
 .saying span {
   color: #ef6838;
+  font-family: "alfarn", sans-serif;
 }
 .saying .ani {
-  color: #352d27;
+  color: #c05125;
+  font-family: ofelia;
+  font-weight: 100;
 }
 .saying .ani2 {
   color: #ef6838;
@@ -435,7 +441,7 @@ body {
   font-size: 18px;
   width: 600px;
   line-height: 30px;
-  font-family: transat-text, sans-serif;
+  font-family: ofelia;
   font-style: normal;
   font-weight: 300;
   margin: 0;
@@ -523,7 +529,7 @@ body {
   background-color: #266433;
   color: #ecf0f1;
   padding: 40px 0;
-  font-family: transat-text, sans-serif;
+  font-family: "alfarn", sans-serif;
 }
 .footer .container {
   width: 90%;
@@ -535,13 +541,14 @@ body {
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
+  font-family: ofelia;
 }
 .footer .footer-logo {
   flex: 1;
 }
 .footer .footer-logo h3 {
   color: #ef6838;
-  font-family: rl-aqva, sans-serif;
+  font-family: "alfarn", sans-serif;
   font-weight: bold;
 }
 .footer .footer-logo h3 span.logo-highlight {
@@ -564,6 +571,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
+  font-family: ofelia;
 }
 .footer .footer-links li a {
   color: #bddfc6;
@@ -653,7 +661,7 @@ body {
   }
 }
 .topImage {
-  background: linear-gradient(#669c8b, #d2c29c);
+  background: linear-gradient(#349452, #d2c29c);
   height: 90vh;
   display: flex;
   flex-direction: column;
@@ -711,7 +719,7 @@ body {
 .section5 {
   width: 100%;
   padding: 100px 0 40px;
-  background: linear-gradient(#d2c29c, #669c8b);
+  background: linear-gradient(#d2c29c, #349452);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -722,7 +730,7 @@ body {
   font-weight: bold;
   color: #352d27;
   text-align: center;
-  font-family: rl-aqva, sans-serif;
+  font-family: "alfarn", sans-serif;
   margin-bottom: 50px;
   animation: fadeIn 1.5s ease-out;
 }
@@ -835,18 +843,18 @@ body {
   }
 }
 .proj {
-  background-color: #669c8b;
+  background-color: #349452;
 }
 .proj .prodTitle {
   font-size: 55px;
-  font-family: rl-aqva, sans-serif;
+  font-family: "alfarn", sans-serif;
   flex-direction: column;
   height: auto;
   display: flex;
   color: #352d27;
   margin: 0 auto;
   text-align: center;
-  background-color: #669c8b;
+  background-color: #349452;
 }
 .proj .YBlurb {
   width: 50%;
@@ -860,7 +868,7 @@ body {
   border-radius: 20px;
 }
 .proj .projects {
-  background: linear-gradient(5deg, #352d27 4%, #669c8b 94%);
+  background: linear-gradient(5deg, #d2c29c 4%, #349452 94%);
   padding-top: 100px;
   display: flex;
   flex-wrap: wrap;
@@ -885,7 +893,7 @@ body {
   margin-bottom: 100px;
 }
 .proj .projects .project-card:hover {
-  background-color: #669c8b;
+  background-color: #bddfc6;
   transform: scale(1);
 }
 .proj .projects .project-card h2 {
@@ -894,7 +902,7 @@ body {
   margin-bottom: 10px;
   color: #352d27;
   align-items: center;
-  font-family: "rl-aqva";
+  font-family: "alfarn", sans-serif;
   text-align: center;
   font-size: 32px;
 }
@@ -1174,7 +1182,7 @@ body {
   }
 }
 .about-section {
-  background-image: linear-gradient(to top, #d2c29c 0%, #669c8b 100%);
+  background-image: linear-gradient(to top, #d2c29c 0%, #bddfc6 100%);
   animation: fadeIn 1.5s ease-out;
   padding-bottom: 50px;
   padding-top: 100px;
@@ -1299,7 +1307,7 @@ body {
 .about-section .bonerCenter h2 {
   color: #c05126;
   font-size: 40px;
-  font-family: rl-aqva;
+  font-family: "alfarn";
 }
 .about-section .logos {
   display: flex;
@@ -1635,7 +1643,7 @@ body {
   text-align: center;
   justify-self: center;
   color: #352d27;
-  font-family: rl-aqva, sans-serif;
+  font-family: "alfarn", sans-serif;
   padding: 10px;
 }
 .container .indyGraphic img {
@@ -1758,7 +1766,7 @@ body {
 }
 .container3 .food-insecurity-section {
   margin-top: 60px;
-  background-color: #d2c29c;
+  background-color: #349452;
   animation: fadeIn 2s ease-out;
   border-radius: 20px;
 }
@@ -1772,12 +1780,12 @@ body {
 .container3 .food-insecurity-section .containerMap .Tcontent .sec-title {
   font-size: 2.5rem;
   text-align: center;
-  color: #352d27;
+  color: #bddfc6;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   animation: slideUp 1.5s ease-out;
-  font-family: rl-aqva, sans-serif;
+  font-family: "alfarn", sans-serif;
   font-style: normal;
   font-weight: 900;
   margin-bottom: 20px;
@@ -1808,7 +1816,7 @@ body {
   transition: color 0.3s ease;
 }
 .container3 .food-insecurity-section .containerMap .map-container .map-instructions:hover {
-  color: #352d27;
+  color: #bddfc6;
 }
 
 @media screen and (max-width: 1285px) {
@@ -1931,13 +1939,14 @@ body {
   justify-content: center;
   margin-top: 30px;
   align-items: center;
+  font-family: "alfarn" sans-serif;
 }
 .button-container .seeMore {
   display: inline-block;
-  background: linear-gradient(45deg, #c05126, #ff9472);
+  background: linear-gradient(45deg, #ef6838, #ff9472);
   color: #fff;
   font-size: 1.2rem;
-  font-weight: bold;
+  font-family: "alfarn" sans-serif;
   padding: 0.75rem 1.5rem;
   border: none;
   border-radius: 30px;
@@ -1952,6 +1961,7 @@ body {
 .button-container .seeMore a {
   text-decoration: none;
   color: inherit;
+  font-family: "alfarn" sans-serif;
   display: flex;
   align-items: center;
   gap: 0.5rem;

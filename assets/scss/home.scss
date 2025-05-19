@@ -6,11 +6,15 @@ $yellow: #e1db54;
 $orange: #ef6838;
 $darkorange: #c05125;
 $highlight-color: #ef6838;
+@font-face {
+  font-family: ofelia;
+  src: url(../fonts/ofeliaLight.otf);
+}
 
 body {
   margin: 0;
 
-  font-family: transat-text, sans-serif;
+  font-family: ofelia;
   font-style: normal;
   font-weight: 300;
 }
@@ -51,16 +55,14 @@ body {
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 
   .logo {
-    font-size: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: $yellow;
-    letter-spacing: 1px;
-    text-decoration: none;
-    padding: 20px;
-    font-style: normal;
-    font-weight: 900;
-    flex: 1;
+    background-image: url(../images/DesignforDignityLogo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100px;
+    height: 40px;
+    margin-left: 10px;
+    margin-bottom: 6px;
 
     &:hover {
       color: $orange;
@@ -71,6 +73,7 @@ body {
     list-style: none;
     display: flex;
     gap: 1.5rem;
+    font-family: ofelia;
     flex-wrap: nowrap;
 
     li {
@@ -390,7 +393,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: $brown;
   text-align: center;
   flex-direction: column;
 
@@ -398,12 +400,16 @@ body {
     width: 60%;
     font-size: 24px;
     color: $orange;
+    font-family: "alfarn", sans-serif;
   }
   span {
     color: $orange;
+    font-family: "alfarn", sans-serif;
   }
   .ani {
-    color: $brown;
+    color: $darkorange;
+    font-family: ofelia;
+    font-weight: 100;
   }
   .ani2 {
     color: $orange;
@@ -471,7 +477,7 @@ body {
     font-size: 18px;
     width: 600px;
     line-height: 30px;
-    font-family: transat-text, sans-serif;
+    font-family: ofelia;
     font-style: normal;
     font-weight: 300;
     margin: 0;
@@ -572,7 +578,7 @@ body {
   background-color: $green;
   color: #ecf0f1;
   padding: 40px 0;
-  font-family: transat-text, sans-serif;
+  font-family: "alfarn", sans-serif;
 
   .container {
     width: 90%;
@@ -585,6 +591,7 @@ body {
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
+    font-family: ofelia;
   }
 
   .footer-logo {
@@ -592,11 +599,11 @@ body {
 
     h3 {
       color: $orange;
-      font-family: rl-aqva, sans-serif;
+      font-family: "alfarn", sans-serif;
       font-weight: bold;
 
       span.logo-highlight {
-        color: $highlight-color; // make sure $highlight-color is defined correctly
+        color: $highlight-color;
       }
     }
 
@@ -620,6 +627,7 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
+    font-family: ofelia;
 
     li {
       a {

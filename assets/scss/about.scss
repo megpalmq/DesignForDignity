@@ -1,14 +1,14 @@
 $tan: #d2c29c;
 $brown: #352d27;
-$primary-color: #352d27;
-$green: #669c8b;
-$accent-color: #e0a138;
-$orange: #c05126;
-$light-gray: #eeee;
-$dark-gray: #635c5c;
-$highlight-color: #c05126;
-$font-family: "rl-aqva", sans-serif;
-$heading-font: "rl-aqva", sans-serif;
+$green: #266433;
+$lightgreen: #349452;
+$soft-green: #bddfc6;
+$yellow: #e1db54;
+$orange: #ef6838;
+$darkorange: #c05125;
+$highlight-color: #ef6838;
+$font-family: "alfarn", sans-serif;
+$heading-font: "alfarn", sans-serif;
 $map-height: 400px;
 
 *,
@@ -87,7 +87,7 @@ $map-height: 400px;
 
 // About Section
 .about-section {
-  background-image: linear-gradient(to top, $tan 0%, $green 100%);
+  background-image: linear-gradient(to top, $tan 0%, $soft-green 100%);
   animation: fadeIn 1.5s ease-out;
   padding-bottom: 50px;
   padding-top: 100px;
@@ -228,7 +228,7 @@ $map-height: 400px;
     h2 {
       color: #c05126;
       font-size: 40px;
-      font-family: rl-aqva;
+      font-family: "alfarn";
     }
   }
 
@@ -610,7 +610,7 @@ $map-height: 400px;
       text-align: center;
       justify-self: center;
       color: $brown;
-      font-family: rl-aqva, sans-serif;
+      font-family: "alfarn", sans-serif;
       padding: 10px;
     }
   }
@@ -751,7 +751,7 @@ $map-height: 400px;
   align-items: center;
   .food-insecurity-section {
     margin-top: 60px;
-    background-color: $tan;
+    background-color: $lightgreen;
     animation: fadeIn 2s ease-out;
     border-radius: 20px;
     .containerMap {
@@ -764,12 +764,12 @@ $map-height: 400px;
         .sec-title {
           font-size: 2.5rem;
           text-align: center;
-          color: $primary-color;
+          color: $soft-green;
           margin: 0 auto;
           display: flex;
           flex-direction: column;
           animation: slideUp 1.5s ease-out;
-          font-family: rl-aqva, sans-serif;
+          font-family: "alfarn", sans-serif;
           font-style: normal;
           font-weight: 900;
           margin-bottom: 20px;
@@ -804,7 +804,7 @@ $map-height: 400px;
           transition: color 0.3s ease;
 
           &:hover {
-            color: $primary-color;
+            color: $soft-green;
           }
         }
       }
@@ -955,12 +955,13 @@ $map-height: 400px;
   justify-content: center;
   margin-top: 30px;
   align-items: center;
+  font-family: "alfarn" sans-serif;
   .seeMore {
     display: inline-block;
     background: linear-gradient(45deg, $orange, #ff9472);
     color: #fff;
     font-size: 1.2rem;
-    font-weight: bold;
+    font-family: "alfarn" sans-serif;
     padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 30px;
@@ -975,6 +976,7 @@ $map-height: 400px;
     a {
       text-decoration: none;
       color: inherit;
+      font-family: "alfarn" sans-serif;
       display: flex;
       align-items: center;
       gap: 0.5rem;
