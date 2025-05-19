@@ -492,7 +492,7 @@ p {
 /* Media Queries for Smaller Mobile Screens */
 @media screen and (max-width: 480px) {
   .project-hero2 {
-    height: 80vh;
+    height: 100vh;
   }
 
   .project-title2 {
@@ -537,6 +537,9 @@ p {
 
   .modal-content2 {
     max-width: 100%; /* Full width for mobile screens */
+  }
+  .finalDrafts {
+    height: 100vh;
   }
 
   .final-draft2 h2 {

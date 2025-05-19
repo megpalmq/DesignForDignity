@@ -461,43 +461,43 @@ $heading-font: "rl-aqva", sans-serif;
     font-family: $heading-font;
   }
 
-  .project-description2 {
+  .project-description4 {
     font-size: 1rem; /* Adjust font size */
     max-width: 90%;
     margin-top: 20px;
   }
 
-  .project-type2 {
+  .project-type4 {
     font-size: 1.2rem;
     width: 15%;
     text-align: center;
   }
 
-  .about2 {
+  .about4 {
     padding: 30px 10px; /* Reduced padding */
   }
 
-  .section-title2 {
-    font-size: 2rem; /* Adjust font size */
+  .section-title4 {
+    font-size: 2rem;
     font-family: $heading-font;
   }
 
-  .project-info2 {
-    width: 90%; /* Full width for smaller screens */
+  .project-info4 {
+    width: 90%;
     font-size: 1rem;
   }
 
-  .project-process2 {
-    padding: 0 20px; /* Adjust padding */
+  .project-process4 {
+    padding: 0 20px;
   }
 
-  .members2 {
+  .members4 {
     padding: 10px;
     margin: 20px 0;
     max-width: 100%;
   }
 
-  .member-list2 {
+  .member-list {
     gap: 20px;
   }
 
@@ -545,43 +545,105 @@ $heading-font: "rl-aqva", sans-serif;
   }
 }
 
-/* Media Queries for Smaller Mobile Screens */
 @media screen and (max-width: 480px) {
-  .project-hero2 {
+  .project-hero4 {
     height: 80vh;
   }
 
-  .project-title2 {
+  .project-title4 {
     font-size: 1.8rem;
   }
 
-  .project-description2 {
+  .project-description4 {
     font-size: 0.9rem; /* Adjust font size */
   }
 
-  .project-type2 {
+  .project-type4 {
     font-size: 1rem;
     width: 100%;
   }
 
-  .about2 {
+  .about4 {
     padding: 20px 10px;
   }
 
-  .section-title2 {
+  .section-title4 {
     font-size: 1.8rem; /* Adjust for mobile */
   }
 
-  .project-info2 {
+  .project-info4 {
     width: 100%;
     font-size: 0.9rem;
   }
 
-  .members2 {
+  .members4 {
     margin: 10px 0;
   }
 
-  .member-list2 {
+  .member-list4 {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+
+  .poster-item2 {
+    width: 100%;
+  }
+
+  .modal-content2 {
+    max-width: 100%; /* Full width for mobile screens */
+  }
+
+  .final-draft4 h2 {
+    font-size: 1.8rem; /* Adjust for mobile */
+  }
+
+  .final-draft4 p {
+    font-size: 0.9rem; /* Adjust font size */
+  }
+
+  .back-button4,
+  .see-more4 {
+    width: 60%;
+    margin: 20px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .project-hero4 {
+    height: 100vh;
+  }
+
+  .project-title4 {
+    font-size: 1.8rem;
+  }
+
+  .project-description4 {
+    font-size: 0.9rem; /* Adjust font size */
+  }
+
+  .project-type4 {
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  .about4 {
+    padding: 20px 10px;
+  }
+
+  .section-title4 {
+    font-size: 1.8rem; /* Adjust for mobile */
+  }
+
+  .project-info4 {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .members4 {
+    margin: 10px 0;
+  }
+
+  .member-list4 {
     flex-direction: column;
     display: flex;
     align-items: center;

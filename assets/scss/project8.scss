@@ -666,3 +666,71 @@ $heading-font: "rl-aqva", sans-serif;
     margin: 20px;
   }
 }
+@media screen and (max-width: 360px) {
+  .project-hero8 {
+    height: 130vh;
+  }
+
+  .project-title8 {
+    font-size: 2rem;
+  }
+
+  .project-description8 {
+    font-size: 0.9rem; /* Adjust font size */
+  }
+
+  .project-type8 {
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  .about8 {
+    padding: 20px 10px;
+  }
+
+  .section-title8 {
+    font-size: 3rem;
+  }
+
+  .project-info8 {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .members8 {
+    margin: 10px 0;
+  }
+
+  .member-list8 {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+
+  .poster-item8 {
+    width: 100%;
+  }
+
+  .modal-content8 {
+    max-width: 100%;
+    margin-top: 200px;
+    padding: 30px;
+  }
+  .group-photo8 {
+    width: 100%;
+  }
+
+  .final-draft8 h2 {
+    font-size: 3rem; /* Adjust for mobile */
+  }
+
+  .final-draft8 p {
+    font-size: 0.9rem; /* Adjust font size */
+  }
+
+  .back-button8,
+  .see-more8 {
+    width: 60%;
+    margin: 20px;
+  }
+}
