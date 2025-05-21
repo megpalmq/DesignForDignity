@@ -765,19 +765,25 @@ body {
   font-family: "alfarn", sans-serif;
   font-size: 38px;
   width: 60%;
-  height: 100px;
   position: relative;
+  top: 0;
+  left: 0;
+  height: 100px;
   padding-right: 100px;
 }
 .topImage .mini-blah {
   font-size: 15px;
+  left: 0;
   position: relative;
   padding-right: 500px;
   padding-bottom: 50px;
 }
 .topImage .TM {
   padding-top: 100px;
-  background: url(../images/process.png) center/contain no-repeat;
+  background-image: url(../images/process.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
   width: 100%;
   min-height: 60vh;
   display: flex;
@@ -787,73 +793,26 @@ body {
 .topImage .TM:hover {
   transform: scale(1.05);
 }
-@media (max-width: 1260px) {
-  .topImage {
-    height: 100vh;
-    padding-top: 15vh;
-  }
-  .topImage .blah {
-    font-size: 32px;
-    width: 80%;
-    padding-right: 50px;
-    margin-top: 50px;
-  }
-  .topImage .mini-blah {
-    font-size: 14px;
-    padding-right: 100px;
-  }
-  .topImage .TM {
-    min-height: 40vh;
-  }
-}
 @media (max-width: 1024px) {
   .topImage {
+    padding-top: 15vh;
     height: auto;
   }
-  .topImage .blah {
-    font-size: 30px;
-  }
-  .topImage .mini-blah {
-    font-size: 14px;
-  }
   .topImage .TM {
-    min-height: 35vh;
+    min-height: 30vh;
   }
 }
 @media (max-width: 768px) {
-  .topImage .blah {
-    font-size: 26px;
-    width: 90%;
-    padding-right: 20px;
-  }
-  .topImage .mini-blah {
-    font-size: 13px;
-    padding-right: 100px;
-  }
   .topImage .TM {
-    padding-top: 80px;
-    min-height: 30vh;
+    min-height: 25vh;
+    margin-top: 50px;
   }
 }
 @media (max-width: 450px) {
   .topImage {
-    padding: 5vh 5vw 0;
-  }
-  .topImage .blah {
-    font-size: 22px;
-    width: 100%;
-    padding-right: 0;
-    margin-top: 100px;
-  }
-  .topImage .mini-blah {
-    font-size: 10px;
-    padding-right: -10;
-    padding-bottom: 30px;
-    width: 100%;
-  }
-  .topImage .TM {
-    padding-top: 50px;
-    min-height: 25vh;
+    padding-top: 5vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
   }
 }
 
@@ -1121,7 +1080,7 @@ body {
     width: 100%;
     max-width: 450px;
     margin: 0 auto;
-    height: 1500px;
+    height: 1200px;
   }
   .visual-process .timeline .timeline-item .circle1,
   .visual-process .timeline .timeline-item .circle2,
@@ -1141,7 +1100,6 @@ body {
     width: 100%;
     max-width: 400px;
     margin: 0 auto;
-    margin-top: 20px;
     display: block;
   }
   .visual-process .timeline .timeline-item .content .text {
@@ -1155,8 +1113,8 @@ body {
   .visual-process .timeline .timeline-item .content .text2 {
     width: 100%;
     margin: 0;
-    right: -50px;
-    padding-bottom: 100px;
+    right: -100;
+    margin-bottom: 100px;
     top: 320px;
     position: absolute;
     background-color: white;
@@ -1172,294 +1130,276 @@ body {
   }
 }
 @media (max-width: 480px) {
-  .visual-process {
-    padding: 1rem;
-  }
-  .visual-process .timeline {
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0;
-  }
-  .visual-process .timeline .timeline-item {
-    width: 100%;
-    padding: 2rem 0;
-    text-align: center;
-  }
-  .visual-process .timeline .timeline-item::before {
-    display: none;
-  }
-  .visual-process .timeline .timeline-item .circle1,
-  .visual-process .timeline .timeline-item .circle2,
-  .visual-process .timeline .timeline-item .circle3 {
-    display: none;
-  }
-  .visual-process .timeline .timeline-item .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 1rem;
-    width: 100%;
-  }
-  .visual-process .timeline .timeline-item .content img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    margin: 1rem 0;
-  }
-  .visual-process .timeline .timeline-item .content .text,
-  .visual-process .timeline .timeline-item .content .text2,
-  .visual-process .timeline .timeline-item .content .text3 {
-    font-size: 0.9rem;
-    padding: 0.5rem;
-    top: 280px;
-  }
-  .visual-process .timeline .timeline-item .content .text2 {
-    right: 0;
-    padding-bottom: 100px;
-    height: 200px;
-  }
-  .visual-process .timeline .timeline-item .content .text3 {
-    bottom: 0;
-    margin-bottom: 100px;
-    height: 200px;
-  }
   .visual-process .title {
-    font-size: 2rem;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+  .visual-process .timeline-item .content .text h2,
+  .visual-process .timeline-item .content .text2 h2,
+  .visual-process .timeline-item .content .text3 h2 {
+    font-size: 18px;
+  }
+  .visual-process .timeline-item .content .text p,
+  .visual-process .timeline-item .content .text2 p,
+  .visual-process .timeline-item .content .text3 p {
+    font-size: 0.85rem;
+  }
+  .visual-process .timeline-item .content img {
+    max-width: 100%;
+    width: 100%;
+    margin: 1rem 0;
   }
 }
 .proj {
-  width: 80%;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
   background-color: #bddfc6;
+  margin-top: 200px;
 }
-.proj .yap {
-  width: 60%;
-}
-.proj .yap .prodTitle {
-  font-size: 57px;
+.proj .prodTitle {
+  font-size: 55px;
   font-family: "alfarn", sans-serif;
   flex-direction: column;
   height: auto;
   display: flex;
-  color: #ef6838;
+  color: #352d27;
   margin: 0 auto;
   text-align: center;
-  margin-top: 20px;
 }
-.proj .yap .YBlurb {
-  width: 70%;
-  color: black;
+.proj .YBlurb {
+  width: 50%;
+  color: white;
   height: 100%;
   display: flex;
   margin: 0 auto;
   margin-top: 30px;
+  background-color: #ef6838;
   padding: 20px;
   border-radius: 20px;
-  font-size: 1.1rem;
 }
-.proj .otherPhoto {
-  background-image: url(../images/img1.jpg);
+.proj .projects {
+  background: linear-gradient(5deg, #d2c29c 4%, #bddfc6 94%);
+  padding-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 0 auto;
+}
+.proj .projects .project-card {
+  background-color: #bddfc6;
+  text-decoration: none;
+  border-radius: 50px;
+  padding: 30px;
+  color: black;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: calc(50% - 20px); /* Two columns */
+  height: 430px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+  font-family: transat-text, sans-serif;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+.proj .projects .project-card:hover {
+  background-color: #e1db54;
+  transform: scale(1);
+}
+.proj .projects .project-card h2 {
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #352d27;
+  align-items: center;
+  font-family: "alfarn", sans-serif;
+  text-align: center;
+  font-size: 32px;
+}
+.proj .projects .project-card a {
+  text-decoration: none;
+  color: black;
+}
+.proj .projects .project-card .project-image {
+  margin: 0 auto;
+  border-radius: 30px;
+  width: 80%;
+  height: 300px;
+  background-image: url(../mockups/team1.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 400px;
-  height: 300px;
-  position: relative;
-  top: -50px;
-  border: #bddfc6 8px solid;
-  background-color: purple;
 }
-@media (max-width: 1260px) {
-  .proj {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    gap: 2rem;
-    height: 100vh;
+.proj .projects .project-card .project-image2 {
+  margin: 0 auto;
+  border-radius: 30px;
+  width: 80%;
+  height: 300px;
+  background-image: url(../mockups/team2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.proj .projects .project-card .project-image3 {
+  margin: 0 auto;
+  border-radius: 30px;
+  width: 80%;
+  height: 300px;
+  background-image: url(../mockups/team3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.proj .projects .project-card .project-image4 {
+  margin: 0 auto;
+  border-radius: 30px;
+  width: 80%;
+  height: 300px;
+  background-image: url(../mockups/team4.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.proj .projects .project-card .project-image5 {
+  margin: 0 auto;
+  border-radius: 30px;
+  width: 80%;
+  height: 300px;
+  background-image: url(../mockups/team5.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.proj .projects .project-card .project-image6 {
+  margin: 0 auto;
+  border-radius: 30px;
+  width: 80%;
+  height: 300px;
+  background-image: url(../mockups/team6.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.proj .projects .project-card .project-image7 {
+  margin: 0 auto;
+  border-radius: 30px;
+  width: 80%;
+  height: 300px;
+  background-image: url(../mockups/team7.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.proj .projects .project-card .project-image8 {
+  margin: 0 auto;
+  border-radius: 30px;
+  width: 80%;
+  height: 300px;
+  background-image: url(../mockups/team8.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 1200px) {
+  .YBlurb {
+    font-size: 14px;
   }
-  .proj .yap {
-    width: 95%;
+  .projects .project-card {
+    width: calc(50% - 20px); /* Two columns */
+    height: auto;
   }
-  .proj .yap .prodTitle {
-    font-size: 42px;
-    text-align: center;
-    line-height: 1.2;
-  }
-  .proj .yap .YBlurb {
-    width: 95%;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.85);
-    color: #000;
-    border-radius: 1rem;
-  }
-  .proj .otherPhoto {
-    width: 90%;
-    height: 250px;
-    top: 0;
-    margin: 40px auto 0 auto;
+}
+@media (max-width: 900px) {
+  .projects .project-card {
+    width: calc(100% - 20px); /* Single column layout */
+    height: auto;
+    margin-bottom: 50px; /* Adjust margin for smaller screens */
   }
 }
 @media (max-width: 768px) {
-  .proj .yap .prodTitle {
-    font-size: 38px;
+  .YBlurb {
+    min-width: 600px;
   }
-  .proj .yap .YBlurb {
-    font-size: 0.95rem;
-    padding: 15px;
-  }
-  .proj .otherPhoto {
-    width: 100%;
-    height: 220px;
-  }
-}
-@media (max-width: 480px) {
-  .proj .proj {
-    margin: 0 auto;
-    top: 0;
-  }
-  .proj .proj .yap .prodTitle {
-    font-size: 30px;
-  }
-  .proj .proj .yap .YBlurb {
-    font-size: 0.9rem;
-    padding: 10px;
-  }
-  .proj .proj .otherPhoto {
-    width: 100%;
-    height: 200px;
-  }
-}
-
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px 200px;
-  margin-top: 30px;
-  justify-content: center;
-}
-.card-container a {
-  text-decoration: none;
-}
-.card-container .card {
-  display: flex;
-  flex-direction: row;
-  background-color: #d3e8d5;
-  border-radius: 2rem;
-  overflow: hidden;
-  width: 500px;
-  height: 300px;
-  max-width: 100%;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  text-decoration: none;
-}
-.card-container .card:hover {
-  box-shadow: 0 4px 20px rgb(0, 0, 0);
-}
-.card-container .card .card-text {
-  flex: 1;
-  padding: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100px;
-}
-.card-container .card .card-text h2 {
-  font-size: 1.3rem;
-  line-height: 1.1;
-  color: #2f7034;
-  font-weight: 400;
-  margin: 0;
-  padding: 20px;
-}
-.card-container .card .card-text h2 .bold {
-  font-family: "alfarn", sans-serif;
-}
-.card-container .card .card-image {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.card-container .card .card-image img {
-  width: 100%;
-  height: 300px;
-  object-fit: contain;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-@media (max-width: 480px) {
-  .card-container {
+  .proj .projects {
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
   }
-  .card-container .card {
-    flex-direction: column;
+  .proj .projects .project-card {
     width: 90%;
     height: auto;
-    align-items: center;
-    justify-content: center;
     text-align: center;
   }
-  .card-container .card-image {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .proj .projects .project-card h2 {
+    font-size: 32px;
   }
-  .card-container .card-image img {
+  .proj .projects .project-card .project-image,
+  .proj .projects .project-card .project-image2,
+  .proj .projects .project-card .project-image3,
+  .proj .projects .project-card .project-image4,
+  .proj .projects .project-card .project-image5,
+  .proj .projects .project-card .project-image6,
+  .proj .projects .project-card .project-image7,
+  .proj .projects .project-card .project-image8 {
     width: 100%;
-    max-width: 100%;
-    height: 200px;
-    object-fit: contain;
-  }
-  .card-container .card-text {
-    width: 100%;
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .card-container .card-text h2 {
-    font-size: 1.1rem;
-    line-height: 1.4;
-    padding: 0;
-    margin: 0;
-    color: #2f7034;
+    height: 250px;
+    border-radius: 20px;
   }
 }
 @media (max-width: 480px) {
-  .card-container {
-    flex-direction: column;
-    gap: 20px;
-    margin-top: 20px;
+  .YBlurb {
+    font-size: 14px;
+    min-width: 400px;
   }
-  .card-container .card {
-    flex-direction: column;
-    width: 300px;
-    height: auto;
+  .proj .prodTitle {
+    font-size: 40px;
+    padding: 10px;
   }
-  .card-container .card .card-image img {
-    height: 200px;
-    object-fit: cover;
+  .proj .projects .project-card {
+    width: 95%;
+    border-radius: 30px;
   }
-  .card-container .card .card-text {
-    padding: 1rem;
+  .proj .projects .project-card h2 {
+    font-size: 24px;
+  }
+  .proj .projects .project-card .project-image,
+  .proj .projects .project-card .project-image2,
+  .proj .projects .project-card .project-image3,
+  .proj .projects .project-card .project-image4,
+  .proj .projects .project-card .project-image5,
+  .proj .projects .project-card .project-image6,
+  .proj .projects .project-card .project-image7,
+  .proj .projects .project-card .project-image8 {
     width: 100%;
+    height: 200px;
+    border-radius: 15px;
   }
-  .card-container .card .card-text h2 {
-    font-size: 1.1rem;
-    padding: 0;
-    text-align: center;
-    line-height: 1.4;
+}
+@media (max-width: 360px) {
+  .YBlurb {
+    font-size: 14px;
+    min-width: 300px;
+  }
+  .proj .prodTitle {
+    font-size: 40px;
+    padding: 10px;
+  }
+  .proj .projects .project-card {
+    width: 85%;
+    border-radius: 30px;
+  }
+  .proj .projects .project-card h2 {
+    font-size: 24px;
+  }
+  .proj .projects .project-card .project-image,
+  .proj .projects .project-card .project-image2,
+  .proj .projects .project-card .project-image3,
+  .proj .projects .project-card .project-image4,
+  .proj .projects .project-card .project-image5,
+  .proj .projects .project-card .project-image6,
+  .proj .projects .project-card .project-image7,
+  .proj .projects .project-card .project-image8 {
+    width: 100%;
+    height: 200px;
+    border-radius: 15px;
   }
 }
 @keyframes fadeInUp {

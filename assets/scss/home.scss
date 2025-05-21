@@ -42,15 +42,15 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1.2rem 0;
-  background-color: $brown;
+  background-color: rgba(255, 255, 255, 0.5);
   color: tan;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
   width: 80%;
   margin-top: 40px;
-  height: 50px;
-  border-radius: 20px;
+  height: 80px;
+  border-radius: 50px;
   box-shadow: 0 0 15px #e3f4d880;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 
@@ -61,7 +61,7 @@ body {
     background-size: cover;
     width: 100px;
     height: 40px;
-    margin-left: 10px;
+    margin-left: 20px;
     margin-bottom: 6px;
 
     &:hover {
@@ -81,7 +81,7 @@ body {
 
       a {
         text-decoration: none;
-        color: white;
+        color: $highlight-color;
         font-size: 1rem;
         padding: 0.5rem 0;
         font-weight: 300;
@@ -389,16 +389,26 @@ body {
   width: 100%;
   min-height: 300px;
   padding: 20px;
-  background-color: $soft-green;
+  background-color: #f7f6f0;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  flex-direction: column;
 
+  .design {
+    justify-content: center;
+    font-size: 40px;
+    margin: 0 auto;
+    padding-left: 100px;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    .change {
+      color: $soft-green;
+    }
+  }
   h3 {
     width: 60%;
-    font-size: 24px;
+    font-size: 19px;
     color: $orange;
     font-family: "alfarn", sans-serif;
   }
@@ -407,26 +417,109 @@ body {
     font-family: "alfarn", sans-serif;
   }
   .ani {
-    color: $darkorange;
+    color: black;
     font-family: ofelia;
     font-weight: 100;
+    width: 520px;
+    margin-right: 150px;
   }
   .ani2 {
     color: $orange;
     margin-top: 20px;
   }
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .saying {
-    min-height: 200px;
+    .design {
+      font-size: 36px;
+      padding-left: 60px;
+      width: 600px;
+    }
+
+    h3 {
+      width: 70%;
+      font-size: 18px;
+    }
+
+    .ani {
+      width: 450px;
+      margin-right: 100px;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .saying {
+    flex-direction: column;
+    text-align: center;
+
+    .design {
+      font-size: 32px;
+      padding-left: 0;
+      width: 90%;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h3 {
+      width: 85%;
+      font-size: 17px;
+      margin: 10px auto;
+    }
+
+    .ani {
+      width: 85%;
+      margin: 20px auto 0 auto;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .saying {
+    padding: 40px 15px;
+
+    .design {
+      font-size: 28px;
+      width: 100%;
+      padding-bottom: 20px;
+    }
+
+    h3 {
+      font-size: 16px;
+    }
+
+    .ani {
+      font-size: 15px;
+      width: 100%;
+      margin: 10px auto 0 auto;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .saying {
     padding: 30px 10px;
-  }
-  .saying h3 {
-    width: 90%;
-    font-size: 15px;
-  }
-  .ani {
-    width: 100%;
+
+    .design {
+      font-size: 24px;
+      width: 100%;
+    }
+
+    h3 {
+      font-size: 15px;
+      width: 100%;
+    }
+
+    .ani {
+      font-size: 14px;
+      margin: 10px auto 0 auto;
+    }
+
+    .ani2 {
+      font-size: 14px;
+      margin-top: 15px;
+    }
   }
 }
 
@@ -575,11 +668,18 @@ body {
 }
 
 .footer {
-  background-color: $green;
+  background-color: $soft-green;
   color: #ecf0f1;
   padding: 40px 0;
-  font-family: "alfarn", sans-serif;
-
+  font-family: ofelia;
+  .bottomLogo {
+    background-image: url(../images/DesignforDignityLogo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100px;
+    height: 50px;
+  }
   .container {
     width: 90%;
     margin: 0 auto;
@@ -596,7 +696,9 @@ body {
 
   .footer-logo {
     flex: 1;
-
+    p {
+      font-family: ofelia;
+    }
     h3 {
       color: $orange;
       font-family: "alfarn", sans-serif;
@@ -610,12 +712,15 @@ body {
     p {
       margin: 5px 0;
       font-size: 15px;
-      color: $soft-green;
+      color: $orange;
+    }
+    .addressing {
+      font-family: "alfarn", sans-serif;
     }
 
     a,
     span {
-      color: $soft-green;
+      color: black;
       text-decoration: none;
     }
   }
@@ -631,12 +736,13 @@ body {
 
     li {
       a {
-        color: $soft-green;
+        color: black;
         text-decoration: none;
         font-size: 1rem;
         padding: 5px 10px;
         border-radius: 5px;
         transition: background 0.3s;
+        font-family: ofelia;
 
         &:hover {
           background-color: $orange;
@@ -650,7 +756,7 @@ body {
     display: flex;
     justify-content: flex-end;
     font-size: 0.7rem;
-    color: $soft-green;
+    color: black;
     margin-top: 150px;
     margin-left: 130px;
   }
@@ -684,7 +790,7 @@ body {
       text-align: center;
       gap: 15px;
     }
-
+    .bottomLogo,
     .footer-logo,
     .footer-links {
       margin-bottom: 15px;
