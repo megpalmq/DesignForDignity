@@ -491,69 +491,74 @@ $heading-font: "alfarn", sans-serif;
 }
 @media (max-width: 480px) {
   .visual-process {
-    padding: 1rem;
-
     .timeline {
       width: 100%;
-      max-width: 100%;
+      max-width: 450px;
       margin: 0 auto;
-      padding: 0;
 
       .timeline-item {
-        width: 100%;
-        padding: 2rem 0;
-        text-align: center;
-
-        &::before {
-          display: none;
-        }
-
-        .circle1,
-        .circle2,
-        .circle3 {
-          display: none; // Hide circles on small screens
-        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
 
         .content {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          text-align: center;
-          padding: 1rem;
+          position: relative;
           width: 100%;
+          max-width: 250px;
+          margin: 40px auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
 
           img {
             width: 100%;
+            height: auto; // maintain aspect ratio
             max-width: 300px;
-            height: auto;
-            margin: 1rem 0;
+            display: block;
+            border-radius: 12px;
+            object-fit: contain;
+          }
+          .first {
+            margin-left: 100px;
           }
 
           .text,
           .text2,
           .text3 {
-            font-size: 0.9rem;
-            padding: 0.5rem;
-            top: 280px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(
+              -50%,
+              -50%
+            ); // Vertically + horizontally centered
+            width: 300px;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 1rem;
+            font-size: 1rem;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+            border-radius: 12px;
           }
 
-          .text2 {
-            right: 0;
-            padding-bottom: 100px;
-            height: 200px;
-          }
-
-          .text3 {
-            bottom: 0;
-            margin-bottom: 100px;
-            height: 200px;
+          &:hover .text,
+          &:hover .text2,
+          &:hover .text3 {
+            opacity: 1;
+            pointer-events: auto;
+            p {
+              display: none;
+            }
           }
         }
       }
-    }
-
-    .title {
-      font-size: 2rem;
     }
   }
 }
