@@ -128,7 +128,7 @@ body {
   width: 30px;
   height: 3px;
   margin: 5px 0;
-  background: white;
+  background: black;
   border-radius: 5px;
   transition: 0.4s ease;
 }
@@ -151,12 +151,12 @@ body {
     height: 190px;
     text-align: center;
     margin-top: 225px;
-    background-color: #352d27;
+    background-color: #bddfc6;
     padding: 10px;
     border-radius: 20px;
   }
   .navbar .nav-links li a {
-    color: white;
+    color: black;
     font-size: 23px;
   }
   .navbar .nav-links:hover {
@@ -188,12 +188,12 @@ body {
     height: 180px;
     text-align: center;
     margin-top: 200px;
-    background-color: #352d27;
+    background-color: #bddfc6;
     padding: 10px;
     border-radius: 18px;
   }
   .navbar .nav-links li a {
-    color: white;
+    color: black;
     font-size: 21px;
   }
   .navbar .nav-links:hover {
@@ -223,12 +223,12 @@ body {
     height: 180px;
     text-align: center;
     margin-top: 200px;
-    background-color: #352d27;
+    background-color: #bddfc6;
     padding: 10px;
     border-radius: 18px;
   }
   .navbar .nav-links li a {
-    color: white;
+    color: black;
     font-size: 21px;
   }
   .navbar .nav-links:hover {
@@ -1326,9 +1326,10 @@ body {
   .proj .proj {
     margin: 0 auto;
     top: 0;
+    width: 80%;
   }
   .proj .proj .yap .prodTitle {
-    font-size: 30px;
+    font-size: 25px;
   }
   .proj .proj .yap .YBlurb {
     font-size: 0.9rem;
