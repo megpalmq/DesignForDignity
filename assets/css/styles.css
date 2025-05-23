@@ -1659,15 +1659,13 @@ body {
   padding: 20px;
 }
 .about-section .container2 .aboutCollabImg {
-  width: 50%;
-  max-width: none;
+  width: 90vw;
+  max-width: 550px;
+  min-width: 280px;
   height: auto;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  transform: scale(0.9);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
-  flex-shrink: 0;
-  object-fit: cover;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
 }
 .about-section .container2 .bonerCenter {
   width: 50%;
@@ -1749,9 +1747,13 @@ body {
     margin-bottom: 100px;
   }
   .about-section .aboutCollabImg {
-    width: 100%;
-    max-height: 300px;
-    max-width: 350px;
+    width: 90vw;
+    max-width: 500px;
+    min-width: 280px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
   }
   .about-section .bonerCenter {
     width: 95%;
@@ -1767,13 +1769,13 @@ body {
     font-size: 1.5rem;
   }
   .about-section .logos {
-    margin: 0 auto;
-    gap: 10px;
     width: 100%;
+    gap: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    margin: 0 auto;
   }
   .about-section .logo1,
   .about-section .logo2 {
@@ -1784,52 +1786,23 @@ body {
   }
 }
 @media screen and (max-width: 360px) {
-  .about-section .container2 {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 1rem;
-    gap: 1rem;
-    margin-bottom: 100px;
-  }
   .about-section .aboutCollabImg {
-    width: 100%;
-    max-height: 300px;
-    max-width: 350px;
-  }
-  .about-section .bonerCenter {
-    width: 95%;
-    max-width: 350px;
-    padding: 10px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    width: 90vw;
+    max-width: 480px;
+    min-width: 250px;
+    max-height: 400px;
   }
   .about-section .bonerCenter h2 {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
   .about-section .BonnerCenterTitle {
-    font-size: 1.2rem;
-  }
-  .about-section .logos {
-    margin: 0 auto;
-    gap: 10px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding-right: 40px;
-    justify-content: center;
-    align-items: center;
+    font-size: 1.1rem;
   }
   .about-section .logo1,
   .about-section .logo2 {
     width: 250px !important;
     height: 80px !important;
-    display: block;
-    margin: 0 auto;
-    margin-left: 50px;
+    margin-left: 0;
   }
 }
 
