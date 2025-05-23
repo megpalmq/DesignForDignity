@@ -101,94 +101,98 @@ h4 {
 .see-more2:focus {
   outline: none;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1024px) {
+  .project-hero2 {
+    height: 70vh;
+    background-position: center top;
+  }
+
   .project-title2 {
     font-size: 2.5rem;
   }
 
   .project-description2 {
-    font-size: 2rem;
+    font-size: 1.2rem;
   }
 
-  .hero-overlay2 .project-type2 {
-    font-size: 0.95rem;
-    padding: 8px;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .project-title2 {
-    font-size: 2rem;
-  }
-
-  .project-description2 {
-    font-size: 0.95rem;
-    line-height: 24px;
-  }
-
-  .hero-overlay2 .project-type2 {
-    font-size: 0.9rem;
-    margin-top: 20px;
-    margin-bottom: 30px;
-  }
-
-  h4 {
-    font-size: 1.6rem;
+  .see-more2 {
+    margin-left: 0;
+    margin-top: 50px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .project-hero2 {
-    height: 70vh;
-    padding: 10px;
-  }
-
-  .project-title2 {
-    font-size: 1.6rem;
-  }
-
-  .project-description2 {
-    font-size: 0.9rem;
+    height: 60vh;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
   }
 
   .hero-overlay2 {
     padding: 10px;
-  }
-
-  .hero-overlay2 .project-type2 {
-    font-size: 0.85rem;
-    padding: 6px 12px;
-  }
-
-  h4 {
-    font-size: 1.4rem;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .project-hero2 {
-    height: 60vh;
-    padding: 0 10px;
+    .project-type2 {
+      font-size: 1rem;
+      line-height: 1.4;
+      padding: 8px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
   }
 
   .project-title2 {
-    font-size: 1.4rem;
+    font-size: 2rem;
   }
 
   .project-description2 {
-    font-size: 0.85rem;
-    line-height: 22px;
+    font-size: 1.1rem;
+    padding: 0 10px;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+
+  .see-more2 {
+    font-size: 16px;
+    padding: 8px 16px;
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .project-hero2 {
+    height: 70vh;
+    padding: 2rem 1rem;
+  }
+
+  .project-title2 {
+    font-size: 1.8rem;
+  }
+
+  .project-description2 {
+    font-size: 1rem;
   }
 
   .hero-overlay2 .project-type2 {
-    font-size: 0.75rem;
-    padding: 5px 10px;
+    font-size: 0.95rem;
+    padding: 6px;
+    margin-bottom: 20px;
   }
 
   h4 {
     font-size: 1.2rem;
   }
+
+  .see-more2 {
+    font-size: 14px;
+    padding: 6px 12px;
+    margin: 20px auto 0 auto;
+    display: block;
+    text-align: center;
+  }
 }
+
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -444,6 +448,20 @@ h4 {
   padding-top: 20px;
   padding-bottom: 20px;
   font-family: ofelia;
+  .nextproj {
+    background-color: $orange;
+    padding: 22px;
+    width: 200px;
+    text-decoration: none;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    border-radius: 30px;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
 }
 
 /* Back Button */

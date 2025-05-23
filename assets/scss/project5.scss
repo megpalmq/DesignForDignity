@@ -442,7 +442,6 @@ $map-height: 400px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #479195;
   padding-top: 20px;
   padding-bottom: 20px;
 
@@ -464,7 +463,6 @@ $map-height: 400px;
 
 /* Back Button */
 .back-button5 {
-  background-color: #479195;
   border: none;
   padding: 15px 30px;
   border-radius: 50px;
@@ -474,11 +472,10 @@ $map-height: 400px;
 }
 
 .back-button5 a {
-  color: white;
+  color: $orange;
   text-decoration: none;
 }
 
 .back-button5:hover {
-  background-color: $orange;
   transform: scale(1.1);
 }

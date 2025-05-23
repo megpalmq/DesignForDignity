@@ -551,14 +551,26 @@ $map-height: 400px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #479195;
   padding-top: 20px;
   padding-bottom: 20px;
+  .nextproj {
+    background-color: $orange;
+    padding: 22px;
+    width: 200px;
+    text-decoration: none;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    border-radius: 30px;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
 }
 
 /* Back Button */
 .back-button4 {
-  background-color: #479195;
   border: none;
   padding: 15px 30px;
   border-radius: 50px;
@@ -567,12 +579,11 @@ $map-height: 400px;
 }
 
 .back-button4 a {
-  color: white;
+  color: $orange;
   text-decoration: none;
 }
 
 .back-button4:hover {
-  background-color: #ff4c4c;
   transform: scale(1.1); /* Slight scale effect on hover */
 }
 

@@ -374,6 +374,20 @@ h4 {
   padding-top: 20px;
   padding-bottom: 20px;
   font-family: ofelia;
+  .nextproj {
+    background-color: $orange;
+    padding: 22px;
+    width: 200px;
+    text-decoration: none;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    border-radius: 30px;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
 }
 
 /* Back Button */
