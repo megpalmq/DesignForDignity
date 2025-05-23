@@ -16,7 +16,7 @@ $map-height: 400px;
   background-image: url(../images/team2.png);
   background-size: cover;
   background-position: center;
-  height: 80vh;
+  height: 100vh;
   color: white;
   display: flex;
   justify-content: center;
@@ -353,93 +353,95 @@ h4 {
 }
 
 .members2 {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  background-color: #e4d64d;
-  padding: 40px 20px;
-  font-family: $heading-font;
-  color: $orange;
-  max-width: 100%;
-  text-align: left;
+  background-color: $yellow;
+  padding: 40px;
+  font-family: ofelia;
 
   .section-title2 {
-    width: 100%;
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
-    color: $orange;
-    margin-bottom: 30px;
+    color: #8e2f2f; // dark red title
+    margin-bottom: 40px;
   }
 
-  .member-list2 {
-    flex: 1 1 45%;
+  .group {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
-    width: 100%;
-    max-width: 400px;
-    margin-left: 400px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
 
-    .member-item2 {
-      border-top: 2px solid #fff;
-      padding-top: 20px;
+    .member-list2 {
+      display: flex;
+      flex-direction: column;
       justify-content: center;
-      left: -200;
-      .fancy-name2 {
-        text-transform: uppercase;
-        font-size: 1.2rem;
-        font-weight: bold;
-        color: #c84830;
-        margin-bottom: 10px;
-        font-family: ofelia;
-        font-weight: bold;
-      }
+      width: 300px;
 
-      p {
-        margin: 0;
-        font-family: ofelia;
-        font-size: 1rem;
-        color: #c84830;
+      .member-item2 {
+        text-align: center;
+        padding: 10px 0;
+        border-top: 2px solid white;
+        margin: 10px 0;
+        margin-top: 10px;
+        .fancy-name2 {
+          font-weight: bold;
+          font-size: 1.6rem;
+          color: #d4634a; // soft red
+          margin: 0;
+        }
+
+        p {
+          font-size: 1rem;
+          color: #d4634a;
+          margin: 4px 0 0;
+        }
       }
     }
 
-    .member-item2:last-child {
-      border-bottom: 4px solid #fff;
-      padding-bottom: 20px;
+    .group-photo2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .group-image2 {
+        max-width: 500px;
+        position: relative;
+        top: 150px;
+        width: 100%;
+        border: 3px solid black;
+      }
+
+      .photo-description2 {
+        margin-top: 10px;
+        font-size: 0.9rem;
+        color: #4a4a4a;
+        text-align: center;
+      }
     }
   }
 
-  .group-photo2 {
-    flex: 1 1 50%;
-    text-align: center;
-    margin-top: 200px;
+  // Responsive layout
+  @media (max-width: 935px) {
+    .group {
+      flex-direction: column;
+      align-items: center;
 
-    h3 {
-      font-size: 2.4rem;
-      margin-bottom: 20px;
-      color: $orange;
-      font-family: ofelia;
-      font-weight: bold;
-    }
+      .member-list2,
+      .group-photo2 {
+        width: 100%;
+        max-width: 400px;
+      }
 
-    img {
-      max-width: 70%;
-      height: auto;
-      border-radius: 20px;
-      border: 4px solid $orange;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    }
-    .photo-description2 {
-      font-size: 1rem;
-      color: $orange;
-      margin-top: 10px;
-      font-family: ofelia;
+      .group-photo2 {
+        .group-image2 {
+          top: 0; // removes the 150px top offset on smaller screens
+        }
+      }
     }
   }
 }
+
 .button-container2 {
   display: flex;
   justify-content: center;
