@@ -79,6 +79,27 @@ h4 {
   animation: fadeInUp 2s ease-out;
   color: black;
   text-align: center;
+  margin-bottom: 40px;
+}
+.see-more2 {
+  padding: 10px 20px;
+  background-color: $lightgreen;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 18px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 90px;
+  margin-left: 200px;
+}
+
+.see-more2:hover {
+  background-color: $lightgreen;
+  transform: scale(1.05);
+}
+
+.see-more2:focus {
+  outline: none;
 }
 @media screen and (max-width: 1200px) {
   .project-title2 {
@@ -296,6 +317,9 @@ h4 {
   .finalDraftss .upText p {
     font-size: 1rem;
   }
+  h4 {
+    justify-content: center;
+  }
 }
 
 /* Small screens (mobile phones) */
@@ -444,24 +468,6 @@ h4 {
 }
 
 /* See More Link */
-.see-more2 {
-  padding: 10px 20px;
-  background-color: $orange;
-  color: white;
-  text-decoration: none;
-  border-radius: 30px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  margin-bottom: 20px;
-}
-
-.see-more2:hover {
-  background-color: $orange;
-  transform: scale(1.05);
-}
-
-.see-more2:focus {
-  outline: none;
-}
 
 /* Responsive adjustments */
 @media screen and (max-width: 900px) {

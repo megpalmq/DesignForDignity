@@ -80,6 +80,25 @@ h4 {
   color: black;
   text-align: center;
 }
+.see-more1 {
+  padding: 10px 20px;
+  background-color: $lightgreen;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.see-more1:hover {
+  background-color: $lightgreen;
+  transform: scale(1.05);
+}
+
+.see-more1:focus {
+  outline: none;
+}
 @media screen and (max-width: 1200px) {
   .project-title1 {
     font-size: 2.5rem;
@@ -537,21 +556,3 @@ h4 {
 }
 
 /* See More Link */
-.see-more1 {
-  padding: 10px 20px;
-  background-color: $orange;
-  color: white;
-  text-decoration: none;
-  border-radius: 30px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  margin-bottom: 20px;
-}
-
-.see-more1:hover {
-  background-color: $orange;
-  transform: scale(1.05);
-}
-
-.see-more1:focus {
-  outline: none;
-}

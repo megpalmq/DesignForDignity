@@ -1,19 +1,22 @@
 $tan: #d2c29c;
 $brown: #352d27;
-$green: #669c8b;
-$yellow: #e0a138;
-$orange: #c05126;
-$light-gray: #eeee;
-$dark-gray: #635c5c;
-$highlight-color: #c05126;
-$heading-font: "rl-aqva", sans-serif;
+$green: #266433;
+$lightgreen: #349452;
+$soft-green: #bddfc6;
+$yellow: #e1db54;
+$orange: #ef6838;
+$darkorange: #c05125;
+$highlight-color: #ef6838;
+$font-family: "alfarn", sans-serif;
+$heading-font: "alfarn", sans-serif;
+$map-height: 400px;
 
 .project-hero6 {
   position: relative;
-  background-image: url(../images/team1.png);
+  background-image: url(../images/team4.png);
   background-size: cover;
   background-position: center;
-  height: 80vh;
+  height: 90vh;
   color: white;
   display: flex;
   justify-content: center;
@@ -28,34 +31,69 @@ $heading-font: "rl-aqva", sans-serif;
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
-  background: linear-gradient(32deg, #479195 21%, $tan 77%);
+  background-color: $soft-green;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 20px;
-}
 
-.project-title6 {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-  animation: fadeInUp 1s ease-out;
-  width: 50%;
-  text-align: center;
-  font-family: $heading-font;
-}
+  .project-type6 {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    font-weight: bolder;
+    text-transform: uppercase;
+    margin-top: 30px;
+    line-height: 27px;
+    background-color: transparent;
+    animation: fadeInUp 2s ease-out;
+    color: $orange;
+    padding: 10px;
+    border-radius: 30px;
+    margin-bottom: 40px;
+    border: 2px solid $orange;
+  }
+  .see-more6 {
+    padding: 10px 20px;
+    background-color: $lightgreen;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 50px;
+    font-size: 18px;
+  }
 
-.project-description6 {
-  font-size: 1.1rem;
-  max-width: 800px;
-  margin: 0 auto;
-  font-weight: bolder;
-  margin-top: 30px;
-  line-height: 27px;
-  animation: fadeInUp 2s ease-out;
-  color: white;
-  text-align: center;
+  .see-more6:hover {
+    background-color: $lightgreen;
+    transform: scale(1.05);
+  }
+
+  .see-more6:focus {
+    outline: none;
+  }
+  .project-title6 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    animation: fadeInUp 1s ease-out;
+    text-align: center;
+    color: $green;
+    font-family: $heading-font;
+  }
+
+  .project-description6 {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    font-weight: bolder;
+    margin-top: 30px;
+    line-height: 27px;
+    animation: fadeInUp 2s ease-out;
+    color: black;
+    text-align: center;
+  }
 }
 
 .project-type6 {
@@ -71,6 +109,65 @@ $heading-font: "rl-aqva", sans-serif;
   border-radius: 20px;
   background-color: white;
 }
+@media screen and (max-width: 768px) {
+  .project-hero6 {
+    padding: 60px 20px;
+    background-position: center top;
+  }
+
+  .hero-overlay6 {
+    padding: 15px;
+
+    .project-title6 {
+      font-size: 2.2rem;
+      padding: 0 10px;
+    }
+
+    .project-description6 {
+      font-size: 1rem;
+      line-height: 1.5;
+      padding: 0 10px;
+    }
+
+    .project-type6 {
+      font-size: 1rem;
+      line-height: 1.4;
+      padding: 8px 12px;
+      margin-bottom: 30px;
+    }
+
+    .see-more6 {
+      font-size: 16px;
+      padding: 8px 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .project-hero6 {
+    padding: 40px 15px;
+  }
+
+  .hero-overlay6 {
+    .project-title6 {
+      font-size: 1.8rem;
+    }
+
+    .project-description6 {
+      font-size: 0.95rem;
+    }
+
+    .project-type6 {
+      font-size: 0.95rem;
+      border-width: 1px;
+    }
+
+    .see-more6 {
+      font-size: 15px;
+      padding: 7px 14px;
+    }
+  }
+}
 
 @keyframes fadeInUp {
   0% {
@@ -84,171 +181,76 @@ $heading-font: "rl-aqva", sans-serif;
 }
 
 .members6 {
-  text-align: center;
-  margin: 40px auto;
-  padding: 20px;
-  background-color: $tan;
-  border-radius: 10px;
-  max-width: 90%;
-  z-index: 10;
-  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  background-color: #e4d64d;
+  padding: 40px 20px;
+  font-family: $heading-font;
+  color: $orange;
+  max-width: 100%;
+  text-align: left;
 
-  h2 {
-    font-size: 1.8rem;
-    color: #333;
-    margin-bottom: 15px;
-    font-family: $heading-font;
+  .section-title6 {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: $orange;
+    margin-bottom: 30px;
   }
 
   .member-list6 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    margin-top: 30px;
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    gap: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 700px; // INCREASED WIDTH
+    margin: 0 auto;
 
     .member-item6 {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      padding: 15px;
-      border-radius: 8px;
-      background-color: #479195;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      width: 80%; // Ensures it expands with the new max-width
+      border-top: 1px solid #fff;
+      padding-top: 10px;
 
       .fancy-name6 {
-        font-size: 1.4rem;
-        font-weight: bold;
-        color: #fff;
         text-transform: uppercase;
-        letter-spacing: 0.6px;
-        margin-bottom: 6px;
-        max-width: 90%;
-        text-wrap: wrap;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #c84830;
+        margin-bottom: 5px;
+        font-family: ofelia;
       }
 
       p {
-        font-size: 1rem;
-        color: #fff;
         margin: 0;
-      }
-    }
-  }
-
-  .group-photo6 {
-    margin-top: 20px;
-    text-align: center;
-    opacity: 0;
-    transform: translateX(-100px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-
-    &.visible {
-      opacity: 1;
-      transform: translateX(0);
-    }
-
-    h3 {
-      font-size: 1.6rem;
-      margin-bottom: 10px;
-      color: #333;
-      font-family: $heading-font;
-    }
-
-    .group-image6 {
-      width: 90%;
-      max-width: 500px;
-      border-radius: 8px;
-      margin-bottom: 10px;
-    }
-
-    .photo-description6 {
-      font-size: 0.9rem;
-      color: #555;
-    }
-  }
-
-  // Tablet
-  @media (max-width: 768px) {
-    .member-list6 {
-      grid-template-columns: 1fr;
-      gap: 15px;
-    }
-
-    .member-item6 {
-      max-width: 90%;
-      padding: 12px;
-    }
-
-    h2,
-    .group-photo6 h3 {
-      font-size: 1.6rem;
-    }
-
-    .group-photo6 .photo-description6 {
-      font-size: 0.85rem;
-    }
-  }
-
-  // Small Tablet / Large Mobile
-  @media (max-width: 580px) {
-    padding: 10px;
-
-    .member-item6 {
-      max-width: 100%;
-      padding: 8px;
-
-      .fancy-name6 {
-        font-size: 1.2rem;
-      }
-    }
-
-    h2,
-    .group-photo6 h3 {
-      font-size: 1.4rem;
-    }
-
-    .group-photo6 .photo-description6 {
-      font-size: 0.8rem;
-    }
-  }
-
-  // Mobile
-  @media (max-width: 480px) {
-    .member-item6 {
-      max-width: 100%;
-      padding: 4px;
-
-      .fancy-name6 {
+        font-family: ofelia;
         font-size: 1rem;
+        color: #c84830;
       }
     }
 
-    h2,
-    .group-photo6 h3 {
-      font-size: 1.2rem;
-    }
-
-    .group-photo6 .photo-description6 {
-      font-size: 0.75rem;
+    .member-item5:last-child {
+      border-bottom: 2px solid #fff;
+      padding-bottom: 10px;
     }
   }
 }
 
 .final-draft6 {
   padding: 50px 20px;
-  background: linear-gradient(to bottom right, $tan, $green);
   text-align: center;
 }
 
 .final-draft6 h2 {
+  font-family: ofelia;
   font-size: 2.5rem;
-  margin-bottom: 30px;
-  color: #479195;
-  font-family: $heading-font;
-  padding-bottom: 30px;
+  color: $orange;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .final-draft6 p {
@@ -379,14 +381,27 @@ $heading-font: "rl-aqva", sans-serif;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #479195;
   padding-top: 20px;
   padding-bottom: 20px;
+
+  .nextproj {
+    background-color: $orange;
+    padding: 22px;
+    width: 200px;
+    text-decoration: none;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    border-radius: 30px;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
 }
 
 /* Back Button */
 .back-button6 {
-  background-color: #479195;
   border: none;
   padding: 15px 30px;
   border-radius: 50px;
@@ -400,275 +415,6 @@ $heading-font: "rl-aqva", sans-serif;
 }
 
 .back-button6:hover {
-  background-color: #ff4c4c;
+  background-color: $orange;
   transform: scale(1.1); /* Slight scale effect on hover */
-}
-
-/* See More Link */
-.see-more6 {
-  padding: 10px 20px;
-  background-color: #ff7b7b;
-  color: white;
-  text-decoration: none;
-  border-radius: 30px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  margin-bottom: 20px;
-}
-
-.see-more6:hover {
-  background-color: #ff4c4c;
-  transform: scale(1.05); /* Slight scale effect */
-}
-
-.see-more6:focus {
-  outline: none;
-}
-
-@media screen and (max-width: 950px) {
-  .project-hero6 {
-    height: 90vh;
-  }
-
-  .project-title6 {
-    font-size: 3rem; /* Smaller font size for mobile */
-    width: 90%;
-    margin-top: 100px;
-  }
-
-  .project-description6 {
-    font-size: 1rem; /* Adjust font size */
-    max-width: 90%;
-    margin-top: 20px;
-  }
-
-  .project-type6 {
-    font-size: 1.3rem;
-    width: 15%;
-    text-align: center;
-  }
-
-  .about6 {
-    padding: 30px 10px; /* Reduced padding */
-  }
-
-  .section-title6 {
-    font-size: 3rem; /* Adjust font size */
-  }
-
-  .project-info6 {
-    width: 90%; /* Full width for smaller screens */
-    font-size: 1rem;
-  }
-
-  .project-process6 {
-    padding: 0 20px; /* Adjust padding */
-  }
-
-  .members6 {
-    padding: 10px;
-    margin: 20px 0;
-    max-width: 100%;
-  }
-
-  .member-list6 {
-    gap: 20px;
-  }
-
-  .poster-thumbnails6 {
-    display: flex;
-    align-items: center;
-  }
-
-  .poster-item6 {
-    width: 100%;
-    align-items: center;
-  }
-
-  .poster-item6 img {
-    width: 100%;
-  }
-
-  .modal-content6 {
-    max-width: 100%;
-  }
-
-  .final-draft6 h2 {
-    font-size: 3rem; /* Smaller heading */
-  }
-
-  .final-draft6 p {
-    font-size: 1rem; /* Adjust paragraph font size */
-  }
-
-  /* Adjust the back and see more buttons */
-  .button-container6 {
-    flex-direction: column; /* Stack buttons vertically */
-  }
-
-  .back-button6 {
-    padding: 15px;
-  }
-
-  .see-more6 {
-    padding: 12px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .project-hero6 {
-    height: 90vh;
-  }
-
-  .project-title6 {
-    font-size: 3rem; /* Smaller font size for mobile */
-    width: 90%;
-    margin-top: 100px;
-  }
-
-  .project-description6 {
-    font-size: 1rem; /* Adjust font size */
-    max-width: 90%;
-    margin-top: 20px;
-  }
-
-  .project-type6 {
-    font-size: 1.3rem;
-    width: 100%;
-    text-align: center;
-  }
-
-  .about6 {
-    padding: 30px 10px; /* Reduced padding */
-  }
-
-  .section-title6 {
-    font-size: 3rem; /* Adjust font size */
-  }
-
-  .project-info6 {
-    width: 90%; /* Full width for smaller screens */
-    font-size: 1rem;
-  }
-
-  .project-process6 {
-    padding: 0 20px; /* Adjust padding */
-  }
-
-  .members6 {
-    padding: 10px;
-    margin: 20px 0;
-    max-width: 100%;
-  }
-
-  .member-list6 {
-    gap: 20px;
-  }
-
-  .poster-thumbnails6 {
-    display: flex;
-    align-items: center;
-  }
-
-  .poster-item6 {
-    width: 100%;
-    align-items: center;
-  }
-
-  .poster-item6 img {
-    width: 100%;
-  }
-
-  .modal-content6 {
-    max-width: 100%;
-  }
-
-  .final-draft6 h2 {
-    font-size: 3rem; /* Smaller heading */
-  }
-
-  .final-draft6 p {
-    font-size: 1rem; /* Adjust paragraph font size */
-  }
-
-  /* Adjust the back and see more buttons */
-  .button-container6 {
-    flex-direction: column; /* Stack buttons vertically */
-  }
-
-  .back-button6 {
-    padding: 15px;
-  }
-
-  .see-more6 {
-    padding: 12px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .project-hero6 {
-    height: 100vh;
-  }
-
-  .project-title6 {
-    font-size: 2rem;
-  }
-
-  .project-description6 {
-    font-size: 0.9rem; /* Adjust font size */
-  }
-
-  .project-type6 {
-    font-size: 1rem;
-    width: 100%;
-  }
-
-  .about6 {
-    padding: 20px 10px;
-  }
-
-  .section-title6 {
-    font-size: 3rem;
-  }
-
-  .project-info6 {
-    width: 100%;
-    font-size: 0.9rem;
-  }
-
-  .members6 {
-    margin: 10px 0;
-  }
-
-  .member-list6 {
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-  }
-
-  .poster-item6 {
-    width: 100%;
-  }
-
-  .modal-content6 {
-    max-width: 100%;
-    margin-top: 150px;
-    padding: 30px;
-  }
-  .group-photo6 {
-    width: 100%;
-  }
-
-  .final-draft6 h2 {
-    font-size: 3rem; /* Adjust for mobile */
-  }
-
-  .final-draft6 p {
-    font-size: 0.9rem; /* Adjust font size */
-  }
-
-  .back-button6,
-  .see-more6 {
-    width: 60%;
-    margin: 20px;
-  }
 }
