@@ -540,7 +540,6 @@ body {
   }
 }
 .topImage {
-  background: linear-gradient(#669c8b, #d2c29c);
   height: 90vh;
   display: flex;
   align-items: center;
@@ -603,9 +602,7 @@ body {
 }
 .section5 {
   width: 100%;
-  padding-top: 100px;
-  background: linear-gradient(#d2c29c, #669c8b);
-  display: flex;
+  padding-top: 100px;  display: flex;
   height: 100vh;
   flex-direction: column;
   align-items: center;
@@ -770,9 +767,7 @@ body {
   padding: 20px;
   border-radius: 20px;
 }
-.proj .projects {
-  background: linear-gradient(5deg, #352d27 4%, #669c8b 94%);
-  padding-top: 100px;
+.proj .projects {  padding-top: 100px;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -1852,7 +1847,6 @@ body {
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
-  background: linear-gradient(32deg, #479195 21%, #d2c29c 77%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1907,7 +1901,6 @@ body {
 }
 .final-draft1 {
   padding: 50px 20px;
-  background: linear-gradient(to bottom right, #d2c29c, #669c8b);
   text-align: center;
 }
 
@@ -2460,7 +2453,6 @@ p {
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
-  background: linear-gradient(32deg, #479195 21%, #d2c29c 77%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2517,7 +2509,7 @@ p {
 /* Gallery Section */
 .final-draft2 {
   padding: 50px 20px;
-  background: linear-gradient(to bottom right, #d2c29c, #669c8b);
+ 
   text-align: center;
 }
 
@@ -2958,7 +2950,6 @@ p {
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
-  background: linear-gradient(32deg, #479195 21%, #d3c49c 77%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -3015,7 +3006,6 @@ p {
 /* About Section */
 .final-draft2 {
   padding: 50px 20px;
-  background: linear-gradient(to bottom right, #d3c49c, #669c8b);
   text-align: center;
 }
 
@@ -3532,7 +3522,6 @@ p {
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
-  background: linear-gradient(32deg, #479195 21%, #d2c29c 77%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -3587,7 +3576,6 @@ p {
 }
 .finalDrafts {
   padding: 50px 20px;
-  background: linear-gradient(to bottom right, #d2c29c, #669c8b);
   text-align: center;
   /* Modal Styles */
 }
@@ -4065,7 +4053,6 @@ p {
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
-  background: linear-gradient(32deg, #479195 21%, #d2c29c 77%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -4120,7 +4107,6 @@ p {
 }
 .final-draft5 {
   padding: 50px 20px;
-  background: linear-gradient(to bottom right, #d2c29c, #669c8b);
   text-align: center;
 }
 
@@ -4682,7 +4668,6 @@ p {
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
-  background: linear-gradient(32deg, #479195 21%, #d2c29c 77%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -4848,7 +4833,6 @@ p {
 
 .final-draft6 {
   padding: 50px 20px;
-  background: linear-gradient(to bottom right, #d2c29c, #669c8b);
   text-align: center;
 }
 
@@ -5247,9 +5231,7 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  background: linear-gradient(32deg, #479195 21%, #d2c29c 77%);
-  display: flex;
+  background: rgba(0, 0, 0, 0.5);  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -5304,7 +5286,6 @@ p {
 }
 .final-draft7 {
   padding: 50px 20px;
-  background: linear-gradient(to bottom right, #d2c29c, #669c8b);
   text-align: center;
 }
 
@@ -5798,7 +5779,6 @@ p {
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
-  background: linear-gradient(32deg, #479195 21%, #d2c29c 77%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -5987,7 +5967,6 @@ p {
 
 .final-draft8 {
   padding: 50px 20px;
-  background: linear-gradient(to bottom right, #d2c29c, #669c8b);
   text-align: center;
 }
 

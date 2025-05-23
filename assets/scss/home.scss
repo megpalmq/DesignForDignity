@@ -152,8 +152,9 @@ body {
       height: 190px;
       text-align: center;
       margin-top: 225px;
-      background-color: $soft-green;
+      background-color: white;
       padding: 10px;
+      border: 1px solid $orange;
       border-radius: 20px;
 
       li a {
@@ -166,6 +167,7 @@ body {
     }
     .nav-links.open {
       display: flex;
+      margin-top: 250px;
     }
 
     .menu-toggle {
@@ -178,8 +180,8 @@ body {
     }
     .menu-toggle {
       position: absolute;
-      top: 10px;
-      right: 10px;
+      top: 20px;
+      right: 20px;
     }
   }
   @media (max-width: 768px) {
@@ -193,9 +195,10 @@ body {
       height: 180px;
       text-align: center;
       margin-top: 200px;
-      background-color: $soft-green;
+      background-color: white;
       padding: 10px;
-      border-radius: 18px;
+      border: 1px solid $orange;
+      border-radius: 20px;
 
       li a {
         color: black;
@@ -235,9 +238,10 @@ body {
       height: 180px;
       text-align: center;
       margin-top: 200px;
-      background-color: $soft-green;
+      background-color: white;
       padding: 10px;
-      border-radius: 18px;
+      border: 1px solid $orange;
+      border-radius: 20px;
 
       li a {
         color: black;
