@@ -111,6 +111,7 @@ $map-height: 400px;
 }
 @media screen and (max-width: 768px) {
   .project-hero6 {
+    height: 90vh;
     padding: 60px 20px;
     background-position: center top;
   }
@@ -145,6 +146,7 @@ $map-height: 400px;
 
 @media screen and (max-width: 480px) {
   .project-hero6 {
+    height: 100vh;
     padding: 40px 15px;
   }
 
@@ -410,7 +412,8 @@ $map-height: 400px;
 }
 
 .back-button6 a {
-  color: white;
+  color: $orange;
+  font-family: ofelia;
   text-decoration: none;
 }
 

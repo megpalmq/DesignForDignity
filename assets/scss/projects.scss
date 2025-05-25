@@ -249,6 +249,9 @@ $heading-font: "alfarn", sans-serif;
             font-size: 27px;
             color: $yellow;
           }
+          p {
+            width: 60%;
+          }
         }
         .text2 {
           min-width: 500px;
@@ -260,6 +263,9 @@ $heading-font: "alfarn", sans-serif;
             font-size: 27px;
             color: $orange;
           }
+          p {
+            width: 60%;
+          }
         }
         .text3 {
           min-width: 400px;
@@ -268,6 +274,9 @@ $heading-font: "alfarn", sans-serif;
             font-family: "alfarn", sans-serif;
             font-size: 27px;
             color: $lightgreen;
+          }
+          p {
+            width: 80%;
           }
         }
         img {
@@ -379,6 +388,9 @@ $heading-font: "alfarn", sans-serif;
             h2 {
               font-size: 1.5rem;
             }
+            p {
+              width: 100%;
+            }
           }
           .text2 {
             min-width: unset;
@@ -386,6 +398,9 @@ $heading-font: "alfarn", sans-serif;
             text-align: center;
             margin: 0 auto;
             padding-right: 100px;
+            p {
+              width: 100%;
+            }
           }
           .text3 {
             min-width: unset;
@@ -393,6 +408,9 @@ $heading-font: "alfarn", sans-serif;
             text-align: center;
             margin: 0 auto;
             margin-left: 100px;
+            p {
+              width: 100%;
+            }
           }
 
           img {
@@ -465,6 +483,9 @@ $heading-font: "alfarn", sans-serif;
             top: 320px;
             position: absolute;
             background-color: white;
+            p {
+              width: 100%;
+            }
           }
           .text2 {
             width: 100%;

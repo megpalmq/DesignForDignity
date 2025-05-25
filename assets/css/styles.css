@@ -968,6 +968,9 @@ body {
   font-size: 27px;
   color: #e1db54;
 }
+.visual-process .timeline .timeline-item .content .text p {
+  width: 60%;
+}
 .visual-process .timeline .timeline-item .content .text2 {
   min-width: 500px;
   margin-right: 60px;
@@ -978,6 +981,9 @@ body {
   font-size: 27px;
   color: #ef6838;
 }
+.visual-process .timeline .timeline-item .content .text2 p {
+  width: 60%;
+}
 .visual-process .timeline .timeline-item .content .text3 {
   min-width: 400px;
   margin-left: 100px;
@@ -986,6 +992,9 @@ body {
   font-family: "alfarn", sans-serif;
   font-size: 27px;
   color: #349452;
+}
+.visual-process .timeline .timeline-item .content .text3 p {
+  width: 80%;
 }
 .visual-process .timeline .timeline-item .content img {
   width: 120px;
@@ -1079,6 +1088,9 @@ body {
   .visual-process .timeline .timeline-item .content .text h2 {
     font-size: 1.5rem;
   }
+  .visual-process .timeline .timeline-item .content .text p {
+    width: 100%;
+  }
   .visual-process .timeline .timeline-item .content .text2 {
     min-width: unset;
     width: 50%;
@@ -1086,12 +1098,18 @@ body {
     margin: 0 auto;
     padding-right: 100px;
   }
+  .visual-process .timeline .timeline-item .content .text2 p {
+    width: 100%;
+  }
   .visual-process .timeline .timeline-item .content .text3 {
     min-width: unset;
     width: 50%;
     text-align: center;
     margin: 0 auto;
     margin-left: 100px;
+  }
+  .visual-process .timeline .timeline-item .content .text3 p {
+    width: 100%;
   }
   .visual-process .timeline .timeline-item .content img {
     width: 100%;
@@ -1151,6 +1169,9 @@ body {
     top: 320px;
     position: absolute;
     background-color: white;
+  }
+  .visual-process .timeline .timeline-item .content .text p {
+    width: 100%;
   }
   .visual-process .timeline .timeline-item .content .text2 {
     width: 100%;
@@ -3578,19 +3599,12 @@ h4 {
 
 @media screen and (max-width: 650px) {
   .project-hero4 {
-    height: 75vh;
+    height: 90vh;
     background-position: top center;
     padding: 0 10px;
   }
   .hero-overlay4 {
     padding: 15px;
-  }
-  .hero-overlay4 .project-type4 {
-    font-size: 1rem;
-    margin-top: 100px;
-    margin-bottom: 30px;
-    width: 60%;
-    padding: 8px 15px;
   }
   .project-title4 {
     font-size: 2rem;
@@ -3611,19 +3625,12 @@ h4 {
 /* Mobile styles for 500px and below */
 @media screen and (max-width: 500px) {
   .project-hero4 {
-    height: 70vh;
+    height: 100vh;
     background-position: top center;
     padding: 0 10px;
   }
   .hero-overlay4 {
     padding: 15px;
-  }
-  .hero-overlay4 .project-type4 {
-    font-size: 1rem;
-    max-width: 90%;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    padding: 8px 15px;
   }
   .project-title4 {
     font-size: 2rem;
@@ -3644,17 +3651,10 @@ h4 {
 /* Mobile styles for 360px and below */
 @media screen and (max-width: 360px) {
   .project-hero4 {
-    height: 60vh;
+    height: 100vh;
   }
   .hero-overlay4 {
     padding: 10px;
-  }
-  .hero-overlay4 .project-type4 {
-    font-size: 0.9rem;
-    max-width: 95%;
-    margin-top: 15px;
-    margin-bottom: 25px;
-    padding: 6px 12px;
   }
   .project-title4 {
     font-size: 1.6rem;
@@ -4000,83 +4000,6 @@ h4 {
   transform: scale(1.1); /* Slight scale effect on hover */
 }
 
-@media screen and (max-width: 768px) {
-  .project-hero4 {
-    height: 100vh; /* Adjust height on smaller screens */
-  }
-  .project-title4 {
-    font-size: 2.5rem; /* Smaller font size for mobile */
-    width: 90%;
-    margin-top: 70px;
-    font-family: "alfarn", sans-serif;
-  }
-  .project-description4 {
-    font-size: 1rem; /* Adjust font size */
-    max-width: 90%;
-    margin-top: 20px;
-  }
-  .project-type4 {
-    font-size: 1.2rem;
-    width: 15%;
-    text-align: center;
-  }
-  .about4 {
-    padding: 30px 10px; /* Reduced padding */
-  }
-  .section-title4 {
-    font-size: 2rem;
-    font-family: "alfarn", sans-serif;
-  }
-  .project-info4 {
-    width: 90%;
-    font-size: 1rem;
-  }
-  .project-process4 {
-    padding: 0 20px;
-  }
-  .members4 {
-    padding: 10px;
-    margin: 20px 0;
-    max-width: 100%;
-  }
-  .member-list {
-    gap: 20px;
-  }
-  .poster-thumbnails2 {
-    display: flex;
-    align-items: center;
-  }
-  .poster-item2 {
-    width: 100%;
-    align-items: center;
-  }
-  .poster-item2 img {
-    width: 100%;
-    display: flex;
-    margin: 0 auto;
-    margin-right: 100px;
-  }
-  .modal-content2 {
-    max-width: 100%;
-  }
-  .final-draft2 h2 {
-    font-size: 2rem; /* Smaller heading */
-    font-family: "alfarn", sans-serif;
-  }
-  .final-draft2 p {
-    font-size: 1rem; /* Adjust paragraph font size */
-  }
-  /* Adjust the back and see more buttons */
-  .button-container2 {
-    flex-direction: column; /* Stack buttons vertically */
-  }
-  .back-button2 {
-    padding: 15px;
-  }
-  .see-more2 {
-    padding: 12px;
-  }
-}
 .project-hero5 {
   position: relative;
   background-image: url(../images/team4.png);
@@ -4624,6 +4547,7 @@ h4 {
 
 @media screen and (max-width: 768px) {
   .project-hero6 {
+    height: 90vh;
     padding: 60px 20px;
     background-position: center top;
   }
@@ -4652,6 +4576,7 @@ h4 {
 }
 @media screen and (max-width: 480px) {
   .project-hero6 {
+    height: 100vh;
     padding: 40px 15px;
   }
   .hero-overlay6 .project-title6 {
@@ -4901,7 +4826,8 @@ h4 {
 }
 
 .back-button6 a {
-  color: white;
+  color: #ef6838;
+  font-family: ofelia;
   text-decoration: none;
 }
 
@@ -5039,7 +4965,7 @@ h4 {
 }
 @media (max-width: 480px) {
   .project-hero7 {
-    height: 100vh;
+    height: 110vh;
     padding: 40px 10px;
   }
   .hero-overlay7 .project-title7 {
@@ -5397,7 +5323,7 @@ h4 {
 }
 
 .back-button7 a {
-  color: white;
+  color: #ef6838;
   text-decoration: none;
 }
 
@@ -5537,6 +5463,7 @@ h4 {
 @media (max-width: 480px) {
   .project-hero8 {
     height: 100vh;
+    padding: 60px 15px;
     padding: 40px 10px;
   }
   .hero-overlay8 .project-title8 {
@@ -5550,11 +5477,13 @@ h4 {
   .hero-overlay8 .project-type8 {
     font-size: 0.9rem;
     padding: 6px;
+    margin-top: 110px;
     margin-bottom: 20px;
   }
   .hero-overlay8 .see-more8 {
     font-size: 14px;
     padding: 8px 16px;
+    margin-bottom: 30px;
   }
 }
 @keyframes fadeInUp {

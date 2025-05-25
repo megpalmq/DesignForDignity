@@ -99,22 +99,13 @@ $map-height: 400px;
 
 @media screen and (max-width: 650px) {
   .project-hero4 {
-    height: 75vh;
+    height: 90vh;
     background-position: top center;
     padding: 0 10px;
   }
 
   .hero-overlay4 {
     padding: 15px;
-  }
-
-  .hero-overlay4 .project-type4 {
-    font-size: 1rem;
-
-    margin-top: 100px;
-    margin-bottom: 30px;
-    width: 60%;
-    padding: 8px 15px;
   }
 
   .project-title4 {
@@ -138,21 +129,13 @@ $map-height: 400px;
 /* Mobile styles for 500px and below */
 @media screen and (max-width: 500px) {
   .project-hero4 {
-    height: 70vh;
+    height: 100vh;
     background-position: top center;
     padding: 0 10px;
   }
 
   .hero-overlay4 {
     padding: 15px;
-  }
-
-  .hero-overlay4 .project-type4 {
-    font-size: 1rem;
-    max-width: 90%;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    padding: 8px 15px;
   }
 
   .project-title4 {
@@ -177,19 +160,11 @@ $map-height: 400px;
 /* Mobile styles for 360px and below */
 @media screen and (max-width: 360px) {
   .project-hero4 {
-    height: 60vh;
+    height: 100vh;
   }
 
   .hero-overlay4 {
     padding: 10px;
-  }
-
-  .hero-overlay4 .project-type4 {
-    font-size: 0.9rem;
-    max-width: 95%;
-    margin-top: 15px;
-    margin-bottom: 25px;
-    padding: 6px 12px;
   }
 
   .project-title4 {
@@ -588,100 +563,4 @@ $map-height: 400px;
 
 .back-button4:hover {
   transform: scale(1.1); /* Slight scale effect on hover */
-}
-
-@media screen and (max-width: 768px) {
-  .project-hero4 {
-    height: 100vh; /* Adjust height on smaller screens */
-  }
-
-  .project-title4 {
-    font-size: 2.5rem; /* Smaller font size for mobile */
-    width: 90%;
-    margin-top: 70px;
-    font-family: $heading-font;
-  }
-
-  .project-description4 {
-    font-size: 1rem; /* Adjust font size */
-    max-width: 90%;
-    margin-top: 20px;
-  }
-
-  .project-type4 {
-    font-size: 1.2rem;
-    width: 15%;
-    text-align: center;
-  }
-
-  .about4 {
-    padding: 30px 10px; /* Reduced padding */
-  }
-
-  .section-title4 {
-    font-size: 2rem;
-    font-family: $heading-font;
-  }
-
-  .project-info4 {
-    width: 90%;
-    font-size: 1rem;
-  }
-
-  .project-process4 {
-    padding: 0 20px;
-  }
-
-  .members4 {
-    padding: 10px;
-    margin: 20px 0;
-    max-width: 100%;
-  }
-
-  .member-list {
-    gap: 20px;
-  }
-
-  .poster-thumbnails2 {
-    display: flex;
-    align-items: center;
-  }
-
-  .poster-item2 {
-    width: 100%;
-    align-items: center;
-  }
-
-  .poster-item2 img {
-    width: 100%;
-    display: flex;
-    margin: 0 auto;
-    margin-right: 100px;
-  }
-
-  .modal-content2 {
-    max-width: 100%;
-  }
-
-  .final-draft2 h2 {
-    font-size: 2rem; /* Smaller heading */
-    font-family: $heading-font;
-  }
-
-  .final-draft2 p {
-    font-size: 1rem; /* Adjust paragraph font size */
-  }
-
-  /* Adjust the back and see more buttons */
-  .button-container2 {
-    flex-direction: column; /* Stack buttons vertically */
-  }
-
-  .back-button2 {
-    padding: 15px;
-  }
-
-  .see-more2 {
-    padding: 12px;
-  }
 }
