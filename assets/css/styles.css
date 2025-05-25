@@ -254,26 +254,38 @@ body {
     right: 10px;
   }
 }
+
 @media (max-width: 470px) {
-  .navbar .menu-toggle {
+  .menu-toggle {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     width: 30px;
     height: 22px;
-    cursor: pointer;
     position: fixed;
     top: 10px;
     right: 15px;
     z-index: 9999;
+    cursor: pointer;
+    background-color: transparent;
   }
-  .navbar .menu-toggle .bar {
-    height: 4px;
+  .menu-toggle .bar {
     width: 100%;
+    height: 4px;
     background-color: #333;
     border-radius: 2px;
   }
-  .navbar .nav-links {
+  .menu-toggle.open .bar:nth-child(1) {
+    opacity: 0;
+  }
+  .menu-toggle.open .bar:nth-child(2) {
+    transform: rotate(60deg) translate(5px, 5px);
+  }
+  .menu-toggle.open .bar:nth-child(3) {
+    transform: rotate(-60deg) translate(6px, -6px);
+  }
+  .nav-links {
     display: none;
     flex-direction: column;
     width: 160px;
@@ -284,20 +296,19 @@ body {
     border: 1px solid #ef6838;
     border-radius: 20px;
   }
-  .navbar .nav-links li a {
+  .nav-links li a {
     color: black;
     font-size: 18px;
   }
-  .navbar .nav-links:hover li a {
+  .nav-links li a:hover {
     color: #91a687;
   }
-  .navbar .nav-links.open {
+  .nav-links.open {
     display: flex;
     position: relative;
     top: 18px;
   }
 }
-
 /* Hero Section */
 .hero1 {
   top: 0;
