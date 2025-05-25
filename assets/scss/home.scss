@@ -222,24 +222,17 @@ body {
       background-color: transparent;
       color: #333;
       position: absolute;
-      top: 10px;
-      right: 10px;
+      top: 20px;
+      right: 25px;
     }
   }
   @media (max-width: 470px) {
     .menu-toggle {
       display: flex;
       cursor: pointer;
-      position: absolute;
+      position: relative;
       z-index: 9998;
-
-      .bar {
-        height: 6px;
-        width: 100%;
-        z-index: 9999;
-        background-color: black;
-        border-radius: 2px;
-      }
+      top: 15px;
     }
 
     .nav-links {
@@ -266,7 +259,8 @@ body {
     .nav-links.open {
       display: flex;
       position: relative;
-      top: 18px;
+      top: 5px;
+      right: -10px;
     }
   }
 }

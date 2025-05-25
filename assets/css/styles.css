@@ -213,23 +213,17 @@ body {
     background-color: transparent;
     color: #333;
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 20px;
+    right: 25px;
   }
 }
 @media (max-width: 470px) {
   .navbar .menu-toggle {
     display: flex;
     cursor: pointer;
-    position: absolute;
+    position: relative;
     z-index: 9998;
-  }
-  .navbar .menu-toggle .bar {
-    height: 6px;
-    width: 100%;
-    z-index: 9999;
-    background-color: black;
-    border-radius: 2px;
+    top: 15px;
   }
   .navbar .nav-links {
     display: none;
@@ -252,7 +246,8 @@ body {
   .navbar .nav-links.open {
     display: flex;
     position: relative;
-    top: 18px;
+    top: 5px;
+    right: -10px;
   }
 }
 
@@ -3255,7 +3250,7 @@ h4 {
 }
 @media screen and (max-width: 576px) {
   .project-hero3 {
-    height: 80vh;
+    height: 90vh;
     padding: 0 10px;
   }
   .project-title3 {
