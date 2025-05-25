@@ -254,54 +254,20 @@ body {
     right: 10px;
   }
 }
-@media (max-width: 380px) {
-  .navbar .logo {
-    width: 80px;
-    height: 30px;
-    margin-left: 10px;
-  }
-  .navbar .nav-links {
-    font-family: komet;
-    font-weight: bold;
-    display: none;
-    flex-direction: column;
-    width: 160px;
-    height: auto;
-    text-align: center;
-    margin-top: 150px;
-    background-color: white;
-    padding: 10px;
-    border: 1px solid #ef6838;
-    border-radius: 20px;
-  }
-  .navbar .nav-links li a {
-    color: black;
-    font-size: 18px;
-  }
-  .navbar .nav-links:hover li a {
-    color: #91a687;
-  }
-  .navbar .nav-links.open {
-    display: flex;
-    position: relative;
-    top: 18px;
-  }
+@media (max-width: 420px) {
   .navbar .menu-toggle {
     position: fixed;
     top: 10px;
-    right: 10px;
-    display: flex;
-    font-size: 28px;
-    cursor: pointer;
-    z-index: 9999;
-    background-color: transparent;
+    right: 15px;
+    font-size: 32px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
     color: #333;
+    background: transparent;
+    display: flex;
     align-items: center;
     justify-content: center;
-  }
-  .navbar .menu-toggle i {
-    color: #333;
-    font-size: 28px;
+    z-index: 9999;
   }
 }
 
