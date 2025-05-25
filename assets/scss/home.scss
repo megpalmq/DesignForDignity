@@ -229,13 +229,9 @@ body {
   @media (max-width: 470px) {
     .menu-toggle {
       display: flex;
-
       cursor: pointer;
       position: absolute;
-      background-color: pink;
       z-index: 9998;
-      .tiny {
-      }
 
       .bar {
         height: 6px;

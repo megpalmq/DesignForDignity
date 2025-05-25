@@ -222,7 +222,6 @@ body {
     display: flex;
     cursor: pointer;
     position: absolute;
-    background-color: pink;
     z-index: 9998;
   }
   .navbar .menu-toggle .bar {
