@@ -131,6 +131,7 @@ body {
   background: black;
   border-radius: 5px;
   transition: 0.4s ease;
+  z-index: 9999;
 }
 .navbar .menu-toggle.open .bar:nth-child(1) {
   opacity: 0;
@@ -216,76 +217,26 @@ body {
     right: 10px;
   }
 }
-@media (max-width: 480px) {
-  .navbar .nav-links {
-    font-family: komet;
-    font-weight: bold;
-    display: none;
-    flex-direction: column;
-    width: 180px;
-    height: 180px;
-    text-align: center;
-    margin-top: 200px;
-    background-color: white;
-    padding: 10px;
-    border: 1px solid #ef6838;
-    border-radius: 20px;
-  }
-  .navbar .nav-links li a {
-    color: black;
-    font-size: 21px;
-  }
-  .navbar .nav-links:hover {
-    color: #91a687;
-  }
-  .navbar .nav-links.open {
-    display: flex;
-    position: relative;
-    top: 18px;
-  }
-  .navbar .menu-toggle {
-    display: flex;
-    cursor: pointer;
-    font-size: 28px;
-    background-color: transparent;
-    color: #333;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-  }
-}
-
 @media (max-width: 470px) {
-  .menu-toggle {
+  .navbar .menu-toggle {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
     width: 30px;
     height: 22px;
-    position: absolute;
+    cursor: pointer;
+    position: fixed;
     top: 10px;
     right: 15px;
     z-index: 9999;
-    cursor: pointer;
-    background-color: transparent;
   }
-  .menu-toggle .bar {
-    width: 100%;
+  .navbar .menu-toggle .bar {
     height: 4px;
+    width: 100%;
     background-color: #333;
     border-radius: 2px;
   }
-  .menu-toggle.open .bar:nth-child(1) {
-    opacity: 0;
-  }
-  .menu-toggle.open .bar:nth-child(2) {
-    transform: rotate(60deg) translate(5px, 5px);
-  }
-  .menu-toggle.open .bar:nth-child(3) {
-    transform: rotate(-60deg) translate(6px, -6px);
-  }
-  .nav-links {
+  .navbar .nav-links {
     display: none;
     flex-direction: column;
     width: 160px;
@@ -296,19 +247,20 @@ body {
     border: 1px solid #ef6838;
     border-radius: 20px;
   }
-  .nav-links li a {
+  .navbar .nav-links li a {
     color: black;
     font-size: 18px;
   }
-  .nav-links li a:hover {
+  .navbar .nav-links:hover li a {
     color: #91a687;
   }
-  .nav-links.open {
+  .navbar .nav-links.open {
     display: flex;
     position: relative;
     top: 18px;
   }
 }
+
 /* Hero Section */
 .hero1 {
   top: 0;
