@@ -234,7 +234,8 @@ body {
       width: 30px;
       height: 22px;
       cursor: pointer;
-      position: fixed;
+      position: absolute;
+      background-color: pink;
       top: 10px;
       right: 15px;
       z-index: 9999;
