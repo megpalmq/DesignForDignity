@@ -220,15 +220,9 @@ body {
 @media (max-width: 470px) {
   .navbar .menu-toggle {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 22px;
     cursor: pointer;
     position: absolute;
     background-color: pink;
-    top: 10px;
-    right: 15px;
     z-index: 9998;
   }
   .navbar .menu-toggle .bar {
