@@ -1299,6 +1299,7 @@ body {
   margin: 0 auto;
   text-align: center;
   margin-top: 20px;
+  margin-right: 110px;
 }
 .proj .yap .YBlurb {
   width: 65%;
@@ -1329,16 +1330,16 @@ body {
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    gap: 2rem;
-    height: 100vh;
   }
   .proj .yap {
     width: 95%;
   }
   .proj .yap .prodTitle {
-    font-size: 42px;
+    font-size: 50px;
     text-align: center;
     line-height: 1.2;
+    margin-bottom: 30px;
+    margin-left: 10px;
   }
   .proj .yap .YBlurb {
     width: 95%;
@@ -1371,16 +1372,16 @@ body {
 }
 @media (max-width: 480px) {
   .proj .proj {
-    margin: 0 auto;
     top: 0;
+    margin: 0 auto;
     width: 80%;
   }
   .proj .proj .yap .prodTitle {
     font-size: 25px;
+    margin-left: 100px;
   }
   .proj .proj .yap .YBlurb {
     font-size: 0.9rem;
-    padding: 10px;
   }
   .proj .proj .otherPhoto {
     width: 100%;

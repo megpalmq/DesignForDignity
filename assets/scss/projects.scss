@@ -602,6 +602,7 @@ $heading-font: "alfarn", sans-serif;
       margin: 0 auto;
       text-align: center;
       margin-top: 20px;
+      margin-right: 110px;
     }
 
     .YBlurb {
@@ -630,22 +631,21 @@ $heading-font: "alfarn", sans-serif;
     background-color: purple;
   }
 
-  // ---- Media Queries ----
   @media (max-width: 1260px) {
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    gap: 2rem;
-    height: 100vh;
 
     .yap {
       width: 95%;
 
       .prodTitle {
-        font-size: 42px;
+        font-size: 50px;
         text-align: center;
         line-height: 1.2;
+        margin-bottom: 30px;
+        margin-left: 10px;
       }
 
       .YBlurb {
@@ -687,17 +687,18 @@ $heading-font: "alfarn", sans-serif;
 
   @media (max-width: 480px) {
     .proj {
-      margin: 0 auto;
       top: 0;
+      margin: 0 auto;
+
       width: 80%;
       .yap {
         .prodTitle {
           font-size: 25px;
+          margin-left: 100px;
         }
 
         .YBlurb {
           font-size: 0.9rem;
-          padding: 10px;
         }
       }
 
