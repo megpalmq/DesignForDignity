@@ -574,6 +574,31 @@ body {
     height: 60vh;
   }
 }
+@media (max-width: 970px) {
+  .descBox2 {
+    flex-direction: column;
+    gap: 25px;
+  }
+  .descBox2 .EDD {
+    font-size: 28px;
+    margin-bottom: 100px;
+  }
+  .descBox2 .horizontial {
+    flex-direction: column;
+  }
+  .descBox2 p {
+    font-size: 15px;
+    line-height: 26px;
+    width: 90%;
+    padding: 0 20px;
+    text-align: center;
+  }
+  .descBox2 .descBox3 .triangle {
+    width: 800px;
+    max-width: 700px;
+    height: 80vh;
+  }
+}
 @media (max-width: 768px) {
   .descBox2 {
     flex-direction: column;
@@ -595,7 +620,7 @@ body {
   }
   .descBox2 .descBox3 .triangle {
     width: 800px;
-    max-width: 400px;
+    max-width: 600px;
     height: 60vh;
   }
 }
@@ -722,12 +747,14 @@ body {
   .footer .footer-links {
     flex: none;
     margin-bottom: 20px;
+    margin: 0 auto;
   }
   .footer .footer-bottom {
     margin-top: 40px;
     margin-left: 0;
     justify-content: center;
     font-size: 0.8rem;
+    margin: 0 auto;
   }
 }
 @media (max-width: 768px) {
@@ -740,10 +767,12 @@ body {
   .footer .footer-logo,
   .footer .footer-links {
     margin-bottom: 15px;
+    margin: 0 auto;
   }
   .footer .footer-bottom {
     margin-top: 30px;
     font-size: 0.75rem;
+    margin: 0 auto;
   }
 }
 @media (max-width: 480px) {
@@ -765,6 +794,7 @@ body {
   .footer .footer-bottom {
     margin-top: 20px;
     font-size: 0.7rem;
+    margin: 0 auto;
   }
 }
 
