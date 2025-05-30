@@ -427,6 +427,18 @@ $map-height: 400px;
       }
     }
   }
+  .nextproj {
+    background-color: $orange;
+    padding: 22px;
+    width: 200px;
+    text-decoration: none;
+    color: white;
+    border-radius: 30px;
+    margin: 40px auto 0 auto; // Center horizontally
+    display: block;
+    text-align: center;
+    font-weight: bold;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -531,20 +543,6 @@ $map-height: 400px;
   flex-direction: column;
   padding-top: 20px;
   padding-bottom: 20px;
-  .nextproj {
-    background-color: $orange;
-    padding: 22px;
-    width: 200px;
-    text-decoration: none;
-    justify-content: center;
-    color: white;
-    align-items: center;
-    border-radius: 30px;
-    margin: 0 auto;
-    text-align: center;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
 }
 
 /* Back Button */

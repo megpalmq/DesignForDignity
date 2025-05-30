@@ -202,61 +202,37 @@ $map-height: 400px;
 }
 
 .poster-thumbnails5 {
-  display: flex;
   justify-content: center;
   align-items: center;
   gap: 200px;
   flex-wrap: wrap;
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
-}
 
-.poster-item5 {
-  width: 400px; // Adjust as needed
-  height: 550px; // Adjust as needed
-  overflow: hidden;
-  cursor: pointer;
-  margin: 0 auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.poster-item5-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+  .poster-item5-container {
+    .english5,
+    .korean5 {
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      margin: 0 auto;
+    }
 
-.poster-caption {
-  margin-top: 8px;
-  font-size: 0.9rem;
-  color: #555;
-  font-family: "Open Sans", sans-serif;
-}
-.poster-item5 img {
-  width: 100%; // Make the image fill the container
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-}
+    .english5 {
+      background-image: url(../images/FD/team5EN.png);
+    }
 
-.poster-item5:hover img {
-  transform: scale(1.05);
-}
+    .korean5 {
+      background-image: url(../images/FD/team5Kr.png);
+    }
 
-.english5 {
-  width: 400px;
-  height: 550px;
-  background-image: url(../images/FD/team5EN.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 10px;
-  display: flex;
-  margin: 0 auto;
+    .poster-caption {
+      font-size: 0.9rem;
+      color: #555;
+      font-family: ofelia;
+    }
+  }
 }
 
 /* Modal Styles */
@@ -378,7 +354,6 @@ $map-height: 400px;
   color: #bbb;
 }
 .members5 {
-  display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
@@ -435,6 +410,19 @@ $map-height: 400px;
       padding-bottom: 10px;
     }
   }
+  .nextproj {
+    background-color: $orange;
+    padding: 22px;
+    width: 200px;
+    text-decoration: none;
+    color: white;
+    border-radius: 30px;
+    margin: 40px auto 0 auto;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-family: ofelia;
+  }
 }
 
 .button-container5 {
@@ -444,21 +432,6 @@ $map-height: 400px;
   flex-direction: column;
   padding-top: 20px;
   padding-bottom: 20px;
-
-  .nextproj {
-    background-color: $orange;
-    padding: 22px;
-    width: 200px;
-    text-decoration: none;
-    justify-content: center;
-    color: white;
-    align-items: center;
-    border-radius: 30px;
-    margin: 0 auto;
-    text-align: center;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
 }
 
 /* Back Button */

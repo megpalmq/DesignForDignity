@@ -22,7 +22,7 @@ $heading-font: "alfarn", sans-serif;
   .blah {
     font-family: "alfarn", sans-serif;
     font-size: 38px;
-    width: 60%;
+    width: 70%;
     height: 100px;
     position: relative;
     padding-right: 100px;
@@ -31,7 +31,7 @@ $heading-font: "alfarn", sans-serif;
   .mini-blah {
     font-size: 15px;
     position: relative;
-    padding-right: 500px;
+    padding-right: 650px;
     padding-bottom: 50px;
   }
 
@@ -44,10 +44,6 @@ $heading-font: "alfarn", sans-serif;
     display: flex;
     margin: 0 auto;
     transition: transform 0.3s ease-in-out;
-
-    &:hover {
-      transform: scale(1.05);
-    }
   }
 
   // Large Screens (≤ 1260px)
@@ -294,6 +290,7 @@ $heading-font: "alfarn", sans-serif;
           border-color: #cb5d29;
           width: 400px;
           height: auto;
+          z-index: 0;
         }
         &.green img {
           border-color: #3c773d;
@@ -535,7 +532,7 @@ $heading-font: "alfarn", sans-serif;
 
           img {
             width: 100%;
-            height: auto; // maintain aspect ratio
+            height: auto;
             max-width: 300px;
             display: block;
             border-radius: 12px;
@@ -608,15 +605,15 @@ $heading-font: "alfarn", sans-serif;
     }
 
     .YBlurb {
-      width: 70%;
+      width: 65%;
       color: black;
       height: 100%;
       display: flex;
       margin: 0 auto;
-      margin-top: 30px;
       padding: 20px;
       border-radius: 20px;
-      font-size: 1.1rem;
+      font-size: 18px;
+      padding-right: 5px;
     }
   }
 
@@ -727,7 +724,6 @@ $heading-font: "alfarn", sans-serif;
     display: flex;
     flex-direction: row;
     background-color: #d3e8d5;
-    border-radius: 2rem;
     overflow: hidden;
     width: 500px;
     height: 300px;

@@ -42,12 +42,12 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1.2rem 0;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
   color: tan;
   left: 50%;
   border: 2px $yellow solid;
   transform: translateX(-50%);
-  z-index: 1000;
+  z-index: 4000;
   width: 80%;
   margin-top: 40px;
   height: 80px;
@@ -671,7 +671,7 @@ body {
 
     .EDD {
       font-size: 22px;
-      top: 10px;
+      top: 40px;
       text-align: center;
       flex: wrap;
       margin-bottom: 4 0px;

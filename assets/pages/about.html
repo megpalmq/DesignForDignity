@@ -1,72 +1,115 @@
 <section id="about" class="about-section">
   <div class="container2">
-    <img src="/assets/images/group3.jpg" class="aboutCollabImg fade-in" alt="">
+    <img
+      src="/assets/images/group3.jpg"
+      class="aboutCollabImg fade-in"
+      alt="Group collaboration image"
+    />
+
     <section class="bonerCenter">
-      <h2>Guest Collaborators </h2>
-      <div class="logos ">
-        <a target="_blank" href="https://jbncenters.org/">
-      <div class="logo1 fade-in"></div></a>
-      <a target="_blank"  href="https://www.yonsei.ac.kr/en_sc/index.do">
-      <div class="logo2 fade-in"></div></a>
-    </div>
-    
+      <h2>Guest Collaborators</h2>
+      <div class="logos">
+        <a
+          href="https://jbncenters.org/"
+          target="_blank"
+          aria-label="JBN Centers"
+        >
+          <div class="logo1 fade-in"></div>
+        </a>
+        <a
+          href="https://www.yonsei.ac.kr/en_sc/index.do"
+          target="_blank"
+          aria-label="Yonsei University"
+        >
+          <div class="logo2 fade-in"></div>
+        </a>
+      </div>
     </section>
   </div>
-  <div class="container">
+
   <div class="about-content1">
-  <div class="text-content fade-in">
-    <p>
-      Food insecurity is a pressing issue affecting many residents of Indiana, particularly in rural and urban areas. Despite the state<span style="font-family: 'Courier New', Courier, monospace;">'</span>s agricultural wealth, a significant number of Hoosiers face challenges in accessing nutritious, affordable food.
-    </p>
-    <p>
-      This issue is often exacerbated by high poverty rates, unemployment, and a lack of access to food retailers in certain regions, resulting in food deserts. The elderly population is especially vulnerable, with many facing difficulties in obtaining fresh produce due to limited mobility and fixed incomes.
-    </p>
-    <p>
-      In cities like Indianapolis, Fort Wayne, and Evansville, low-income households struggle to meet basic nutritional needs, leading to poor health outcomes and increased reliance on food pantries and community food banks.
-    </p>
-    <p>
-      Furthermore, food insecurity in Indiana has a significant ripple effect, impacting children<span style="font-family: 'Courier New', Courier, monospace;">'</span>s education, physical and mental development, and contributing to the cycle of poverty.
-    </p>
-    <p class="tiny">Source <span style="font-family: 'Courier New', Courier, monospace;">:</span> State of Aging Central Indiana</p>
-  </div>
-
-  <img src="/assets/images/indyGraphic.png" class="fade-in" alt="Indianapolis food insecurity graphic" class="fade-in" />
-</div>
-    </div>
-  </div>
-
-<div class="container3">
-  <section id="food-insecurity" class="food-insecurity-section ">
-    <div class="containerMap">
-      <div class="Tcontent">
-      <h2 class="sec-title fade-in" >Map of Food Insecurity</h2>
-      <p class="pclass fade-in">
-        Food insecurity affects vulnerable populations across Indiana and Korea,
-        particularly the elderly and underserved communities. By focusing on these
-        regions, our collaboration highlights the importance of addressing food
-        access disparities and fostering community-driven solutions.
+    <div class="text-content fade-in">
+      <p>
+        Food insecurity is a pressing issue affecting many residents of Indiana,
+        particularly in rural and urban areas. Despite the state<span
+          style="font-family: 'Courier New', Courier, monospace"
+          >'</span
+        >s agricultural wealth, a significant number of Hoosiers face challenges
+        in accessing nutritious, affordable food.
       </p>
-      </div>
-      <div id="food-insecurity-map" class="map-container">
-        <div id="map"></div>
-        <p class="map-instructions">
-          Tap the dots on the map to learn more about food insecurity hotspots.
-        </p>     
-      </div>
+      <br />
+      <p>
+        This issue is often exacerbated by high poverty rates, unemployment, and
+        a lack of access to food retailers in certain regions, resulting in food
+        deserts. The elderly population is especially vulnerable, with many
+        facing difficulties in obtaining fresh produce due to limited mobility
+        and fixed incomes.
+      </p>
+      <br />
+      <p>
+        In cities like Indianapolis, Fort Wayne, and Evansville, low-income
+        households struggle to meet basic nutritional needs, leading to poor
+        health outcomes and increased reliance on food pantries and community
+        food banks.
+      </p>
+      <br />
+      <p>
+        Furthermore, food insecurity in Indiana has a significant ripple effect,
+        impacting children<span
+          style="font-family: 'Courier New', Courier, monospace"
+          >'</span
+        >s education, physical and mental development, and contributing to the
+        cycle of poverty.
+      </p>
+      <br />
+      <p class="tiny">
+        <a href="https://centralindiana.stateofaging.org/">
+          Source<span style="font-family: 'Courier New', Courier, monospace"
+            >:</span
+          >State of Aging Central Indiana</a
+        >
+      </p>
     </div>
-  </section>
-</div>
-<div class="button-container">
-<a style="text-decoration: none;" href="#projects" class="seeMore">
-  See                                                                             Deliverables <i class="fa-regular fa-circle-right"></i>
-</a>
-</div>
+
+    <img
+      src="/assets/images/Indianagraphic.png"
+      class="fade-in indyGraphic"
+      alt="Indianapolis food insecurity graphic"
+    />
+  </div>
+
+  <div class="container3">
+    <section id="food-insecurity" class="food-insecurity-section">
+      <div class="containerMap">
+        <div class="Tcontent">
+          <h2 class="sec-title fade-in">Map of Food Insecurity</h2>
+          <p class="pclass fade-in">
+            Food insecurity affects vulnerable populations across Indiana and
+            Korea, particularly the elderly and underserved communities. By
+            focusing on these regions, our collaboration highlights the
+            importance of addressing food access disparities and fostering
+            community-driven solutions.
+          </p>
+        </div>
+        <div id="food-insecurity-map" class="map-container">
+          <div id="map"></div>
+          <p class="map-instructions">
+            Tap the dots on the map to learn more about food insecurity
+            hotspots.
+          </p>
+        </div>
+      </div>
+      <a style="text-decoration: none" href="#projects" class="seeMore">
+        See Deliverables <i class="fa-regular fa-circle-right"></i>
+      </a>
+    </section>
+  </div>
 </section>
 <script>
   function initMap() {
     const map = new google.maps.Map(document.getElementById("map"), {
       zoom: 6,
-      center: { lat: 40.0, lng: -86.0 }
+      center: { lat: 40.0, lng: -86.0 },
     });
 
     const locations = [

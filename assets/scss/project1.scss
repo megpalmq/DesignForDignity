@@ -16,7 +16,7 @@ $map-height: 400px;
   background-image: url(../images/team1.png);
   background-size: cover;
   background-position: center;
-  height: 80vh;
+  height: 90vh;
   color: white;
   display: flex;
   justify-content: center;
@@ -347,6 +347,7 @@ h4 {
   background-color: $yellow;
   padding: 40px;
   font-family: ofelia;
+  margin: 0 auto;
 
   .section-title1 {
     text-align: center;
@@ -431,27 +432,19 @@ h4 {
       }
     }
   }
+  .nextproj {
+    background-color: $orange;
+    padding: 22px;
+    width: 200px;
+    text-decoration: none;
+    color: white;
+    border-radius: 30px;
+    margin: 40px auto 0 auto; // Center horizontally
+    display: block;
+    text-align: center;
+    font-weight: bold;
+  }
 }
-
-// @media (max-width: 1024px) {
-//   .members1 {
-//     align-items: center;
-//     text-align: center;
-
-//     .member-list1 {
-//       margin-left: 0;
-//       align-items: center;
-//     }
-
-//     .group-photo1 {
-//       margin-top: 60px;
-
-//       .group-image1 {
-//         max-width: 70%;
-//       }
-//     }
-//   }
-// }
 
 @media (max-width: 768px) {
   .members1 {
@@ -536,20 +529,6 @@ h4 {
   padding-top: 20px;
   padding-bottom: 20px;
   font-family: ofelia;
-  .nextproj {
-    background-color: $orange;
-    padding: 22px;
-    width: 200px;
-    text-decoration: none;
-    justify-content: center;
-    color: white;
-    align-items: center;
-    border-radius: 30px;
-    margin: 0 auto;
-    text-align: center;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
 }
 
 /* Back Button */
