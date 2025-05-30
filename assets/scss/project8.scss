@@ -254,6 +254,22 @@ $map-height: 400px;
       padding-bottom: 10px;
     }
   }
+  .nextproj {
+    background-color: $orange;
+    padding: 22px;
+    width: 200px;
+    text-decoration: none;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    border-radius: 30px;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-family: ofelia;
+    margin: 20px;
+  }
 }
 
 .back-button8 a {
@@ -429,20 +445,6 @@ $map-height: 400px;
   background-color: white;
   padding-top: 20px;
   padding-bottom: 20px;
-  .nextproj {
-    background-color: $orange;
-    padding: 22px;
-    width: 200px;
-    text-decoration: none;
-    justify-content: center;
-    color: white;
-    align-items: center;
-    border-radius: 30px;
-    margin: 0 auto;
-    text-align: center;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
 }
 
 .back-button8 {

@@ -5031,6 +5031,27 @@ h4 {
   flex-basis: 20%;
 }
 
+@media (max-width: 1424px) {
+  .members7 {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 15px;
+  }
+  .members7 .member-list7 {
+    margin-left: 0;
+    max-width: 100%;
+    align-items: center;
+  }
+  .members7 .group-photo7 {
+    margin-top: 40px;
+  }
+  .members7 .group-photo7 h3 {
+    font-size: 2rem;
+  }
+  .members7 .group-photo7 img {
+    max-width: 80%;
+  }
+}
 @media (max-width: 1024px) {
   .members7 {
     flex-direction: column;
@@ -5102,7 +5123,7 @@ h4 {
     font-size: 1.3rem;
   }
   .members7 .group-photo7 img {
-    max-width: 90%;
+    width: 100%;
   }
   .members7 .group-photo7 .photo-description7 {
     font-size: 0.9rem;
@@ -5355,6 +5376,22 @@ h4 {
   border-bottom: 2px solid #fff;
   padding-bottom: 10px;
 }
+.members8 .nextproj {
+  background-color: #ef6838;
+  padding: 22px;
+  width: 200px;
+  text-decoration: none;
+  justify-content: center;
+  color: white;
+  align-items: center;
+  border-radius: 30px;
+  margin: 0 auto;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-family: ofelia;
+  margin: 20px;
+}
 
 .back-button8 a {
   color: #ef6838;
@@ -5528,20 +5565,6 @@ h4 {
   background-color: white;
   padding-top: 20px;
   padding-bottom: 20px;
-}
-.button-container8 .nextproj {
-  background-color: #ef6838;
-  padding: 22px;
-  width: 200px;
-  text-decoration: none;
-  justify-content: center;
-  color: white;
-  align-items: center;
-  border-radius: 30px;
-  margin: 0 auto;
-  text-align: center;
-  justify-content: center;
-  margin-bottom: 20px;
 }
 
 .back-button8 {

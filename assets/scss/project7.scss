@@ -407,7 +407,7 @@ $map-height: 400px;
     text-decoration: none;
     color: white;
     border-radius: 30px;
-    margin: 40px auto 0 auto; // centers horizontally
+    margin: 40px auto 0 auto;
     display: block;
     text-align: center;
     font-weight: bold;
@@ -415,7 +415,31 @@ $map-height: 400px;
     flex-basis: 20%;
   }
 }
+@media (max-width: 1424px) {
+  .members7 {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 15px;
 
+    .member-list7 {
+      margin-left: 0;
+      max-width: 100%;
+      align-items: center;
+    }
+
+    .group-photo7 {
+      margin-top: 40px;
+
+      h3 {
+        font-size: 2rem;
+      }
+
+      img {
+        max-width: 80%;
+      }
+    }
+  }
+}
 @media (max-width: 1024px) {
   .members7 {
     flex-direction: column;
@@ -509,7 +533,7 @@ $map-height: 400px;
       }
 
       img {
-        max-width: 90%;
+        width: 100%;
       }
 
       .photo-description7 {
