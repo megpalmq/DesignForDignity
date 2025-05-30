@@ -45,6 +45,7 @@ body {
   background-color: rgba(255, 255, 255, 0.5);
   color: tan;
   left: 50%;
+  border: 2px $yellow solid;
   transform: translateX(-50%);
   z-index: 1000;
   width: 80%;
@@ -84,7 +85,7 @@ body {
         color: $highlight-color;
         font-size: 1rem;
         padding: 0.5rem 0;
-        font-weight: 300;
+        font-weight: bold;
 
         &:hover {
           color: $highlight-color;
@@ -391,7 +392,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
   .design {
     justify-content: center;
     font-size: 40px;
@@ -401,7 +401,7 @@ body {
     align-items: center;
     width: 700px;
     .change {
-      color: $soft-green;
+      color: $yellow;
     }
   }
   h3 {
@@ -420,6 +420,7 @@ body {
     font-weight: 100;
     width: 520px;
     margin-right: 150px;
+    margin-top: 9px;
   }
   .ani2 {
     color: $orange;
@@ -555,112 +556,142 @@ body {
 .descBox2 {
   height: 100vh;
   width: 100%;
-  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  text-align: center;
-  background-color: $lightgreen;
-  gap: 40px;
+  background-color: #f8f6ef;
+
+  .EDD {
+    display: flex;
+    font-size: 40px;
+    font-family: alfarn;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: center;
+    top: 60px;
+    position: relative;
+    color: $orange;
+
+    span {
+      color: $yellow;
+    }
+  }
+
+  .horizontial {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: center;
+  }
 
   p {
-    color: $soft-green;
+    color: black;
     font-size: 18px;
-    width: 600px;
+    width: 580px;
     line-height: 30px;
     font-family: ofelia;
     font-style: normal;
     font-weight: 300;
     margin: 0;
-    padding-left: 40px; // Add more left padding on large screens
+    padding-left: 40px;
   }
 
   .descBox3 {
     .triangle {
-      background-image: url(../images/triangle.png);
+      background-image: url(../images/triangleGraphic.png);
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
       width: 700px;
-      height: 50vh;
+      height: 90vh;
       transition: transform 0.3s ease-in-out;
-    }
-
-    .triangle:hover {
-      transform: scale(1.1);
+      margin-left: 50px;
     }
   }
 
-  @media screen and (max-width: 1024px) {
+  // Desktop / Large Tablet
+  @media (max-width: 1280px) {
     flex-direction: column;
+    height: auto;
+    padding: 40px 20px;
+    gap: 30px;
+
+    .EDD {
+      font-size: 32px;
+      top: 30px;
+    }
 
     p {
-      width: 80%;
       font-size: 16px;
-      line-height: 28px;
-      padding-left: 20px; // Less padding on tablet
+      width: 90%;
+      padding-left: 0;
+      text-align: center;
     }
 
     .descBox3 .triangle {
       width: 500px;
-      height: 40vh;
+      height: 60vh;
     }
   }
 
-  @media screen and (max-width: 768px) {
-    .descBox2 {
-      height: 100vh;
-      padding: 40px 0;
+  // Medium Tablet
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 25px;
+
+    .EDD {
+      font-size: 28px;
+      margin-bottom: 100px;
+    }
+
+    .horizontial {
       flex-direction: column;
     }
 
-    .descBox3 {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .triangle {
-      width: 70vw;
-      height: 60vh;
-      margin-left: 30px;
-    }
-
     p {
-      width: 90%;
       font-size: 15px;
       line-height: 26px;
-      padding-left: 10px;
-      padding-right: 10px;
+      width: 90%;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .descBox3 .triangle {
+      width: 800px;
+      max-width: 400px;
+      height: 60vh;
     }
   }
-  @media screen and (max-width: 420px) {
-    .descBox2 {
-      height: auto;
-      padding: 30px 0;
+
+  // Mobile
+  @media (max-width: 480px) {
+    padding: 20px 10px;
+    flex-direction: column;
+    gap: 20px;
+
+    .EDD {
+      font-size: 22px;
+      top: 10px;
+      text-align: center;
+      flex: wrap;
+      margin-bottom: 4 0px;
+    }
+
+    .horizontial {
       flex-direction: column;
     }
 
-    .descBox3 {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .triangle {
-      width: 80vw;
-      height: 50vh;
-      margin-left: 30px;
-      background-size: contain;
-    }
-
     p {
-      width: 95%;
-      font-size: 13px;
-      line-height: 22px;
-      margin-top: 30px;
+      font-size: 14px;
+      width: 100%;
+      padding: 0 10px;
+      line-height: 24px;
+      text-align: center;
+    }
+
+    .descBox3 .triangle {
+      width: 400px;
+      height: 50vh;
     }
   }
 }
@@ -668,6 +699,7 @@ body {
 .footer {
   background-color: $soft-green;
   color: #ecf0f1;
+  align-items: flex-end;
   padding: 40px 0;
   font-family: ofelia;
   .bottomLogo {
@@ -751,12 +783,12 @@ body {
   }
 
   .footer-bottom {
-    display: flex;
-    justify-content: flex-end;
+    margin-left: auto;
     font-size: 0.7rem;
     color: black;
-    margin-top: 150px;
-    margin-left: 130px;
+    padding-top: 30px;
+    align-self: flex-end;
+    margin-left: 600px;
   }
 
   // Tablet (≤1024px)

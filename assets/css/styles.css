@@ -58,6 +58,7 @@ body {
   background-color: rgba(255, 255, 255, 0.5);
   color: tan;
   left: 50%;
+  border: 2px #e1db54 solid;
   transform: translateX(-50%);
   z-index: 1000;
   width: 80%;
@@ -95,7 +96,7 @@ body {
   color: #ef6838;
   font-size: 1rem;
   padding: 0.5rem 0;
-  font-weight: 300;
+  font-weight: bold;
 }
 .navbar .nav-links li a:hover {
   color: #ef6838;
@@ -373,7 +374,7 @@ body {
   width: 700px;
 }
 .saying .design .change {
-  color: #bddfc6;
+  color: #e1db54;
 }
 .saying h3 {
   width: 60%;
@@ -391,6 +392,7 @@ body {
   font-weight: 100;
   width: 520px;
   margin-right: 150px;
+  margin-top: 9px;
 }
 .saying .ani2 {
   color: #ef6838;
@@ -504,18 +506,35 @@ body {
 .descBox2 {
   height: 100vh;
   width: 100%;
-  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  text-align: center;
-  background-color: #349452;
-  gap: 40px;
+  background-color: #f8f6ef;
+}
+.descBox2 .EDD {
+  display: flex;
+  font-size: 40px;
+  font-family: alfarn;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: center;
+  top: 60px;
+  position: relative;
+  color: #ef6838;
+}
+.descBox2 .EDD span {
+  color: #e1db54;
+}
+.descBox2 .horizontial {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: center;
 }
 .descBox2 p {
-  color: #bddfc6;
+  color: black;
   font-size: 18px;
-  width: 600px;
+  width: 580px;
   line-height: 30px;
   font-family: ofelia;
   font-style: normal;
@@ -524,86 +543,95 @@ body {
   padding-left: 40px;
 }
 .descBox2 .descBox3 .triangle {
-  background-image: url(../images/triangle.png);
+  background-image: url(../images/triangleGraphic.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   width: 700px;
-  height: 50vh;
+  height: 90vh;
   transition: transform 0.3s ease-in-out;
+  margin-left: 50px;
 }
-.descBox2 .descBox3 .triangle:hover {
-  transform: scale(1.1);
-}
-@media screen and (max-width: 1024px) {
+@media (max-width: 1280px) {
   .descBox2 {
     flex-direction: column;
+    height: auto;
+    padding: 40px 20px;
+    gap: 30px;
+  }
+  .descBox2 .EDD {
+    font-size: 32px;
+    top: 30px;
   }
   .descBox2 p {
-    width: 80%;
     font-size: 16px;
-    line-height: 28px;
-    padding-left: 20px;
+    width: 90%;
+    padding-left: 0;
+    text-align: center;
   }
   .descBox2 .descBox3 .triangle {
     width: 500px;
-    height: 40vh;
+    height: 60vh;
   }
 }
-@media screen and (max-width: 768px) {
-  .descBox2 .descBox2 {
-    height: 100vh;
-    padding: 40px 0;
+@media (max-width: 768px) {
+  .descBox2 {
+    flex-direction: column;
+    gap: 25px;
+  }
+  .descBox2 .EDD {
+    font-size: 28px;
+    margin-bottom: 100px;
+  }
+  .descBox2 .horizontial {
     flex-direction: column;
   }
-  .descBox2 .descBox3 {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .descBox2 .triangle {
-    width: 70vw;
-    height: 60vh;
-    margin-left: 30px;
-  }
   .descBox2 p {
-    width: 90%;
     font-size: 15px;
     line-height: 26px;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 90%;
+    padding: 0 20px;
+    text-align: center;
+  }
+  .descBox2 .descBox3 .triangle {
+    width: 800px;
+    max-width: 400px;
+    height: 60vh;
   }
 }
-@media screen and (max-width: 420px) {
-  .descBox2 .descBox2 {
-    height: auto;
-    padding: 30px 0;
+@media (max-width: 480px) {
+  .descBox2 {
+    padding: 20px 10px;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .descBox2 .EDD {
+    font-size: 22px;
+    top: 10px;
+    text-align: center;
+    flex: wrap;
+    margin-bottom: 4 0px;
+  }
+  .descBox2 .horizontial {
     flex-direction: column;
   }
-  .descBox2 .descBox3 {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .descBox2 .triangle {
-    width: 80vw;
-    height: 50vh;
-    margin-left: 30px;
-    background-size: contain;
-  }
   .descBox2 p {
-    width: 95%;
-    font-size: 13px;
-    line-height: 22px;
-    margin-top: 30px;
+    font-size: 14px;
+    width: 100%;
+    padding: 0 10px;
+    line-height: 24px;
+    text-align: center;
+  }
+  .descBox2 .descBox3 .triangle {
+    width: 400px;
+    height: 50vh;
   }
 }
 
 .footer {
   background-color: #bddfc6;
   color: #ecf0f1;
+  align-items: flex-end;
   padding: 40px 0;
   font-family: ofelia;
 }
@@ -677,12 +705,12 @@ body {
   color: #352d27;
 }
 .footer .footer-bottom {
-  display: flex;
-  justify-content: flex-end;
+  margin-left: auto;
   font-size: 0.7rem;
   color: black;
-  margin-top: 150px;
-  margin-left: 130px;
+  padding-top: 30px;
+  align-self: flex-end;
+  margin-left: 600px;
 }
 @media (max-width: 1024px) {
   .footer .footer-grid {
