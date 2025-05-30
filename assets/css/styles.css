@@ -695,8 +695,10 @@ body {
   margin: 5px 0;
   font-size: 15px;
   color: black;
+  text-decoration: none;
 }
 .footer .footer-column p strong {
+  text-decoration: none;
   display: block;
   font-weight: bold;
   color: black;
