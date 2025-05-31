@@ -137,6 +137,13 @@ function changeRoute() {
     console.log("Error loading page: " + pageID);
   });
 }
+document.addEventListener("DOMContentLoaded", function () {
+  const video = document.getElementById("bg-video");
+  video.muted = true;
+  video.play().catch((e) => {
+    console.log("Autoplay failed:", e);
+  });
+});
 
 // Initialize URL Listener
 function initURLListener() {
