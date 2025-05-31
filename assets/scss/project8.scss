@@ -13,7 +13,6 @@ $map-height: 400px;
 
 .project-hero8 {
   position: relative;
-  background-image: url(../images/team1.png);
   background-size: cover;
   background-position: center;
   height: 92vh;
@@ -22,6 +21,7 @@ $map-height: 400px;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  height: 110vh;
 }
 .hero-overlay8 {
   position: absolute;
@@ -35,8 +35,6 @@ $map-height: 400px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
-  height: 100vh;
 
   .project-type8 {
     font-size: 1.2rem;
@@ -44,13 +42,14 @@ $map-height: 400px;
     margin: 0 auto;
     font-weight: bolder;
     text-transform: uppercase;
-    margin-top: 30px;
+    margin-top: 150px;
     line-height: 27px;
     background-color: transparent;
     animation: fadeInUp 2s ease-out;
     color: $orange;
     padding: 10px;
     border-radius: 30px;
+
     margin-bottom: 40px;
     border: 2px solid $orange;
   }
@@ -63,6 +62,7 @@ $map-height: 400px;
     transition: background-color 0.3s ease, transform 0.3s ease;
     margin-top: 50px;
     font-size: 18px;
+    margin-bottom: 50px;
   }
 
   .see-more8:hover {
@@ -200,7 +200,7 @@ $map-height: 400px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  flex-wrap: wrap;
+  flex-direction: column;
   background-color: #e4d64d;
   padding: 40px 20px;
   font-family: $heading-font;
@@ -259,16 +259,13 @@ $map-height: 400px;
     padding: 22px;
     width: 200px;
     text-decoration: none;
-    justify-content: center;
     color: white;
-    align-items: center;
     border-radius: 30px;
-    margin: 0 auto;
+    margin: 40px auto 0 auto;
+    display: block;
     text-align: center;
-    justify-content: center;
-    margin-bottom: 20px;
+    font-weight: bold;
     font-family: ofelia;
-    margin: 20px;
   }
 }
 

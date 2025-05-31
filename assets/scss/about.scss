@@ -46,9 +46,9 @@ $map-height: 400px;
 
 @media screen and (max-width: 480px) {
   .container {
-    width: 100%; /* Ensure full width */
-    padding: 0 15px; /* Reduce padding for very small screens */
-    max-width: none; /* Remove max-width restriction */
+    width: 100%;
+    padding: 0 15px;
+    max-width: none;
   }
 }
 
@@ -92,34 +92,29 @@ $map-height: 400px;
 
   .container2 {
     display: flex;
-    justify-content: center;
-    align-items: stretch;
+    flex-wrap: nowrap;
     width: 100%;
-    flex-wrap: wrap;
-    padding: 20px;
-    height: auto;
-    gap: 20px;
+    height: 65vh;
+    gap: 0;
 
     .aboutCollabImg {
-      width: 90vw;
-      max-width: 550px;
-      min-width: 280px;
-      height: auto;
-      object-fit: contain;
-      margin: 0 auto;
-      display: block;
+      width: 50%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 0;
+      padding-bottom: 30px;
     }
 
     .bonerCenter {
       width: 50%;
-      min-height: 50vh;
+      height: 100%;
       padding: 30px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      border-radius: 30px;
       text-align: center;
+      background: white;
 
       h2 {
         color: #c05126;
@@ -129,10 +124,9 @@ $map-height: 400px;
 
       .logos {
         display: flex;
-        justify-content: center;
-        gap: 25px;
         flex-direction: column;
         align-items: center;
+        gap: 25px;
 
         .logo1,
         .logo2 {
@@ -156,28 +150,104 @@ $map-height: 400px;
     }
   }
 
+  .about-title {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 70px;
+    margin-bottom: 20px;
+    color: $orange;
+    font-family: alfarn;
+  }
+
+  .seeMore {
+    display: flex;
+    width: 300px;
+    flex-direction: row;
+    background: linear-gradient(45deg, $orange, #ff9472);
+    color: #fff;
+    font-size: 1.2rem;
+    font-family: "alfarn", sans-serif;
+    padding: 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto 20px auto;
+    align-items: center;
+    justify-content: center;
+
+    a {
+      text-decoration: none !important;
+      color: inherit;
+      font-family: "alfarn", sans-serif;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin: 0 auto;
+
+      i {
+        transition: transform 0.3s ease;
+      }
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(255, 111, 97, 0.5);
+      background: linear-gradient(45deg, #ff9472, #ff6f61);
+
+      i {
+        transform: translateX(5px);
+      }
+    }
+
+    &:active {
+      transform: scale(0.98);
+      box-shadow: 0 4px 10px rgba(255, 111, 97, 0.3);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.3);
+      transition: left 0.4s ease;
+    }
+
+    &:hover::before {
+      left: 0;
+    }
+  }
+
   // Tablet & small desktop
   @media screen and (max-width: 1285px) {
     .container2 {
       flex-direction: column;
       align-items: center;
       text-align: center;
-      padding: 2rem;
+
+      height: auto;
     }
 
     .aboutCollabImg {
-      width: 90%;
+      width: 100%;
       max-width: 600px;
+      min-width: 300px;
+      height: auto;
     }
 
     .bonerCenter {
-      width: 80%;
+      width: 90%;
       padding: 20px;
     }
 
     .logos {
       gap: 20px;
-      width: 80%;
 
       .logo1 {
         width: 300px;
@@ -194,19 +264,19 @@ $map-height: 400px;
   // Mobile
   @media screen and (max-width: 500px) {
     .container2 {
-      gap: 1rem;
-      padding: 1rem;
-      margin-bottom: 100px;
+      gap: 1.5rem;
+      height: auto;
     }
 
     .aboutCollabImg {
-      max-width: 500px;
-      min-width: 250px;
+      width: 100%;
+      min-width: 500px;
+      height: auto;
     }
 
     .bonerCenter {
-      width: 95%;
-      max-width: 350px;
+      width: 100%;
+      max-width: 90%;
       padding: 10px;
 
       h2 {
@@ -216,12 +286,13 @@ $map-height: 400px;
 
     .logos {
       width: 100%;
-      gap: 10px;
+      gap: 15px;
 
       .logo1,
       .logo2 {
-        width: 300px !important;
-        height: 100px !important;
+        width: 80%;
+        max-width: 300px;
+        height: auto;
       }
     }
   }
@@ -229,8 +300,8 @@ $map-height: 400px;
   // Extra small devices
   @media screen and (max-width: 360px) {
     .aboutCollabImg {
-      max-width: 480px;
-      min-width: 240px;
+      min-width: 280px;
+      width: 100%;
     }
 
     .bonerCenter h2 {
@@ -243,8 +314,8 @@ $map-height: 400px;
 
     .logo1,
     .logo2 {
-      width: 250px !important;
-      height: 80px !important;
+      width: 230px !important;
+      height: auto !important;
     }
   }
 }
@@ -254,7 +325,6 @@ $map-height: 400px;
   display: flex;
   flex-wrap: wrap;
   color: black;
-  background-color: $yellow;
   opacity: 0;
   width: 100%;
   animation: fadeIn 1.5s ease-out 0.5s forwards;
@@ -288,8 +358,8 @@ $map-height: 400px;
 
   img {
     max-width: 50%;
-    height: 80vh;
-    border-radius: 15px;
+    height: 60vh;
+    padding-right: 100px;
     object-fit: contain;
     margin: 0 auto;
   }
@@ -413,7 +483,7 @@ $map-height: 400px;
         }
         .pclass {
           color: white;
-          width: 40%;
+          width: 65%;
           font-size: 18px;
         }
       }
@@ -446,71 +516,6 @@ $map-height: 400px;
           }
         }
       }
-    }
-  }
-  .seeMore {
-    display: flex;
-    width: 300px;
-    flex-direction: row;
-    background: linear-gradient(45deg, $orange, #ff9472);
-    color: #fff;
-    font-size: 1.2rem;
-    font-family: "alfarn" sans-serif;
-    padding: 20px;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    margin: 30px auto 50px auto;
-    align-items: center;
-    justify-content: center;
-    a {
-      text-decoration: none !important;
-      color: inherit;
-      font-family: "alfarn", sans-serif;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin: 0 auto;
-
-      i {
-        text-decoration: none;
-        transition: transform 0.3s ease;
-      }
-    }
-
-    &:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 20px rgba(255, 111, 97, 0.5);
-      background: linear-gradient(45deg, #ff9472, #ff6f61);
-
-      i {
-        text-decoration: none;
-        transform: translateX(5px);
-      }
-    }
-
-    &:active {
-      transform: scale(0.98);
-      box-shadow: 0 4px 10px rgba(255, 111, 97, 0.3);
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: rgba(255, 255, 255, 0.3);
-      transition: left 0.4s ease;
-    }
-
-    &:hover::before {
-      left: 0;
     }
   }
 }
