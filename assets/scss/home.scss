@@ -81,32 +81,32 @@ body {
       margin: 0 1.5rem;
 
       a {
+        position: relative; // Needed to anchor the ::after
         text-decoration: none;
         color: $highlight-color;
         font-size: 1rem;
         padding: 0.5rem 0;
         font-weight: bold;
 
-        &:hover {
-          color: $highlight-color;
-        }
-
+        // Animate underline
         &::after {
           content: "";
           position: absolute;
-          bottom: 0;
+          bottom: 0; // Align underline under text
           left: 0;
-          width: 0;
-          margin-left: 13px;
-          margin-bottom: 1px;
-          height: 4px;
+          width: 0%;
+          height: 3px;
+          background-color: $highlight-color;
           border-radius: 10px;
-          background: $highlight-color;
-          transition: width 0.3s ease;
+          transition: width 0.3s ease-in-out;
         }
 
         &:hover::after {
-          width: 98%;
+          width: 100%; // Animate full width from left to right
+        }
+
+        &:hover {
+          color: $highlight-color; // Optional: emphasize hover color
         }
       }
     }
