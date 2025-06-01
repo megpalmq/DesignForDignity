@@ -94,7 +94,6 @@ $map-height: 400px;
   line-height: 27px;
   animation: fadeInUp 2s ease-out;
   color: black;
-  text-align: center;
 }
 
 .project-type5 {
@@ -380,11 +379,11 @@ $map-height: 400px;
     gap: 20px;
     text-align: center;
     width: 100%;
-    max-width: 700px; // INCREASED WIDTH
+    max-width: 700px;
     margin: 0 auto;
 
     .member-item5 {
-      width: 80%; // Ensures it expands with the new max-width
+      width: 80%;
       border-top: 1px solid #fff;
       padding-top: 10px;
 
@@ -410,6 +409,7 @@ $map-height: 400px;
       padding-bottom: 10px;
     }
   }
+
   .nextproj {
     background-color: $orange;
     padding: 22px;

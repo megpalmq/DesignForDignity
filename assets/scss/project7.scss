@@ -92,14 +92,12 @@ $map-height: 400px;
     line-height: 27px;
     animation: fadeInUp 2s ease-out;
     color: black;
-    text-align: center;
   }
 }
 
 @media (max-width: 1024px) {
   .project-hero7 {
     padding: 80px 20px;
-    text-align: center;
   }
 
   .hero-overlay7 {
@@ -509,8 +507,6 @@ $map-height: 400px;
 
 @media (max-width: 480px) {
   .members7 {
-    padding: 20px 8px;
-
     .section-title7 {
       font-size: 1.4rem;
     }
@@ -534,6 +530,7 @@ $map-height: 400px;
 
       img {
         width: 100%;
+        height: auto;
       }
 
       .photo-description7 {

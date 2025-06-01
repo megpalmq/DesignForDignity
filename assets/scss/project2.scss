@@ -21,6 +21,7 @@ $map-height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: left;
   overflow: hidden;
 }
 
@@ -35,6 +36,7 @@ $map-height: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: left;
   justify-content: center;
   padding: 20px;
   .project-type2 {
@@ -76,9 +78,10 @@ h4 {
   font-weight: bolder;
   margin-top: 30px;
   line-height: 27px;
+  text-align: left;
   animation: fadeInUp 2s ease-out;
   color: black;
-  text-align: center;
+
   margin-bottom: 40px;
 }
 .see-more2 {
@@ -113,10 +116,10 @@ h4 {
 
   .project-description2 {
     font-size: 1.2rem;
+    text-align: left;
   }
 
   .see-more2 {
-    margin-left: 0;
     margin-top: 50px;
   }
 }
@@ -127,6 +130,9 @@ h4 {
     flex-direction: column;
     text-align: center;
     padding: 1rem;
+  }
+  .project-description2 {
+    text-align: left;
   }
 
   .hero-overlay2 {

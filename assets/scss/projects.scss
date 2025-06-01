@@ -688,26 +688,39 @@ $heading-font: "alfarn", sans-serif;
   }
 
   @media (max-width: 480px) {
-    .proj {
-      top: 0;
-      margin: 0 auto;
-
-      width: 80%;
-      .yap {
-        .prodTitle {
-          font-size: 25px;
-          margin-left: 100px;
-        }
-
-        .YBlurb {
-          font-size: 0.9rem;
-        }
+    .yap {
+      .prodTitle {
+        font-size: 35px;
       }
 
-      .otherPhoto {
-        width: 100%;
-        height: 200px;
+      .YBlurb {
+        font-size: 0.95rem;
+        padding: 15px;
       }
+    }
+
+    .otherPhoto {
+      width: 100%;
+      height: 220px;
+    }
+  }
+  @media (max-width: 370px) {
+    .yap {
+      .prodTitle {
+        font-size: 30px;
+        position: relative;
+        padding-right: 100px;
+      }
+
+      .YBlurb {
+        font-size: 0.95rem;
+        padding: 15px;
+      }
+    }
+
+    .otherPhoto {
+      width: 100%;
+      height: 220px;
     }
   }
 }

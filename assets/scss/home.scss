@@ -178,90 +178,33 @@ body {
       font-size: 30px;
 
       background-color: transparent;
-      color: #333;
-    }
-    .menu-toggle {
+      color: black;
       position: absolute;
       top: 20px;
       right: 20px;
     }
   }
   @media (max-width: 768px) {
-    .nav-links {
-      font-family: komet;
-      font-weight: bold;
-
-      display: none;
-      flex-direction: column;
-      width: 180px;
-      height: 180px;
-      text-align: center;
-      margin-top: 200px;
-      background-color: white;
-      padding: 10px;
-      border: 1px solid $orange;
-      border-radius: 20px;
-
-      li a {
-        color: black;
-        font-size: 21px;
-      }
-
-      &:hover {
-        color: #91a687;
-      }
-    }
-
-    .nav-links.open {
-      display: flex;
-    }
-
-    .menu-toggle {
-      display: flex;
-      cursor: pointer;
-      font-size: 28px;
-      background-color: transparent;
-      color: #333;
-      position: absolute;
-      top: 20px;
-      right: 25px;
-    }
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    top: 0;
   }
-  @media (max-width: 470px) {
+
+  @media (max-width: 490px) {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
     .menu-toggle {
       display: flex;
       cursor: pointer;
-      position: relative;
-      z-index: 9998;
-      top: 15px;
-    }
+      font-size: 30px;
 
-    .nav-links {
-      display: none;
-      flex-direction: column;
-      width: 160px;
-      text-align: center;
-      margin-top: 150px;
-      background-color: white;
-      padding: 10px;
-      border: 1px solid $orange;
-      border-radius: 20px;
-
-      li a {
-        color: black;
-        font-size: 18px;
-      }
-
-      &:hover li a {
-        color: #91a687;
-      }
-    }
-
-    .nav-links.open {
-      display: flex;
-      position: relative;
-      top: 5px;
-      right: -10px;
+      background-color: transparent;
+      color: black;
+      position: absolute;
+      top: 10px;
+      right: 20px;
     }
   }
 }
@@ -386,6 +329,26 @@ body {
     object-fit: cover;
   }
 }
+@media (max-width: 380px) {
+  .navbar {
+    height: 6%;
+
+    .menu-toggle {
+      height: 80%;
+      padding-bottom: 4px;
+    }
+  }
+
+  .hero1 {
+    height: 30vh;
+  }
+
+  .hero1 .myVideo {
+    width: 100vw;
+    height: 40vh;
+    object-fit: cover;
+  }
+}
 
 .saying {
   width: 100%;
@@ -452,56 +415,72 @@ body {
 
 @media screen and (max-width: 992px) {
   .saying {
+    display: flex;
     flex-direction: column;
-    text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    width: 100%;
+  }
 
-    .design {
-      font-size: 32px;
-      padding-left: 0;
-      width: 90%;
-      justify-content: center;
-      align-items: center;
-    }
+  .design {
+    font-size: 32px;
+    margin: 0 auto; // center it
+    padding-left: 0;
+    text-align: left;
+    width: fit-content;
+  }
 
-    h3 {
-      width: 85%;
-      font-size: 17px;
-      margin: 10px auto;
-    }
+  h3 {
+    font-size: 17px;
+    margin: 10px auto;
+    min-width: 70%;
+    margin-bottom: 50px;
+  }
 
-    .ani {
-      width: 85%;
-      margin: 20px auto 0 auto;
-      text-align: center;
-    }
+  .ani {
+    width: 100vw;
+    padding-top: 20px;
+    max-width: 100%;
+    margin: 20px 0 0 0;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
   .saying {
-    padding: 40px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    width: 100%;
+  }
 
-    .design {
-      font-size: 28px;
-      width: 100%;
-      padding-bottom: 20px;
-    }
+  .design {
+    font-size: 28px;
+    margin: 0 auto; // center it
+    padding-left: 0;
+    text-align: left;
+    width: fit-content;
+  }
 
-    h3 {
-      font-size: 16px;
-    }
+  h3 {
+    font-size: 17px;
+    width: 100%;
+    margin: 10px auto;
+  }
 
-    .ani {
-      font-size: 15px;
-      width: 100%;
-      margin: 10px auto 0 auto;
-    }
+  .ani {
+    width: 100vw;
+    padding-top: 20px;
+    max-width: 100%;
+    margin: 20px 0 0 0;
   }
 }
 
 @media screen and (max-width: 480px) {
   .saying {
-    padding: 30px 10px;
+    padding: 40px 20px;
 
     .design {
       font-size: 24px;
@@ -628,7 +607,6 @@ body {
       font-size: 16px;
       width: 90%;
       padding-left: 0;
-      text-align: center;
     }
 
     .descBox3 .triangle {
@@ -654,7 +632,6 @@ body {
       line-height: 26px;
       width: 90%;
       padding: 0 20px;
-      text-align: center;
     }
 
     .descBox3 .triangle {
@@ -682,7 +659,6 @@ body {
       line-height: 26px;
       width: 90%;
       padding: 0 20px;
-      text-align: center;
     }
 
     .descBox3 .triangle {
@@ -715,7 +691,6 @@ body {
       width: 100%;
       padding: 0 10px;
       line-height: 24px;
-      text-align: center;
     }
 
     .descBox3 .triangle {
@@ -796,7 +771,7 @@ body {
   @media (max-width: 1024px) {
     .footer-grid {
       flex-direction: column;
-      text-align: center;
+
       gap: 20px;
     }
 
@@ -817,7 +792,6 @@ body {
   @media (max-width: 768px) {
     .footer-grid {
       flex-direction: column;
-      text-align: center;
       gap: 15px;
     }
 

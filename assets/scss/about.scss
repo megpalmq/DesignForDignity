@@ -229,7 +229,6 @@ $map-height: 400px;
     .container2 {
       flex-direction: column;
       align-items: center;
-      text-align: center;
 
       height: auto;
     }
@@ -368,7 +367,6 @@ $map-height: 400px;
   @media (max-width: 992px) {
     flex-direction: column;
     align-items: center;
-    text-align: center;
 
     .text-content {
       font-size: 1rem;
@@ -621,8 +619,7 @@ $map-height: 400px;
   .containerMap .Tcontent .pclass {
     font-size: 1rem;
     padding: 0;
-    min-width: 300px;
-    text-align: center;
+    min-width: 350px;
   }
 
   .map-container {
