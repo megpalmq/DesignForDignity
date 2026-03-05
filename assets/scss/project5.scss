@@ -481,6 +481,17 @@ $map-height: 400px;
     max-width: 90%;
     margin: 0 auto;
   }
+}
+
+/* Vertical Monitor (1080x2560) */
+@media (min-width: 1024px) and (min-height: 2000px) {
+  .project-hero5 {
+    height: 40vh;
+  }
+
+  .project-description5 {
+    font-size: 20px;
+  }
 
   .hero-overlay5 .project-type5 {
     font-size: 14px;

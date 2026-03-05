@@ -1855,7 +1855,7 @@ body {
   .topImage .blah {
     height: auto;
     margin-bottom: 0;
-    margin-top: 20px;
+    margin-top: 40px;
   }
   .topImage .TM {
     padding-top: 0;
@@ -2987,6 +2987,15 @@ h4 {
     font-size: 20px;
     max-width: 90%;
   }
+}
+/* Vertical Monitor (1080x2560) */
+@media (min-width: 1024px) and (min-height: 2000px) {
+  .project-hero1 {
+    height: 40vh;
+  }
+  .project-description1 {
+    font-size: 20px;
+  }
   .hero-overlay1 .project-type1 {
     font-size: 14px;
     max-width: 90%;
@@ -3517,6 +3526,15 @@ h4 {
     text-align: center;
     margin: 0 auto;
   }
+}
+/* Vertical Monitor (1080x2560) */
+@media (min-width: 1024px) and (min-height: 2000px) {
+  .project-hero2 {
+    height: 40vh;
+  }
+  .project-description2 {
+    font-size: 20px;
+  }
   .hero-overlay2 .project-type2 {
     font-size: 14px;
     max-width: 90%;
@@ -3966,6 +3984,15 @@ h4 {
     font-size: 14px;
     max-width: 90%;
     margin: 0 auto;
+  }
+}
+/* Vertical Monitor (1080x2560) */
+@media (min-width: 1024px) and (min-height: 2000px) {
+  .project-hero3 {
+    height: 40vh;
+  }
+  .project-description3 {
+    font-size: 20px;
   }
   .hero-overlay3 .project-type3 {
     font-size: 14px;
@@ -4546,6 +4573,15 @@ h4 {
     max-width: 90%;
     margin: 0 auto;
   }
+}
+/* Vertical Monitor (1080x2560) */
+@media (min-width: 1024px) and (min-height: 2000px) {
+  .project-hero4 {
+    height: 40vh;
+  }
+  .project-description4 {
+    font-size: 20px;
+  }
   .hero-overlay4 .project-type4 {
     font-size: 14px;
     max-width: 90%;
@@ -5021,6 +5057,15 @@ h4 {
     max-width: 90%;
     margin: 0 auto;
   }
+}
+/* Vertical Monitor (1080x2560) */
+@media (min-width: 1024px) and (min-height: 2000px) {
+  .project-hero5 {
+    height: 40vh;
+  }
+  .project-description5 {
+    font-size: 20px;
+  }
   .hero-overlay5 .project-type5 {
     font-size: 14px;
     max-width: 90%;
@@ -5464,6 +5509,15 @@ h4 {
     font-size: 14px;
     max-width: 90%;
     margin: 0 auto;
+  }
+}
+/* Vertical Monitor (1080x2560) */
+@media (min-width: 1024px) and (min-height: 2000px) {
+  .project-hero6 {
+    height: 40vh;
+  }
+  .project-description6 {
+    font-size: 20px;
   }
   .hero-overlay6 .project-type6 {
     font-size: 14px;
@@ -6022,6 +6076,15 @@ h4 {
     max-width: 90%;
     margin: 0 auto;
   }
+}
+/* Vertical Monitor (1080x2560) */
+@media (min-width: 1024px) and (min-height: 2000px) {
+  .project-hero7 {
+    height: 40vh;
+  }
+  .project-description7 {
+    font-size: 20px;
+  }
   .hero-overlay7 .project-type7 {
     font-size: 14px;
     max-width: 90%;
@@ -6244,6 +6307,15 @@ h4 {
     font-size: 14px;
     max-width: 90%;
     margin: 0 auto;
+  }
+}
+/* Vertical Monitor (1080x2560) */
+@media (min-width: 1024px) and (min-height: 2000px) {
+  .project-hero8 {
+    height: 40vh;
+  }
+  .project-description8 {
+    font-size: 20px;
   }
   .hero-overlay8 .project-type8 {
     font-size: 14px;
