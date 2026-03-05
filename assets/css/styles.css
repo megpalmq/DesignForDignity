@@ -1853,8 +1853,7 @@ body {
     padding-top: 6vh;
   }
   .topImage .blah {
-    height: 200px;
-    background-color: rebeccapurple !important;
+    height: 100px;
     margin-bottom: 8px;
   }
   .topImage .TM {
