@@ -789,9 +789,7 @@ body {
   }
   .hero1 .myVideo {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+    height: 50vh;
   }
   .hero1 .content h1 {
     font-size: 50px;
