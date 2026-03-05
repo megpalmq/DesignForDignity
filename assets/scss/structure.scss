@@ -18,3 +18,16 @@ h6,
 p {
   margin-bottom: 16px;
 }
+
+/* Portrait orientation global styles */
+@media (orientation: portrait) {
+  html,
+  body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  * {
+    max-width: 100vw;
+  }
+}

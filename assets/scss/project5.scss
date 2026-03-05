@@ -60,7 +60,9 @@ $map-height: 400px;
     color: white;
     text-decoration: none;
     border-radius: 30px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition:
+      background-color 0.3s ease,
+      transform 0.3s ease;
     margin-top: 50px;
     font-size: 18px;
   }
@@ -439,7 +441,9 @@ $map-height: 400px;
   border: none;
   padding: 15px 30px;
   border-radius: 50px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
   margin-bottom: 10px;
   font-family: ofelia;
 }
@@ -451,4 +455,79 @@ $map-height: 400px;
 
 .back-button5:hover {
   transform: scale(1.1);
+}
+
+/* ============================= */
+/* PORTRAIT ORIENTATION (Vertical Monitor) */
+/* ============================= */
+@media (orientation: portrait) {
+  .project-hero5 {
+    height: 70vh;
+    min-height: 500px;
+  }
+
+  .hero-overlay5 {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 10px;
+  }
+
+  .project-title5 {
+    font-size: 28px;
+  }
+
+  .project-description5 {
+    font-size: 14px;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .hero-overlay5 .project-type5 {
+    font-size: 14px;
+    max-width: 90%;
+    margin: 10px auto 20px;
+  }
+
+  .hero-overlay5 .see-more5 {
+    margin-top: 20px;
+    margin-left: 0;
+  }
+
+  .members5 {
+    padding: 15px 10px;
+
+    .section-title5 {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .group {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .member-list5 {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .group-photo5 {
+      width: 100%;
+      margin-top: 10px;
+
+      .group-image5 {
+        max-width: 100%;
+        top: 0;
+      }
+    }
+
+    .nextproj {
+      margin-top: 15px;
+    }
+  }
+
+  .button-container5 {
+    padding: 15px 10px;
+  }
 }

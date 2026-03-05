@@ -21,6 +21,17 @@ p {
   margin-bottom: 16px;
 }
 
+/* Portrait orientation global styles */
+@media (orientation: portrait) {
+  html,
+  body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+  * {
+    max-width: 100vw;
+  }
+}
 @font-face {
   font-family: ofelia;
   src: url(../fonts/ofeliaLight.otf);
@@ -747,6 +758,302 @@ body {
   }
 }
 
+/* ============================= */
+/* PORTRAIT ORIENTATION (Vertical Monitor) */
+/* ============================= */
+@media (orientation: portrait) and (min-height: 900px) {
+  .navbar {
+    width: 95%;
+    margin-top: 30px;
+    height: 70px;
+    padding: 0.8rem 0;
+  }
+  .navbar .nav-links {
+    gap: 1rem;
+  }
+  .navbar .nav-links li {
+    margin: 0 1rem;
+  }
+  .navbar .nav-links li a {
+    font-size: 0.9rem;
+  }
+  .navbar .logo {
+    width: 90px;
+    height: 35px;
+    margin-left: 20px;
+  }
+  /* Hero section - reduce height for portrait */
+  .hero1 {
+    height: 50vh;
+    min-height: 500px;
+  }
+  .hero1 .myVideo {
+    height: 50vh;
+  }
+  .hero1 .content h1 {
+    font-size: 50px;
+  }
+  .hero1 .content p {
+    font-size: 16px;
+    max-width: 90%;
+  }
+  /* Saying/text section */
+  .saying {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  .saying .design {
+    font-size: 28px;
+    width: 100%;
+    text-align: center;
+  }
+  .saying h3 {
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .saying .ani {
+    width: 70%;
+    max-width: 100%;
+    padding-top: 15px;
+    margin: 15px auto;
+    font-size: 15px;
+    text-align: center;
+  }
+  /* Images section - stack vertically */
+  .images {
+    display: flex;
+    flex-direction: column;
+  }
+  .images .groupimage,
+  .images .tylerpic {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+  }
+  /* Description box adjustments */
+  .descBox2 {
+    height: 30vh;
+    padding: 30px 15px;
+  }
+  .descBox2 .EDD {
+    font-size: 28px;
+    margin-bottom: 20px;
+    top: 0;
+  }
+  .descBox2 .horizontial {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .descBox2 p {
+    width: 70%;
+    font-size: 15px;
+    padding: 0;
+    line-height: 26px;
+  }
+  .descBox2 .descBox3 .triangle {
+    width: 100% !important;
+    max-width: 500px;
+    height: 300px;
+    margin-left: 0;
+    margin: 0 auto;
+  }
+  /* Project cards and grids */
+  .grid,
+  .projects-grid,
+  [class*=grid] {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  /* Reduce excessive vertical spacing */
+  html,
+  body {
+    overflow-x: hidden;
+  }
+  /* Adjust container widths */
+  .container {
+    width: 95%;
+  }
+  /* Footer centering */
+  .footer {
+    text-align: left;
+  }
+  .footer .footer-grid {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer .footer-column {
+    text-align: center;
+  }
+  .footer .footer-bottom {
+    text-align: center;
+  }
+}
+/* Smaller vertical displays */
+@media (orientation: portrait) and (max-height: 900px) {
+  .hero1 {
+    height: 60vh;
+    min-height: 500px;
+  }
+  .hero1 .myVideo {
+    height: 60vh;
+  }
+  .hero1 .content h1 {
+    font-size: 40px;
+  }
+  .hero1 .content p {
+    font-size: 14px;
+  }
+  .navbar {
+    width: 90%;
+    margin-top: 20px;
+    height: 60px;
+  }
+  .navbar .nav-links {
+    gap: 0.8rem;
+  }
+  .navbar .nav-links li {
+    margin: 0 0.8rem;
+  }
+  .navbar .nav-links li a {
+    font-size: 0.8rem;
+  }
+  .navbar .logo {
+    width: 70px;
+    height: 30px;
+  }
+  .saying {
+    padding: 30px 15px;
+    text-align: center;
+  }
+  .saying .design {
+    font-size: 24px;
+    text-align: center;
+  }
+  .saying h3 {
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .saying .ani {
+    font-size: 13px;
+    margin: 10px auto;
+    text-align: center;
+  }
+  .descBox2 {
+    padding: 20px 10px;
+  }
+  .descBox2 .EDD {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  .descBox2 p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .descBox2 .descBox3 .triangle {
+    width: 100% !important;
+    max-width: 400px;
+    height: 250px;
+  }
+  /* Footer centering */
+  .footer {
+    text-align: center;
+  }
+  .footer .footer-grid {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer .footer-column {
+    text-align: center;
+  }
+  .footer .footer-bottom {
+    text-align: center;
+  }
+}
+/* Very small vertical displays (portrait phones in portrait mode) */
+@media (orientation: portrait) and (max-width: 480px) {
+  .navbar {
+    width: 85%;
+    margin-top: 10px;
+    height: 50px;
+    border-radius: 30px;
+  }
+  .navbar .nav-links {
+    display: none;
+  }
+  .navbar .menu-toggle {
+    display: flex;
+  }
+  .navbar .logo {
+    width: 60px;
+    height: 25px;
+    margin-left: 10px;
+  }
+  .hero1 {
+    height: 50vh;
+    min-height: 400px;
+  }
+  .hero1 .content h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+  .hero1 .content p {
+    font-size: 13px;
+  }
+  .saying {
+    padding: 25px 12px;
+    text-align: center;
+  }
+  .saying .design {
+    font-size: 20px;
+    text-align: center;
+  }
+  .saying h3 {
+    font-size: 13px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  .saying .ani {
+    font-size: 12px;
+    text-align: center;
+  }
+  .descBox2 {
+    padding: 15px 10px;
+    gap: 15px;
+  }
+  .descBox2 .EDD {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .descBox2 p {
+    font-size: 13px;
+    line-height: 22px;
+  }
+  .descBox2 .descBox3 .triangle {
+    width: 100% !important;
+    max-width: 350px;
+    height: 200px;
+  }
+  /* Footer centering */
+  .footer {
+    text-align: center;
+  }
+  .footer .footer-grid {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer .footer-column {
+    text-align: center;
+  }
+  .footer .footer-bottom {
+    text-align: center;
+  }
+}
 @media (min-aspect-ratio: 16/9) {
   video {
     width: 100%;
@@ -2056,6 +2363,90 @@ body {
     margin: 0 auto;
   }
 }
+/* ============================= */
+/* PORTRAIT ORIENTATION (Vertical Monitor) */
+/* ============================= */
+@media (orientation: portrait) {
+  .about-section {
+    padding-top: 80px;
+  }
+  .about-section .container2 {
+    flex-direction: column;
+    height: auto;
+    gap: 15px;
+  }
+  .about-section .aboutCollabImg {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+  }
+  .about-section .bonerCenter {
+    width: 95%;
+    padding: 20px;
+    text-align: center;
+  }
+  .about-section .bonerCenter h2 {
+    font-size: 32px;
+  }
+  .about-section .logos {
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-section .logos .logo1 {
+    width: 280px;
+    height: 140px;
+  }
+  .about-section .logos .logo2 {
+    width: 180px;
+    height: 110px;
+  }
+  .about-content1 {
+    flex-direction: column;
+    padding: 30px 15px;
+  }
+  .about-content1 .text-content {
+    padding-left: 0;
+    text-align: left;
+    margin: 0 auto;
+    display: flex;
+    font-size: 16px;
+  }
+  .about-content1 .text-content p {
+    margin: 0 auto;
+    max-width: 72%;
+    margin-bottom: 10px;
+  }
+  .about-content1 img {
+    max-width: 90%;
+    height: auto;
+    padding-right: 0;
+    padding: 0;
+  }
+  .containerMap .sec-title {
+    font-size: 28px;
+  }
+  .container3 .food-insecurity-section .containerMap .Tcontent {
+    padding: 25px 15px;
+  }
+  .container3 .food-insecurity-section .containerMap .Tcontent .sec-title {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+  .container3 .food-insecurity-section .containerMap .Tcontent .pclass {
+    width: 95%;
+    font-size: 16px;
+  }
+  .container3 .food-insecurity-section .containerMap .map-container {
+    margin-top: 15px;
+  }
+  .container3 .food-insecurity-section .containerMap .map-container #map {
+    height: 300px;
+  }
+  .container3 .food-insecurity-section .containerMap .map-instructions {
+    font-size: 13px;
+  }
+}
 .project-hero1 {
   position: relative;
   background-image: url(../images/team1.png);
@@ -2536,6 +2927,84 @@ h4 {
 }
 
 /* See More Link */
+/* ============================= */
+/* PORTRAIT ORIENTATION (Vertical Monitor) */
+/* ============================= */
+@media (orientation: portrait) {
+  .project-hero1 {
+    height: 60vh;
+    min-height: 500px;
+  }
+  .hero-overlay1 {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 10px;
+  }
+  .project-title1 {
+    font-size: 28px;
+  }
+  .project-description1 {
+    font-size: 14px;
+    max-width: 90%;
+  }
+  .hero-overlay1 .project-type1 {
+    font-size: 14px;
+    max-width: 90%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .finalDraftss {
+    padding: 30px 15px;
+  }
+  .finalDraftss .upText h2 {
+    font-size: 22px;
+  }
+  .finalDraftss .upText p {
+    font-size: 16px;
+  }
+  .poster-thumbnails1 {
+    gap: 20px;
+    flex-direction: column;
+  }
+  .poster-item1 {
+    width: 90vw;
+    height: auto;
+    aspect-ratio: 400/550;
+  }
+  .members1 {
+    padding: 15px 10px;
+  }
+  .members1 .section-title1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  .members1 .group {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .members1 .member-list1 {
+    width: 100%;
+    max-width: 100%;
+  }
+  .members1 .group-photo1 {
+    width: 100%;
+    margin-top: -110px;
+  }
+  .members1 .group-photo1 .group-image1 {
+    max-width: 100%;
+    height: auto;
+  }
+  .members1 .nextproj {
+    margin-top: 15px;
+    margin-top: 120px;
+    padding: 10px;
+  }
+  .button-container1 {
+    padding: 15px 10px;
+    margin-top: 0px;
+  }
+}
 .project-hero2 {
   position: relative;
   background-image: url(../images/team2.png);
@@ -2986,6 +3455,90 @@ h4 {
     margin-top: 50px;
   }
 }
+/* ============================= */
+/* PORTRAIT ORIENTATION (Vertical Monitor) */
+/* ============================= */
+@media (orientation: portrait) {
+  .project-hero2 {
+    height: 75vh;
+    min-height: 500px;
+  }
+  .hero-overlay2 {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 10px;
+  }
+  .project-title2 {
+    font-size: 28px;
+  }
+  .project-description2 {
+    font-size: 14px;
+    max-width: 90%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .hero-overlay2 .project-type2 {
+    font-size: 14px;
+    max-width: 90%;
+    margin: 10px auto 20px;
+    text-align: center;
+  }
+  .see-more2 {
+    margin-left: 0;
+    margin: 20px auto;
+  }
+  .finalDraftss {
+    padding: 30px 15px;
+  }
+  .finalDraftss .upText h2 {
+    font-size: 22px;
+  }
+  .finalDraftss .upText p {
+    font-size: 16px;
+  }
+  .poster-thumbnails2 {
+    gap: 20px;
+    flex-direction: column;
+  }
+  .poster-item2 {
+    width: 90vw;
+    height: auto;
+    aspect-ratio: 400/550;
+  }
+  .members2 {
+    padding: 15px 10px;
+  }
+  .members2 .section-title2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  .members2 .group {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .members2 .member-list2 {
+    width: 100%;
+    max-width: 100%;
+  }
+  .members2 .group-photo2 {
+    width: 100%;
+    margin-top: -110px;
+  }
+  .members2 .group-photo2 .group-image2 {
+    max-width: 100%;
+    height: auto;
+  }
+  .members2 .nextproj {
+    margin-top: 15px;
+    margin-top: 120px;
+    padding: 10px;
+  }
+  .button-container2 {
+    padding: 15px 10px;
+    margin-top: 0px;
+  }
+}
 .project-hero3 {
   position: relative;
   background-image: url(../images/team3.png);
@@ -3353,6 +3906,84 @@ h4 {
 }
 
 /* See More Link */
+/* ============================= */
+/* PORTRAIT ORIENTATION (Vertical Monitor) */
+/* ============================= */
+@media (orientation: portrait) {
+  .project-hero3 {
+    height: 75vh;
+    min-height: 500px;
+  }
+  .hero-overlay3 {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 10px;
+  }
+  .project-title3 {
+    font-size: 28px;
+  }
+  .project-description3 {
+    font-size: 14px;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  .hero-overlay3 .project-type3 {
+    font-size: 14px;
+    max-width: 90%;
+    margin: 10px auto 20px;
+  }
+  .finalDraftss {
+    padding: 30px 15px;
+  }
+  .finalDraftss .upText h2 {
+    font-size: 22px;
+  }
+  .finalDraftss .upText p {
+    font-size: 16px;
+  }
+  .poster-thumbnails3 {
+    gap: 20px;
+    flex-direction: column;
+  }
+  .poster-item3 {
+    width: 90vw;
+    height: auto;
+    aspect-ratio: 400/550;
+  }
+  .members3 {
+    padding: 15px 10px;
+  }
+  .members3 .section-title3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  .members3 .group {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .members3 .member-list3 {
+    width: 100%;
+    max-width: 100%;
+  }
+  .members3 .group-photo3 {
+    width: 100%;
+    margin-top: -110px;
+  }
+  .members3 .group-photo3 .group-image3 {
+    max-width: 100%;
+    height: auto;
+  }
+  .members3 .nextproj {
+    margin-top: 15px;
+    margin-top: 120px;
+    padding: 10px;
+  }
+  .button-container3 {
+    padding: 15px 10px;
+    margin-top: 0px;
+  }
+}
 /* Responsive adjustments */
 @media screen and (max-width: 900px) {
   .members3 {
@@ -3854,6 +4485,66 @@ h4 {
   transform: scale(1.1); /* Slight scale effect on hover */
 }
 
+/* ============================= */
+/* PORTRAIT ORIENTATION (Vertical Monitor) */
+/* ============================= */
+@media (orientation: portrait) {
+  .project-hero4 {
+    height: 70vh;
+    min-height: 500px;
+  }
+  .hero-overlay4 {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 10px;
+  }
+  .project-title4 {
+    font-size: 28px;
+  }
+  .project-description4 {
+    font-size: 14px;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  .hero-overlay4 .project-type4 {
+    font-size: 14px;
+    max-width: 90%;
+    margin: 10px auto 20px;
+  }
+  .members4 {
+    padding: 15px 10px;
+  }
+  .members4 .section-title4 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  .members4 .group {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .members4 .member-list4 {
+    width: 100%;
+    max-width: 100%;
+  }
+  .members4 .group-photo4 {
+    width: 100%;
+    margin-top: -110px;
+  }
+  .members4 .group-photo4 .group-image4 {
+    max-width: 100%;
+    height: auto;
+  }
+  .members4 .nextproj {
+    margin-top: 15px;
+    margin-top: 120px;
+    padding: 10px;
+  }
+  .button-container4 {
+    padding: 15px 10px;
+    margin-top: 0px;
+  }
+}
 .project-hero5 {
   position: relative;
   background-image: url(../images/team4.png);
@@ -4269,6 +4960,67 @@ h4 {
   transform: scale(1.1);
 }
 
+/* ============================= */
+/* PORTRAIT ORIENTATION (Vertical Monitor) */
+/* ============================= */
+@media (orientation: portrait) {
+  .project-hero5 {
+    height: 70vh;
+    min-height: 500px;
+  }
+  .hero-overlay5 {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 10px;
+  }
+  .project-title5 {
+    font-size: 28px;
+  }
+  .project-description5 {
+    font-size: 14px;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  .hero-overlay5 .project-type5 {
+    font-size: 14px;
+    max-width: 90%;
+    margin: 10px auto 20px;
+  }
+  .hero-overlay5 .see-more5 {
+    margin-top: 20px;
+    margin-left: 0;
+  }
+  .members5 {
+    padding: 15px 10px;
+  }
+  .members5 .section-title5 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  .members5 .group {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .members5 .member-list5 {
+    width: 100%;
+    max-width: 100%;
+  }
+  .members5 .group-photo5 {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .members5 .group-photo5 .group-image5 {
+    max-width: 100%;
+    top: 0;
+  }
+  .members5 .nextproj {
+    margin-top: 15px;
+  }
+  .button-container5 {
+    padding: 15px 10px;
+  }
+}
 .project-hero6 {
   position: relative;
   background-image: url(../images/team4.png);
@@ -4652,6 +5404,67 @@ h4 {
   transform: scale(1.1); /* Slight scale effect on hover */
 }
 
+/* ============================= */
+/* PORTRAIT ORIENTATION (Vertical Monitor) */
+/* ============================= */
+@media (orientation: portrait) {
+  .project-hero6 {
+    height: 70vh;
+    min-height: 500px;
+  }
+  .hero-overlay6 {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 10px;
+  }
+  .hero-overlay6 .project-title6 {
+    font-size: 28px;
+  }
+  .hero-overlay6 .project-description6 {
+    font-size: 14px;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  .hero-overlay6 .project-type6 {
+    font-size: 14px;
+    max-width: 90%;
+    margin: 10px auto 20px;
+  }
+  .hero-overlay6 .see-more6 {
+    margin-top: 20px;
+    margin-left: 0;
+  }
+  .members6 {
+    padding: 15px 10px;
+  }
+  .members6 .section-title6 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  .members6 .group {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .members6 .member-list6 {
+    width: 100%;
+    max-width: 100%;
+  }
+  .members6 .group-photo6 {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .members6 .group-photo6 .group-image6 {
+    max-width: 100%;
+    top: 0;
+  }
+  .members6 .nextproj {
+    margin-top: 15px;
+  }
+  .button-container6 {
+    padding: 15px 10px;
+  }
+}
 .project-hero7 {
   position: relative;
   background-color: #bddfc6;
@@ -5148,6 +5961,68 @@ h4 {
   transform: scale(1.1); /* Slight scale effect on hover */
 }
 
+/* ============================= */
+/* PORTRAIT ORIENTATION (Vertical Monitor) */
+/* ============================= */
+@media (orientation: portrait) {
+  .project-hero7 {
+    height: 75vh;
+    min-height: 500px;
+  }
+  .hero-overlay7 {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 10px;
+  }
+  .hero-overlay7 .project-title7 {
+    font-size: 28px;
+  }
+  .hero-overlay7 .project-description7 {
+    font-size: 14px;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  .hero-overlay7 .project-type7 {
+    font-size: 14px;
+    max-width: 90%;
+    margin: 10px auto 20px;
+    margin-top: 10px;
+  }
+  .hero-overlay7 .see-more7 {
+    margin-top: 20px;
+    margin-left: 0;
+  }
+  .members7 {
+    padding: 15px 10px;
+  }
+  .members7 .section-title7 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  .members7 .group {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .members7 .member-list7 {
+    width: 100%;
+    max-width: 100%;
+  }
+  .members7 .group-photo7 {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .members7 .group-photo7 .group-image7 {
+    max-width: 100%;
+    top: 0;
+  }
+  .members7 .nextproj {
+    margin-top: 15px;
+  }
+  .button-container7 {
+    padding: 15px 10px;
+  }
+}
 .project-hero8 {
   position: relative;
   background-size: cover;
@@ -5307,6 +6182,72 @@ h4 {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+/* ============================= */
+/* PORTRAIT ORIENTATION (Vertical Monitor) */
+/* ============================= */
+@media (orientation: portrait) {
+  .project-hero8 {
+    height: 80vh;
+    min-height: 500px;
+  }
+  .hero-overlay8 {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 10px;
+  }
+  .hero-overlay8 .project-title8 {
+    font-size: 28px;
+  }
+  .hero-overlay8 .project-description8 {
+    font-size: 14px;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  .hero-overlay8 .project-type8 {
+    font-size: 14px;
+    max-width: 90%;
+    margin: 10px auto 20px;
+    margin-top: 10px;
+  }
+  .hero-overlay8 .see-more8 {
+    margin-top: 20px;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+  .members8 {
+    padding: 15px 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .members8 .section-title8 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  .members8 .group {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+  .members8 .member-list8 {
+    width: 100%;
+    max-width: 100%;
+  }
+  .members8 .group-photo8 {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .members8 .group-photo8 .group-image8 {
+    max-width: 100%;
+    top: 0;
+  }
+  .members8 .nextproj {
+    margin-top: 15px;
+  }
+  .button-container8 {
+    padding: 15px 10px;
   }
 }
 .members8 {

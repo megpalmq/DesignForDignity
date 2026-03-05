@@ -82,7 +82,9 @@ $map-height: 400px;
   color: white;
   text-decoration: none;
   border-radius: 30px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
   margin-top: 50px;
   font-size: 18px;
 }
@@ -549,7 +551,9 @@ $map-height: 400px;
   border: none;
   padding: 15px 30px;
   border-radius: 50px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
   margin-bottom: 10px;
 }
 
@@ -560,4 +564,77 @@ $map-height: 400px;
 
 .back-button4:hover {
   transform: scale(1.1); /* Slight scale effect on hover */
+}
+
+/* ============================= */
+/* PORTRAIT ORIENTATION (Vertical Monitor) */
+/* ============================= */
+@media (orientation: portrait) {
+  .project-hero4 {
+    height: 70vh;
+    min-height: 500px;
+  }
+
+  .hero-overlay4 {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 10px;
+  }
+
+  .project-title4 {
+    font-size: 28px;
+  }
+
+  .project-description4 {
+    font-size: 14px;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .hero-overlay4 .project-type4 {
+    font-size: 14px;
+    max-width: 90%;
+    margin: 10px auto 20px;
+  }
+
+  .members4 {
+    padding: 15px 10px;
+
+    .section-title4 {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .group {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .member-list4 {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .group-photo4 {
+      width: 100%;
+      margin-top: -110px;
+
+      .group-image4 {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    .nextproj {
+      margin-top: 15px;
+      margin-top: 120px;
+      padding: 10px;
+    }
+  }
+
+  .button-container4 {
+    padding: 15px 10px;
+    margin-top: 0px;
+  }
 }

@@ -91,7 +91,9 @@ h4 {
   text-decoration: none;
   border-radius: 30px;
   font-size: 18px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
   margin-top: 90px;
   margin-left: 200px;
 }
@@ -476,7 +478,9 @@ h4 {
   color: $orange;
   padding: 15px 30px;
   border-radius: 50px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
   margin-bottom: 10px;
 }
 
@@ -508,5 +512,111 @@ h4 {
     .group-photo2 {
       margin-top: 50px;
     }
+  }
+}
+
+/* ============================= */
+/* PORTRAIT ORIENTATION (Vertical Monitor) */
+/* ============================= */
+@media (orientation: portrait) {
+  .project-hero2 {
+    height: 75vh;
+    min-height: 500px;
+  }
+
+  .hero-overlay2 {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 10px;
+  }
+
+  .project-title2 {
+    font-size: 28px;
+  }
+
+  .project-description2 {
+    font-size: 14px;
+    max-width: 90%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .hero-overlay2 .project-type2 {
+    font-size: 14px;
+    max-width: 90%;
+    margin: 10px auto 20px;
+    text-align: center;
+  }
+
+  .see-more2 {
+    margin-left: 0;
+    margin: 20px auto;
+  }
+
+  .finalDraftss {
+    padding: 30px 15px;
+
+    .upText {
+      h2 {
+        font-size: 22px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .poster-thumbnails2 {
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .poster-item2 {
+    width: 90vw;
+    height: auto;
+    aspect-ratio: 400/550;
+  }
+
+  .members2 {
+    padding: 15px 10px;
+
+    .section-title2 {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .group {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .member-list2 {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .group-photo2 {
+      width: 100%;
+
+      margin-top: -110px;
+
+      .group-image2 {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    .nextproj {
+      margin-top: 15px;
+      margin-top: 120px;
+      padding: 10px;
+    }
+  }
+
+  .button-container2 {
+    padding: 15px 10px;
+    margin-top: 0px;
   }
 }

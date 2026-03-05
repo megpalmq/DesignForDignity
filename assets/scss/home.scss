@@ -27,7 +27,9 @@ body {
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+  transition:
+    opacity 0.9s ease-out,
+    transform 0.9s ease-out;
 
   &.visible {
     opacity: 1;
@@ -53,7 +55,9 @@ body {
   height: 80px;
   border-radius: 50px;
   box-shadow: 0 0 15px #e3f4d880;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
 
   .logo {
     background-image: url(../images/DesignforDignityLogo.png);
@@ -825,6 +829,375 @@ body {
       margin-top: 20px;
       font-size: 0.7rem;
       margin: 0 auto;
+    }
+  }
+}
+
+/* ============================= */
+/* PORTRAIT ORIENTATION (Vertical Monitor) */
+/* ============================= */
+@media (orientation: portrait) and (min-height: 900px) {
+  .navbar {
+    width: 95%;
+    margin-top: 30px;
+    height: 70px;
+    padding: 0.8rem 0;
+
+    .nav-links {
+      gap: 1rem;
+
+      li {
+        margin: 0 1rem;
+
+        a {
+          font-size: 0.9rem;
+        }
+      }
+    }
+
+    .logo {
+      width: 90px;
+      height: 35px;
+      margin-left: 20px;
+    }
+  }
+
+  /* Hero section - reduce height for portrait */
+  .hero1 {
+    height: 50vh;
+    min-height: 500px;
+
+    .myVideo {
+      height: 50vh;
+    }
+
+    .content {
+      h1 {
+        font-size: 50px;
+      }
+
+      p {
+        font-size: 16px;
+        max-width: 90%;
+      }
+    }
+  }
+
+  /* Saying/text section */
+  .saying {
+    padding: 40px 20px;
+    text-align: center;
+
+    .design {
+      font-size: 28px;
+      width: 100%;
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 16px;
+      width: 100%;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .ani {
+      width: 70%;
+      max-width: 100%;
+      padding-top: 15px;
+      margin: 15px auto;
+      font-size: 15px;
+      text-align: center;
+    }
+  }
+
+  /* Images section - stack vertically */
+  .images {
+    display: flex;
+    flex-direction: column;
+
+    .groupimage,
+    .tylerpic {
+      width: 100%;
+      height: auto;
+      max-height: 400px;
+    }
+  }
+
+  /* Description box adjustments */
+  .descBox2 {
+    height: 30vh;
+    padding: 30px 15px;
+
+    .EDD {
+      font-size: 28px;
+      margin-bottom: 20px;
+      top: 0;
+    }
+
+    .horizontial {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    p {
+      width: 70%;
+      font-size: 15px;
+      padding: 0;
+      line-height: 26px;
+    }
+
+    .descBox3 .triangle {
+      width: 100% !important;
+      max-width: 500px;
+      height: 300px;
+      margin-left: 0;
+      margin: 0 auto;
+    }
+  }
+
+  /* Project cards and grids */
+  .grid,
+  .projects-grid,
+  [class*="grid"] {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  /* Reduce excessive vertical spacing */
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Adjust container widths */
+  .container {
+    width: 95%;
+  }
+
+  /* Footer centering */
+  .footer {
+    text-align: left;
+
+    .footer-grid {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer-column {
+      text-align: center;
+    }
+
+    .footer-bottom {
+      text-align: center;
+    }
+  }
+}
+
+/* Smaller vertical displays */
+@media (orientation: portrait) and (max-height: 900px) {
+  .hero1 {
+    height: 60vh;
+    min-height: 500px;
+
+    .myVideo {
+      height: 60vh;
+    }
+
+    .content {
+      h1 {
+        font-size: 40px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .navbar {
+    width: 90%;
+    margin-top: 20px;
+    height: 60px;
+
+    .nav-links {
+      gap: 0.8rem;
+
+      li {
+        margin: 0 0.8rem;
+
+        a {
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+    .logo {
+      width: 70px;
+      height: 30px;
+    }
+  }
+
+  .saying {
+    padding: 30px 15px;
+    text-align: center;
+
+    .design {
+      font-size: 24px;
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 14px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .ani {
+      font-size: 13px;
+      margin: 10px auto;
+      text-align: center;
+    }
+  }
+
+  .descBox2 {
+    padding: 20px 10px;
+
+    .EDD {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    .descBox3 .triangle {
+      width: 100% !important;
+      max-width: 400px;
+      height: 250px;
+    }
+  }
+
+  /* Footer centering */
+  .footer {
+    text-align: center;
+
+    .footer-grid {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer-column {
+      text-align: center;
+    }
+
+    .footer-bottom {
+      text-align: center;
+    }
+  }
+}
+
+/* Very small vertical displays (portrait phones in portrait mode) */
+@media (orientation: portrait) and (max-width: 480px) {
+  .navbar {
+    width: 85%;
+    margin-top: 10px;
+    height: 50px;
+    border-radius: 30px;
+
+    .nav-links {
+      display: none;
+    }
+
+    .menu-toggle {
+      display: flex;
+    }
+
+    .logo {
+      width: 60px;
+      height: 25px;
+      margin-left: 10px;
+    }
+  }
+
+  .hero1 {
+    height: 50vh;
+    min-height: 400px;
+
+    .content {
+      h1 {
+        font-size: 32px;
+        margin-bottom: 15px;
+      }
+
+      p {
+        font-size: 13px;
+      }
+    }
+  }
+
+  .saying {
+    padding: 25px 12px;
+    text-align: center;
+
+    .design {
+      font-size: 20px;
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 13px;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .ani {
+      font-size: 12px;
+      text-align: center;
+    }
+  }
+
+  .descBox2 {
+    padding: 15px 10px;
+    gap: 15px;
+
+    .EDD {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 13px;
+      line-height: 22px;
+    }
+
+    .descBox3 .triangle {
+      width: 100% !important;
+      max-width: 350px;
+      height: 200px;
+    }
+  }
+
+  /* Footer centering */
+  .footer {
+    text-align: center;
+
+    .footer-grid {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer-column {
+      text-align: center;
+    }
+
+    .footer-bottom {
+      text-align: center;
     }
   }
 }
