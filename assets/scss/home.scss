@@ -836,7 +836,7 @@ body {
 /* ============================= */
 /* PORTRAIT ORIENTATION (Vertical Monitor) */
 /* ============================= */
-@media (orientation: portrait) and (min-height: 700px) and (min-width: 1200px) {
+@media (orientation: portrait) and (min-height: 2425px) and (min-width: 1200px) {
   .navbar {
     width: 95%;
     margin-top: 30px;
@@ -996,7 +996,7 @@ body {
 }
 
 /* Smaller vertical displays */
-@media (orientation: portrait) and (max-height: 700px) and (min-width: 768px) {
+@media (orientation: portrait) and (max-height: 2425px) and (min-width: 1200px) {
   .hero1 {
     height: 60vh;
     min-height: 500px;
