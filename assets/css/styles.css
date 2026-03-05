@@ -1847,13 +1847,14 @@ body {
 }
 
 /* PORTRAIT ORIENTATION (Vertical Monitor) */
-@media (orientation: portrait) and (min-width: 1024px) {
+@media (min-width: 1024px) and (min-height: 2000px) {
   .topImage {
     height: auto;
     padding-top: 6vh;
   }
   .topImage .blah {
-    height: auto;
+    height: 200px;
+    background-color: rebeccapurple !important;
     margin-bottom: 8px;
   }
   .topImage .TM {
