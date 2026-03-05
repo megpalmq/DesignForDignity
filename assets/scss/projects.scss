@@ -887,3 +887,19 @@ $heading-font: "alfarn", sans-serif;
     animation: fadeInUp 0.6s ease-out forwards;
   }
 }
+
+/* PORTRAIT ORIENTATION (Vertical Monitor) */
+@media (orientation: portrait) and (min-width: 1024px) {
+  .visual-process {
+    .timeline {
+      .timeline-item {
+        min-height: 50vh;
+
+        .content {
+          min-height: 50vh;
+          height: auto;
+        }
+      }
+    }
+  }
+}
