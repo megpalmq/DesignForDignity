@@ -1855,13 +1855,6 @@ body {
   .topImage .TM {
     min-height: 45vh;
   }
-  .visual-process .timeline .timeline-item {
-    min-height: 50vh;
-  }
-  .visual-process .timeline .timeline-item .content {
-    min-height: 50vh;
-    height: auto;
-  }
 }
 *,
 *::before,
