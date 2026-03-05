@@ -891,22 +891,22 @@ $heading-font: "alfarn", sans-serif;
 /* PORTRAIT ORIENTATION (Vertical Monitor) */
 @media (min-width: 1024px) and (min-height: 2000px) {
   .topImage {
-    height: 40vh;
-    padding-top: 6vh;
+    height: auto;
+    padding-top: 3vh;
 
     .blah {
-      height: 100px;
-      margin-bottom: 8px;
+      height: auto;
+      margin-bottom: 0;
     }
 
     .TM {
-      padding-top: 10px;
-      height: 45vh;
+      padding-top: 0;
+      min-height: 30vh;
     }
 
     .mini-blah {
       padding-bottom: 0;
-      margin-top: 8px;
+      margin-top: 0;
     }
   }
 
