@@ -836,7 +836,7 @@ body {
 /* ============================= */
 /* PORTRAIT ORIENTATION (Vertical Monitor) */
 /* ============================= */
-@media (orientation: portrait) and (min-width: 1024px) {
+@media (orientation: portrait) and (width: 1200px) {
   .navbar {
     width: 95%;
     margin-top: 30px;
@@ -997,118 +997,6 @@ body {
     }
   }
 }
-
-/* Commented out - conflicting with main portrait styles
-/* Smaller vertical displays */
-/*
-@media (orientation: portrait) and (max-height: 2425px) and (min-width: 1200px) {
-  .hero1 {
-    height: 60vh;
-    min-height: 500px;
-
-    .myVideo {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
-
-    .content {
-      h1 {
-        font-size: 40px;
-      }
-
-      p {
-        font-size: 14px;
-      }
-    }
-  }
-
-  .navbar {
-    width: 90%;
-    margin-top: 20px;
-    height: 60px;
-
-    .nav-links {
-      gap: 0.8rem;
-
-      li {
-        margin: 0 0.8rem;
-
-        a {
-          font-size: 0.8rem;
-        }
-      }
-    }
-
-    .logo {
-      width: 70px;
-      height: 30px;
-    }
-  }
-
-  .saying {
-    padding: 30px 15px;
-    text-align: center;
-
-    .design {
-      font-size: 24px;
-      text-align: center;
-    }
-
-    h3 {
-      font-size: 14px;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    .ani {
-      font-size: 13px;
-      margin: 10px auto;
-      text-align: center;
-    }
-  }
-
-  .descBox2 {
-    padding: 20px 10px;
-
-    .EDD {
-      font-size: 24px;
-      margin-bottom: 15px;
-    }
-
-    p {
-      font-size: 14px;
-      line-height: 24px;
-    }
-
-    .descBox3 .triangle {
-      width: 100% !important;
-      max-width: 400px;
-      height: 250px;
-    }
-  }
-
-  /* Footer centering */
-  .footer {
-    text-align: center;
-
-    .footer-grid {
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .footer-column {
-      text-align: center;
-    }
-
-    .footer-bottom {
-      text-align: center;
-    }
-  }
-}
-*/
 
 /* Very small vertical displays (portrait phones in portrait mode) */
 @media (orientation: portrait) and (max-width: 480px) {
