@@ -784,11 +784,11 @@ body {
   }
   /* Hero section - reduce height for portrait */
   .hero1 {
-    height: 50vh;
-    min-height: 500px;
+    height: 30vh;
+    min-height: 300px;
   }
   .hero1 .myVideo {
-    height: 50vh;
+    height: 30vh;
   }
   .hero1 .content h1 {
     font-size: 50px;
@@ -995,7 +995,7 @@ body {
   }
   .hero1 {
     height: 50vh;
-    min-height: 400px;
+    min-height: 300px;
   }
   .hero1 .content h1 {
     font-size: 32px;
