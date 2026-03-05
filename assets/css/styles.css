@@ -1849,7 +1849,7 @@ body {
 /* PORTRAIT ORIENTATION (Vertical Monitor) */
 @media (min-width: 1024px) and (min-height: 2000px) {
   .topImage {
-    height: auto;
+    height: 40vh;
     padding-top: 6vh;
   }
   .topImage .blah {
