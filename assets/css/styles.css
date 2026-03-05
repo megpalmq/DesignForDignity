@@ -1852,12 +1852,7 @@ body {
     height: 55vh;
     padding-top: 10vh;
   }
-  .topImage .blah {
-    height: auto;
-    margin-bottom: 8px;
-  }
   .topImage .TM {
-    padding-top: 10px;
     min-height: 45vh;
   }
   .visual-process .timeline .timeline-item {
