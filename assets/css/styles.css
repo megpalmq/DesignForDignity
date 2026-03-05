@@ -865,7 +865,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0;
+    height: 500px;
   }
   .descBox2 .descBox3 .triangle {
     width: 100% !important;
