@@ -1848,6 +1848,13 @@ body {
 
 /* PORTRAIT ORIENTATION (Vertical Monitor) */
 @media (orientation: portrait) and (min-width: 1024px) {
+  .topImage {
+    height: 85vh;
+    padding-top: 10vh;
+  }
+  .topImage .TM {
+    min-height: 45vh;
+  }
   .visual-process .timeline .timeline-item {
     min-height: 50vh;
   }

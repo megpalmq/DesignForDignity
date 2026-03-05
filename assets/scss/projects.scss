@@ -890,6 +890,15 @@ $heading-font: "alfarn", sans-serif;
 
 /* PORTRAIT ORIENTATION (Vertical Monitor) */
 @media (orientation: portrait) and (min-width: 1024px) {
+  .topImage {
+    height: 85vh;
+    padding-top: 10vh;
+
+    .TM {
+      min-height: 45vh;
+    }
+  }
+
   .visual-process {
     .timeline {
       .timeline-item {
