@@ -1850,7 +1850,7 @@ body {
 @media (min-width: 1024px) and (min-height: 2000px) {
   .topImage {
     height: auto;
-    padding-top: 1vh;
+    padding-top: 3vh;
   }
   .topImage .blah {
     height: auto;
@@ -1858,7 +1858,7 @@ body {
   }
   .topImage .TM {
     padding-top: 0;
-    min-height: 25vh;
+    min-height: 30vh;
   }
   .topImage .mini-blah {
     padding-bottom: 0;
