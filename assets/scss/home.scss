@@ -836,7 +836,7 @@ body {
 /* ============================= */
 /* PORTRAIT ORIENTATION (Vertical Monitor) */
 /* ============================= */
-@media (orientation: portrait) and (min-height: 2425px) and (min-width: 2000px) {
+@media (orientation: portrait) and (min-height: 2425px) and (min-width: 1200px) {
   .navbar {
     width: 95%;
     margin-top: 30px;
