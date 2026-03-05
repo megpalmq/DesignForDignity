@@ -1857,8 +1857,8 @@ body {
     margin-bottom: 8px;
   }
   .topImage .TM {
-    padding-top: 20px;
-    min-height: 45vh;
+    padding-top: 10px;
+    height: 45vh;
   }
   .topImage .mini-blah {
     padding-bottom: 0;
