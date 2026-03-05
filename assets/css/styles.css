@@ -801,11 +801,16 @@ body {
   .saying {
     padding: 40px 20px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .saying .design {
     font-size: 28px;
     width: 100%;
     text-align: center;
+    margin: 0 auto;
   }
   .saying h3 {
     font-size: 16px;
