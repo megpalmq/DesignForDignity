@@ -840,7 +840,7 @@ body {
   /* Description box adjustments */
   .descBox2 {
     height: auto;
-    padding: 10px 5px;
+    padding: 50px 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -852,19 +852,20 @@ body {
   }
   .descBox2 .horizontial {
     flex-direction: column;
-    gap: 20px;
+    gap: 8px;
   }
   .descBox2 p {
     width: 70%;
     font-size: 15px;
-    padding: 0;
     line-height: 26px;
+    margin: 0;
   }
   .descBox2 .descBox3 {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0;
   }
   .descBox2 .descBox3 .triangle {
     width: 100% !important;
@@ -872,6 +873,7 @@ body {
     height: 750px;
     margin-left: 0;
     margin: 0 auto;
+    padding: 0 10px;
   }
   /* Project cards and grids */
   .grid,
