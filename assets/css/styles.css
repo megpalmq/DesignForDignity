@@ -824,7 +824,7 @@ body {
     padding-top: 15px;
     margin: 15px auto;
     font-size: 15px;
-    text-align: center;
+    text-align: left;
   }
   /* Images section - stack vertically */
   .images {
@@ -840,7 +840,7 @@ body {
   /* Description box adjustments */
   .descBox2 {
     height: auto;
-    padding: 30px 15px;
+    padding: 10px 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -868,8 +868,8 @@ body {
   }
   .descBox2 .descBox3 .triangle {
     width: 100% !important;
-    max-width: 700px;
-    height: 650px;
+    max-width: 800px;
+    height: 750px;
     margin-left: 0;
     margin: 0 auto;
   }
