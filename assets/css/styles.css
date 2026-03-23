@@ -546,13 +546,10 @@ body {
   padding-left: 40px;
 }
 .descBox2 .descBox3 .triangle {
-  background-image: url(../images/trianglegraphic.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
   display: block;
   width: 700px;
   height: 90vh;
+  object-fit: contain;
   transition: transform 0.3s ease-in-out;
   margin-left: 50px;
 }
