@@ -546,10 +546,11 @@ body {
   padding-left: 40px;
 }
 .descBox2 .descBox3 .triangle {
-  background-image: url(../images/triangleGraphic.png);
+  background-image: url(../images/trianglegraphic.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  display: block;
   width: 700px;
   height: 90vh;
   transition: transform 0.3s ease-in-out;
@@ -1072,7 +1073,7 @@ body {
   }
 }
 /* HOME PAGE PHONE FIXES */
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   .navbar {
     width: calc(100% - 1.5rem);
     margin-top: 0.6rem;
@@ -1162,7 +1163,7 @@ body {
     padding: 1.6rem 0.9rem 2rem;
   }
   .descBox2 .EDD {
-    font-size: clamp(1.45rem, 7vw, 1.8rem);
+    font-size: 22px;
     top: 0;
     text-align: left;
     margin-bottom: 0.9rem;
@@ -1180,10 +1181,11 @@ body {
     text-align: left;
   }
   .descBox2 .descBox3 .triangle {
-    width: min(92vw, 360px);
+    width: min(96vw, 460px);
     max-width: 100%;
-    height: 360px;
+    height: 540px;
     margin: 0 auto;
+    display: block;
   }
   .footer .footer-column {
     min-width: 0;
@@ -1208,7 +1210,8 @@ body {
     top: 8px;
   }
   .descBox2 .descBox3 .triangle {
-    height: 220px;
+    width: min(96vw, 380px);
+    height: 320px;
   }
 }
 .topImage {
