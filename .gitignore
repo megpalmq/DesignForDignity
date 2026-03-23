@@ -12,3 +12,6 @@
 # project
 /css/styles.css.map
 .prepros
+
+# windows reserved device filename that can appear as phantom untracked entry
+NUL

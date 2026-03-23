@@ -215,6 +215,7 @@ body {
 
 /* Hero Section */
 .hero1 {
+  position: relative;
   top: 0;
   width: 100%;
   height: 100vh;
@@ -228,6 +229,8 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     object-fit: cover;
     width: 100%;
     height: 100vh;
@@ -309,8 +312,8 @@ body {
   }
 
   .hero1 .myVideo {
-    width: 100vw; // Ensure full screen width
-    height: 50vh; // Keep the height proportional
+    width: 100%;
+    height: 100%;
     object-fit: cover;
   }
 }
@@ -328,8 +331,8 @@ body {
   }
 
   .hero1 .myVideo {
-    width: 100vw;
-    height: 40vh;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
   }
 }
@@ -348,8 +351,8 @@ body {
   }
 
   .hero1 .myVideo {
-    width: 100vw;
-    height: 40vh;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
   }
 }
@@ -1148,7 +1151,6 @@ body {
     .content {
       h1 {
         font-size: 32px;
-        margin-bottom: 15px;
       }
 
       p {
@@ -1158,7 +1160,7 @@ body {
   }
 
   .saying {
-    padding: 25px 12px;
+    //padding: 25px 12px;
     text-align: center;
 
     .design {
@@ -1219,15 +1221,177 @@ body {
   }
 }
 
-@media (min-aspect-ratio: 16/9) {
-  video {
-    width: 100%;
+/* HOME PAGE PHONE FIXES */
+@media (max-width: 600px) {
+  .navbar {
+    width: calc(100% - 1.5rem);
+    margin-top: 0.6rem;
+    height: 56px;
+    border-radius: 999px;
+    padding: 0.4rem 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .logo {
+      width: 78px;
+      height: 30px;
+      margin-left: 14px;
+      margin-bottom: 0;
+    }
+
+    .menu-toggle {
+      right: 14px;
+      top: 10px;
+    }
+
+    .nav-links {
+      width: min(82vw, 280px);
+      position: absolute;
+      top: calc(100% + 0.45rem);
+      right: 0.5rem;
+      height: auto;
+      margin-top: 0;
+      padding: 0.8rem;
+      gap: 0.35rem;
+
+      li {
+        margin: 0;
+
+        a {
+          font-size: 1.05rem;
+        }
+      }
+    }
+
+    .nav-links.open {
+      margin-top: 0;
+    }
+  }
+
+  .hero1 {
+    height: clamp(300px, 56vh, 420px);
+    min-height: 0;
+
+    .myVideo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .content {
+      width: 92%;
+
+      h1 {
+        font-size: clamp(2rem, 10vw, 2.6rem);
+      }
+
+      p {
+        font-size: clamp(0.95rem, 3.8vw, 1.1rem);
+        line-height: 1.35;
+      }
+    }
+  }
+
+  .saying {
+    padding: 1.5rem 1rem;
+    min-height: 0;
+
+    .design {
+      width: 100%;
+      padding-left: 0;
+      font-size: clamp(1.45rem, 7.2vw, 1.8rem);
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    h3 {
+      width: 100%;
+    }
+
+    .ani {
+      width: 100%;
+      margin: 0.7rem 0 0;
+      font-size: 0.94rem;
+      line-height: 1.6;
+      text-align: left;
+    }
+  }
+
+  .images {
+    .groupimage,
+    .tylerpic {
+      width: 100%;
+      max-height: 320px;
+      object-fit: cover;
+    }
+  }
+
+  .descBox2 {
     height: auto;
+    padding: 1.6rem 0.9rem 2rem;
+
+    .EDD {
+      font-size: clamp(1.45rem, 7vw, 1.8rem);
+      top: 0;
+      text-align: left;
+      margin-bottom: 0.9rem;
+      margin-top: 50px;
+    }
+
+    .horizontial {
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    p {
+      width: 100%;
+      padding: 0;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      text-align: left;
+    }
+
+    .descBox3 .triangle {
+      width: min(92vw, 360px);
+      max-width: 100%;
+      height: 360px;
+      margin: 0 auto;
+    }
+  }
+
+  .footer {
+    .footer-column {
+      min-width: 0;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding: 0.8rem 0.6rem 0;
+    }
   }
 }
-@media (max-aspect-ratio: 16/9) {
-  video {
-    width: auto;
-    height: 100%;
+
+@media (max-width: 390px) {
+  .hero1 {
+    min-height: 330px;
+  }
+
+  .navbar {
+    height: 52px;
+
+    .logo {
+      width: 70px;
+      height: 26px;
+    }
+
+    .menu-toggle {
+      top: 8px;
+    }
+  }
+
+  .descBox2 {
+    .descBox3 .triangle {
+      height: 220px;
+    }
   }
 }

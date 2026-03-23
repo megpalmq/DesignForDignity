@@ -91,6 +91,7 @@ $heading-font: "alfarn", sans-serif;
       font-size: 26px;
       width: 90%;
       padding-right: 20px;
+      margin-left: -20px;
     }
 
     .mini-blah {
@@ -885,36 +886,5 @@ $heading-font: "alfarn", sans-serif;
 
   &.visible {
     animation: fadeInUp 0.6s ease-out forwards;
-  }
-}
-
-/* PORTRAIT ORIENTATION (Vertical Monitor) */
-@media (min-width: 1024px) and (min-height: 2000px) {
-  .topImage {
-    height: auto;
-    padding-top: 3vh;
-
-    .blah {
-      height: auto;
-      margin-bottom: 0;
-      margin-top: 40px;
-    }
-
-    .TM {
-      padding-top: 0;
-      min-height: 30vh;
-    }
-
-    .mini-blah {
-      padding-bottom: 0;
-      margin-top: 0;
-      margin-bottom: 20px;
-    }
-  }
-
-  .visual-process {
-    .title {
-      margin-top: 12px;
-    }
   }
 }
