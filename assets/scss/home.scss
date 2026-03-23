@@ -1359,6 +1359,11 @@ body {
       margin: 0 auto;
       display: block;
     }
+
+    .descBox3 .triangle.fade-in {
+      opacity: 1;
+      transform: none;
+    }
   }
 
   .footer {

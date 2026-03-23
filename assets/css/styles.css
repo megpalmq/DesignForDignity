@@ -1187,6 +1187,10 @@ body {
     margin: 0 auto;
     display: block;
   }
+  .descBox2 .descBox3 .triangle.fade-in {
+    opacity: 1;
+    transform: none;
+  }
   .footer .footer-column {
     min-width: 0;
   }
